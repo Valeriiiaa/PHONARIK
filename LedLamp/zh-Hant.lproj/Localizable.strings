@@ -1,0 +1,76 @@
+/* 
+  Localizable.strings
+  LedLamp
+
+  Created by Valeriya Chernyak on 26.02.2024.
+  
+*/
+
+//tabbar
+"light" = "光";
+"rooms" = "房间";
+"music" = "音乐";
+
+
+//settings
+"settings" = "设置";
+"contactUs" = "联系我们";
+"privacyPolicy" = "隐私政策";
+"termsUse" = "使用条款";
+"share" = "分享给朋友";
+"microphoneAccess" = "麦克风访问";
+"cameraAccess" = "摄像头访问";
+"homeAccess" = "家庭访问";
+
+"selectAccesory" = "选择要添加的配件";
+"makeSure" = "确保您的设备已激活并处于近距离，或将其设置为可发现模式。";
+
+
+//buttons
+"accessoryNotListed" = "配件未列出";
+"addLight" = "添加灯光";
+"moreOptions" = "更多选项";
+"addAppleHome" = "添加到Apple Home";
+"next" = "下一个";
+"done" = "完成";
+"editName" = "编辑名称";
+"delete" = "删除";
+"cancel" = "取消";
+"save" = "保存";
+"addRoom" = "添加房间";
+"add" = "添加";
+"showSelected" = "显示所选";
+
+
+//main
+"youDontHaveLight" = "您没有智能灯";
+"brightenYourEnv" = "照亮您的环境：LED灯管理";
+"addDevice" = "添加设备";
+"scanCode" = "扫描代码或将iPhone靠近配件。";
+"scanSetupCode" = "扫描设置代码";
+"locateQRCode" = "在配件、包装或说明书上找到QR代码，然后将其放置在相机框架上方。";
+"bringIphoneClose" = "将iPhone靠近配件";
+"youCanPlaceIphone" = "如果可用，您也可以将iPhone放置在配件上的符号附近。";
+"lightingDevice" = "照明设备";
+"connectionToLightingDevice" = "连接到照明设备";
+"ensureThatAccessoryPlugged" = "确保配件已插入电源并且距离很近。";
+"lightingDeviceNameLocation" = "照明设备名称和位置";
+"whatDeviceName" = "您的设备名称是什么？";
+"enterDeviceName" = "输入设备名称";
+"whereDeviceLocated" = "您的设备位于哪里？";
+"livingRoom" = "客厅";
+"bedroom" = "卧室";
+"bathroom" = "浴室";
+"kitchen" = "厨房";
+"deviceAdded" = "已添加到DevHome";
+"lightSmartLulb" = "智能灯泡RGB";
+"connect" = "连接";
+"disconnect" = "断开连接";
+"youDontHaveRooms" = "您没有任何房间";
+"pleaseInputRoomsName" = "请输入房间名称并选择壁纸设计。";
+"deviceName" = "设备名称";
+
+
+//collection
+"collection" = "收藏";
+"devicesConnected" = "设备已连接";

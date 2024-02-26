@@ -1,0 +1,78 @@
+/* 
+  Localizable.strings
+  LedLamp
+
+  Created by Valeriya Chernyak on 26.02.2024.
+  
+*/
+
+//tabbar
+"light" = "Light";
+"rooms" = "Rooms";
+"music" = "Music";
+
+
+//settings
+"settings" = "Settings";
+"contactUs" = "Contact us";
+"privacyPolicy" = "Privacy Policy";
+"termsUse" = "Terms of use";
+"share" = "Share with friends";
+"microphoneAccess" = "Microphone access";
+"cameraAccess" = "Camera access";
+"homeAccess" = "Home access";
+
+"selectAccesory" = "Select an accessory to add";
+"makeSure" = "Make sure your device is activated and in close range, or set it to discoverable mode.";
+
+
+//buttons
+"accessoryNotListed" = "Accessory not listed";
+"addLight" = "Add light";
+"moreOptions" = "More options";
+"addAppleHome" = "Add to Apple Home";
+"next" = "Next";
+"done" = "Done";
+"editName" = "Edit Name";
+"delete" = "Delete";
+"cancel" = "Cancel";
+"save" = "Save";
+"addRoom" = "Add room";
+"add" = "Add";
+"showSelected" = "Show Selected";
+
+
+//main
+"youDontHaveLight" = "You don’t have any smart-lights";
+"brightenYourEnv" = "Brighten Your Environment: LED Lamp Management";
+"addDevice" = "Add Device";
+"scanCode" = "Scan the code or bring your iPhone close to the accessory.";
+"scanSetupCode" = "Scan a Setup code";
+"locateQRCode" = "Locate a QR code on the accessory, packaging, or in the instructions, then position it within the camera frame above.";
+"bringIphoneClose" = "Bring iPhone close to the accessory";
+"youCanPlaceIphone" = "You can also place your iPhone near the symbol on the accessory, if available.";
+"lightingDevice" = "Lighting device";
+"connectionToLightingDevice" = "Сonnection to the lighting device";
+"ensureThatAccessoryPlugged" = "Ensure that the accessory is plugged into a power source and is in close proximity.";
+"lightingDeviceNameLocation" = "Lighting device name and location";
+"whatDeviceName" = "What is your device name?";
+"enterDeviceName" = "Enter device name";
+"whereDeviceLocated" = "Where is your device located?";
+"livingRoom" = "Living room";
+"bedroom" = "Bedroom";
+"bathroom" = "Bathroom";
+"kitchen" = "Kitchen";
+"deviceAdded" = "added to DevHome";
+"lightSmartLulb" = "Light smart bulb RGB";
+"connect" = "Connect";
+"disconnect" = "Disconnect";
+"youDontHaveRooms" = "You don’t have any rooms";
+"pleaseInputRoomsName" = "Please input the room's name and choose a wallpaper design.";
+"deviceName" = "Device name";
+
+
+//collection
+"collection" = "Collection";
+"devicesConnected" = "devices connected";
+
+

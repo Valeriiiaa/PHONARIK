@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Lcp-bL-sQL">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ChakraPetch-Medium.ttf">
+            <string>ChakraPetch-Medium</string>
+        </array>
+        <array key="ChakraPetch-Regular.ttf">
+            <string>ChakraPetch-Regular</string>
+        </array>
+        <array key="ChakraPetch-SemiBold.ttf">
+            <string>ChakraPetch-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" id="BYZ-38-t0r" customClass="MainViewController" customModule="LedLamp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainBackground" translatesAutoresizingMaskIntoConstraints="NO" id="CeA-Ex-aoo">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8EF-iM-R6Q">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="199"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Brighten Your Environment: LED Lamp Management" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OhY-qZ-D3b">
+                                        <rect key="frame" x="16" y="61.666666666666664" width="271" height="109.33333333333334"/>
+                                        <fontDescription key="fontDescription" name="ChakraPetch-SemiBold" family="Chakra Petch" pointSize="28"/>
+                                        <color key="textColor" name="Label(#E7FE55)"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LTa-dU-Rts">
+                                        <rect key="frame" x="313" y="69" width="64" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="64" id="ZrY-9s-pR1"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="setingsButton"/>
+                                        <connections>
+                                            <action selector="settingsButtonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FTs-EH-uMe"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" name="Background(#222222)"/>
+                                <constraints>
+                                    <constraint firstItem="LTa-dU-Rts" firstAttribute="top" secondItem="8EF-iM-R6Q" secondAttribute="top" constant="69" id="9Xo-gk-DGz"/>
+                                    <constraint firstAttribute="height" constant="199" id="CdE-6U-JPH"/>
+                                    <constraint firstItem="OhY-qZ-D3b" firstAttribute="top" secondItem="8EF-iM-R6Q" secondAttribute="top" constant="61.670000000000002" id="dTS-hF-cps"/>
+                                    <constraint firstItem="OhY-qZ-D3b" firstAttribute="leading" secondItem="8EF-iM-R6Q" secondAttribute="leading" constant="16" id="mZT-hE-5se"/>
+                                    <constraint firstAttribute="trailing" secondItem="LTa-dU-Rts" secondAttribute="trailing" constant="16" id="sR9-yo-zNH"/>
+                                    <constraint firstItem="LTa-dU-Rts" firstAttribute="leading" secondItem="OhY-qZ-D3b" secondAttribute="trailing" constant="26" id="tfe-gK-abz"/>
+                                    <constraint firstAttribute="bottom" secondItem="OhY-qZ-D3b" secondAttribute="bottom" constant="28" id="xYu-f2-yxX"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lampMain" translatesAutoresizingMaskIntoConstraints="NO" id="jzo-Ge-ZPM">
+                                <rect key="frame" x="126.66666666666669" y="284" width="140" height="166"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You don’t have any smart-lights" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="92L-IF-jZv">
+                                <rect key="frame" x="20" y="466" width="353" height="23.666666666666686"/>
+                                <fontDescription key="fontDescription" name="ChakraPetch-Regular" family="Chakra Petch" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="epP-Jq-len">
+                                <rect key="frame" x="30" y="521.66666666666663" width="333" height="72"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vAx-aw-6Yk">
+                                        <rect key="frame" x="271" y="10" width="52" height="52"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="addLight"/>
+                                        <connections>
+                                            <action selector="addLightButtonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bz0-VO-dJK"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add light" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vVe-rp-au1">
+                                        <rect key="frame" x="27.999999999999996" y="26" width="61.666666666666657" height="20"/>
+                                        <fontDescription key="fontDescription" name="ChakraPetch-Medium" family="Chakra Petch" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="Background(#222222)"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="vVe-rp-au1" secondAttribute="bottom" constant="26" id="6MU-B2-Vzy"/>
+                                    <constraint firstAttribute="trailing" secondItem="vAx-aw-6Yk" secondAttribute="trailing" constant="10" id="6ii-6s-7v0"/>
+                                    <constraint firstItem="vVe-rp-au1" firstAttribute="leading" secondItem="epP-Jq-len" secondAttribute="leading" constant="28" id="GBh-HO-Xj9"/>
+                                    <constraint firstItem="vAx-aw-6Yk" firstAttribute="top" secondItem="epP-Jq-len" secondAttribute="top" constant="10" id="Vey-bM-U8U"/>
+                                    <constraint firstAttribute="height" constant="72" id="pcK-fX-Udz"/>
+                                    <constraint firstAttribute="bottom" secondItem="vAx-aw-6Yk" secondAttribute="bottom" constant="10" id="rxX-5O-tre"/>
+                                    <constraint firstItem="vVe-rp-au1" firstAttribute="top" secondItem="epP-Jq-len" secondAttribute="top" constant="26" id="sBh-Ym-zqZ"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="ebO-rJ-CmT" appends="YES" id="I2I-1F-6L5"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CeA-Ex-aoo" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="BkP-3N-ca1"/>
+                            <constraint firstItem="CeA-Ex-aoo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="C8Y-UJ-4LY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8EF-iM-R6Q" secondAttribute="trailing" id="GE9-gH-BHm"/>
+                            <constraint firstItem="jzo-Ge-ZPM" firstAttribute="top" secondItem="8EF-iM-R6Q" secondAttribute="bottom" constant="85" id="Khw-Cj-LbJ"/>
+                            <constraint firstItem="epP-Jq-len" firstAttribute="top" secondItem="92L-IF-jZv" secondAttribute="bottom" constant="32" id="Knv-a9-Szx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CeA-Ex-aoo" secondAttribute="trailing" id="MBB-ke-58o"/>
+                            <constraint firstItem="92L-IF-jZv" firstAttribute="top" secondItem="jzo-Ge-ZPM" secondAttribute="bottom" constant="16" id="PYk-Mc-Qfb"/>
+                            <constraint firstItem="8EF-iM-R6Q" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Rzd-Da-fjS"/>
+                            <constraint firstItem="epP-Jq-len" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="aGm-lS-CfN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="92L-IF-jZv" secondAttribute="trailing" constant="20" id="aei-wO-rmr"/>
+                            <constraint firstItem="92L-IF-jZv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="fu1-Dd-azv"/>
+                            <constraint firstItem="jzo-Ge-ZPM" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.194836" id="gUX-Cq-v3J"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="epP-Jq-len" secondAttribute="trailing" constant="30" id="gwl-ij-rDe"/>
+                            <constraint firstAttribute="bottom" secondItem="CeA-Ex-aoo" secondAttribute="bottom" id="k6r-SQ-RL0"/>
+                            <constraint firstItem="jzo-Ge-ZPM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lLG-pM-9Gs"/>
+                            <constraint firstItem="8EF-iM-R6Q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="s4X-m2-wle"/>
+                            <constraint firstItem="8EF-iM-R6Q" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.233568" id="yG9-rW-sFh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="1JQ-rr-5DX"/>
+                    <connections>
+                        <outlet property="addLightLabel" destination="vVe-rp-au1" id="USD-tf-ZR3"/>
+                        <outlet property="backgroundButtonView" destination="epP-Jq-len" id="oRc-ab-CRS"/>
+                        <outlet property="backgroundMainView" destination="8EF-iM-R6Q" id="UAS-nF-fyN"/>
+                        <outlet property="titleLabel" destination="OhY-qZ-D3b" id="Xc2-5q-hie"/>
+                        <outlet property="youDontHaveLight" destination="92L-IF-jZv" id="dYL-Ny-8vN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="ebO-rJ-CmT">
+                    <connections>
+                        <action selector="addLightButtonDidTap:" destination="BYZ-38-t0r" id="fNi-VO-MKG"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1900" y="-2.1126760563380285"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="xQu-Wv-jZW">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Lcp-bL-sQL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OfH-HQ-CNj">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="n7R-Kh-7zd" kind="relationship" relationship="viewControllers" id="8oH-e6-uWO"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Abl-ow-MBl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="D71-Ci-BMo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="n7R-Kh-7zd" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="4WN-2A-E7B"/>
+                    <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eth-r6-mmD">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="vX8-RE-PdZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QaL-aA-SAp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="973.28244274809151" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="addLight" width="52" height="52"/>
+        <image name="lampMain" width="140" height="166"/>
+        <image name="mainBackground" width="390" height="844"/>
+        <image name="setingsButton" width="64" height="64"/>
+        <namedColor name="Background(#222222)">
+            <color red="0.13300000131130219" green="0.13300000131130219" blue="0.13300000131130219" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Label(#E7FE55)">
+            <color red="0.90600001811981201" green="0.99599999189376831" blue="0.33300000429153442" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

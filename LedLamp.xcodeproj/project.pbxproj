@@ -1,0 +1,771 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F6A0BC162B8CA4DD0084A0E8 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6A0BC152B8CA4DD0084A0E8 /* Settings.storyboard */; };
+		F6A0BC182B8CA5CA0084A0E8 /* SettingsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6A0BC172B8CA5CA0084A0E8 /* SettingsCell.xib */; };
+		F6A0BC1A2B8CA5DC0084A0E8 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A0BC192B8CA5DC0084A0E8 /* SettingsCell.swift */; };
+		F6A0BC1E2B8CAB230084A0E8 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A0BC1D2B8CAB230084A0E8 /* SettingsModel.swift */; };
+		F6A0BC212B8CAEC30084A0E8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F6A0BC232B8CAEC30084A0E8 /* Localizable.strings */; };
+		F6A0BC2D2B8CB02B0084A0E8 /* String+localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A0BC2C2B8CB02B0084A0E8 /* String+localization.swift */; };
+		F6A0BC2F2B8CB9900084A0E8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A0BC2E2B8CB9900084A0E8 /* MainViewController.swift */; };
+		F6A0BC312B8CBA9F0084A0E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6A0BC302B8CBA9F0084A0E8 /* Assets.xcassets */; };
+		F6EB00F82B8C9FBB005139CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EB00F72B8C9FBB005139CC /* AppDelegate.swift */; };
+		F6EB00FA2B8C9FBB005139CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EB00F92B8C9FBB005139CC /* SceneDelegate.swift */; };
+		F6EB00FC2B8C9FBB005139CC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EB00FB2B8C9FBB005139CC /* SettingsViewController.swift */; };
+		F6EB00FF2B8C9FBB005139CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6EB00FD2B8C9FBB005139CC /* Main.storyboard */; };
+		F6EB01042B8C9FBC005139CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6EB01022B8C9FBC005139CC /* LaunchScreen.storyboard */; };
+		F6EB010F2B8C9FBC005139CC /* LedLampTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EB010E2B8C9FBC005139CC /* LedLampTests.swift */; };
+		F6EB01192B8C9FBC005139CC /* LedLampUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EB01182B8C9FBC005139CC /* LedLampUITests.swift */; };
+		F6EB011B2B8C9FBC005139CC /* LedLampUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EB011A2B8C9FBC005139CC /* LedLampUITestsLaunchTests.swift */; };
+		F6EB01342B8CA156005139CC /* ChakraPetch-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6EB012F2B8CA156005139CC /* ChakraPetch-Regular.ttf */; };
+		F6EB01352B8CA156005139CC /* ChakraPetch-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6EB01302B8CA156005139CC /* ChakraPetch-Bold.ttf */; };
+		F6EB01362B8CA156005139CC /* ChakraPetch-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6EB01312B8CA156005139CC /* ChakraPetch-SemiBold.ttf */; };
+		F6EB01372B8CA156005139CC /* ChakraPetch-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6EB01322B8CA156005139CC /* ChakraPetch-Medium.ttf */; };
+		F6EB01382B8CA156005139CC /* ChakraPetch-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6EB01332B8CA156005139CC /* ChakraPetch-Light.ttf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F6EB010B2B8C9FBC005139CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6EB00EC2B8C9FBB005139CC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F6EB00F32B8C9FBB005139CC;
+			remoteInfo = LedLamp;
+		};
+		F6EB01152B8C9FBC005139CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6EB00EC2B8C9FBB005139CC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F6EB00F32B8C9FBB005139CC;
+			remoteInfo = LedLamp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F6A0BC152B8CA4DD0084A0E8 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		F6A0BC172B8CA5CA0084A0E8 /* SettingsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsCell.xib; sourceTree = "<group>"; };
+		F6A0BC192B8CA5DC0084A0E8 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
+		F6A0BC1D2B8CAB230084A0E8 /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
+		F6A0BC222B8CAEC30084A0E8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F6A0BC242B8CAECE0084A0E8 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		F6A0BC252B8CAED70084A0E8 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F6A0BC262B8CAEE00084A0E8 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F6A0BC272B8CAEE80084A0E8 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F6A0BC282B8CAEF40084A0E8 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		F6A0BC292B8CAEFC0084A0E8 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F6A0BC2A2B8CAF020084A0E8 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F6A0BC2C2B8CB02B0084A0E8 /* String+localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+localization.swift"; sourceTree = "<group>"; };
+		F6A0BC2E2B8CB9900084A0E8 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		F6A0BC302B8CBA9F0084A0E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F6EB00F42B8C9FBB005139CC /* LedLamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LedLamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6EB00F72B8C9FBB005139CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F6EB00F92B8C9FBB005139CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F6EB00FB2B8C9FBB005139CC /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		F6EB00FE2B8C9FBB005139CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F6EB01032B8C9FBC005139CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F6EB01052B8C9FBC005139CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6EB010A2B8C9FBC005139CC /* LedLampTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LedLampTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6EB010E2B8C9FBC005139CC /* LedLampTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LedLampTests.swift; sourceTree = "<group>"; };
+		F6EB01142B8C9FBC005139CC /* LedLampUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LedLampUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6EB01182B8C9FBC005139CC /* LedLampUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LedLampUITests.swift; sourceTree = "<group>"; };
+		F6EB011A2B8C9FBC005139CC /* LedLampUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LedLampUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F6EB012F2B8CA156005139CC /* ChakraPetch-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ChakraPetch-Regular.ttf"; sourceTree = "<group>"; };
+		F6EB01302B8CA156005139CC /* ChakraPetch-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ChakraPetch-Bold.ttf"; sourceTree = "<group>"; };
+		F6EB01312B8CA156005139CC /* ChakraPetch-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ChakraPetch-SemiBold.ttf"; sourceTree = "<group>"; };
+		F6EB01322B8CA156005139CC /* ChakraPetch-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ChakraPetch-Medium.ttf"; sourceTree = "<group>"; };
+		F6EB01332B8CA156005139CC /* ChakraPetch-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ChakraPetch-Light.ttf"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F6EB00F12B8C9FBB005139CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6EB01072B8C9FBC005139CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6EB01112B8C9FBC005139CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F6A0BC1B2B8CA9160084A0E8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F6A0BC1C2B8CA91E0084A0E8 /* SettingsModel */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F6A0BC1C2B8CA91E0084A0E8 /* SettingsModel */ = {
+			isa = PBXGroup;
+			children = (
+				F6A0BC1D2B8CAB230084A0E8 /* SettingsModel.swift */,
+			);
+			path = SettingsModel;
+			sourceTree = "<group>";
+		};
+		F6A0BC2B2B8CB00F0084A0E8 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				F6A0BC2C2B8CB02B0084A0E8 /* String+localization.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
+		F6EB00EB2B8C9FBB005139CC = {
+			isa = PBXGroup;
+			children = (
+				F6EB00F62B8C9FBB005139CC /* LedLamp */,
+				F6EB010D2B8C9FBC005139CC /* LedLampTests */,
+				F6EB01172B8C9FBC005139CC /* LedLampUITests */,
+				F6EB00F52B8C9FBB005139CC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F6EB00F52B8C9FBB005139CC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F6EB00F42B8C9FBB005139CC /* LedLamp.app */,
+				F6EB010A2B8C9FBC005139CC /* LedLampTests.xctest */,
+				F6EB01142B8C9FBC005139CC /* LedLampUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F6EB00F62B8C9FBB005139CC /* LedLamp */ = {
+			isa = PBXGroup;
+			children = (
+				F6A0BC2B2B8CB00F0084A0E8 /* Extentions */,
+				F6EB01282B8C9FD3005139CC /* Classes */,
+				F6EB01272B8C9FC7005139CC /* Resouces */,
+				F6A0BC232B8CAEC30084A0E8 /* Localizable.strings */,
+				F6EB01022B8C9FBC005139CC /* LaunchScreen.storyboard */,
+				F6A0BC302B8CBA9F0084A0E8 /* Assets.xcassets */,
+				F6EB00F72B8C9FBB005139CC /* AppDelegate.swift */,
+				F6EB00F92B8C9FBB005139CC /* SceneDelegate.swift */,
+				F6EB01052B8C9FBC005139CC /* Info.plist */,
+			);
+			path = LedLamp;
+			sourceTree = "<group>";
+		};
+		F6EB010D2B8C9FBC005139CC /* LedLampTests */ = {
+			isa = PBXGroup;
+			children = (
+				F6EB010E2B8C9FBC005139CC /* LedLampTests.swift */,
+			);
+			path = LedLampTests;
+			sourceTree = "<group>";
+		};
+		F6EB01172B8C9FBC005139CC /* LedLampUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F6EB01182B8C9FBC005139CC /* LedLampUITests.swift */,
+				F6EB011A2B8C9FBC005139CC /* LedLampUITestsLaunchTests.swift */,
+			);
+			path = LedLampUITests;
+			sourceTree = "<group>";
+		};
+		F6EB01272B8C9FC7005139CC /* Resouces */ = {
+			isa = PBXGroup;
+			children = (
+				F6EB01292B8C9FFF005139CC /* Storyboards */,
+				F6EB012D2B8CA041005139CC /* Cells */,
+				F6EB012B2B8CA023005139CC /* Fonts */,
+			);
+			path = Resouces;
+			sourceTree = "<group>";
+		};
+		F6EB01282B8C9FD3005139CC /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F6A0BC1B2B8CA9160084A0E8 /* Models */,
+				F6EB012E2B8CA048005139CC /* Cells */,
+				F6EB012A2B8CA012005139CC /* ViewControllers */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		F6EB01292B8C9FFF005139CC /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F6EB00FD2B8C9FBB005139CC /* Main.storyboard */,
+				F6A0BC152B8CA4DD0084A0E8 /* Settings.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		F6EB012A2B8CA012005139CC /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F6EB00FB2B8C9FBB005139CC /* SettingsViewController.swift */,
+				F6A0BC2E2B8CB9900084A0E8 /* MainViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F6EB012B2B8CA023005139CC /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F6EB01302B8CA156005139CC /* ChakraPetch-Bold.ttf */,
+				F6EB01332B8CA156005139CC /* ChakraPetch-Light.ttf */,
+				F6EB01322B8CA156005139CC /* ChakraPetch-Medium.ttf */,
+				F6EB012F2B8CA156005139CC /* ChakraPetch-Regular.ttf */,
+				F6EB01312B8CA156005139CC /* ChakraPetch-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		F6EB012D2B8CA041005139CC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F6A0BC172B8CA5CA0084A0E8 /* SettingsCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		F6EB012E2B8CA048005139CC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F6A0BC192B8CA5DC0084A0E8 /* SettingsCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F6EB00F32B8C9FBB005139CC /* LedLamp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6EB011E2B8C9FBC005139CC /* Build configuration list for PBXNativeTarget "LedLamp" */;
+			buildPhases = (
+				F6EB00F02B8C9FBB005139CC /* Sources */,
+				F6EB00F12B8C9FBB005139CC /* Frameworks */,
+				F6EB00F22B8C9FBB005139CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LedLamp;
+			productName = LedLamp;
+			productReference = F6EB00F42B8C9FBB005139CC /* LedLamp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F6EB01092B8C9FBC005139CC /* LedLampTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6EB01212B8C9FBC005139CC /* Build configuration list for PBXNativeTarget "LedLampTests" */;
+			buildPhases = (
+				F6EB01062B8C9FBC005139CC /* Sources */,
+				F6EB01072B8C9FBC005139CC /* Frameworks */,
+				F6EB01082B8C9FBC005139CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F6EB010C2B8C9FBC005139CC /* PBXTargetDependency */,
+			);
+			name = LedLampTests;
+			productName = LedLampTests;
+			productReference = F6EB010A2B8C9FBC005139CC /* LedLampTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F6EB01132B8C9FBC005139CC /* LedLampUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6EB01242B8C9FBC005139CC /* Build configuration list for PBXNativeTarget "LedLampUITests" */;
+			buildPhases = (
+				F6EB01102B8C9FBC005139CC /* Sources */,
+				F6EB01112B8C9FBC005139CC /* Frameworks */,
+				F6EB01122B8C9FBC005139CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F6EB01162B8C9FBC005139CC /* PBXTargetDependency */,
+			);
+			name = LedLampUITests;
+			productName = LedLampUITests;
+			productReference = F6EB01142B8C9FBC005139CC /* LedLampUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F6EB00EC2B8C9FBB005139CC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					F6EB00F32B8C9FBB005139CC = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					F6EB01092B8C9FBC005139CC = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = F6EB00F32B8C9FBB005139CC;
+					};
+					F6EB01132B8C9FBC005139CC = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = F6EB00F32B8C9FBB005139CC;
+					};
+				};
+			};
+			buildConfigurationList = F6EB00EF2B8C9FBB005139CC /* Build configuration list for PBXProject "LedLamp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				"zh-Hant",
+				fr,
+				de,
+				it,
+				"pt-PT",
+				ru,
+				es,
+			);
+			mainGroup = F6EB00EB2B8C9FBB005139CC;
+			productRefGroup = F6EB00F52B8C9FBB005139CC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F6EB00F32B8C9FBB005139CC /* LedLamp */,
+				F6EB01092B8C9FBC005139CC /* LedLampTests */,
+				F6EB01132B8C9FBC005139CC /* LedLampUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F6EB00F22B8C9FBB005139CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6EB01342B8CA156005139CC /* ChakraPetch-Regular.ttf in Resources */,
+				F6EB01372B8CA156005139CC /* ChakraPetch-Medium.ttf in Resources */,
+				F6A0BC312B8CBA9F0084A0E8 /* Assets.xcassets in Resources */,
+				F6A0BC212B8CAEC30084A0E8 /* Localizable.strings in Resources */,
+				F6EB01352B8CA156005139CC /* ChakraPetch-Bold.ttf in Resources */,
+				F6EB01042B8C9FBC005139CC /* LaunchScreen.storyboard in Resources */,
+				F6A0BC182B8CA5CA0084A0E8 /* SettingsCell.xib in Resources */,
+				F6EB01382B8CA156005139CC /* ChakraPetch-Light.ttf in Resources */,
+				F6EB01362B8CA156005139CC /* ChakraPetch-SemiBold.ttf in Resources */,
+				F6EB00FF2B8C9FBB005139CC /* Main.storyboard in Resources */,
+				F6A0BC162B8CA4DD0084A0E8 /* Settings.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6EB01082B8C9FBC005139CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6EB01122B8C9FBC005139CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F6EB00F02B8C9FBB005139CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6A0BC2F2B8CB9900084A0E8 /* MainViewController.swift in Sources */,
+				F6EB00FC2B8C9FBB005139CC /* SettingsViewController.swift in Sources */,
+				F6A0BC2D2B8CB02B0084A0E8 /* String+localization.swift in Sources */,
+				F6A0BC1E2B8CAB230084A0E8 /* SettingsModel.swift in Sources */,
+				F6EB00F82B8C9FBB005139CC /* AppDelegate.swift in Sources */,
+				F6A0BC1A2B8CA5DC0084A0E8 /* SettingsCell.swift in Sources */,
+				F6EB00FA2B8C9FBB005139CC /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6EB01062B8C9FBC005139CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6EB010F2B8C9FBC005139CC /* LedLampTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6EB01102B8C9FBC005139CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6EB011B2B8C9FBC005139CC /* LedLampUITestsLaunchTests.swift in Sources */,
+				F6EB01192B8C9FBC005139CC /* LedLampUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F6EB010C2B8C9FBC005139CC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F6EB00F32B8C9FBB005139CC /* LedLamp */;
+			targetProxy = F6EB010B2B8C9FBC005139CC /* PBXContainerItemProxy */;
+		};
+		F6EB01162B8C9FBC005139CC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F6EB00F32B8C9FBB005139CC /* LedLamp */;
+			targetProxy = F6EB01152B8C9FBC005139CC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F6A0BC232B8CAEC30084A0E8 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F6A0BC222B8CAEC30084A0E8 /* en */,
+				F6A0BC242B8CAECE0084A0E8 /* zh-Hant */,
+				F6A0BC252B8CAED70084A0E8 /* fr */,
+				F6A0BC262B8CAEE00084A0E8 /* de */,
+				F6A0BC272B8CAEE80084A0E8 /* it */,
+				F6A0BC282B8CAEF40084A0E8 /* pt-PT */,
+				F6A0BC292B8CAEFC0084A0E8 /* ru */,
+				F6A0BC2A2B8CAF020084A0E8 /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		F6EB00FD2B8C9FBB005139CC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F6EB00FE2B8C9FBB005139CC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F6EB01022B8C9FBC005139CC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F6EB01032B8C9FBC005139CC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F6EB011C2B8C9FBC005139CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F6EB011D2B8C9FBC005139CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F6EB011F2B8C9FBC005139CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6NNWR2JHQ8;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LedLamp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = w.LedLamp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F6EB01202B8C9FBC005139CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6NNWR2JHQ8;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LedLamp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = w.LedLamp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F6EB01222B8C9FBC005139CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6NNWR2JHQ8;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = w.LedLampTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LedLamp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LedLamp";
+			};
+			name = Debug;
+		};
+		F6EB01232B8C9FBC005139CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6NNWR2JHQ8;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = w.LedLampTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LedLamp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LedLamp";
+			};
+			name = Release;
+		};
+		F6EB01252B8C9FBC005139CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6NNWR2JHQ8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = w.LedLampUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LedLamp;
+			};
+			name = Debug;
+		};
+		F6EB01262B8C9FBC005139CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6NNWR2JHQ8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = w.LedLampUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LedLamp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F6EB00EF2B8C9FBB005139CC /* Build configuration list for PBXProject "LedLamp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6EB011C2B8C9FBC005139CC /* Debug */,
+				F6EB011D2B8C9FBC005139CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F6EB011E2B8C9FBC005139CC /* Build configuration list for PBXNativeTarget "LedLamp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6EB011F2B8C9FBC005139CC /* Debug */,
+				F6EB01202B8C9FBC005139CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F6EB01212B8C9FBC005139CC /* Build configuration list for PBXNativeTarget "LedLampTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6EB01222B8C9FBC005139CC /* Debug */,
+				F6EB01232B8C9FBC005139CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F6EB01242B8C9FBC005139CC /* Build configuration list for PBXNativeTarget "LedLampUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6EB01252B8C9FBC005139CC /* Debug */,
+				F6EB01262B8C9FBC005139CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F6EB00EC2B8C9FBB005139CC /* Project object */;
+}

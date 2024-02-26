@@ -1,0 +1,76 @@
+/* 
+  Localizable.strings
+  LedLamp
+
+  Created by Valeriya Chernyak on 26.02.2024.
+  
+*/
+
+//tabbar
+"light" = "Lumière";
+"rooms" = "Chambres";
+"music" = "Musique";
+
+
+//settings
+"settings" = "Paramètres";
+"contactUs" = "Contactez-nous";
+"privacyPolicy" = "Politique de confidentialité";
+"termsUse" = "Conditions d'utilisation";
+"share" = "Partager avec des amis";
+"microphoneAccess" = "Accès au microphone";
+"cameraAccess" = "Accès à la caméra";
+"homeAccess" = "Accès à domicile";
+
+"selectAccesory" = "Sélectionnez un accessoire à ajouter";
+"makeSure" = "Assurez-vous que votre appareil est activé et à proximité, ou réglez-le en mode découvrable.";
+
+
+//buttons
+"accessoryNotListed" = "Accessoire non répertorié";
+"addLight" = "Ajouter de la lumière";
+"moreOptions" = "Plus d'options";
+"addAppleHome" = "Ajouter à Apple Home";
+"next" = "Suivant";
+"done" = "Terminé";
+"editName" = "Modifier le nom";
+"delete" = "Supprimer";
+"cancel" = "Annuler";
+"save" = "Enregistrer";
+"addRoom" = "Ajouter une pièce";
+"add" = "Ajouter";
+"showSelected" = "Afficher sélectionné";
+
+
+//main
+"youDontHaveLight" = "Vous n'avez pas de lampes intelligentes";
+"brightenYourEnv" = "Éclairer votre environnement : gestion de la lampe LED";
+"addDevice" = "Ajouter un appareil";
+"scanCode" = "Numérisez le code ou approchez votre iPhone de l'accessoire.";
+"scanSetupCode" = "Scanner un code de configuration";
+"locateQRCode" = "Localisez un code QR sur l'accessoire, l'emballage ou dans les instructions, puis positionnez-le dans le cadre de la caméra ci-dessus.";
+"bringIphoneClose" = "Approchez l'iPhone de l'accessoire";
+"youCanPlaceIphone" = "Vous pouvez également placer votre iPhone près du symbole sur l'accessoire, si disponible.";
+"lightingDevice" = "Appareil d'éclairage";
+"connectionToLightingDevice" = "Connexion à l'appareil d'éclairage";
+"ensureThatAccessoryPlugged" = "Assurez-vous que l'accessoire est branché sur une source d'alimentation et est à proximité.";
+"lightingDeviceNameLocation" = "Nom et emplacement de l'appareil d'éclairage";
+"whatDeviceName" = "Quel est le nom de votre appareil ?";
+"enterDeviceName" = "Entrez le nom de l'appareil";
+"whereDeviceLocated" = "Où se trouve votre appareil ?";
+"livingRoom" = "Salon";
+"bedroom" = "Chambre";
+"bathroom" = "Salle de bain";
+"kitchen" = "Cuisine";
+"deviceAdded" = "ajouté à DevHome";
+"lightSmartLulb" = "Ampoule intelligente RGB";
+"connect" = "Connecter";
+"disconnect" = "Déconnecter";
+"youDontHaveRooms" = "Vous n'avez pas de pièces";
+"pleaseInputRoomsName" = "Veuillez saisir le nom de la pièce et choisir un design de papier peint.";
+"deviceName" = "Nom de l'appareil";
+
+
+//collection
+"collection" = "Collection";
+"devicesConnected" = "Appareils connectés";

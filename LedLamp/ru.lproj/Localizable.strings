@@ -1,0 +1,68 @@
+/* 
+  Localizable.strings
+  LedLamp
+
+  Created by Valeriya Chernyak on 26.02.2024.
+  
+*/
+
+"light" = "Cвет";
+"rooms" = "Команты";
+"music" = "Музыка";
+
+"settings" = "Настройки";
+"contactUs" = "Свяжитесь с нами";
+"privacyPolicy" = "Политика конфиденциальности";
+"termsUse" = "Условия использования";
+"share" = "Поделиться с друзьями";
+"microphoneAccess" = "Доступ к микрофону";
+"cameraAccess" = "Доступ к камере";
+"homeAccess" = "Доступ к домашней сети";
+
+"selectAccesory" = "Выберите аксессуар для добавления";
+"makeSure" = "Убедитесь, что ваше устройство активировано и находится в непосредственной близости, или установите режим обнаружения.";
+
+"accessoryNotListed" = "Аксессуар не указан";
+"addLight" = "Добавить свет";
+"moreOptions" = "Дополнительные настройки";
+"addAppleHome" = "Добавить в Apple Home";
+"next" = "Далее";
+"done" = "Готово";
+"editName" = "Изменить имя";
+"delete" = "Удалить";
+"cancel" = "Отмена";
+"save" = "Сохранить";
+"addRoom" = "Добавить комнату";
+"add" = "Добавить";
+"showSelected" = "Показать выбранное";
+
+"youDontHaveLight" = "У вас нет умных ламп";
+"brightenYourEnv" = "Укрась свое окружение: управление светодиодной лампой";
+"addDevice" = "Добавить устройство";
+"scanCode" = "Отсканируйте код или поднесите iPhone к аксессуару.";
+"scanSetupCode" = "Отсканируйте код настройки";
+"locateQRCode" = "Найдите QR-код на аксессуаре, упаковке или в инструкциях, а затем поместите его в камеру.";
+"bringIphoneClose" = "Приблизьте iPhone к аксессуару";
+"youCanPlaceIphone" = "Также вы можете поместить iPhone рядом с символом на аксессуаре, если это доступно.";
+"lightingDevice" = "Осветительное устройство";
+"connectionToLightingDevice" = "Подключение к осветительному устройству";
+"ensureThatAccessoryPlugged" = "Убедитесь, что аксессуар подключен к источнику питания и находится в непосредственной близости.";
+"lightingDeviceNameLocation" = "Название и местоположение осветительного устройства";
+"whatDeviceName" = "Какое у вас название устройства?";
+"enterDeviceName" = "Введите название устройства";
+"whereDeviceLocated" = "Где находится ваше устройство?";
+"livingRoom" = "Гостиная";
+"bedroom" = "Спальня";
+"bathroom" = "Ванная";
+"kitchen" = "Кухня";
+"deviceAdded" = "добавлено в DevHome";
+"lightSmartLulb" = "Умная светодиодная лампа RGB";
+"connect" = "Подключить";
+"disconnect" = "Отключить";
+"youDontHaveRooms" = "У вас нет комнат";
+"pleaseInputRoomsName" = "Пожалуйста, введите название комнаты и выберите дизайн обоев.";
+"deviceName" = "Название устройства";
+
+"collection" = "Коллекция";
+"devicesConnected" = "Подключенные устройства";
+
