@@ -38,6 +38,39 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
         UITableView.automaticDimension
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
+            
+        } else if indexPath.row == 1 {
+            let url = URL(string: "https://docs.google.com/document/d/1-zWJG6PrjMv8GXakefrHsDzbURqBy4KNNp_vdRZSew0")!
+            UIApplication.shared.open(url)
+        } else if indexPath.row == 2 {
+            let url = URL(string: "https://docs.google.com/document/d/1-zWJG6PrjMv8GXakefrHsDzbURqBy4KNNp_vdRZSew0")!
+            UIApplication.shared.open(url)
+        } else if indexPath.row == 3 {
+            
+        } else if indexPath.row == 4 {
+            if let url = URL(string:UIApplication.openSettingsURLString) {
+                if UIApplication.shared.canOpenURL(url) {
+                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                }
+            }
+            
+        } else if indexPath.row == 5 {
+            if let url = URL(string:UIApplication.openSettingsURLString) {
+                if UIApplication.shared.canOpenURL(url) {
+                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                }
+            }
+        } else if indexPath.row == 6 {
+            if let url = URL(string:UIApplication.openSettingsURLString) {
+                if UIApplication.shared.canOpenURL(url) {
+                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                }
+            }
+        }
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsCell", for: indexPath)
         let item = items[indexPath.row]
