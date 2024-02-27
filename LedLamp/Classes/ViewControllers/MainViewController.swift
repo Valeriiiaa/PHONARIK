@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import BottomSheet
 
 class MainViewController: UIViewController {
 
@@ -28,6 +29,15 @@ class MainViewController: UIViewController {
     }
   
     @IBAction func addLightButtonDidTap(_ sender: Any) {
+        let entrance = UIStoryboard(name: "ScanDeviceView", bundle: nil).instantiateViewController(identifier: "ScanDeviceView")
+        presentBottomSheet(
+            viewController: entrance,
+            configuration: BottomSheetConfiguration(
+                cornerRadius: 40,
+                pullBarConfiguration: .hidden,
+                shadowConfiguration: .init(backgroundColor: UIColor(red: 34/255, green: 34/255, blue: 34/255, alpha: 0.46), blur: .regular)
+            )
+        )
     }
     
     @IBAction func settingsButtonDidTap(_ sender: Any) {

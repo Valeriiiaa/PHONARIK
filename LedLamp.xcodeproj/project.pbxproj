@@ -15,6 +15,8 @@
 		F6A0BC2D2B8CB02B0084A0E8 /* String+localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A0BC2C2B8CB02B0084A0E8 /* String+localization.swift */; };
 		F6A0BC2F2B8CB9900084A0E8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A0BC2E2B8CB9900084A0E8 /* MainViewController.swift */; };
 		F6A0BC312B8CBA9F0084A0E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6A0BC302B8CBA9F0084A0E8 /* Assets.xcassets */; };
+		F6A0BC3A2B8E44FA0084A0E8 /* ScanDeviceView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6A0BC392B8E44FA0084A0E8 /* ScanDeviceView.storyboard */; };
+		F6A0BC3C2B8E450C0084A0E8 /* ScanDeviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A0BC3B2B8E450C0084A0E8 /* ScanDeviceView.swift */; };
 		F6EB00F82B8C9FBB005139CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EB00F72B8C9FBB005139CC /* AppDelegate.swift */; };
 		F6EB00FA2B8C9FBB005139CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EB00F92B8C9FBB005139CC /* SceneDelegate.swift */; };
 		F6EB00FC2B8C9FBB005139CC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EB00FB2B8C9FBB005139CC /* SettingsViewController.swift */; };
@@ -28,6 +30,7 @@
 		F6EB01362B8CA156005139CC /* ChakraPetch-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6EB01312B8CA156005139CC /* ChakraPetch-SemiBold.ttf */; };
 		F6EB01372B8CA156005139CC /* ChakraPetch-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6EB01322B8CA156005139CC /* ChakraPetch-Medium.ttf */; };
 		F6EB01382B8CA156005139CC /* ChakraPetch-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6EB01332B8CA156005139CC /* ChakraPetch-Light.ttf */; };
+		F6EFECAA2B8E491300041B96 /* BottomSheet in Frameworks */ = {isa = PBXBuildFile; productRef = F6EFECA92B8E491300041B96 /* BottomSheet */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,8 @@
 		F6A0BC2C2B8CB02B0084A0E8 /* String+localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+localization.swift"; sourceTree = "<group>"; };
 		F6A0BC2E2B8CB9900084A0E8 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F6A0BC302B8CBA9F0084A0E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F6A0BC392B8E44FA0084A0E8 /* ScanDeviceView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ScanDeviceView.storyboard; sourceTree = "<group>"; };
+		F6A0BC3B2B8E450C0084A0E8 /* ScanDeviceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanDeviceView.swift; sourceTree = "<group>"; };
 		F6EB00F42B8C9FBB005139CC /* LedLamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LedLamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6EB00F72B8C9FBB005139CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6EB00F92B8C9FBB005139CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6EFECAA2B8E491300041B96 /* BottomSheet in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +135,30 @@
 				F6A0BC2C2B8CB02B0084A0E8 /* String+localization.swift */,
 			);
 			path = Extentions;
+			sourceTree = "<group>";
+		};
+		F6A0BC322B8E3F290084A0E8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F6A0BC3B2B8E450C0084A0E8 /* ScanDeviceView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F6A0BC332B8E3F300084A0E8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F6A0BC342B8E3F380084A0E8 /* ScanDeviceView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F6A0BC342B8E3F380084A0E8 /* ScanDeviceView */ = {
+			isa = PBXGroup;
+			children = (
+				F6A0BC392B8E44FA0084A0E8 /* ScanDeviceView.storyboard */,
+			);
+			path = ScanDeviceView;
 			sourceTree = "<group>";
 		};
 		F6EB00EB2B8C9FBB005139CC = {
@@ -187,6 +217,7 @@
 		F6EB01272B8C9FC7005139CC /* Resouces */ = {
 			isa = PBXGroup;
 			children = (
+				F6A0BC332B8E3F300084A0E8 /* Views */,
 				F6EB01292B8C9FFF005139CC /* Storyboards */,
 				F6EB012D2B8CA041005139CC /* Cells */,
 				F6EB012B2B8CA023005139CC /* Fonts */,
@@ -197,6 +228,7 @@
 		F6EB01282B8C9FD3005139CC /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F6A0BC322B8E3F290084A0E8 /* Views */,
 				F6A0BC1B2B8CA9160084A0E8 /* Models */,
 				F6EB012E2B8CA048005139CC /* Cells */,
 				F6EB012A2B8CA012005139CC /* ViewControllers */,
@@ -266,6 +298,9 @@
 			dependencies = (
 			);
 			name = LedLamp;
+			packageProductDependencies = (
+				F6EFECA92B8E491300041B96 /* BottomSheet */,
+			);
 			productName = LedLamp;
 			productReference = F6EB00F42B8C9FBB005139CC /* LedLamp.app */;
 			productType = "com.apple.product-type.application";
@@ -345,6 +380,9 @@
 				es,
 			);
 			mainGroup = F6EB00EB2B8C9FBB005139CC;
+			packageReferences = (
+				F6EFECA82B8E491300041B96 /* XCRemoteSwiftPackageReference "BottomSheet" */,
+			);
 			productRefGroup = F6EB00F52B8C9FBB005139CC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -364,6 +402,7 @@
 				F6EB01342B8CA156005139CC /* ChakraPetch-Regular.ttf in Resources */,
 				F6EB01372B8CA156005139CC /* ChakraPetch-Medium.ttf in Resources */,
 				F6A0BC312B8CBA9F0084A0E8 /* Assets.xcassets in Resources */,
+				F6A0BC3A2B8E44FA0084A0E8 /* ScanDeviceView.storyboard in Resources */,
 				F6A0BC212B8CAEC30084A0E8 /* Localizable.strings in Resources */,
 				F6EB01352B8CA156005139CC /* ChakraPetch-Bold.ttf in Resources */,
 				F6EB01042B8C9FBC005139CC /* LaunchScreen.storyboard in Resources */,
@@ -402,6 +441,7 @@
 				F6A0BC1E2B8CAB230084A0E8 /* SettingsModel.swift in Sources */,
 				F6EB00F82B8C9FBB005139CC /* AppDelegate.swift in Sources */,
 				F6A0BC1A2B8CA5DC0084A0E8 /* SettingsCell.swift in Sources */,
+				F6A0BC3C2B8E450C0084A0E8 /* ScanDeviceView.swift in Sources */,
 				F6EB00FA2B8C9FBB005139CC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -766,6 +806,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F6EFECA82B8E491300041B96 /* XCRemoteSwiftPackageReference "BottomSheet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/joomcode/BottomSheet";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F6EFECA92B8E491300041B96 /* BottomSheet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F6EFECA82B8E491300041B96 /* XCRemoteSwiftPackageReference "BottomSheet" */;
+			productName = BottomSheet;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F6EB00EC2B8C9FBB005139CC /* Project object */;
 }
