@@ -18,6 +18,11 @@ class DeviceAddedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         preferredContentSize = .init(width: view.frame.width, height: 390)
+        loadViewIfNeeded()
+        view.setNeedsLayout()
+        view.layoutIfNeeded()
+        view.layoutSubviews()
+//        presentationController?.preferredContentSize = .zero
         doneButton.layer.cornerRadius = 30
         doneButton.layer.masksToBounds = true
         doneButton.setTitle("done".localized, for: .normal)
