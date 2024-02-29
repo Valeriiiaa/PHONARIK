@@ -10,7 +10,7 @@ import BottomSheet
 
 class MainViewController: UIViewController {
 
-   @IBOutlet weak var youDontHaveLight: UILabel!
+    @IBOutlet weak var youDontHaveLight: UILabel!
     @IBOutlet weak var addLightLabel: UILabel!
     @IBOutlet weak var backgroundButtonView: UIView!
     @IBOutlet weak var settingsButton: UIButton!

@@ -78,7 +78,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vAx-aw-6Yk">
                                         <rect key="frame" x="271" y="10" width="52" height="52"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="addLight"/>
+                                        <state key="normal" image="addBtn"/>
                                         <connections>
                                             <action selector="addLightButtonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bz0-VO-dJK"/>
                                         </connections>
@@ -152,6 +152,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Lcp-bL-sQL" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OfH-HQ-CNj">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -184,7 +185,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="addLight" width="52" height="52"/>
+        <image name="addBtn" width="52" height="52"/>
         <image name="lampMain" width="140" height="166"/>
         <image name="mainBackground" width="390" height="844"/>
         <image name="setingsButton" width="64" height="64"/>

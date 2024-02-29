@@ -17,6 +17,8 @@
 		F6A0BC312B8CBA9F0084A0E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6A0BC302B8CBA9F0084A0E8 /* Assets.xcassets */; };
 		F6A0BC3A2B8E44FA0084A0E8 /* ScanDeviceView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6A0BC392B8E44FA0084A0E8 /* ScanDeviceView.storyboard */; };
 		F6A0BC3C2B8E450C0084A0E8 /* ScanDeviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A0BC3B2B8E450C0084A0E8 /* ScanDeviceView.swift */; };
+		F6E415A92B9076E600D8B418 /* LightingDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E415A82B9076E600D8B418 /* LightingDeviceViewController.swift */; };
+		F6E415AB2B907A3600D8B418 /* ConnectionDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E415AA2B907A3600D8B418 /* ConnectionDeviceViewController.swift */; };
 		F6EB00F82B8C9FBB005139CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EB00F72B8C9FBB005139CC /* AppDelegate.swift */; };
 		F6EB00FA2B8C9FBB005139CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EB00F92B8C9FBB005139CC /* SceneDelegate.swift */; };
 		F6EB00FC2B8C9FBB005139CC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EB00FB2B8C9FBB005139CC /* SettingsViewController.swift */; };
@@ -31,6 +33,13 @@
 		F6EB01372B8CA156005139CC /* ChakraPetch-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6EB01322B8CA156005139CC /* ChakraPetch-Medium.ttf */; };
 		F6EB01382B8CA156005139CC /* ChakraPetch-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6EB01332B8CA156005139CC /* ChakraPetch-Light.ttf */; };
 		F6EFECAA2B8E491300041B96 /* BottomSheet in Frameworks */ = {isa = PBXBuildFile; productRef = F6EFECA92B8E491300041B96 /* BottomSheet */; };
+		F6F827592B907DC800F1BB61 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F827582B907DC800F1BB61 /* TextField.swift */; };
+		F6F8275B2B907EF100F1BB61 /* DeviceNameLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F8275A2B907EF100F1BB61 /* DeviceNameLocationViewController.swift */; };
+		F6F8275F2B9080A200F1BB61 /* DeviceLocationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6F8275E2B9080A200F1BB61 /* DeviceLocationCell.xib */; };
+		F6F827612B90810A00F1BB61 /* DeviceLocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F827602B90810A00F1BB61 /* DeviceLocationCell.swift */; };
+		F6F827642B90820000F1BB61 /* LocationCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F827632B90820000F1BB61 /* LocationCollectionViewModel.swift */; };
+		F6F827672B9086D300F1BB61 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F6F827662B9086D300F1BB61 /* IQKeyboardManagerSwift */; };
+		F6F827692B9089B900F1BB61 /* DeviceAddedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F827682B9089B900F1BB61 /* DeviceAddedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +77,8 @@
 		F6A0BC302B8CBA9F0084A0E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F6A0BC392B8E44FA0084A0E8 /* ScanDeviceView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ScanDeviceView.storyboard; sourceTree = "<group>"; };
 		F6A0BC3B2B8E450C0084A0E8 /* ScanDeviceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanDeviceView.swift; sourceTree = "<group>"; };
+		F6E415A82B9076E600D8B418 /* LightingDeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightingDeviceViewController.swift; sourceTree = "<group>"; };
+		F6E415AA2B907A3600D8B418 /* ConnectionDeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionDeviceViewController.swift; sourceTree = "<group>"; };
 		F6EB00F42B8C9FBB005139CC /* LedLamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LedLamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6EB00F72B8C9FBB005139CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6EB00F92B8C9FBB005139CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +96,12 @@
 		F6EB01312B8CA156005139CC /* ChakraPetch-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ChakraPetch-SemiBold.ttf"; sourceTree = "<group>"; };
 		F6EB01322B8CA156005139CC /* ChakraPetch-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ChakraPetch-Medium.ttf"; sourceTree = "<group>"; };
 		F6EB01332B8CA156005139CC /* ChakraPetch-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ChakraPetch-Light.ttf"; sourceTree = "<group>"; };
+		F6F827582B907DC800F1BB61 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		F6F8275A2B907EF100F1BB61 /* DeviceNameLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceNameLocationViewController.swift; sourceTree = "<group>"; };
+		F6F8275E2B9080A200F1BB61 /* DeviceLocationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeviceLocationCell.xib; sourceTree = "<group>"; };
+		F6F827602B90810A00F1BB61 /* DeviceLocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceLocationCell.swift; sourceTree = "<group>"; };
+		F6F827632B90820000F1BB61 /* LocationCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCollectionViewModel.swift; sourceTree = "<group>"; };
+		F6F827682B9089B900F1BB61 /* DeviceAddedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceAddedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +110,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6EFECAA2B8E491300041B96 /* BottomSheet in Frameworks */,
+				F6F827672B9086D300F1BB61 /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +134,7 @@
 		F6A0BC1B2B8CA9160084A0E8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F6F827622B9081E600F1BB61 /* LocationCellModel */,
 				F6A0BC1C2B8CA91E0084A0E8 /* SettingsModel */,
 			);
 			path = Models;
@@ -133,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				F6A0BC2C2B8CB02B0084A0E8 /* String+localization.swift */,
+				F6F827582B907DC800F1BB61 /* TextField.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -141,6 +161,10 @@
 			isa = PBXGroup;
 			children = (
 				F6A0BC3B2B8E450C0084A0E8 /* ScanDeviceView.swift */,
+				F6E415A82B9076E600D8B418 /* LightingDeviceViewController.swift */,
+				F6E415AA2B907A3600D8B418 /* ConnectionDeviceViewController.swift */,
+				F6F8275A2B907EF100F1BB61 /* DeviceNameLocationViewController.swift */,
+				F6F827682B9089B900F1BB61 /* DeviceAddedViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -269,6 +293,7 @@
 		F6EB012D2B8CA041005139CC /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				F6F8275D2B90809300F1BB61 /* CollectionViewCells */,
 				F6A0BC172B8CA5CA0084A0E8 /* SettingsCell.xib */,
 			);
 			path = Cells;
@@ -277,9 +302,34 @@
 		F6EB012E2B8CA048005139CC /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				F6F8275C2B90808900F1BB61 /* CollectionViewCells */,
 				F6A0BC192B8CA5DC0084A0E8 /* SettingsCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		F6F8275C2B90808900F1BB61 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				F6F827602B90810A00F1BB61 /* DeviceLocationCell.swift */,
+			);
+			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		F6F8275D2B90809300F1BB61 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				F6F8275E2B9080A200F1BB61 /* DeviceLocationCell.xib */,
+			);
+			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		F6F827622B9081E600F1BB61 /* LocationCellModel */ = {
+			isa = PBXGroup;
+			children = (
+				F6F827632B90820000F1BB61 /* LocationCollectionViewModel.swift */,
+			);
+			path = LocationCellModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,6 +350,7 @@
 			name = LedLamp;
 			packageProductDependencies = (
 				F6EFECA92B8E491300041B96 /* BottomSheet */,
+				F6F827662B9086D300F1BB61 /* IQKeyboardManagerSwift */,
 			);
 			productName = LedLamp;
 			productReference = F6EB00F42B8C9FBB005139CC /* LedLamp.app */;
@@ -382,6 +433,7 @@
 			mainGroup = F6EB00EB2B8C9FBB005139CC;
 			packageReferences = (
 				F6EFECA82B8E491300041B96 /* XCRemoteSwiftPackageReference "BottomSheet" */,
+				F6F827652B9086D300F1BB61 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			productRefGroup = F6EB00F52B8C9FBB005139CC /* Products */;
 			projectDirPath = "";
@@ -409,6 +461,7 @@
 				F6A0BC182B8CA5CA0084A0E8 /* SettingsCell.xib in Resources */,
 				F6EB01382B8CA156005139CC /* ChakraPetch-Light.ttf in Resources */,
 				F6EB01362B8CA156005139CC /* ChakraPetch-SemiBold.ttf in Resources */,
+				F6F8275F2B9080A200F1BB61 /* DeviceLocationCell.xib in Resources */,
 				F6EB00FF2B8C9FBB005139CC /* Main.storyboard in Resources */,
 				F6A0BC162B8CA4DD0084A0E8 /* Settings.storyboard in Resources */,
 			);
@@ -436,12 +489,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6A0BC2F2B8CB9900084A0E8 /* MainViewController.swift in Sources */,
+				F6F827592B907DC800F1BB61 /* TextField.swift in Sources */,
+				F6E415A92B9076E600D8B418 /* LightingDeviceViewController.swift in Sources */,
 				F6EB00FC2B8C9FBB005139CC /* SettingsViewController.swift in Sources */,
 				F6A0BC2D2B8CB02B0084A0E8 /* String+localization.swift in Sources */,
+				F6F827612B90810A00F1BB61 /* DeviceLocationCell.swift in Sources */,
 				F6A0BC1E2B8CAB230084A0E8 /* SettingsModel.swift in Sources */,
+				F6F8275B2B907EF100F1BB61 /* DeviceNameLocationViewController.swift in Sources */,
 				F6EB00F82B8C9FBB005139CC /* AppDelegate.swift in Sources */,
+				F6F827642B90820000F1BB61 /* LocationCollectionViewModel.swift in Sources */,
 				F6A0BC1A2B8CA5DC0084A0E8 /* SettingsCell.swift in Sources */,
+				F6F827692B9089B900F1BB61 /* DeviceAddedViewController.swift in Sources */,
 				F6A0BC3C2B8E450C0084A0E8 /* ScanDeviceView.swift in Sources */,
+				F6E415AB2B907A3600D8B418 /* ConnectionDeviceViewController.swift in Sources */,
 				F6EB00FA2B8C9FBB005139CC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -644,6 +704,7 @@
 				DEVELOPMENT_TEAM = 6NNWR2JHQ8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LedLamp/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Qr code scanner";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -672,6 +733,7 @@
 				DEVELOPMENT_TEAM = 6NNWR2JHQ8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LedLamp/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Qr code scanner";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -816,6 +878,14 @@
 				minimumVersion = 2.0.5;
 			};
 		};
+		F6F827652B9086D300F1BB61 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -823,6 +893,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F6EFECA82B8E491300041B96 /* XCRemoteSwiftPackageReference "BottomSheet" */;
 			productName = BottomSheet;
+		};
+		F6F827662B9086D300F1BB61 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F6F827652B9086D300F1BB61 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

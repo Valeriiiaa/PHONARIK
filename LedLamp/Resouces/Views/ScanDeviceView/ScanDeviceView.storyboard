@@ -6,6 +6,7 @@
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -65,7 +66,7 @@
                                 <rect key="frame" x="16" y="190.66666666666663" width="361" height="202"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="202" id="icy-lp-CPG"/>
+                                    <constraint firstAttribute="height" constant="202" id="xjf-wZ-vcj"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan the code or bring your iPhone close to the accessory." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ezV-cK-1Rs">
@@ -95,8 +96,8 @@
                                 <rect key="frame" x="16" y="504.33333333333326" width="30" height="24"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Device" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aPe-dB-tnM">
-                                <rect key="frame" x="16" y="86" width="161.66666666666666" height="41.666666666666657"/>
-                                <fontDescription key="fontDescription" name="ChakraPetch-Regular" family="Chakra Petch" pointSize="32"/>
+                                <rect key="frame" x="16" y="86" width="164" height="41.666666666666657"/>
+                                <fontDescription key="fontDescription" name="ChakraPetch-Medium" family="Chakra Petch" pointSize="32"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -136,8 +137,6 @@
                             <constraint firstItem="TT0-NG-JcU" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="3B7-gy-tdn"/>
                             <constraint firstItem="Kkb-EM-ypk" firstAttribute="leading" secondItem="TT0-NG-JcU" secondAttribute="trailing" constant="10" id="3bH-Fu-lRv"/>
                             <constraint firstItem="Kkb-EM-ypk" firstAttribute="top" secondItem="jb2-z5-VCV" secondAttribute="bottom" constant="20" id="58a-Bk-Mo6"/>
-                            <constraint firstItem="jb2-z5-VCV" firstAttribute="top" secondItem="ezV-cK-1Rs" secondAttribute="bottom" constant="16" id="5PU-OC-J0f"/>
-                            <constraint firstItem="jb2-z5-VCV" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.237089" id="7dH-1J-fo8"/>
                             <constraint firstAttribute="trailing" secondItem="ezV-cK-1Rs" secondAttribute="trailing" constant="31" id="FTd-PK-Epp"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Z0l-0z-ULh" secondAttribute="trailing" constant="30" id="Hnv-QB-Xrd"/>
                             <constraint firstAttribute="trailing" secondItem="Kkb-EM-ypk" secondAttribute="trailing" constant="30" id="Ho6-f2-WZ6"/>
@@ -153,6 +152,7 @@
                             <constraint firstItem="XRV-QJ-OTn" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="iXY-Po-c23"/>
                             <constraint firstItem="aPe-dB-tnM" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="mVV-AB-WGL"/>
                             <constraint firstItem="jSR-eU-Qkc" firstAttribute="leading" secondItem="aaa-rK-3UC" secondAttribute="trailing" constant="10" id="oY6-nd-AOl"/>
+                            <constraint firstItem="jb2-z5-VCV" firstAttribute="top" secondItem="ezV-cK-1Rs" secondAttribute="bottom" constant="16" id="rNi-l3-XG9"/>
                             <constraint firstItem="aPe-dB-tnM" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="27" id="spe-U6-qpf"/>
                             <constraint firstItem="TT0-NG-JcU" firstAttribute="top" secondItem="jb2-z5-VCV" secondAttribute="bottom" constant="20" id="ufO-Mg-NO7"/>
                         </constraints>
@@ -176,11 +176,394 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="-83" y="-2"/>
+        </scene>
+        <!--Device Name Location View Controller-->
+        <scene sceneID="YSv-hm-2ei">
+            <objects>
+                <viewController storyboardIdentifier="DeviceNameLocationViewController" id="2O8-Yy-RRL" customClass="DeviceNameLocationViewController" customModule="LedLamp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nn2-Qp-22p">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o0e-MR-dNT">
+                                <rect key="frame" x="299" y="59" width="94" height="54"/>
+                                <inset key="contentEdgeInsets" minX="50" minY="10" maxX="20" maxY="20"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="close"/>
+                                <connections>
+                                    <action selector="closeBtnDidTap:" destination="2O8-Yy-RRL" eventType="touchUpInside" id="bbJ-vZ-bWy"/>
+                                    <action selector="closeButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="0dZ-5o-Xf8"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lighting device name and location" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="16" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PYz-1l-lJP">
+                                <rect key="frame" x="16" y="86" width="377" height="83.333333333333314"/>
+                                <fontDescription key="fontDescription" name="ChakraPetch-Medium" family="Chakra Petch" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is your device name?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mKA-OC-NX5">
+                                <rect key="frame" x="16" y="185.33333333333334" width="357" height="19.666666666666657"/>
+                                <fontDescription key="fontDescription" name="ChakraPetch-Regular" family="Chakra Petch" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lsP-qa-R1Q" customClass="TextField" customModule="LedLamp" customModuleProvider="target">
+                                <rect key="frame" x="16" y="211" width="361" height="64"/>
+                                <color key="backgroundColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="so9-7N-LCh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="o9t-yS-rS1">
+                                <rect key="frame" x="0.0" y="320.66666666666669" width="393" height="120"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="9Zf-aB-Rky"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="SQr-6o-TtR">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="4F9-mY-P3f">
+                                        <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gWu-Qc-nFU">
+                                            <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where is your device located?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTy-bM-P9d">
+                                <rect key="frame" x="16" y="293" width="357" height="19.666666666666686"/>
+                                <fontDescription key="fontDescription" name="ChakraPetch-Regular" family="Chakra Petch" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ouP-fy-0XG">
+                                <rect key="frame" x="16" y="470.66666666666669" width="361" height="72.000000000000057"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Next" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Swd-nf-aMH">
+                                        <rect key="frame" x="28" y="26" width="32" height="20"/>
+                                        <fontDescription key="fontDescription" name="ChakraPetch-Medium" family="Chakra Petch" pointSize="15"/>
+                                        <color key="textColor" red="0.61960784313725492" green="0.61960784313725492" blue="0.61960784313725492" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2k9-Di-Y6F">
+                                        <rect key="frame" x="299" y="10" width="52" height="52"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="moreOptionBtn"/>
+                                        <connections>
+                                            <action selector="moreOptionBtnDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Wh4-v0-9bf"/>
+                                            <action selector="nextBtnDidTap:" destination="2O8-Yy-RRL" eventType="touchUpInside" id="jn8-5a-8p8"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="Swd-nf-aMH" firstAttribute="top" secondItem="ouP-fy-0XG" secondAttribute="top" constant="26" id="7ob-VQ-3Sz"/>
+                                    <constraint firstItem="Swd-nf-aMH" firstAttribute="leading" secondItem="ouP-fy-0XG" secondAttribute="leading" constant="28" id="RNx-5M-6FW"/>
+                                    <constraint firstAttribute="bottom" secondItem="Swd-nf-aMH" secondAttribute="bottom" constant="26" id="f2q-ds-lzr"/>
+                                    <constraint firstAttribute="bottom" secondItem="2k9-Di-Y6F" secondAttribute="bottom" constant="10" id="gxn-Lx-6cb"/>
+                                    <constraint firstAttribute="height" constant="72" id="j0b-QV-HYa"/>
+                                    <constraint firstAttribute="trailing" secondItem="2k9-Di-Y6F" secondAttribute="trailing" constant="10" id="qDN-cM-Tsa"/>
+                                    <constraint firstItem="2k9-Di-Y6F" firstAttribute="top" secondItem="ouP-fy-0XG" secondAttribute="top" constant="10" id="tvU-BT-W9A"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Uj9-Xs-oM6"/>
+                        <color key="backgroundColor" name="BottomShit(#747474)"/>
+                        <constraints>
+                            <constraint firstItem="NTy-bM-P9d" firstAttribute="leading" secondItem="Uj9-Xs-oM6" secondAttribute="leading" constant="16" id="2oG-as-6GA"/>
+                            <constraint firstItem="ouP-fy-0XG" firstAttribute="top" secondItem="o9t-yS-rS1" secondAttribute="bottom" constant="30" id="4JT-0H-FRv"/>
+                            <constraint firstItem="Uj9-Xs-oM6" firstAttribute="trailing" secondItem="ouP-fy-0XG" secondAttribute="trailing" constant="16" id="8Kl-GW-K1x"/>
+                            <constraint firstItem="ouP-fy-0XG" firstAttribute="leading" secondItem="Uj9-Xs-oM6" secondAttribute="leading" constant="16" id="9Ou-CB-gIB"/>
+                            <constraint firstItem="o9t-yS-rS1" firstAttribute="leading" secondItem="Uj9-Xs-oM6" secondAttribute="leading" id="9ZM-KR-CYh"/>
+                            <constraint firstItem="o9t-yS-rS1" firstAttribute="top" secondItem="NTy-bM-P9d" secondAttribute="bottom" constant="8" id="CHO-RL-hkI"/>
+                            <constraint firstItem="lsP-qa-R1Q" firstAttribute="top" secondItem="mKA-OC-NX5" secondAttribute="bottom" constant="6" id="FTP-mh-RtW"/>
+                            <constraint firstItem="Uj9-Xs-oM6" firstAttribute="trailing" secondItem="lsP-qa-R1Q" secondAttribute="trailing" constant="16" id="Q5b-of-o4p"/>
+                            <constraint firstItem="PYz-1l-lJP" firstAttribute="top" secondItem="Uj9-Xs-oM6" secondAttribute="top" constant="27" id="RZk-F7-Loa"/>
+                            <constraint firstItem="Uj9-Xs-oM6" firstAttribute="trailing" secondItem="mKA-OC-NX5" secondAttribute="trailing" constant="20" id="atL-Jm-Ar6"/>
+                            <constraint firstItem="mKA-OC-NX5" firstAttribute="leading" secondItem="Uj9-Xs-oM6" secondAttribute="leading" constant="16" id="dnP-L9-snc"/>
+                            <constraint firstItem="Uj9-Xs-oM6" firstAttribute="trailing" secondItem="PYz-1l-lJP" secondAttribute="trailing" id="gYl-Di-kUG"/>
+                            <constraint firstItem="o0e-MR-dNT" firstAttribute="top" secondItem="Uj9-Xs-oM6" secondAttribute="top" id="jCl-A9-8zh"/>
+                            <constraint firstItem="Uj9-Xs-oM6" firstAttribute="trailing" secondItem="o9t-yS-rS1" secondAttribute="trailing" id="l6m-tW-mtL"/>
+                            <constraint firstItem="Uj9-Xs-oM6" firstAttribute="trailing" secondItem="NTy-bM-P9d" secondAttribute="trailing" constant="20" id="lM2-jy-YaB"/>
+                            <constraint firstItem="Uj9-Xs-oM6" firstAttribute="trailing" secondItem="o0e-MR-dNT" secondAttribute="trailing" id="mdP-dL-cQp"/>
+                            <constraint firstItem="NTy-bM-P9d" firstAttribute="top" secondItem="lsP-qa-R1Q" secondAttribute="bottom" constant="18" id="muB-5u-x7s"/>
+                            <constraint firstItem="mKA-OC-NX5" firstAttribute="top" secondItem="PYz-1l-lJP" secondAttribute="bottom" constant="16" id="qQD-YZ-QbM"/>
+                            <constraint firstItem="lsP-qa-R1Q" firstAttribute="leading" secondItem="Uj9-Xs-oM6" secondAttribute="leading" constant="16" id="sLT-cm-sVW"/>
+                            <constraint firstItem="PYz-1l-lJP" firstAttribute="leading" secondItem="Uj9-Xs-oM6" secondAttribute="leading" constant="16" id="yW5-iQ-muE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundNextView" destination="ouP-fy-0XG" id="Vr5-Ae-oMU"/>
+                        <outlet property="deviceNameLabel" destination="mKA-OC-NX5" id="oXN-aM-RpL"/>
+                        <outlet property="lightingDevicaLabel" destination="PYz-1l-lJP" id="nsi-hq-WoM"/>
+                        <outlet property="locationCollectionView" destination="o9t-yS-rS1" id="zwD-bJ-tHO"/>
+                        <outlet property="locationLabel" destination="NTy-bM-P9d" id="IeN-B9-hYb"/>
+                        <outlet property="nextLabel" destination="Swd-nf-aMH" id="UcM-jB-2vD"/>
+                        <outlet property="textFieldName" destination="lsP-qa-R1Q" id="KR8-Lg-Y2w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kkI-Ec-7u2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-83" y="711"/>
+        </scene>
+        <!--Lighting Device View Controller-->
+        <scene sceneID="9cq-lS-uXH">
+            <objects>
+                <viewController storyboardIdentifier="LightingDeviceViewController" id="kYE-xu-W6n" customClass="LightingDeviceViewController" customModule="LedLamp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="r9L-Jo-BmG">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6IH-kX-t9a">
+                                <rect key="frame" x="299" y="59" width="94" height="54"/>
+                                <inset key="contentEdgeInsets" minX="50" minY="10" maxX="20" maxY="20"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="close"/>
+                                <connections>
+                                    <action selector="closeBtnDidTap:" destination="kYE-xu-W6n" eventType="touchUpInside" id="dvS-ro-K6W"/>
+                                    <action selector="closeButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="NCn-bc-Qrh"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lighting device" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ueE-R8-PZu">
+                                <rect key="frame" x="15.999999999999986" y="86" width="224.66666666666663" height="42"/>
+                                <fontDescription key="fontDescription" name="ChakraPetch-Medium" family="Chakra Petch" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ipt-N5-gIp">
+                                <rect key="frame" x="30" y="557.66666666666663" width="333" height="72"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add to Apple Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJe-qH-HKw">
+                                        <rect key="frame" x="28" y="26" width="132" height="20"/>
+                                        <fontDescription key="fontDescription" name="ChakraPetch-Medium" family="Chakra Petch" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Weg-Pm-2rt">
+                                        <rect key="frame" x="271" y="10" width="52" height="52"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="addBtn"/>
+                                        <connections>
+                                            <action selector="addBtnDidTap:" destination="kYE-xu-W6n" eventType="touchUpInside" id="pUi-CT-piV"/>
+                                            <action selector="moreOptionBtnDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="5m7-uI-9dL"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" name="Background(#222222)"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="PJe-qH-HKw" firstAttribute="top" secondItem="Ipt-N5-gIp" secondAttribute="top" constant="26" id="B56-Hw-Rx0"/>
+                                    <constraint firstItem="Weg-Pm-2rt" firstAttribute="top" secondItem="Ipt-N5-gIp" secondAttribute="top" constant="10" id="FAx-2F-deE"/>
+                                    <constraint firstItem="PJe-qH-HKw" firstAttribute="leading" secondItem="Ipt-N5-gIp" secondAttribute="leading" constant="28" id="JlM-7B-H2i"/>
+                                    <constraint firstAttribute="trailing" secondItem="Weg-Pm-2rt" secondAttribute="trailing" constant="10" id="TZZ-xm-FPK"/>
+                                    <constraint firstAttribute="height" constant="72" id="V4M-Pu-SwT"/>
+                                    <constraint firstAttribute="bottom" secondItem="Weg-Pm-2rt" secondAttribute="bottom" constant="10" id="b1s-DG-juv"/>
+                                    <constraint firstAttribute="bottom" secondItem="PJe-qH-HKw" secondAttribute="bottom" constant="26" id="g0X-u9-JfF"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="ObT-cu-iYq" appends="YES" id="M65-iX-Tbu"/>
+                                </connections>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lamp2" translatesAutoresizingMaskIntoConstraints="NO" id="q6k-62-EDM">
+                                <rect key="frame" x="46.666666666666657" y="141.00000000000003" width="299.66666666666674" height="399.66666666666674"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Egb-9s-lax"/>
+                        <color key="backgroundColor" name="BottomShit(#747474)"/>
+                        <color key="tintColor" name="BottomShit(#747474)"/>
+                        <constraints>
+                            <constraint firstItem="q6k-62-EDM" firstAttribute="height" secondItem="r9L-Jo-BmG" secondAttribute="height" multiplier="0.4689" id="3Xs-GV-TFa"/>
+                            <constraint firstItem="Egb-9s-lax" firstAttribute="trailing" secondItem="Ipt-N5-gIp" secondAttribute="trailing" constant="30" id="Hnk-Hc-zK7"/>
+                            <constraint firstItem="Ipt-N5-gIp" firstAttribute="top" secondItem="q6k-62-EDM" secondAttribute="bottom" constant="17.32" id="Ire-em-RtM"/>
+                            <constraint firstItem="Egb-9s-lax" firstAttribute="trailing" secondItem="6IH-kX-t9a" secondAttribute="trailing" id="OFy-mX-aXH"/>
+                            <constraint firstItem="Ipt-N5-gIp" firstAttribute="leading" secondItem="Egb-9s-lax" secondAttribute="leading" constant="30" id="OSw-6S-DXI"/>
+                            <constraint firstItem="q6k-62-EDM" firstAttribute="centerX" secondItem="r9L-Jo-BmG" secondAttribute="centerX" id="Tz3-kU-Hun"/>
+                            <constraint firstItem="ueE-R8-PZu" firstAttribute="leading" secondItem="Egb-9s-lax" secondAttribute="leading" constant="16" id="eRq-HN-Zo1"/>
+                            <constraint firstItem="ueE-R8-PZu" firstAttribute="top" secondItem="Egb-9s-lax" secondAttribute="top" constant="27" id="efT-Mt-GTS"/>
+                            <constraint firstItem="q6k-62-EDM" firstAttribute="top" secondItem="ueE-R8-PZu" secondAttribute="bottom" constant="13" id="mpK-Mn-IWR"/>
+                            <constraint firstItem="6IH-kX-t9a" firstAttribute="top" secondItem="Egb-9s-lax" secondAttribute="top" id="xBj-6d-2fd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addToAppleHomeLabel" destination="PJe-qH-HKw" id="bIH-Xa-9V2"/>
+                        <outlet property="backgroundAddView" destination="Ipt-N5-gIp" id="4ix-vX-GTd"/>
+                        <outlet property="lightingDeviceLabel" destination="ueE-R8-PZu" id="RGh-8T-Hdk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ovx-FU-oBW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="ObT-cu-iYq">
+                    <connections>
+                        <action selector="addBtnDidTap:" destination="kYE-xu-W6n" id="kdU-XR-KC4"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1127.4809160305342" y="-2.1126760563380285"/>
+        </scene>
+        <!--Connection Device View Controller-->
+        <scene sceneID="LVq-Kr-NPl">
+            <objects>
+                <viewController storyboardIdentifier="ConnectionDeviceViewController" id="N2i-fG-Bkr" customClass="ConnectionDeviceViewController" customModule="LedLamp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hdn-b9-l9Z">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YmP-sq-mcO">
+                                <rect key="frame" x="292.33333333333331" y="59" width="100.66666666666669" height="54"/>
+                                <inset key="contentEdgeInsets" minX="50" minY="10" maxX="20" maxY="20"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="close"/>
+                                <connections>
+                                    <action selector="closeBtnDidTap:" destination="N2i-fG-Bkr" eventType="touchUpInside" id="X1G-aV-m53"/>
+                                    <action selector="closeButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="UqE-4E-KBa"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сonnection to the lighting device" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MDs-C8-YNd">
+                                <rect key="frame" x="16" y="86" width="276.33333333333331" height="83.333333333333314"/>
+                                <fontDescription key="fontDescription" name="ChakraPetch-Medium" family="Chakra Petch" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ensure that the accessory is plugged into a power source and is in close proximity." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1jG-7c-0sw">
+                                <rect key="frame" x="16" y="177.33333333333334" width="335" height="39"/>
+                                <fontDescription key="fontDescription" name="ChakraPetch-Medium" family="Chakra Petch" pointSize="15"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QqB-6v-LnH">
+                                <rect key="frame" x="16" y="751" width="361" height="8"/>
+                                <color key="backgroundColor" name="Background(#222222)"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="8" id="fUP-NZ-2Ah"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lly-sO-o2J">
+                                <rect key="frame" x="20" y="771" width="353" height="21"/>
+                                <fontDescription key="fontDescription" name="ChakraPetch-Regular" family="Chakra Petch" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Pp0-Ae-5q9"/>
+                        <color key="backgroundColor" name="BottomShit(#747474)"/>
+                        <color key="tintColor" name="BottomShit(#747474)"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="1jG-7c-0sw" secondAttribute="trailing" constant="42" id="11T-bd-lA8"/>
+                            <constraint firstItem="YmP-sq-mcO" firstAttribute="leading" secondItem="MDs-C8-YNd" secondAttribute="trailing" id="3RS-RG-ccy"/>
+                            <constraint firstItem="Pp0-Ae-5q9" firstAttribute="trailing" secondItem="QqB-6v-LnH" secondAttribute="trailing" constant="16" id="65h-Yt-ktm"/>
+                            <constraint firstItem="MDs-C8-YNd" firstAttribute="top" secondItem="Pp0-Ae-5q9" secondAttribute="top" constant="27" id="C3f-Rd-b3z"/>
+                            <constraint firstItem="1jG-7c-0sw" firstAttribute="leading" secondItem="Pp0-Ae-5q9" secondAttribute="leading" constant="16" id="CJS-wN-Fum"/>
+                            <constraint firstItem="Lly-sO-o2J" firstAttribute="leading" secondItem="Pp0-Ae-5q9" secondAttribute="leading" constant="20" id="D1E-oW-qIb"/>
+                            <constraint firstItem="YmP-sq-mcO" firstAttribute="top" secondItem="Pp0-Ae-5q9" secondAttribute="top" id="MBQ-As-jRu"/>
+                            <constraint firstItem="1jG-7c-0sw" firstAttribute="top" secondItem="MDs-C8-YNd" secondAttribute="bottom" constant="8" id="VXQ-UJ-K0w"/>
+                            <constraint firstItem="MDs-C8-YNd" firstAttribute="leading" secondItem="Pp0-Ae-5q9" secondAttribute="leading" constant="16" id="XYt-5f-gHm"/>
+                            <constraint firstItem="Lly-sO-o2J" firstAttribute="top" secondItem="QqB-6v-LnH" secondAttribute="bottom" constant="12" id="dDA-41-mhV"/>
+                            <constraint firstItem="Pp0-Ae-5q9" firstAttribute="trailing" secondItem="YmP-sq-mcO" secondAttribute="trailing" id="daD-QA-E3d"/>
+                            <constraint firstItem="QqB-6v-LnH" firstAttribute="leading" secondItem="Pp0-Ae-5q9" secondAttribute="leading" constant="16" id="e2Z-g8-sfy"/>
+                            <constraint firstItem="Pp0-Ae-5q9" firstAttribute="bottom" secondItem="Lly-sO-o2J" secondAttribute="bottom" constant="26" id="nX9-vN-CEV"/>
+                            <constraint firstItem="Pp0-Ae-5q9" firstAttribute="trailing" secondItem="Lly-sO-o2J" secondAttribute="trailing" constant="20" id="zgK-zl-M85"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="connectionLabel" destination="MDs-C8-YNd" id="Sei-Bv-bkn"/>
+                        <outlet property="ensureLabel" destination="1jG-7c-0sw" id="Vd6-sl-wT1"/>
+                        <outlet property="procentLabel" destination="Lly-sO-o2J" id="w3p-Oa-jXW"/>
+                        <outlet property="progressView" destination="QqB-6v-LnH" id="ahx-k8-CST"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aJZ-mN-tJD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="7HE-qV-PEL"/>
+            </objects>
+            <point key="canvasLocation" x="2040.4580152671756" y="-2.1126760563380285"/>
+        </scene>
+        <!--Device Added View Controller-->
+        <scene sceneID="s0D-ro-qFv">
+            <objects>
+                <tapGestureRecognizer id="Amm-Uf-4ty"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HXs-GV-eZ4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="DeviceAddedViewController" id="xMd-HP-0iJ" customClass="DeviceAddedViewController" customModule="LedLamp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ehr-Th-QgY">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ft5-7Y-mCi">
+                                <rect key="frame" x="299" y="59" width="94" height="54"/>
+                                <inset key="contentEdgeInsets" minX="50" minY="10" maxX="20" maxY="20"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="close"/>
+                                <connections>
+                                    <action selector="closeBtn:" destination="xMd-HP-0iJ" eventType="touchUpInside" id="Jfp-Eg-FiD"/>
+                                    <action selector="closeButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="c70-Dd-VEw"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="“Device name” added to DevHome" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amF-3j-SeS">
+                                <rect key="frame" x="16" y="86" width="313" height="83.333333333333314"/>
+                                <fontDescription key="fontDescription" name="ChakraPetch-Medium" family="Chakra Petch" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="livingroom" translatesAutoresizingMaskIntoConstraints="NO" id="EzD-8V-8Qf">
+                                <rect key="frame" x="15" y="185.33333333333337" width="362" height="200"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="saw-Pl-XEF">
+                                <rect key="frame" x="14" y="409.33333333333331" width="364" height="72"/>
+                                <color key="backgroundColor" name="Background(#222222)"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="fnW-2F-tfD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ChakraPetch-Medium" family="Chakra Petch" pointSize="15"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="doneBtnDidTap:" destination="xMd-HP-0iJ" eventType="touchUpInside" id="lzl-SZ-Mps"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qy7-BU-tXm"/>
+                        <color key="backgroundColor" name="BottomShit(#747474)"/>
+                        <color key="tintColor" name="BottomShit(#747474)"/>
+                        <constraints>
+                            <constraint firstItem="ft5-7Y-mCi" firstAttribute="top" secondItem="qy7-BU-tXm" secondAttribute="top" id="2ON-L5-3J4"/>
+                            <constraint firstItem="qy7-BU-tXm" firstAttribute="trailing" secondItem="saw-Pl-XEF" secondAttribute="trailing" constant="15" id="Gxs-FC-zAl"/>
+                            <constraint firstItem="EzD-8V-8Qf" firstAttribute="top" secondItem="amF-3j-SeS" secondAttribute="bottom" constant="16" id="KJ6-an-uk3"/>
+                            <constraint firstItem="EzD-8V-8Qf" firstAttribute="height" secondItem="ehr-Th-QgY" secondAttribute="height" multiplier="0.234742" id="MpN-N0-mWl"/>
+                            <constraint firstItem="saw-Pl-XEF" firstAttribute="leading" secondItem="qy7-BU-tXm" secondAttribute="leading" constant="14" id="Y1T-m9-8tY"/>
+                            <constraint firstItem="EzD-8V-8Qf" firstAttribute="leading" secondItem="qy7-BU-tXm" secondAttribute="leading" constant="15" id="Ze3-Q5-1b4"/>
+                            <constraint firstItem="qy7-BU-tXm" firstAttribute="trailing" secondItem="ft5-7Y-mCi" secondAttribute="trailing" id="dIx-dH-GwP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="amF-3j-SeS" secondAttribute="trailing" constant="48" id="hkd-XC-NPi"/>
+                            <constraint firstItem="saw-Pl-XEF" firstAttribute="top" secondItem="EzD-8V-8Qf" secondAttribute="bottom" constant="24" id="iNQ-0s-060"/>
+                            <constraint firstItem="amF-3j-SeS" firstAttribute="top" secondItem="qy7-BU-tXm" secondAttribute="top" constant="27" id="kMj-tQ-xSc"/>
+                            <constraint firstItem="qy7-BU-tXm" firstAttribute="trailing" secondItem="EzD-8V-8Qf" secondAttribute="trailing" constant="16" id="n8U-vm-CEH"/>
+                            <constraint firstItem="amF-3j-SeS" firstAttribute="leading" secondItem="qy7-BU-tXm" secondAttribute="leading" constant="16" id="olw-u2-oYf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="deviceAddedLabel" destination="amF-3j-SeS" id="oae-91-015"/>
+                        <outlet property="doneButton" destination="saw-Pl-XEF" id="aGJ-Od-G9O"/>
+                        <outlet property="livingroomImage" destination="EzD-8V-8Qf" id="uVn-Ay-Rh7"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1075.5725190839694" y="710.56338028169023"/>
         </scene>
     </scenes>
     <resources>
+        <image name="addBtn" width="52" height="52"/>
         <image name="close" width="24" height="24"/>
+        <image name="lamp2" width="299.66665649414062" height="296.33334350585938"/>
+        <image name="livingroom" width="359" height="200"/>
         <image name="moreOptionBtn" width="52" height="52"/>
         <image name="qrCodeScan" width="24" height="24"/>
         <image name="translation" width="24" height="24"/>
