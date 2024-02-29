@@ -27,13 +27,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrCodeScan" translatesAutoresizingMaskIntoConstraints="NO" id="TT0-NG-JcU">
-                                <rect key="frame" x="15.999999999999998" y="412.66666666666669" width="31.333333333333329" height="24"/>
+                                <rect key="frame" x="15.999999999999996" y="404.33333333333331" width="32.666666666666657" height="24"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z0l-0z-ULh">
                                 <rect key="frame" x="30" y="712" width="333" height="72"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More option" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wz3-NE-8xV">
-                                        <rect key="frame" x="28.000000000000007" y="26" width="82.666666666666686" height="20"/>
+                                        <rect key="frame" x="27.999999999999993" y="26" width="81.333333333333314" height="20"/>
                                         <fontDescription key="fontDescription" name="ChakraPetch-Medium" family="Chakra Petch" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -63,29 +63,29 @@
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jb2-z5-VCV">
-                                <rect key="frame" x="16" y="190.66666666666663" width="361" height="202"/>
+                                <rect key="frame" x="16" y="182.33333333333337" width="361" height="202"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="202" id="xjf-wZ-vcj"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan the code or bring your iPhone close to the accessory." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ezV-cK-1Rs">
-                                <rect key="frame" x="16" y="135.66666666666666" width="346" height="39"/>
+                                <rect key="frame" x="16" y="131.33333333333334" width="346" height="35"/>
                                 <fontDescription key="fontDescription" name="ChakraPetch-Regular" family="Chakra Petch" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Kkb-EM-ypk">
-                                <rect key="frame" x="57.333333333333343" y="412.66666666666669" width="305.66666666666663" height="83.666666666666686"/>
+                                <rect key="frame" x="58.666666666666657" y="404.33333333333331" width="304.33333333333337" height="75.666666666666686"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan a Setup code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1c-fm-5Ut">
-                                        <rect key="frame" x="0.0" y="0.0" width="305.66666666666669" height="21"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="304.33333333333331" height="18.666666666666668"/>
                                         <fontDescription key="fontDescription" name="ChakraPetch-Medium" family="Chakra Petch" pointSize="16"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Locate a QR code on the accessory, packaging, or in the instructions, then position it within the camera frame above." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yGE-ke-3vk">
-                                        <rect key="frame" x="0.0" y="28.999999999999996" width="305.66666666666669" height="54.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="26.666666666666686" width="304.33333333333331" height="49"/>
                                         <fontDescription key="fontDescription" name="ChakraPetch-Regular" family="Chakra Petch" pointSize="14"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -93,10 +93,10 @@
                                 </subviews>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="translation" translatesAutoresizingMaskIntoConstraints="NO" id="aaa-rK-3UC">
-                                <rect key="frame" x="16" y="504.33333333333326" width="30" height="24"/>
+                                <rect key="frame" x="15.999999999999996" y="488" width="32.666666666666657" height="24"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Device" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aPe-dB-tnM">
-                                <rect key="frame" x="16" y="86" width="164" height="41.666666666666657"/>
+                                <rect key="frame" x="16" y="86" width="165" height="37.333333333333343"/>
                                 <fontDescription key="fontDescription" name="ChakraPetch-Medium" family="Chakra Petch" pointSize="32"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -111,16 +111,16 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jSR-eU-Qkc">
-                                <rect key="frame" x="56" y="504.33333333333331" width="307" height="65.666666666666686"/>
+                                <rect key="frame" x="58.666666666666657" y="487.99999999999994" width="304.33333333333337" height="59.333333333333314"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bring iPhone close to the accessory" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FZV-U5-hh6">
-                                        <rect key="frame" x="0.0" y="0.0" width="307" height="21"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="304.33333333333331" height="18.666666666666668"/>
                                         <fontDescription key="fontDescription" name="ChakraPetch-Medium" family="Chakra Petch" pointSize="16"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can also place your iPhone near the symbol on the accessory, if available." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFP-je-8sC">
-                                        <rect key="frame" x="0.0" y="29.000000000000053" width="307" height="36.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="26.666666666666625" width="304.33333333333331" height="32.666666666666657"/>
                                         <fontDescription key="fontDescription" name="ChakraPetch-Regular" family="Chakra Petch" pointSize="14"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -196,8 +196,8 @@
                                     <action selector="closeButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="0dZ-5o-Xf8"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lighting device name and location" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="16" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PYz-1l-lJP">
-                                <rect key="frame" x="16" y="86" width="377" height="83.333333333333314"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lighting device name and location" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="16" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PYz-1l-lJP">
+                                <rect key="frame" x="16" y="86" width="337" height="83.333333333333314"/>
                                 <fontDescription key="fontDescription" name="ChakraPetch-Medium" family="Chakra Petch" pointSize="32"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -292,7 +292,7 @@
                             <constraint firstItem="PYz-1l-lJP" firstAttribute="top" secondItem="Uj9-Xs-oM6" secondAttribute="top" constant="27" id="RZk-F7-Loa"/>
                             <constraint firstItem="Uj9-Xs-oM6" firstAttribute="trailing" secondItem="mKA-OC-NX5" secondAttribute="trailing" constant="20" id="atL-Jm-Ar6"/>
                             <constraint firstItem="mKA-OC-NX5" firstAttribute="leading" secondItem="Uj9-Xs-oM6" secondAttribute="leading" constant="16" id="dnP-L9-snc"/>
-                            <constraint firstItem="Uj9-Xs-oM6" firstAttribute="trailing" secondItem="PYz-1l-lJP" secondAttribute="trailing" id="gYl-Di-kUG"/>
+                            <constraint firstItem="Uj9-Xs-oM6" firstAttribute="trailing" secondItem="PYz-1l-lJP" secondAttribute="trailing" constant="40" id="gYl-Di-kUG"/>
                             <constraint firstItem="o0e-MR-dNT" firstAttribute="top" secondItem="Uj9-Xs-oM6" secondAttribute="top" id="jCl-A9-8zh"/>
                             <constraint firstItem="Uj9-Xs-oM6" firstAttribute="trailing" secondItem="o9t-yS-rS1" secondAttribute="trailing" id="l6m-tW-mtL"/>
                             <constraint firstItem="Uj9-Xs-oM6" firstAttribute="trailing" secondItem="NTy-bM-P9d" secondAttribute="trailing" constant="20" id="lM2-jy-YaB"/>
@@ -309,6 +309,7 @@
                         <outlet property="lightingDevicaLabel" destination="PYz-1l-lJP" id="nsi-hq-WoM"/>
                         <outlet property="locationCollectionView" destination="o9t-yS-rS1" id="zwD-bJ-tHO"/>
                         <outlet property="locationLabel" destination="NTy-bM-P9d" id="IeN-B9-hYb"/>
+                        <outlet property="nextButton" destination="2k9-Di-Y6F" id="Pdg-Tu-Ogg"/>
                         <outlet property="nextLabel" destination="Swd-nf-aMH" id="UcM-jB-2vD"/>
                         <outlet property="textFieldName" destination="lsP-qa-R1Q" id="KR8-Lg-Y2w"/>
                     </connections>
@@ -428,7 +429,7 @@
                                     <action selector="closeButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="UqE-4E-KBa"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сonnection to the lighting device" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MDs-C8-YNd">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сonnection to the lighting device" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MDs-C8-YNd">
                                 <rect key="frame" x="16" y="86" width="276.33333333333331" height="83.333333333333314"/>
                                 <fontDescription key="fontDescription" name="ChakraPetch-Medium" family="Chakra Petch" pointSize="32"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -489,8 +490,6 @@
         <!--Device Added View Controller-->
         <scene sceneID="s0D-ro-qFv">
             <objects>
-                <tapGestureRecognizer id="Amm-Uf-4ty"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HXs-GV-eZ4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="DeviceAddedViewController" id="xMd-HP-0iJ" customClass="DeviceAddedViewController" customModule="LedLamp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ehr-Th-QgY">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
@@ -513,10 +512,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="livingroom" translatesAutoresizingMaskIntoConstraints="NO" id="EzD-8V-8Qf">
-                                <rect key="frame" x="15" y="185.33333333333337" width="362" height="200"/>
+                                <rect key="frame" x="15" y="185.33333333333334" width="362" height="366.33333333333326"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="saw-Pl-XEF">
-                                <rect key="frame" x="14" y="409.33333333333331" width="364" height="72"/>
+                                <rect key="frame" x="14" y="575.66666666666663" width="364" height="72"/>
                                 <color key="backgroundColor" name="Background(#222222)"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="72" id="fnW-2F-tfD"/>
@@ -538,7 +537,7 @@
                             <constraint firstItem="ft5-7Y-mCi" firstAttribute="top" secondItem="qy7-BU-tXm" secondAttribute="top" id="2ON-L5-3J4"/>
                             <constraint firstItem="qy7-BU-tXm" firstAttribute="trailing" secondItem="saw-Pl-XEF" secondAttribute="trailing" constant="15" id="Gxs-FC-zAl"/>
                             <constraint firstItem="EzD-8V-8Qf" firstAttribute="top" secondItem="amF-3j-SeS" secondAttribute="bottom" constant="16" id="KJ6-an-uk3"/>
-                            <constraint firstItem="EzD-8V-8Qf" firstAttribute="height" secondItem="ehr-Th-QgY" secondAttribute="height" multiplier="0.234742" id="MpN-N0-mWl"/>
+                            <constraint firstItem="EzD-8V-8Qf" firstAttribute="height" secondItem="ehr-Th-QgY" secondAttribute="height" multiplier="0.43" id="MpN-N0-mWl"/>
                             <constraint firstItem="saw-Pl-XEF" firstAttribute="leading" secondItem="qy7-BU-tXm" secondAttribute="leading" constant="14" id="Y1T-m9-8tY"/>
                             <constraint firstItem="EzD-8V-8Qf" firstAttribute="leading" secondItem="qy7-BU-tXm" secondAttribute="leading" constant="15" id="Ze3-Q5-1b4"/>
                             <constraint firstItem="qy7-BU-tXm" firstAttribute="trailing" secondItem="ft5-7Y-mCi" secondAttribute="trailing" id="dIx-dH-GwP"/>
@@ -555,6 +554,8 @@
                         <outlet property="livingroomImage" destination="EzD-8V-8Qf" id="uVn-Ay-Rh7"/>
                     </connections>
                 </viewController>
+                <tapGestureRecognizer id="Amm-Uf-4ty"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HXs-GV-eZ4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1075.5725190839694" y="710.56338028169023"/>
         </scene>

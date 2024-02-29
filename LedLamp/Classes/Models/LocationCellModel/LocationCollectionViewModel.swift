@@ -16,13 +16,13 @@ enum LocationCollectionViewModel: CaseIterable {
     var titel: String {
         switch self {
         case .livingroom:
-        return "Living room"
+            return "livingRoom".localized
         case .bedroom:
-            return "Bedroom"
+            return "bedroom".localized
         case .kitchen:
-            return "Kitchen"
+            return "kitchen".localized
         case .bathroom:
-            return "Bathroom"
+            return "bathroom".localized
         }
     }
 }

@@ -29,7 +29,8 @@ class MainViewController: UIViewController {
     }
   
     @IBAction func addLightButtonDidTap(_ sender: Any) {
-        let entrance = UIStoryboard(name: "ScanDeviceView", bundle: nil).instantiateViewController(identifier: "ScanDeviceView")
+        let entrance = UIStoryboard(name: "ScanDeviceView", bundle: nil).instantiateViewController(identifier: "DeviceNameLocationViewController")
+        presentBottomSheetInsideNavigationController(viewController: <#T##UIViewController#>, configuration: <#T##BottomSheetConfiguration#>)
         presentBottomSheet(
             viewController: entrance,
             configuration: BottomSheetConfiguration(

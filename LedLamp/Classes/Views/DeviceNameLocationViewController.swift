@@ -7,9 +7,12 @@
 
 import UIKit
 import IQKeyboardManagerSwift
+import BottomSheet
+
 
 class DeviceNameLocationViewController: UIViewController {
    
+    @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var locationCollectionView: UICollectionView!
     @IBOutlet weak var nextLabel: UILabel!
     @IBOutlet weak var backgroundNextView: UIView!
@@ -19,9 +22,12 @@ class DeviceNameLocationViewController: UIViewController {
     @IBOutlet weak var lightingDevicaLabel: UILabel!
     
     let items = LocationCollectionViewModel.allCases
+    var selectedIndex: Int?
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        textFieldName.delegate = self
         preferredContentSize = .init(width: view.frame.width, height: 503)
         nextLabel.text = "next".localized
         locationLabel.text = "whereDeviceLocated".localized
@@ -47,14 +53,33 @@ class DeviceNameLocationViewController: UIViewController {
         
     }
     @IBAction func nextBtnDidTap(_ sender: Any) {
+        let entrance = UIStoryboard(name: "ScanDeviceView", bundle: nil).instantiateViewController(identifier: "DeviceAddedViewController")
+//        self.presentingViewController?.dismiss(animated: true, completion: nil)
+        presentBottomSheet(
+            viewController: entrance,
+            configuration: BottomSheetConfiguration(
+                cornerRadius: 40,
+                pullBarConfiguration: .hidden,
+                shadowConfiguration: .default
+            )
+        )
     }
     
     @IBAction func closeBtnDidTap(_ sender: Any) {
         self.dismiss(animated: true)
     }
     
-    
-
+    func activateNextBtn() {
+        if textFieldName.text != nil, textFieldName.text?.isEmpty == false && selectedIndex != nil {
+            nextLabel.textColor = UIColor.white
+            backgroundNextView.backgroundColor = UIColor(red: 34/255, green: 34/255, blue: 34/255, alpha: 1)
+            nextButton.isEnabled = true
+        } else {
+            nextLabel.textColor = UIColor(red: 158/255, green: 158/255, blue: 158/255, alpha: 1)
+            backgroundNextView.backgroundColor = UIColor(red: 34/255, green: 34/255, blue: 34/255, alpha: 0.6)
+            nextButton.isEnabled = false
+        }
+    }
 }
 
 extension DeviceNameLocationViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
@@ -73,12 +98,26 @@ extension DeviceNameLocationViewController: UICollectionViewDelegateFlowLayout, 
         return UIEdgeInsets(top: 8, left: 16, bottom: 8, right: 8)
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectedIndex = indexPath.row
+        collectionView.reloadData()
+        activateNextBtn()
+    }
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let item = items[indexPath.row]
         let cell = locationCollectionView.dequeueReusableCell(withReuseIdentifier: "DeviceLocationCell", for: indexPath)
-        (cell as? DeviceLocationCell)?.configure(locationName: item.titel)
+        let backgroundColor = indexPath.row == selectedIndex ? UIColor.white : UIColor(red: 116/255, green: 116/255, blue: 116/255, alpha: 1)
+        let labelColor = indexPath.row == selectedIndex ? UIColor(red: 34/255, green: 34/255, blue: 34/255, alpha: 1) : UIColor.white
+        (cell as? DeviceLocationCell)?.configure(locationName: item.titel, backgroundLocationView: backgroundColor, labelColor: labelColor)
         return cell
     }
 }
+
+extension DeviceNameLocationViewController: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        activateNextBtn()
+}
+    }
+

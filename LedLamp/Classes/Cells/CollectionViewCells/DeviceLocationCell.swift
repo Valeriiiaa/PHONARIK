@@ -21,7 +21,9 @@ class DeviceLocationCell: UICollectionViewCell {
        
     }
     
-    func configure(locationName: String) {
+    func configure(locationName: String, backgroundLocationView: UIColor, labelColor: UIColor) {
         self.locationName.text = locationName
+        self.backgroundLocationView.backgroundColor = backgroundLocationView
+        self.locationName.textColor = labelColor
     }
 }

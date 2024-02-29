@@ -12,6 +12,8 @@ class DeviceAddedViewController: UIViewController {
     @IBOutlet weak var livingroomImage: UIImageView!
     @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var deviceAddedLabel: UILabel!
+    
+    var deviceName = ""
   
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +21,8 @@ class DeviceAddedViewController: UIViewController {
         doneButton.layer.cornerRadius = 30
         doneButton.layer.masksToBounds = true
         doneButton.setTitle("done".localized, for: .normal)
-        deviceAddedLabel.text = "deviceAdded".localized
+        deviceAddedLabel.text = #"""# +  "\(deviceName)" + #"""# + "deviceAdded".localized
+        
     }
     
     @IBAction func closeBtn(_ sender: Any) {
