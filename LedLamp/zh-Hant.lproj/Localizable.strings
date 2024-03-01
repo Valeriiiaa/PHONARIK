@@ -74,3 +74,9 @@
 //collection
 "collection" = "收藏";
 "devicesConnected" = "设备已连接";
+
+//coloPicker
+"saturation" = "饱和度";
+"brightness" = "亮度";
+"plinth" = "基座";
+"intensity" = "强度";

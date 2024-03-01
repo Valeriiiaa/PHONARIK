@@ -75,4 +75,10 @@
 "collection" = "Collection";
 "devicesConnected" = "devices connected";
 
+//colorPicker
+"saturation" = "Saturation";
+"brightness" = "Brightness";
+"plinth" = "Plinth:";
+"intensity" = "Intensity:";
+
 

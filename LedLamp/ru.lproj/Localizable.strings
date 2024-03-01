@@ -66,3 +66,9 @@
 "collection" = "Коллекция";
 "devicesConnected" = "Подключенные устройства";
 
+
+//coloPicker
+"saturation" = "Насыщенность";
+"brightness" = "Яркость";
+"plinth" = "Цоколь:";
+"intensity" = "Интенсивность:";

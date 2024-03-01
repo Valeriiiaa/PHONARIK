@@ -73,3 +73,9 @@
 //collection
 "collection" = "Sammlung";
 "devicesConnected" = "Verbundene Geräte";
+
+//coloPicker
+"saturation" = "Sättigung";
+"brightness" = "Helligkeit";
+"plinth" = "Sockel:";
+"intensity" = "Intensität:";
