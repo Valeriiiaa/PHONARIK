@@ -23,11 +23,9 @@ class DeviceNameLocationViewController: UIViewController {
     
     let items = LocationCollectionViewModel.allCases
     var selectedIndex: Int?
-   
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        textFieldName.delegate = self
         preferredContentSize = .init(width: view.frame.width, height: 503)
         nextLabel.text = "next".localized
         locationLabel.text = "whereDeviceLocated".localized
@@ -41,6 +39,8 @@ class DeviceNameLocationViewController: UIViewController {
         textFieldName.textColor = UIColor(red: 195/255, green: 195/255, blue: 195/255, alpha: 1)
         textFieldName.font = UIFont(name: "ChakraPetch-Regular", size: 16)
         textFieldName.tintColor = UIColor.white
+        textFieldName.iq.enableMode = .disabled
+        textFieldName.iq.toolbar.isHidden = true
         let attributes = [
             NSAttributedString.Key.foregroundColor: UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 0.7),
             NSAttributedString.Key.font : UIFont(name: "ChakraPetch-Regular", size: 16)!
@@ -51,18 +51,26 @@ class DeviceNameLocationViewController: UIViewController {
         locationCollectionView.dataSource = self
         locationCollectionView.register(UINib(nibName: "DeviceLocationCell", bundle: nil),forCellWithReuseIdentifier: "DeviceLocationCell")
         
+        textFieldName.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        
     }
     @IBAction func nextBtnDidTap(_ sender: Any) {
         let entrance = UIStoryboard(name: "ScanDeviceView", bundle: nil).instantiateViewController(identifier: "DeviceAddedViewController")
 //        self.presentingViewController?.dismiss(animated: true, completion: nil)
-        presentBottomSheet(
-            viewController: entrance,
-            configuration: BottomSheetConfiguration(
-                cornerRadius: 40,
-                pullBarConfiguration: .hidden,
-                shadowConfiguration: .default
-            )
-        )
+        navigationController?.setViewControllers([entrance], animated: true)// .pushViewController(entrance, animated: false)
+        
+//        presentBottomSheet(
+//            viewController: entrance,
+//            configuration: BottomSheetConfiguration(
+//                cornerRadius: 40,
+//                pullBarConfiguration: .hidden,
+//                shadowConfiguration: .default
+//            )
+//        )
+    }
+    
+    @objc func textFieldDidChange(_ textField: UITextField) {
+        activateNextBtn()
     }
     
     @IBAction func closeBtnDidTap(_ sender: Any) {
@@ -114,10 +122,3 @@ extension DeviceNameLocationViewController: UICollectionViewDelegateFlowLayout, 
         return cell
     }
 }
-
-extension DeviceNameLocationViewController: UITextFieldDelegate {
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        activateNextBtn()
-}
-    }
-
