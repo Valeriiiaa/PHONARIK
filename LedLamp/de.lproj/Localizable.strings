@@ -68,7 +68,7 @@
 "disconnect" = "Trennen";
 "youDontHaveRooms" = "Sie haben keine Räume";
 "pleaseInputRoomsName" = "Bitte geben Sie den Namen des Raums ein und wählen Sie ein Hintergrunddesign aus.";
-"deviceName" = "Gerätename";
+"roomName" = "Raumname";
 "wallpaper" = "Wallpaper";
 "addFromGallery" = "Aus der Galerie hinzufügen";
 "OpenCamera" = "Kamera öffnen";

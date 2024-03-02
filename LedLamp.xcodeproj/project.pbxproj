@@ -34,6 +34,7 @@
 		F6B176DC2B91EA4300932231 /* MainScreenCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6B176DB2B91EA4300932231 /* MainScreenCell.xib */; };
 		F6B176DF2B91EA5400932231 /* MainScreenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B176DE2B91EA5400932231 /* MainScreenCell.swift */; };
 		F6B176E12B91EED400932231 /* ColorPicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6B176E02B91EED400932231 /* ColorPicker.storyboard */; };
+		F6B8B8462B938F68001FE671 /* ChoosenRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B8B8452B938F68001FE671 /* ChoosenRoomViewController.swift */; };
 		F6E415A92B9076E600D8B418 /* LightingDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E415A82B9076E600D8B418 /* LightingDeviceViewController.swift */; };
 		F6E415AB2B907A3600D8B418 /* ConnectionDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E415AA2B907A3600D8B418 /* ConnectionDeviceViewController.swift */; };
 		F6EB00F82B8C9FBB005139CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EB00F72B8C9FBB005139CC /* AppDelegate.swift */; };
@@ -111,6 +112,7 @@
 		F6B176DB2B91EA4300932231 /* MainScreenCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainScreenCell.xib; sourceTree = "<group>"; };
 		F6B176DE2B91EA5400932231 /* MainScreenCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenCell.swift; sourceTree = "<group>"; };
 		F6B176E02B91EED400932231 /* ColorPicker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ColorPicker.storyboard; sourceTree = "<group>"; };
+		F6B8B8452B938F68001FE671 /* ChoosenRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosenRoomViewController.swift; sourceTree = "<group>"; };
 		F6E415A82B9076E600D8B418 /* LightingDeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightingDeviceViewController.swift; sourceTree = "<group>"; };
 		F6E415AA2B907A3600D8B418 /* ConnectionDeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionDeviceViewController.swift; sourceTree = "<group>"; };
 		F6EB00F42B8C9FBB005139CC /* LedLamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LedLamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -190,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				F6505C562B9372C100D47128 /* AddRoomViewController.swift */,
+				F6B8B8452B938F68001FE671 /* ChoosenRoomViewController.swift */,
 			);
 			path = Rooms;
 			sourceTree = "<group>";
@@ -597,6 +600,7 @@
 				F6EB00F82B8C9FBB005139CC /* AppDelegate.swift in Sources */,
 				F6F827642B90820000F1BB61 /* LocationCollectionViewModel.swift in Sources */,
 				F6A0BC1A2B8CA5DC0084A0E8 /* SettingsCell.swift in Sources */,
+				F6B8B8462B938F68001FE671 /* ChoosenRoomViewController.swift in Sources */,
 				F6F827692B9089B900F1BB61 /* DeviceAddedViewController.swift in Sources */,
 				F6A0BC3C2B8E450C0084A0E8 /* ScanDeviceView.swift in Sources */,
 				F6E415AB2B907A3600D8B418 /* ConnectionDeviceViewController.swift in Sources */,
@@ -804,6 +808,7 @@
 				DEVELOPMENT_TEAM = 6NNWR2JHQ8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LedLamp/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Qr code scanner";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -833,6 +838,7 @@
 				DEVELOPMENT_TEAM = 6NNWR2JHQ8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LedLamp/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Qr code scanner";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;

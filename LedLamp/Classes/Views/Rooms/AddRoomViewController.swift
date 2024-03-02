@@ -6,8 +6,13 @@
 //
 
 import UIKit
+import BottomSheet
 
-class AddRoomViewController: UIViewController {
+class AddRoomViewController: UIViewController, UITextFieldDelegate {
+   
+    @IBOutlet weak var openCameraButton: UIButton!
+    @IBOutlet weak var galleryButton: UIButton!
+    @IBOutlet weak var collectionButton: UIButton!
     @IBOutlet weak var openCameraView: UIView!
     @IBOutlet weak var openCamerLabel: UILabel!
     @IBOutlet weak var addFromGalleryLabel: UILabel!
@@ -32,6 +37,11 @@ class AddRoomViewController: UIViewController {
         wallpaperLabel.text = "wallpaper".localized
         pleaseInputLabel.text = "pleaseInputRoomsName".localized
         addRoomLabel.text = "addRoom".localized
+        textFieldNameDevice.delegate = self
+        
+        [openCameraView, galleryView, collectionView].forEach({ item in
+            item?.isUserInteractionEnabled = false
+        })
         
         textFieldNameDevice.layer.cornerRadius = 30
         textFieldNameDevice.layer.masksToBounds = true
@@ -45,20 +55,71 @@ class AddRoomViewController: UIViewController {
             NSAttributedString.Key.font : UIFont(name: "ChakraPetch-Regular", size: 16)!
         ]
 
-        textFieldNameDevice.attributedPlaceholder = NSAttributedString(string: "deviceName".localized, attributes:attributes)
-       
+        textFieldNameDevice.attributedPlaceholder = NSAttributedString(string: "roomName".localized, attributes:attributes)
+        
+        textFieldNameDevice.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+    }
+    
+    private func pushToNext(with image: UIImage) {
+        let entrance = UIStoryboard(name: "RoomBottomSheets", bundle: nil).instantiateViewController(identifier: "ChoosenRoomViewController")
+        (entrance as? ChoosenRoomViewController)?.roomsName = textFieldNameDevice.text ?? ""
+        (entrance as? ChoosenRoomViewController)?.imageRoom = image
+        presentBottomSheet(viewController: entrance, configuration: BottomSheetConfiguration(
+            cornerRadius: 40,
+            pullBarConfiguration: .hidden,
+            shadowConfiguration: .init(backgroundColor: UIColor(red: 34/255, green: 34/255, blue: 34/255, alpha: 0.46), blur: .regular)
+        ))
+    }
+    
+    @objc func textFieldDidChange(_ textField: UITextField) {
+        if textFieldNameDevice.text != nil, textFieldNameDevice.text?.isEmpty == false {
+            [openCameraView, galleryView, collectionView].forEach({ item in
+                item?.isUserInteractionEnabled = true
+            })
+        } else {
+            [openCameraView, galleryView, collectionView].forEach({ item in
+                item?.isUserInteractionEnabled = false
+            })
+        }
     }
    
     @IBAction func openCamerBtnDidTap(_ sender: Any) {
+        let cameraVc = UIImagePickerController()
+        cameraVc.sourceType = UIImagePickerController.SourceType.camera
+        cameraVc.delegate = self
+        self.present(cameraVc, animated: true, completion: nil)
     }
    
     @IBAction func openGalleryBtnDidTap(_ sender: Any) {
-    }
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = .photoLibrary
+        present(imagePicker, animated: true, completion: nil
+        )}
+    
    
     @IBAction func collectionBtnDidTap(_ sender: Any) {
+        pushToNext(with: UIImage())
     }
     
     @IBAction func closeBtnDidTap(_ sender: Any) {
         self.dismiss(animated: true)
+    }
+}
+
+extension AddRoomViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        var newImage: UIImage
+        if let possibleImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
+            newImage = possibleImage
+        } else if let possibleImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            newImage = possibleImage
+        } else {
+            return
+        }
+        
+        self.dismiss(animated: true, completion: nil)
+        
+        pushToNext(with: newImage)
     }
 }

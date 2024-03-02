@@ -67,7 +67,7 @@
 "disconnect" = "Disconnetti";
 "youDontHaveRooms" = "Non hai stanze";
 "pleaseInputRoomsName" = "Per favore inserisci il nome della stanza e scegli un design della carta da parati.";
-"deviceName" = "Nome del dispositivo";
+"roomName" = "Nome della stanza";
 "wallpaper" = "Wallpaper";
 "addFromGallery" = "Aggiungi dalla galleria";
 "OpenCamera" = "Apri la fotocamera";

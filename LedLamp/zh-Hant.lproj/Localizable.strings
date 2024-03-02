@@ -70,7 +70,7 @@
 "disconnect" = "断开连接";
 "youDontHaveRooms" = "您没有任何房间";
 "pleaseInputRoomsName" = "请输入房间名称并选择壁纸设计。";
-"deviceName" = "设备名称";
+"roomName" = "房间名称";
 "wallpaper" = "Wallpaper";
 "addFromGallery" = "从相册添加";
 "OpenCamera" = "打开相机";

@@ -63,7 +63,7 @@
 "disconnect" = "Desconectar";
 "youDontHaveRooms" = "No tienes ninguna habitación";
 "pleaseInputRoomsName" = "Ingrese el nombre de la habitación y elija un diseño de fondo.";
-"deviceName" = "Nombre del dispositivo";
+"roomName" = "Nombre de la habitación";
 "wallpaper" = "Wallpaper";
 "addFromGallery" = "Agregar desde la galería";
 "OpenCamera" = "Abrir cámara";

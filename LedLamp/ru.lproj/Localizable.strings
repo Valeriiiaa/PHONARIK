@@ -36,6 +36,7 @@
 "add" = "Добавить";
 "showSelected" = "Показать выбранное";
 "selectLight" = "Выбрать свет";
+"roomName" = "Название комнаты";
 "wallpaper" = "Обои";
 "addFromGallery" = "Добавить из галереи";
 "OpenCamera" = "Открыть камеру";

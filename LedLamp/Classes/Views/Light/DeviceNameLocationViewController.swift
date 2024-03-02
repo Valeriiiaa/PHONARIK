@@ -57,6 +57,7 @@ class DeviceNameLocationViewController: UIViewController {
     }
     @IBAction func nextBtnDidTap(_ sender: Any) {
         let entrance = UIStoryboard(name: "ScanDeviceView", bundle: nil).instantiateViewController(identifier: "DeviceAddedViewController")
+        (entrance as? DeviceAddedViewController)?.deviceName = textFieldName.text ?? ""
         navigationController?.setViewControllers([entrance], animated: true)
     }
     

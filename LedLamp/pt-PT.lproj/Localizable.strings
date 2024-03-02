@@ -69,7 +69,7 @@
 "disconnect" = "Desconectar";
 "youDontHaveRooms" = "Você não tem nenhum quarto";
 "pleaseInputRoomsName" = "Por favor, insira o nome do quarto e escolha um design de papel de parede.";
-"deviceName" = "Nome do Dispositivo";
+"roomName" = "Nome do quarto";
 "wallpaper" = "Wallpaper";
 "addFromGallery" = "Adicionar da galeria";
 "OpenCamera" = "Abrir câmera";

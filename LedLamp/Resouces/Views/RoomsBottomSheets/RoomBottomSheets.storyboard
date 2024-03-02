@@ -212,10 +212,13 @@
                     <connections>
                         <outlet property="addFromGalleryLabel" destination="8Hr-b2-VCu" id="Atb-e2-1eV"/>
                         <outlet property="addRoomLabel" destination="4H2-HI-EWX" id="EuH-6A-t3d"/>
+                        <outlet property="collectionButton" destination="bb4-g6-2E0" id="fJA-ah-wUr"/>
                         <outlet property="collectionLabel" destination="syg-OG-F1e" id="pKa-P6-ZrD"/>
                         <outlet property="collectionView" destination="YPn-1l-uJw" id="4lY-xa-ASb"/>
+                        <outlet property="galleryButton" destination="3pr-iQ-PK6" id="acO-7U-o2f"/>
                         <outlet property="galleryView" destination="fc9-fV-uBZ" id="x77-zn-Mie"/>
                         <outlet property="openCamerLabel" destination="B3P-Y0-pjJ" id="K89-je-EEy"/>
+                        <outlet property="openCameraButton" destination="Mzv-sf-wZI" id="EOr-gK-tTG"/>
                         <outlet property="openCameraView" destination="27e-gU-rwf" id="6uP-Cd-qtf"/>
                         <outlet property="pleaseInputLabel" destination="9gn-X2-Y51" id="Ym7-YW-XDB"/>
                         <outlet property="textFieldNameDevice" destination="uVM-tR-Xcb" id="ieV-Ig-vOc"/>
@@ -241,13 +244,88 @@
             </objects>
             <point key="canvasLocation" x="101.5267175572519" y="3.5211267605633805"/>
         </scene>
+        <!--Choosen Room View Controller-->
+        <scene sceneID="U2F-nv-iGp">
+            <objects>
+                <viewController storyboardIdentifier="ChoosenRoomViewController" id="G5a-8e-Fsm" customClass="ChoosenRoomViewController" customModule="LedLamp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7Gt-Ng-eKk">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g63-us-oZc">
+                                <rect key="frame" x="299" y="59" width="94" height="54"/>
+                                <inset key="contentEdgeInsets" minX="50" minY="10" maxX="20" maxY="20"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="close"/>
+                                <connections>
+                                    <action selector="closeBtnDidTap:" destination="G5a-8e-Fsm" eventType="touchUpInside" id="adX-Ru-wJ5"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Living room" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXC-be-YDX">
+                                <rect key="frame" x="16" y="86" width="313" height="41.666666666666657"/>
+                                <fontDescription key="fontDescription" name="ChakraPetch-Medium" family="Chakra Petch" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="livingroom" translatesAutoresizingMaskIntoConstraints="NO" id="xFx-hf-lCT">
+                                <rect key="frame" x="15" y="143.66666666666666" width="362" height="366.33333333333337"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fxa-ib-lhV">
+                                <rect key="frame" x="14" y="534" width="364" height="72"/>
+                                <color key="backgroundColor" name="Background(#222222)"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="1LK-Ds-KHh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ChakraPetch-Medium" family="Chakra Petch" pointSize="15"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveButtonDidTap:" destination="G5a-8e-Fsm" eventType="touchUpInside" id="gFS-Ff-pzT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="UTg-5c-SMP"/>
+                        <color key="backgroundColor" name="BottomShit(#747474)"/>
+                        <color key="tintColor" name="BottomShit(#747474)"/>
+                        <constraints>
+                            <constraint firstItem="g63-us-oZc" firstAttribute="top" secondItem="UTg-5c-SMP" secondAttribute="top" id="60o-0z-xkG"/>
+                            <constraint firstItem="UTg-5c-SMP" firstAttribute="trailing" secondItem="g63-us-oZc" secondAttribute="trailing" id="8Se-bZ-crZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nXC-be-YDX" secondAttribute="trailing" constant="48" id="A1b-ea-Sn8"/>
+                            <constraint firstItem="xFx-hf-lCT" firstAttribute="top" secondItem="nXC-be-YDX" secondAttribute="bottom" constant="16" id="ARF-XG-qRX"/>
+                            <constraint firstItem="xFx-hf-lCT" firstAttribute="leading" secondItem="UTg-5c-SMP" secondAttribute="leading" constant="15" id="JoQ-bM-7Cd"/>
+                            <constraint firstItem="nXC-be-YDX" firstAttribute="leading" secondItem="UTg-5c-SMP" secondAttribute="leading" constant="16" id="MC8-Zu-Awf"/>
+                            <constraint firstItem="UTg-5c-SMP" firstAttribute="trailing" secondItem="fxa-ib-lhV" secondAttribute="trailing" constant="15" id="Q8R-6k-ZRE"/>
+                            <constraint firstItem="nXC-be-YDX" firstAttribute="top" secondItem="UTg-5c-SMP" secondAttribute="top" constant="27" id="g7T-gO-JLV"/>
+                            <constraint firstItem="UTg-5c-SMP" firstAttribute="trailing" secondItem="xFx-hf-lCT" secondAttribute="trailing" constant="16" id="had-Lz-P1b"/>
+                            <constraint firstItem="xFx-hf-lCT" firstAttribute="height" secondItem="7Gt-Ng-eKk" secondAttribute="height" multiplier="0.43" id="klz-XK-cx2"/>
+                            <constraint firstItem="fxa-ib-lhV" firstAttribute="top" secondItem="xFx-hf-lCT" secondAttribute="bottom" constant="24" id="oov-Hk-7zn"/>
+                            <constraint firstItem="fxa-ib-lhV" firstAttribute="leading" secondItem="UTg-5c-SMP" secondAttribute="leading" constant="14" id="qWu-t5-b9p"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="roomImage" destination="xFx-hf-lCT" id="nmP-5t-j3w"/>
+                        <outlet property="roomName" destination="nXC-be-YDX" id="U6p-Zr-RH1"/>
+                        <outlet property="saveButton" destination="fxa-ib-lhV" id="a0H-5t-jYS"/>
+                    </connections>
+                </viewController>
+                <tapGestureRecognizer id="Eve-zI-Eoc"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cBV-PS-qFn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1080" y="4"/>
+        </scene>
     </scenes>
     <resources>
         <image name="arrowWhiteAhead" width="9.6666669845581055" height="17.666666030883789"/>
         <image name="close" width="24" height="24"/>
         <image name="collection" width="24" height="24"/>
         <image name="gallery" width="24" height="24"/>
+        <image name="livingroom" width="359" height="200"/>
         <image name="openCamera" width="24" height="24"/>
+        <namedColor name="Background(#222222)">
+            <color red="0.13300000131130219" green="0.13300000131130219" blue="0.13300000131130219" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="BottomShit(#747474)">
             <color red="0.45500001311302185" green="0.45500001311302185" blue="0.45500001311302185" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
