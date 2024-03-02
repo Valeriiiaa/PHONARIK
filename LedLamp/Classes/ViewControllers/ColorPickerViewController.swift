@@ -46,6 +46,5 @@ class ColorPickerViewController: UIViewController {
     
     @IBAction func menuBtnDidTap(_ sender: Any) {
         
-    }
-    
+    }    
 }

@@ -35,6 +35,8 @@
 "addRoom" = "Agregar habitación";
 "add" = "Agregar";
 "showSelected" = "Mostrar seleccionado";
+"selectLight" = "Seleccionar luz";
+
 
 "youDontHaveLight" = "No tienes ninguna luz inteligente";
 "brightenYourEnv" = "Ilumina tu entorno: gestión de lámparas LED";
@@ -62,6 +64,9 @@
 "youDontHaveRooms" = "No tienes ninguna habitación";
 "pleaseInputRoomsName" = "Ingrese el nombre de la habitación y elija un diseño de fondo.";
 "deviceName" = "Nombre del dispositivo";
+"wallpaper" = "Wallpaper";
+"addFromGallery" = "Agregar desde la galería";
+"OpenCamera" = "Abrir cámara";
 
 "collection" = "Colección";
 "devicesConnected" = "Dispositivos conectados";
@@ -71,3 +76,11 @@
 "brightness" = "Brillo";
 "plinth" = "Plinto:";
 "intensity" = "Intensidad:";
+
+//player
+"selectYourMusicSource" = "Selecciona tu fuente de música";
+"musicOnIphone" = "Música en el iPhone";
+"syncWithMusic" = "Sincronizar con la música";
+"playbackLight" = "Reflejo de la luz de reproducción";
+"thisFeatureWorks" = "Esta función funciona a través del micrófono de tu iPhone.";
+"pressPlay" = "Presiona “Reproducir” y acerca tu teléfono a la fuente de sonido.";

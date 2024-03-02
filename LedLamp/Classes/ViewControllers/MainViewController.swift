@@ -36,7 +36,6 @@ class MainViewController: UIViewController {
             shadowConfiguration: .init(backgroundColor: UIColor(red: 34/255, green: 34/255, blue: 34/255, alpha: 0.46), blur: .regular)
         ))
         navigationContorller.navigationBar.isHidden = true
-//        navigationContorller.tabBarObservedScrollView?.backgroundColor = .red
         navigationContorller.view.backgroundColor = UIColor(red: 116/255, green: 116/255, blue: 116/255, alpha: 1)
         presentBottomSheet(viewController: navigationContorller, configuration: BottomSheetConfiguration(
             cornerRadius: 40,

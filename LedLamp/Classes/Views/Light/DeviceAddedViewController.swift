@@ -36,6 +36,7 @@ class DeviceAddedViewController: UIViewController {
     
     
     @IBAction func doneBtnDidTap(_ sender: Any) {
+        
     }
     
 }

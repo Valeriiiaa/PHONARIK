@@ -40,6 +40,8 @@
 "addRoom" = "添加房间";
 "add" = "添加";
 "showSelected" = "显示所选";
+"selectLight" = "选择灯光";
+
 
 
 //main
@@ -69,6 +71,9 @@
 "youDontHaveRooms" = "您没有任何房间";
 "pleaseInputRoomsName" = "请输入房间名称并选择壁纸设计。";
 "deviceName" = "设备名称";
+"wallpaper" = "Wallpaper";
+"addFromGallery" = "从相册添加";
+"OpenCamera" = "打开相机";
 
 
 //collection
@@ -80,3 +85,11 @@
 "brightness" = "亮度";
 "plinth" = "基座";
 "intensity" = "强度";
+
+//player
+"selectYourMusicSource" = "选择您的音乐来源";
+"musicOnIphone" = "iPhone 上的音乐";
+"syncWithMusic" = "与音乐同步";
+"playbackLight" = "播放灯光反射";
+"thisFeatureWorks" = "此功能通过您的 iPhone 麦克风工作。";
+"pressPlay" = "按“播放”并将您的手机靠近声源。";

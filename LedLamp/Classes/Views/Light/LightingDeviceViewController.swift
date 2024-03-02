@@ -27,14 +27,7 @@ class LightingDeviceViewController: UIViewController {
     
     @IBAction func addBtnDidTap(_ sender: Any) {
         let entrance = UIStoryboard(name: "ScanDeviceView", bundle: nil).instantiateViewController(identifier: "ConnectionDeviceViewController")
-        presentBottomSheet(
-            viewController: entrance,
-            configuration: BottomSheetConfiguration(
-                cornerRadius: 40,
-                pullBarConfiguration: .hidden,
-                shadowConfiguration: .init(backgroundColor: UIColor(red: 34/255, green: 34/255, blue: 34/255, alpha: 0.46), blur: .regular)
-            )
-        )
+        navigationController?.pushViewController(entrance, animated: true)
     }
    
     @IBAction func closeBtnDidTap(_ sender: Any) {

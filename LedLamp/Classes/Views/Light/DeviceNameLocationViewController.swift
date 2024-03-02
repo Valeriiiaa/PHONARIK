@@ -36,6 +36,7 @@ class DeviceNameLocationViewController: UIViewController {
         backgroundNextView.layer.cornerRadius = 30
         backgroundNextView.layer.masksToBounds = true
         textFieldName.keyboardAppearance =  .dark
+        textFieldName.autocapitalizationType = .sentences
         textFieldName.textColor = UIColor(red: 195/255, green: 195/255, blue: 195/255, alpha: 1)
         textFieldName.font = UIFont(name: "ChakraPetch-Regular", size: 16)
         textFieldName.tintColor = UIColor.white
@@ -56,17 +57,7 @@ class DeviceNameLocationViewController: UIViewController {
     }
     @IBAction func nextBtnDidTap(_ sender: Any) {
         let entrance = UIStoryboard(name: "ScanDeviceView", bundle: nil).instantiateViewController(identifier: "DeviceAddedViewController")
-//        self.presentingViewController?.dismiss(animated: true, completion: nil)
-        navigationController?.setViewControllers([entrance], animated: true)// .pushViewController(entrance, animated: false)
-        
-//        presentBottomSheet(
-//            viewController: entrance,
-//            configuration: BottomSheetConfiguration(
-//                cornerRadius: 40,
-//                pullBarConfiguration: .hidden,
-//                shadowConfiguration: .default
-//            )
-//        )
+        navigationController?.setViewControllers([entrance], animated: true)
     }
     
     @objc func textFieldDidChange(_ textField: UITextField) {

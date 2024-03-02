@@ -40,6 +40,7 @@
 "addRoom" = "Adicionar sala";
 "add" = "Adicionar";
 "showSelected" = "Mostrar Selecionado";
+"selectLight" = "Selecionar luz";
 
 
 //main
@@ -69,6 +70,9 @@
 "youDontHaveRooms" = "Você não tem nenhum quarto";
 "pleaseInputRoomsName" = "Por favor, insira o nome do quarto e escolha um design de papel de parede.";
 "deviceName" = "Nome do Dispositivo";
+"wallpaper" = "Wallpaper";
+"addFromGallery" = "Adicionar da galeria";
+"OpenCamera" = "Abrir câmera";
 
 
 //collection
@@ -80,3 +84,11 @@
 "brightness" = "Brilho";
 "plinth" = "Base:";
 "intensity" = "Intensidade:";
+
+//player
+"selectYourMusicSource" = "Selecione sua fonte de música";
+"musicOnIphone" = "Música no iPhone";
+"syncWithMusic" = "Sincronizar com música";
+"playbackLight" = "Reflexão da luz de reprodução";
+"thisFeatureWorks" = "Essa funcionalidade funciona através do microfone do seu iPhone.";
+"pressPlay" = "Pressione “Reproduzir” e aproxime seu telefone da fonte sonora.";

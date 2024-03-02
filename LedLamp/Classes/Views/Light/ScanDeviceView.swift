@@ -93,10 +93,9 @@ class ScanDeviceView: UIViewController {
     }
     
     @IBAction func moreOptionBtnDidTap(_ sender: Any) {
+        let entrance = UIStoryboard(name: "ScanDeviceView", bundle: nil).instantiateViewController(identifier: "SelectAccessoryViewController")
+        navigationController?.pushViewController(entrance, animated: true)
     }
-    
-    
-
 }
 
 extension ScanDeviceView: AVCaptureMetadataOutputObjectsDelegate {

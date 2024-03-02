@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ChakraPetch-Bold.ttf">
+            <string>ChakraPetch-Bold</string>
+        </array>
+        <array key="ChakraPetch-Medium.ttf">
+            <string>ChakraPetch-Medium</string>
+        </array>
+        <array key="ChakraPetch-Regular.ttf">
+            <string>ChakraPetch-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Add Room View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="AddRoomViewController" id="Y6W-OH-hqX" customClass="AddRoomViewController" customModule="LedLamp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mSG-eu-lz6">
+                                <rect key="frame" x="299" y="59" width="94" height="54"/>
+                                <inset key="contentEdgeInsets" minX="50" minY="10" maxX="20" maxY="20"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="close"/>
+                                <connections>
+                                    <action selector="closeBtnDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="j6n-HF-zlL"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add room" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4H2-HI-EWX">
+                                <rect key="frame" x="15" y="86" width="141.33333333333334" height="41.666666666666657"/>
+                                <fontDescription key="fontDescription" name="ChakraPetch-Medium" family="Chakra Petch" pointSize="32"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please input the room's name and choose a wallpaper design." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9gn-X2-Y51">
+                                <rect key="frame" x="15" y="135.66666666666666" width="346" height="39"/>
+                                <fontDescription key="fontDescription" name="ChakraPetch-Regular" family="Chakra Petch" pointSize="15"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uVM-tR-Xcb" customClass="TextField" customModule="LedLamp" customModuleProvider="target">
+                                <rect key="frame" x="15" y="190.66666666666666" width="361" height="64"/>
+                                <color key="backgroundColor" red="0.1333333333" green="0.1333333333" blue="0.1333333333" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="cVQ-XJ-JvS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wallpaper" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k49-Aq-HL9">
+                                <rect key="frame" x="15" y="278.66666666666669" width="94.333333333333329" height="26"/>
+                                <fontDescription key="fontDescription" name="ChakraPetch-Bold" family="Chakra Petch" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YPn-1l-uJw">
+                                <rect key="frame" x="15" y="320.66666666666669" width="361" height="68"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bb4-g6-2E0">
+                                        <rect key="frame" x="336" y="26" width="10" height="16"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="arrowWhiteAhead"/>
+                                        <connections>
+                                            <action selector="collectionBtnDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="AMa-nb-uvA"/>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="collection" translatesAutoresizingMaskIntoConstraints="NO" id="cgn-WK-vAS">
+                                        <rect key="frame" x="16" y="22" width="24" height="24"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Collection" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="syg-OG-F1e">
+                                        <rect key="frame" x="48" y="23.666666666666629" width="73" height="20.666666666666671"/>
+                                        <fontDescription key="fontDescription" name="ChakraPetch-Regular" family="Chakra Petch" pointSize="16"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.51372549019607838" green="0.51372549019607838" blue="0.51372549019607838" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="bb4-g6-2E0" firstAttribute="top" secondItem="YPn-1l-uJw" secondAttribute="top" constant="26" id="6eo-JR-3dn"/>
+                                    <constraint firstAttribute="bottom" secondItem="syg-OG-F1e" secondAttribute="bottom" constant="23.600000000000001" id="7Xq-5e-tlD"/>
+                                    <constraint firstAttribute="bottom" secondItem="bb4-g6-2E0" secondAttribute="bottom" constant="26" id="A6N-dT-l32"/>
+                                    <constraint firstAttribute="trailing" secondItem="bb4-g6-2E0" secondAttribute="trailing" constant="15" id="FoU-bE-egE"/>
+                                    <constraint firstAttribute="height" constant="68" id="LaR-uN-BqP"/>
+                                    <constraint firstAttribute="bottom" secondItem="cgn-WK-vAS" secondAttribute="bottom" constant="22" id="XX2-tf-d7i"/>
+                                    <constraint firstItem="syg-OG-F1e" firstAttribute="top" secondItem="YPn-1l-uJw" secondAttribute="top" constant="23.5" id="Y3K-Ds-lXV"/>
+                                    <constraint firstItem="cgn-WK-vAS" firstAttribute="leading" secondItem="YPn-1l-uJw" secondAttribute="leading" constant="16" id="lhE-9i-K2x"/>
+                                    <constraint firstItem="syg-OG-F1e" firstAttribute="leading" secondItem="cgn-WK-vAS" secondAttribute="trailing" constant="8" id="sRn-k0-kYq"/>
+                                    <constraint firstItem="cgn-WK-vAS" firstAttribute="top" secondItem="YPn-1l-uJw" secondAttribute="top" constant="22" id="zn3-y3-kMB"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Bva-YL-iJ1" appends="YES" id="2FY-hc-bpQ"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fc9-fV-uBZ">
+                                <rect key="frame" x="15" y="396.66666666666669" width="361" height="68"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3pr-iQ-PK6">
+                                        <rect key="frame" x="336.33333333333331" y="26" width="9.6666666666666856" height="16"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="arrowWhiteAhead"/>
+                                        <connections>
+                                            <action selector="openGalleryBtnDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="SGu-FB-IQB"/>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gallery" translatesAutoresizingMaskIntoConstraints="NO" id="EL0-YP-8Av">
+                                        <rect key="frame" x="16" y="22" width="24" height="24"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add from Gallery" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Hr-b2-VCu">
+                                        <rect key="frame" x="47.999999999999993" y="23.666666666666629" width="121.33333333333331" height="20.666666666666671"/>
+                                        <fontDescription key="fontDescription" name="ChakraPetch-Regular" family="Chakra Petch" pointSize="16"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.51372549020000002" green="0.51372549020000002" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="EL0-YP-8Av" secondAttribute="bottom" constant="22" id="3P0-O0-lrO"/>
+                                    <constraint firstAttribute="trailing" secondItem="3pr-iQ-PK6" secondAttribute="trailing" constant="15" id="4Nc-dK-SKf"/>
+                                    <constraint firstItem="EL0-YP-8Av" firstAttribute="leading" secondItem="fc9-fV-uBZ" secondAttribute="leading" constant="16" id="4oY-6b-EIK"/>
+                                    <constraint firstItem="EL0-YP-8Av" firstAttribute="top" secondItem="fc9-fV-uBZ" secondAttribute="top" constant="22" id="8vo-s3-sDz"/>
+                                    <constraint firstItem="3pr-iQ-PK6" firstAttribute="top" secondItem="fc9-fV-uBZ" secondAttribute="top" constant="26" id="Ade-qU-Es2"/>
+                                    <constraint firstAttribute="bottom" secondItem="8Hr-b2-VCu" secondAttribute="bottom" constant="23.600000000000001" id="CbJ-Rr-UAf"/>
+                                    <constraint firstItem="8Hr-b2-VCu" firstAttribute="leading" secondItem="EL0-YP-8Av" secondAttribute="trailing" constant="8" id="EKZ-pX-mrS"/>
+                                    <constraint firstAttribute="height" constant="68" id="MAj-hq-4xA"/>
+                                    <constraint firstItem="8Hr-b2-VCu" firstAttribute="top" secondItem="fc9-fV-uBZ" secondAttribute="top" constant="23.5" id="NuT-Bp-lKW"/>
+                                    <constraint firstItem="3pr-iQ-PK6" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8Hr-b2-VCu" secondAttribute="trailing" constant="20" id="of8-AH-e7F"/>
+                                    <constraint firstAttribute="bottom" secondItem="3pr-iQ-PK6" secondAttribute="bottom" constant="26" id="rOW-eu-6Sf"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="F2r-cw-zZT" appends="YES" id="4fd-4T-BG5"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="27e-gU-rwf">
+                                <rect key="frame" x="15" y="472.66666666666669" width="361" height="68.000000000000057"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mzv-sf-wZI">
+                                        <rect key="frame" x="336.33333333333331" y="26" width="9.6666666666666856" height="16"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="arrowWhiteAhead"/>
+                                        <connections>
+                                            <action selector="openCamerBtnDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Zdx-Rr-gtb"/>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="openCamera" translatesAutoresizingMaskIntoConstraints="NO" id="7L6-Eo-MVx">
+                                        <rect key="frame" x="16" y="22" width="24" height="24"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Open camera" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B3P-Y0-pjJ">
+                                        <rect key="frame" x="48.000000000000007" y="23.666666666666629" width="96.666666666666686" height="20.666666666666671"/>
+                                        <fontDescription key="fontDescription" name="ChakraPetch-Regular" family="Chakra Petch" pointSize="16"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.51372549020000002" green="0.51372549020000002" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="7L6-Eo-MVx" firstAttribute="leading" secondItem="27e-gU-rwf" secondAttribute="leading" constant="16" id="2Zo-eC-Pi6"/>
+                                    <constraint firstAttribute="bottom" secondItem="Mzv-sf-wZI" secondAttribute="bottom" constant="26" id="8o2-29-kkf"/>
+                                    <constraint firstAttribute="height" constant="68" id="VmA-Po-yHM"/>
+                                    <constraint firstAttribute="bottom" secondItem="B3P-Y0-pjJ" secondAttribute="bottom" constant="23.600000000000001" id="gtB-7C-eAP"/>
+                                    <constraint firstItem="Mzv-sf-wZI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="B3P-Y0-pjJ" secondAttribute="trailing" constant="20" id="pfV-pj-8Qh"/>
+                                    <constraint firstItem="Mzv-sf-wZI" firstAttribute="top" secondItem="27e-gU-rwf" secondAttribute="top" constant="26" id="pmT-hG-uCS"/>
+                                    <constraint firstItem="7L6-Eo-MVx" firstAttribute="top" secondItem="27e-gU-rwf" secondAttribute="top" constant="22" id="qHo-7b-dRa"/>
+                                    <constraint firstItem="B3P-Y0-pjJ" firstAttribute="top" secondItem="27e-gU-rwf" secondAttribute="top" constant="23.5" id="r5V-oT-czX"/>
+                                    <constraint firstAttribute="trailing" secondItem="Mzv-sf-wZI" secondAttribute="trailing" constant="15" id="vWq-OC-5kj"/>
+                                    <constraint firstItem="B3P-Y0-pjJ" firstAttribute="leading" secondItem="7L6-Eo-MVx" secondAttribute="trailing" constant="8" id="ve9-Br-dfy"/>
+                                    <constraint firstAttribute="bottom" secondItem="7L6-Eo-MVx" secondAttribute="bottom" constant="22" id="wfg-v1-5Jv"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="apX-lV-2x1" appends="YES" id="4qV-bU-EUF"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" name="BottomShit(#747474)"/>
+                        <constraints>
+                            <constraint firstItem="fc9-fV-uBZ" firstAttribute="top" secondItem="YPn-1l-uJw" secondAttribute="bottom" constant="8" id="4by-cn-9R6"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="uVM-tR-Xcb" secondAttribute="trailing" constant="17" id="5Qr-LT-po8"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="27e-gU-rwf" secondAttribute="trailing" constant="17" id="7dj-S2-uRJ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="YPn-1l-uJw" secondAttribute="trailing" constant="17" id="BF9-1A-ybb"/>
+                            <constraint firstItem="k49-Aq-HL9" firstAttribute="top" secondItem="uVM-tR-Xcb" secondAttribute="bottom" constant="24" id="Fhm-dJ-fK3"/>
+                            <constraint firstItem="YPn-1l-uJw" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="KhD-Pv-Enz"/>
+                            <constraint firstItem="k49-Aq-HL9" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="Ocr-C3-BEt"/>
+                            <constraint firstItem="fc9-fV-uBZ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="VSi-3y-GbN"/>
+                            <constraint firstItem="27e-gU-rwf" firstAttribute="top" secondItem="fc9-fV-uBZ" secondAttribute="bottom" constant="8" id="YZe-XY-rms"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="9gn-X2-Y51" secondAttribute="trailing" constant="32" id="a5v-wU-drw"/>
+                            <constraint firstItem="YPn-1l-uJw" firstAttribute="top" secondItem="k49-Aq-HL9" secondAttribute="bottom" constant="16" id="dSF-dv-l7K"/>
+                            <constraint firstItem="4H2-HI-EWX" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="e6b-af-sZB"/>
+                            <constraint firstItem="4H2-HI-EWX" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="27" id="eZv-0j-zxb"/>
+                            <constraint firstItem="27e-gU-rwf" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="gbm-8f-kwr"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="mSG-eu-lz6" secondAttribute="trailing" id="gdi-Jl-OgV"/>
+                            <constraint firstItem="mSG-eu-lz6" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="gns-qH-MKB"/>
+                            <constraint firstItem="9gn-X2-Y51" firstAttribute="top" secondItem="4H2-HI-EWX" secondAttribute="bottom" constant="8" id="hxl-DJ-QZw"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="fc9-fV-uBZ" secondAttribute="trailing" constant="17" id="nXC-cY-7T6"/>
+                            <constraint firstItem="uVM-tR-Xcb" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="15" id="tvF-6m-Jlb"/>
+                            <constraint firstItem="uVM-tR-Xcb" firstAttribute="top" secondItem="9gn-X2-Y51" secondAttribute="bottom" constant="16" id="uVr-NY-SE5"/>
+                            <constraint firstItem="9gn-X2-Y51" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="zEU-uH-8SI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addFromGalleryLabel" destination="8Hr-b2-VCu" id="Atb-e2-1eV"/>
+                        <outlet property="addRoomLabel" destination="4H2-HI-EWX" id="EuH-6A-t3d"/>
+                        <outlet property="collectionLabel" destination="syg-OG-F1e" id="pKa-P6-ZrD"/>
+                        <outlet property="collectionView" destination="YPn-1l-uJw" id="4lY-xa-ASb"/>
+                        <outlet property="galleryView" destination="fc9-fV-uBZ" id="x77-zn-Mie"/>
+                        <outlet property="openCamerLabel" destination="B3P-Y0-pjJ" id="K89-je-EEy"/>
+                        <outlet property="openCameraView" destination="27e-gU-rwf" id="6uP-Cd-qtf"/>
+                        <outlet property="pleaseInputLabel" destination="9gn-X2-Y51" id="Ym7-YW-XDB"/>
+                        <outlet property="textFieldNameDevice" destination="uVM-tR-Xcb" id="ieV-Ig-vOc"/>
+                        <outlet property="wallpaperLabel" destination="k49-Aq-HL9" id="FeF-bp-F2S"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Bva-YL-iJ1">
+                    <connections>
+                        <action selector="collectionBtnDidTap:" destination="Y6W-OH-hqX" id="MpT-lQ-fb9"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="F2r-cw-zZT">
+                    <connections>
+                        <action selector="openGalleryBtnDidTap:" destination="Y6W-OH-hqX" id="8tt-xq-dxD"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="apX-lV-2x1">
+                    <connections>
+                        <action selector="openCamerBtnDidTap:" destination="Y6W-OH-hqX" id="LgP-fV-grc"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="101.5267175572519" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrowWhiteAhead" width="9.6666669845581055" height="17.666666030883789"/>
+        <image name="close" width="24" height="24"/>
+        <image name="collection" width="24" height="24"/>
+        <image name="gallery" width="24" height="24"/>
+        <image name="openCamera" width="24" height="24"/>
+        <namedColor name="BottomShit(#747474)">
+            <color red="0.45500001311302185" green="0.45500001311302185" blue="0.45500001311302185" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

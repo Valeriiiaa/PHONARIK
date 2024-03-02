@@ -35,6 +35,10 @@
 "addRoom" = "Добавить комнату";
 "add" = "Добавить";
 "showSelected" = "Показать выбранное";
+"selectLight" = "Выбрать свет";
+"wallpaper" = "Обои";
+"addFromGallery" = "Добавить из галереи";
+"OpenCamera" = "Открыть камеру";
 
 "youDontHaveLight" = "У вас нет умных ламп";
 "brightenYourEnv" = "Укрась свое окружение: управление светодиодной лампой";
@@ -72,3 +76,11 @@
 "brightness" = "Яркость";
 "plinth" = "Цоколь:";
 "intensity" = "Интенсивность:";
+
+//player
+"selectYourMusicSource" = "Выберите источник музыки";
+"musicOnIphone" = "Музыка на iPhone";
+"syncWithMusic" = "Синхронизировать с музыкой";
+"playbackLight" = "Отражение света воспроизведения";
+"thisFeatureWorks" = "Эта функция работает через микрофон вашего iPhone.";
+"pressPlay" = "Нажмите «Воспроизведение» и поднесите телефон ближе к источнику звука.";

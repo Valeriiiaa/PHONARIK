@@ -39,6 +39,7 @@
 "addRoom" = "Raum hinzufügen";
 "add" = "Hinzufügen";
 "showSelected" = "Ausgewähltes anzeigen";
+"selectLight" = "Licht auswählen";
 
 
 //main
@@ -68,6 +69,9 @@
 "youDontHaveRooms" = "Sie haben keine Räume";
 "pleaseInputRoomsName" = "Bitte geben Sie den Namen des Raums ein und wählen Sie ein Hintergrunddesign aus.";
 "deviceName" = "Gerätename";
+"wallpaper" = "Wallpaper";
+"addFromGallery" = "Aus der Galerie hinzufügen";
+"OpenCamera" = "Kamera öffnen";
 
 
 //collection
@@ -79,3 +83,11 @@
 "brightness" = "Helligkeit";
 "plinth" = "Sockel:";
 "intensity" = "Intensität:";
+
+//player
+"selectYourMusicSource" = "Wählen Sie Ihre Musikquelle aus";
+"musicOnIphone" = "Musik auf dem iPhone";
+"syncWithMusic" = "Mit Musik synchronisieren";
+"playbackLight" = "Wiedergabe-Lichtreflexion";
+"thisFeatureWorks" = "Diese Funktion funktioniert über das Mikrofon Ihres iPhones.";
+"pressPlay" = "Drücken Sie auf „Wiedergabe“ und halten Sie Ihr Telefon nah an die Klangquelle.";

@@ -27,13 +27,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrCodeScan" translatesAutoresizingMaskIntoConstraints="NO" id="TT0-NG-JcU">
-                                <rect key="frame" x="15.999999999999996" y="404.33333333333331" width="32.666666666666657" height="24"/>
+                                <rect key="frame" x="15.999999999999998" y="412.66666666666669" width="31.333333333333329" height="24"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z0l-0z-ULh">
                                 <rect key="frame" x="30" y="712" width="333" height="72"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More option" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wz3-NE-8xV">
-                                        <rect key="frame" x="27.999999999999993" y="26" width="81.333333333333314" height="20"/>
+                                        <rect key="frame" x="28.000000000000007" y="26" width="82.666666666666686" height="20"/>
                                         <fontDescription key="fontDescription" name="ChakraPetch-Medium" family="Chakra Petch" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -63,29 +63,29 @@
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jb2-z5-VCV">
-                                <rect key="frame" x="16" y="182.33333333333337" width="361" height="202"/>
+                                <rect key="frame" x="16" y="190.66666666666663" width="361" height="202"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="202" id="xjf-wZ-vcj"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan the code or bring your iPhone close to the accessory." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ezV-cK-1Rs">
-                                <rect key="frame" x="16" y="131.33333333333334" width="346" height="35"/>
+                                <rect key="frame" x="16" y="135.66666666666666" width="346" height="39"/>
                                 <fontDescription key="fontDescription" name="ChakraPetch-Regular" family="Chakra Petch" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Kkb-EM-ypk">
-                                <rect key="frame" x="58.666666666666657" y="404.33333333333331" width="304.33333333333337" height="75.666666666666686"/>
+                                <rect key="frame" x="57.333333333333343" y="412.66666666666669" width="305.66666666666663" height="83.666666666666686"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan a Setup code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1c-fm-5Ut">
-                                        <rect key="frame" x="0.0" y="0.0" width="304.33333333333331" height="18.666666666666668"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="305.66666666666669" height="21"/>
                                         <fontDescription key="fontDescription" name="ChakraPetch-Medium" family="Chakra Petch" pointSize="16"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Locate a QR code on the accessory, packaging, or in the instructions, then position it within the camera frame above." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yGE-ke-3vk">
-                                        <rect key="frame" x="0.0" y="26.666666666666686" width="304.33333333333331" height="49"/>
+                                        <rect key="frame" x="0.0" y="28.999999999999996" width="305.66666666666669" height="54.666666666666657"/>
                                         <fontDescription key="fontDescription" name="ChakraPetch-Regular" family="Chakra Petch" pointSize="14"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -93,10 +93,10 @@
                                 </subviews>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="translation" translatesAutoresizingMaskIntoConstraints="NO" id="aaa-rK-3UC">
-                                <rect key="frame" x="15.999999999999996" y="488" width="32.666666666666657" height="24"/>
+                                <rect key="frame" x="16" y="504.33333333333326" width="30" height="24"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Device" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aPe-dB-tnM">
-                                <rect key="frame" x="16" y="86" width="165" height="37.333333333333343"/>
+                                <rect key="frame" x="16" y="86" width="164" height="41.666666666666657"/>
                                 <fontDescription key="fontDescription" name="ChakraPetch-Medium" family="Chakra Petch" pointSize="32"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -111,16 +111,16 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jSR-eU-Qkc">
-                                <rect key="frame" x="58.666666666666657" y="487.99999999999994" width="304.33333333333337" height="59.333333333333314"/>
+                                <rect key="frame" x="56" y="504.33333333333331" width="307" height="65.666666666666686"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bring iPhone close to the accessory" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FZV-U5-hh6">
-                                        <rect key="frame" x="0.0" y="0.0" width="304.33333333333331" height="18.666666666666668"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="307" height="21"/>
                                         <fontDescription key="fontDescription" name="ChakraPetch-Medium" family="Chakra Petch" pointSize="16"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can also place your iPhone near the symbol on the accessory, if available." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFP-je-8sC">
-                                        <rect key="frame" x="0.0" y="26.666666666666625" width="304.33333333333331" height="32.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="29.000000000000053" width="307" height="36.666666666666657"/>
                                         <fontDescription key="fontDescription" name="ChakraPetch-Regular" family="Chakra Petch" pointSize="14"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -558,6 +558,69 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HXs-GV-eZ4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1075.5725190839694" y="710.56338028169023"/>
+        </scene>
+        <!--Select Accessory View Controller-->
+        <scene sceneID="0wm-sx-KTB">
+            <objects>
+                <viewController storyboardIdentifier="SelectAccessoryViewController" id="WfR-wQ-CUo" customClass="SelectAccessoryViewController" customModule="LedLamp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yRM-op-YFx">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ukl-7M-yUQ">
+                                <rect key="frame" x="299" y="59" width="94" height="54"/>
+                                <inset key="contentEdgeInsets" minX="50" minY="10" maxX="20" maxY="20"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="close"/>
+                                <connections>
+                                    <action selector="closeBtn:" destination="xMd-HP-0iJ" eventType="touchUpInside" id="IYk-vG-c4l"/>
+                                    <action selector="closeBtnDidTap:" destination="WfR-wQ-CUo" eventType="touchUpInside" id="gpr-C6-dNt"/>
+                                    <action selector="closeButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="sai-sU-U4g"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select an accessory to add" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="16" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PBe-cS-cXE">
+                                <rect key="frame" x="16" y="86" width="313" height="83.333333333333314"/>
+                                <fontDescription key="fontDescription" name="ChakraPetch-Medium" family="Chakra Petch" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make sure your device is activated and in close range, or set it to discoverable mode." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWH-4c-3nb">
+                                <rect key="frame" x="16" y="177.33333333333334" width="346" height="39"/>
+                                <fontDescription key="fontDescription" name="ChakraPetch-Regular" family="Chakra Petch" pointSize="15"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="M1t-ad-qJm">
+                                <rect key="frame" x="0.0" y="232.33333333333331" width="393" height="619.66666666666674"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="oyN-Fx-ezI"/>
+                        <color key="backgroundColor" name="BottomShit(#747474)"/>
+                        <constraints>
+                            <constraint firstItem="oyN-Fx-ezI" firstAttribute="trailing" secondItem="M1t-ad-qJm" secondAttribute="trailing" id="44x-5q-bdR"/>
+                            <constraint firstAttribute="bottom" secondItem="M1t-ad-qJm" secondAttribute="bottom" id="BXr-nV-mfY"/>
+                            <constraint firstItem="NWH-4c-3nb" firstAttribute="top" secondItem="PBe-cS-cXE" secondAttribute="bottom" constant="8" id="EUx-oM-L7j"/>
+                            <constraint firstItem="M1t-ad-qJm" firstAttribute="leading" secondItem="oyN-Fx-ezI" secondAttribute="leading" id="MTx-Lx-Vpy"/>
+                            <constraint firstItem="Ukl-7M-yUQ" firstAttribute="top" secondItem="oyN-Fx-ezI" secondAttribute="top" id="NWe-Md-cQ7"/>
+                            <constraint firstItem="oyN-Fx-ezI" firstAttribute="trailing" secondItem="Ukl-7M-yUQ" secondAttribute="trailing" id="Nat-nh-dyI"/>
+                            <constraint firstItem="PBe-cS-cXE" firstAttribute="leading" secondItem="oyN-Fx-ezI" secondAttribute="leading" constant="16" id="OiE-SH-W5N"/>
+                            <constraint firstItem="M1t-ad-qJm" firstAttribute="top" secondItem="NWH-4c-3nb" secondAttribute="bottom" constant="16" id="Tc5-Lh-j40"/>
+                            <constraint firstItem="NWH-4c-3nb" firstAttribute="leading" secondItem="oyN-Fx-ezI" secondAttribute="leading" constant="16" id="VYP-RD-I1a"/>
+                            <constraint firstItem="oyN-Fx-ezI" firstAttribute="trailing" secondItem="PBe-cS-cXE" secondAttribute="trailing" constant="64" id="Yqg-I3-K1B"/>
+                            <constraint firstAttribute="trailing" secondItem="NWH-4c-3nb" secondAttribute="trailing" constant="31" id="bcC-VY-Nph"/>
+                            <constraint firstItem="PBe-cS-cXE" firstAttribute="top" secondItem="oyN-Fx-ezI" secondAttribute="top" constant="27" id="fSN-qv-NEq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="makeSureDeviceCloseLabel" destination="NWH-4c-3nb" id="WNP-wr-l6o"/>
+                        <outlet property="selectAccessoryLabel" destination="PBe-cS-cXE" id="1j2-NX-j2Q"/>
+                        <outlet property="tableView" destination="M1t-ad-qJm" id="TOD-4F-xgl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mbk-Fb-gyh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2038.9312977099237" y="710.56338028169023"/>
         </scene>
     </scenes>
     <resources>

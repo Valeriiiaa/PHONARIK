@@ -40,6 +40,7 @@
 "addRoom" = "Ajouter une pièce";
 "add" = "Ajouter";
 "showSelected" = "Afficher sélectionné";
+"selectLight" = "Sélectionner la lumière";
 
 
 //main
@@ -69,6 +70,9 @@
 "youDontHaveRooms" = "Vous n'avez pas de pièces";
 "pleaseInputRoomsName" = "Veuillez saisir le nom de la pièce et choisir un design de papier peint.";
 "deviceName" = "Nom de l'appareil";
+"wallpaper" = "Wallpaper";
+"addFromGallery" = "Ajouter depuis la galerie";
+"OpenCamera" = "Ouvrir l'appareil photo";
 
 
 //collection
@@ -80,3 +84,11 @@
 "brightness" = "Luminosité";
 "plinth" = "Socle:";
 "intensity" = "Intensité:";
+
+//player
+"selectYourMusicSource" = "Sélectionnez votre source de musique";
+"musicOnIphone" = "Musique sur iPhone";
+"syncWithMusic" = "Synchroniser avec la musique";
+"playbackLight" = "Réflexion de la lumière de lecture";
+"thisFeatureWorks" = "Cette fonctionnalité fonctionne via le microphone de votre iPhone.";
+"pressPlay" = "Appuyez sur “Lecture” et approchez votre téléphone de la source sonore.";

@@ -39,6 +39,7 @@
 "addRoom" = "Aggiungi stanza";
 "add" = "Aggiungi";
 "showSelected" = "Mostra selezionato";
+"selectLight" = "Seleziona la luce";
 
 //main
 "youDontHaveLight" = "Non hai luci intelligenti";
@@ -67,6 +68,9 @@
 "youDontHaveRooms" = "Non hai stanze";
 "pleaseInputRoomsName" = "Per favore inserisci il nome della stanza e scegli un design della carta da parati.";
 "deviceName" = "Nome del dispositivo";
+"wallpaper" = "Wallpaper";
+"addFromGallery" = "Aggiungi dalla galleria";
+"OpenCamera" = "Apri la fotocamera";
 
 
 //collection
@@ -79,3 +83,11 @@
 "brightness" = "Luminosità";
 "plinth" = "Plinto:";
 "intensity" = "Intensità:";
+
+//player
+"selectYourMusicSource" = "Seleziona la tua fonte musicale";
+"musicOnIphone" = "Musica sull'iPhone";
+"syncWithMusic" = "Sincronizza con la musica";
+"playbackLight" = "Riflessione della luce di riproduzione";
+"thisFeatureWorks" = "Questa funzione funziona tramite il microfono del tuo iPhone.";
+"pressPlay" = "Premi “Riproduci” e avvicina il telefono alla fonte audio.";
