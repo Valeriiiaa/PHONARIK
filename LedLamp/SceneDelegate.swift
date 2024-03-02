@@ -16,7 +16,46 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        
+        self.window = UIWindow(frame: windowScene.coordinateSpace.bounds)
+        self.window?.windowScene = windowScene
+        window?.rootViewController = getConfiguredController()
+        self.window?.makeKeyAndVisible()
+    }
+    
+    func getConfiguredController() -> UITabBarController {
+        //1- Initiate your viewControllers
+        let tabBarItem = UITabBarItem(title: "Light", image: UIImage(resource: .lightTabBar), tag: 0)
+        let firstViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()!
+        firstViewController.tabBarItem = tabBarItem
+        let second = UIViewController()
+        second.tabBarItem = UITabBarItem(title: "Rooms", image: UIImage(resource: .roomsTabBar), tag: 1)
+        let third = UIViewController()
+        third.tabBarItem = UITabBarItem(title: "Music", image: UIImage(resource: .musicTabBar), tag: 2)
+        //2- get instance of BEKCurveTabbarController
+        let tabBarViewController = BEKCurveTabbarController.instantiate()
+        
+        //3- Config your own TabBar ViewModel
+        let myViewModel = MyCustomTabBarViewModel()
+        
+        //4- setup TabBar Controller with you viewModel
+        tabBarViewController.setupViewModel(viewModel: myViewModel)
+        
+        //5- set viewControllers to the tabbar
+        tabBarViewController.setViewControllers([firstViewController, second, third], animated: true)
+        (tabBarViewController.tabBar as? BEKCurveTabbar)?.addCircleShape()
+        DispatchQueue.main.async {
+            if let itemView = (tabBarItem.value(forKey: "view") as? UIView) {
+                UIView.setAnimationsEnabled(false)
+                UIView.performWithoutAnimation {
+                    (tabBarViewController.tabBar as? BEKCurveTabbar)?.circleLayer?.position = itemView.frame.origin
+                }
+                
+                UIView.setAnimationsEnabled(true)
+            }
+        }
+        return tabBarViewController
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
