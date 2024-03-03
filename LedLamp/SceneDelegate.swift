@@ -29,8 +29,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let tabBarItem = UITabBarItem(title: "Light", image: UIImage(resource: .lightTabBar), tag: 0)
         let firstViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()!
         firstViewController.tabBarItem = tabBarItem
-        let second = UIViewController()
-        second.tabBarItem = UITabBarItem(title: "Rooms", image: UIImage(resource: .roomsTabBar), tag: 1)
+        
+        let secondViewController = UIStoryboard(name: "Rooms", bundle: nil).instantiateInitialViewController()!
+    
+        secondViewController.tabBarItem = UITabBarItem(title: "Rooms", image: UIImage(resource: .roomsTabBar), tag: 1)
         let third = UIViewController()
         third.tabBarItem = UITabBarItem(title: "Music", image: UIImage(resource: .musicTabBar), tag: 2)
         //2- get instance of BEKCurveTabbarController
@@ -43,7 +45,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         tabBarViewController.setupViewModel(viewModel: myViewModel)
         
         //5- set viewControllers to the tabbar
-        tabBarViewController.setViewControllers([firstViewController, second, third], animated: true)
+        tabBarViewController.setViewControllers([firstViewController, secondViewController, third], animated: true)
         (tabBarViewController.tabBar as? BEKCurveTabbar)?.addCircleShape()
         DispatchQueue.main.async {
             if let itemView = (tabBarItem.value(forKey: "view") as? UIView) {

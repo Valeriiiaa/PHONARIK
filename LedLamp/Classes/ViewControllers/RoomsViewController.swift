@@ -1,35 +1,32 @@
 //
-//  MainViewController.swift
+//  RoomsViewController.swift
 //  LedLamp
 //
-//  Created by Valeriya Chernyak on 26.02.2024.
+//  Created by Valeriya Chernyak on 03.03.2024.
 //
 
 import UIKit
 import BottomSheet
 
-class MainViewController: UIViewController {
+class RoomsViewController: UIViewController {
 
-    @IBOutlet weak var youDontHaveLight: UILabel!
-    @IBOutlet weak var addLightLabel: UILabel!
-    @IBOutlet weak var backgroundButtonView: UIView!
-    @IBOutlet weak var settingsButton: UIButton!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var backgroundMainView: UIView!
+    @IBOutlet weak var backgroundBrightenView: UIView!
+    @IBOutlet weak var backgroundAddRoomView: UIView!
+    @IBOutlet weak var addButton: UILabel!
+    @IBOutlet weak var brightenYourEnviroment: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        youDontHaveLight.text = "youDontHaveLight".localized
-        addLightLabel.text = "addLight".localized
-        titleLabel.text = "brightenYourEnv".localized
-        backgroundMainView.layer.cornerRadius = 40
-        backgroundMainView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
-        backgroundButtonView.layer.cornerRadius = 36
-        backgroundButtonView.layer.masksToBounds = true
-    }
-  
-    @IBAction func addLightButtonDidTap(_ sender: Any) {
-        let entrance = UIStoryboard(name: "ScanDeviceView", bundle: nil).instantiateViewController(identifier: "ScanDeviceView")
+        brightenYourEnviroment.text = "brightenYourEnv".localized
+        addButton.text = "addLight".localized
+        backgroundBrightenView.layer.cornerRadius = 40
+        backgroundBrightenView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
+        backgroundAddRoomView.layer.cornerRadius = 36
+        backgroundAddRoomView.layer.masksToBounds = true
+}
+   
+    @IBAction func addRoomBtnDidTap(_ sender: Any) {
+        let entrance = UIStoryboard(name: "RoomBottomSheets", bundle: nil).instantiateViewController(identifier: "AddRoomViewController")
         let navigationContorller = BottomSheetNavigationController(rootViewController: entrance, configuration: BottomSheetConfiguration(
             cornerRadius: 40,
             pullBarConfiguration: .hidden,
@@ -42,10 +39,9 @@ class MainViewController: UIViewController {
             pullBarConfiguration: .hidden,
             shadowConfiguration: .init(backgroundColor: UIColor(red: 34/255, green: 34/255, blue: 34/255, alpha: 0.46), blur: .regular)
         ))
-
     }
     
-    @IBAction func settingsButtonDidTap(_ sender: Any) {
+    @IBAction func settingBtnDidTap(_ sender: Any) {
         let entrance = UIStoryboard(name: "Settings", bundle: nil).instantiateViewController(withIdentifier: "SettingsViewController")
         navigationController?.pushViewController(entrance, animated: true)
     }
