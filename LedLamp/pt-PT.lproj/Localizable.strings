@@ -87,8 +87,8 @@
 
 //player
 "selectYourMusicSource" = "Selecione sua fonte de música";
-"musicOnIphone" = "Música no iPhone";
-"syncWithMusic" = "Sincronizar com música";
+"musicOnIphone" = "Música no\niPhone";
+"syncWithMusic" = "Sincronizar\ncom música";
 "playbackLight" = "Reflexão da luz de reprodução";
 "thisFeatureWorks" = "Essa funcionalidade funciona através do microfone do seu iPhone.";
 "pressPlay" = "Pressione “Reproduzir” e aproxime seu telefone da fonte sonora.";

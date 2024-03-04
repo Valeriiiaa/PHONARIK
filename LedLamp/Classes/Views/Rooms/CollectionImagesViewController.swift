@@ -16,8 +16,8 @@ class CollectionImagesViewController: UIViewController {
         super.viewDidLoad()
         preferredContentSize = .init(width: view.frame.width, height: 751)
         collectionLabel.text = "collection".localized
-        collectionView.dataSource = self
-        collectionView.delegate = self
+//        collectionView.dataSource = self
+//        collectionView.delegate = self
         collectionView.register(UINib(nibName: "CollectionImageCell", bundle: nil),forCellWithReuseIdentifier: "CollectionImageCell")
         
     }
@@ -30,15 +30,15 @@ class CollectionImagesViewController: UIViewController {
 
 }
 
-extension CollectionImagesViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
-   
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        <#code#>
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
-    }
-    
-    
-}
+//extension CollectionImagesViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+//   
+//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//         w
+//    }
+//    
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//         w
+//    }
+//    
+//    
+//}

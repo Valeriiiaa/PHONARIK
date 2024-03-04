@@ -29,6 +29,9 @@
                                 <inset key="contentEdgeInsets" minX="50" minY="24" maxX="20" maxY="20"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="close"/>
+                                <connections>
+                                    <action selector="closeBtnDidTap:" destination="V0y-B0-9w5" eventType="touchUpInside" id="ocG-4N-hOh"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Playback light reflection" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="16" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z1n-PQ-viG">
                                 <rect key="frame" x="16" y="79" width="316" height="83.333333333333314"/>
@@ -36,8 +39,8 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qB6-yR-uvg">
-                                <rect key="frame" x="14" y="527" width="364" height="72"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qB6-yR-uvg">
+                                <rect key="frame" x="30" y="719" width="333" height="72"/>
                                 <color key="backgroundColor" name="Background(#222222)"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="72" id="mcU-l8-8V4"/>
@@ -47,6 +50,9 @@
                                 <state key="normal" title="Done">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="doneBtnDidTap:" destination="V0y-B0-9w5" eventType="touchUpInside" id="70O-rv-02Z"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This feature works through your iPhone's microphone." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kgO-fz-qr9">
                                 <rect key="frame" x="16" y="170.33333333333334" width="335" height="39"/>
@@ -66,20 +72,27 @@
                         <color key="tintColor" name="BottomShit(#747474)"/>
                         <constraints>
                             <constraint firstItem="gmn-AZ-MZo" firstAttribute="leading" secondItem="ogx-AB-eZ7" secondAttribute="leading" constant="16" id="2NY-9f-Wbw"/>
+                            <constraint firstItem="ogx-AB-eZ7" firstAttribute="bottom" secondItem="qB6-yR-uvg" secondAttribute="bottom" constant="27" id="5Ck-MG-a9A"/>
+                            <constraint firstItem="ogx-AB-eZ7" firstAttribute="trailing" secondItem="qB6-yR-uvg" secondAttribute="trailing" constant="30" id="7Qg-He-2aT"/>
                             <constraint firstItem="2S2-wx-v4W" firstAttribute="top" secondItem="ogx-AB-eZ7" secondAttribute="top" id="9Xk-u4-3zA"/>
                             <constraint firstItem="ogx-AB-eZ7" firstAttribute="trailing" secondItem="2S2-wx-v4W" secondAttribute="trailing" id="AfA-39-JnW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="z1n-PQ-viG" secondAttribute="trailing" constant="45" id="Hsp-hk-qD5"/>
                             <constraint firstItem="z1n-PQ-viG" firstAttribute="top" secondItem="ogx-AB-eZ7" secondAttribute="top" constant="20" id="KOa-gO-I9S"/>
                             <constraint firstItem="z1n-PQ-viG" firstAttribute="leading" secondItem="ogx-AB-eZ7" secondAttribute="leading" constant="16" id="Lx4-hm-cd0"/>
-                            <constraint firstItem="ogx-AB-eZ7" firstAttribute="trailing" secondItem="qB6-yR-uvg" secondAttribute="trailing" constant="15" id="PMw-GW-WPD"/>
                             <constraint firstItem="kgO-fz-qr9" firstAttribute="leading" secondItem="ogx-AB-eZ7" secondAttribute="leading" constant="16" id="Rfj-oJ-hhb"/>
                             <constraint firstItem="kgO-fz-qr9" firstAttribute="top" secondItem="z1n-PQ-viG" secondAttribute="bottom" constant="8" id="UkU-fU-PvA"/>
                             <constraint firstItem="ogx-AB-eZ7" firstAttribute="trailing" secondItem="gmn-AZ-MZo" secondAttribute="trailing" constant="42" id="clz-3z-mMJ"/>
                             <constraint firstItem="ogx-AB-eZ7" firstAttribute="trailing" secondItem="kgO-fz-qr9" secondAttribute="trailing" constant="42" id="coK-YE-uuK"/>
-                            <constraint firstItem="qB6-yR-uvg" firstAttribute="leading" secondItem="ogx-AB-eZ7" secondAttribute="leading" constant="14" id="u3D-WH-5m3"/>
+                            <constraint firstItem="qB6-yR-uvg" firstAttribute="leading" secondItem="ogx-AB-eZ7" secondAttribute="leading" constant="30" id="nIl-WX-1IO"/>
                             <constraint firstItem="gmn-AZ-MZo" firstAttribute="top" secondItem="kgO-fz-qr9" secondAttribute="bottom" constant="8" id="whK-0y-wlD"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="doneButton" destination="qB6-yR-uvg" id="11y-5X-oaC"/>
+                        <outlet property="playBackLabel" destination="z1n-PQ-viG" id="pqE-YT-rzR"/>
+                        <outlet property="pressPlayLabel" destination="gmn-AZ-MZo" id="Orm-wj-V6y"/>
+                        <outlet property="thisFeatureLabel" destination="kgO-fz-qr9" id="YJH-Tb-bBp"/>
+                    </connections>
                 </viewController>
                 <tapGestureRecognizer id="30L-zr-aqq"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IaJ-Eg-jFf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

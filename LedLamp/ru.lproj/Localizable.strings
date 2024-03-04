@@ -7,7 +7,7 @@
 */
 
 "light" = "Cвет";
-"rooms" = "Команты";
+"rooms" = "Комнаты";
 "music" = "Музыка";
 
 "settings" = "Настройки";
@@ -80,8 +80,8 @@
 
 //player
 "selectYourMusicSource" = "Выберите источник музыки";
-"musicOnIphone" = "Музыка на iPhone";
-"syncWithMusic" = "Синхронизировать с музыкой";
+"musicOnIphone" = "Музыка на\niPhone";
+"syncWithMusic" = "Синхронизировать\nс музыкой";
 "playbackLight" = "Отражение света воспроизведения";
 "thisFeatureWorks" = "Эта функция работает через микрофон вашего iPhone.";
 "pressPlay" = "Нажмите «Воспроизведение» и поднесите телефон ближе к источнику звука.";

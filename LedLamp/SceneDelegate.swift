@@ -26,15 +26,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     func getConfiguredController() -> UITabBarController {
         //1- Initiate your viewControllers
-        let tabBarItem = UITabBarItem(title: "Light", image: UIImage(resource: .lightTabBar), tag: 0)
+        let tabBarItem = UITabBarItem(title: "light".localized, image: UIImage(resource: .lightTabBar), tag: 0)
         let firstViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()!
         firstViewController.tabBarItem = tabBarItem
         
         let secondViewController = UIStoryboard(name: "Rooms", bundle: nil).instantiateInitialViewController()!
-    
-        secondViewController.tabBarItem = UITabBarItem(title: "Rooms", image: UIImage(resource: .roomsTabBar), tag: 1)
-        let third = UIViewController()
-        third.tabBarItem = UITabBarItem(title: "Music", image: UIImage(resource: .musicTabBar), tag: 2)
+        secondViewController.tabBarItem = UITabBarItem(title: "rooms".localized, image: UIImage(resource: .roomsTabBar), tag: 1)
+        let third = UIStoryboard(name: "MusicPlayer", bundle: nil).instantiateInitialViewController()!
+        third.tabBarItem = UITabBarItem(title: "music".localized, image: UIImage(resource: .musicTabBar), tag: 2)
         //2- get instance of BEKCurveTabbarController
         let tabBarViewController = BEKCurveTabbarController.instantiate()
         
