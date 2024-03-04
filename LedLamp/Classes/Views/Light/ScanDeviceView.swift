@@ -21,7 +21,7 @@ class ScanDeviceView: UIViewController {
     @IBOutlet weak var scanCodeLabel: UILabel!
     @IBOutlet weak var addDeviceLabel: UILabel!
     
-   
+    var captureSession: AVCaptureSession?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +36,6 @@ class ScanDeviceView: UIViewController {
         qrCodeView.layer.masksToBounds = true
         backgroundMoreOptionView.layer.cornerRadius = 30
         backgroundMoreOptionView.layer.masksToBounds = true
-        
         preferredContentSize = .init(width: view.frame.width, height: 641)
        }
     
@@ -79,13 +78,22 @@ class ScanDeviceView: UIViewController {
         }
         
         let previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+        self.captureSession = captureSession
         DispatchQueue.main.async {
             previewLayer.frame = self.qrCodeView.layer.bounds
             previewLayer.videoGravity = .resizeAspectFill
             self.qrCodeView.layer.addSublayer(previewLayer)
             
     }
+        
+        
         captureSession.startRunning()
+    }
+    
+    private func showLightning() {
+        let storyboard = UIStoryboard(name: "ScanDeviceView", bundle: nil)
+        let lightingDeviceViewController = storyboard.instantiateViewController(withIdentifier: "LightingDeviceViewController")
+        navigationController?.pushViewController(lightingDeviceViewController, animated: true)
     }
    
     @IBAction func closeButtonDidTap(_ sender: Any) {
@@ -102,8 +110,10 @@ extension ScanDeviceView: AVCaptureMetadataOutputObjectsDelegate {
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         if let metadataObject = metadataObjects.first as? AVMetadataMachineReadableCodeObject {
             if metadataObject.type == .qr, let qrCode = metadataObject.stringValue {
-                // Handle the QR code (e.g., print or display it)
-                print("QR Code: \(qrCode)")
+                DispatchQueue.main.async {
+                    self.showLightning()
+                }
+                captureSession?.stopRunning()
             }
         }
     }

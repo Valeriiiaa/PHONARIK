@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11A1D3EB2B94F8E6003184AA /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A1D3EA2B94F8E6003184AA /* ScannerView.swift */; };
+		11A1D3ED2B94F911003184AA /* QRCodePreviewLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A1D3EC2B94F911003184AA /* QRCodePreviewLayer.swift */; };
 		11C621A32B936493006B15F7 /* DefaultTabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C6219D2B936493006B15F7 /* DefaultTabBarViewModel.swift */; };
 		11C621A52B936493006B15F7 /* BEKCurveTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C6219F2B936493006B15F7 /* BEKCurveTabbarController.swift */; };
 		11C621A62B936493006B15F7 /* BEKTabBarViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C621A02B936493006B15F7 /* BEKTabBarViewModelType.swift */; };
@@ -14,6 +16,7 @@
 		11C621A82B936493006B15F7 /* BEKCurveTabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C621A22B936493006B15F7 /* BEKCurveTabbar.swift */; };
 		11C621AA2B9364B9006B15F7 /* MyCustomTabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C621A92B9364B9006B15F7 /* MyCustomTabBarViewModel.swift */; };
 		11C621AC2B936715006B15F7 /* CustomTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11C621AB2B936715006B15F7 /* CustomTabBar.storyboard */; };
+		11C621AF2B938D1A006B15F7 /* HomeKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C621AE2B938D1A006B15F7 /* HomeKitManager.swift */; };
 		F6505C4A2B936A2800D47128 /* SelectAccessoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6505C492B936A2800D47128 /* SelectAccessoryViewController.swift */; };
 		F6505C4C2B936A3700D47128 /* SelectAccessoryViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6505C4B2B936A3700D47128 /* SelectAccessoryViewController.storyboard */; };
 		F6505C4E2B936C3000D47128 /* SelectAccessoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6505C4D2B936C3000D47128 /* SelectAccessoryCell.xib */; };
@@ -83,6 +86,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		11A1D3EA2B94F8E6003184AA /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
+		11A1D3EC2B94F911003184AA /* QRCodePreviewLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodePreviewLayer.swift; sourceTree = "<group>"; };
 		11C6219D2B936493006B15F7 /* DefaultTabBarViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultTabBarViewModel.swift; sourceTree = "<group>"; };
 		11C6219F2B936493006B15F7 /* BEKCurveTabbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BEKCurveTabbarController.swift; sourceTree = "<group>"; };
 		11C621A02B936493006B15F7 /* BEKTabBarViewModelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BEKTabBarViewModelType.swift; sourceTree = "<group>"; };
@@ -90,6 +95,8 @@
 		11C621A22B936493006B15F7 /* BEKCurveTabbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BEKCurveTabbar.swift; sourceTree = "<group>"; };
 		11C621A92B9364B9006B15F7 /* MyCustomTabBarViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCustomTabBarViewModel.swift; sourceTree = "<group>"; };
 		11C621AB2B936715006B15F7 /* CustomTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomTabBar.storyboard; sourceTree = "<group>"; };
+		11C621AE2B938D1A006B15F7 /* HomeKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeKitManager.swift; sourceTree = "<group>"; };
+		11C621B02B939314006B15F7 /* LedLamp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LedLamp.entitlements; sourceTree = "<group>"; };
 		F6505C492B936A2800D47128 /* SelectAccessoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAccessoryViewController.swift; sourceTree = "<group>"; };
 		F6505C4B2B936A3700D47128 /* SelectAccessoryViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectAccessoryViewController.storyboard; sourceTree = "<group>"; };
 		F6505C4D2B936C3000D47128 /* SelectAccessoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectAccessoryCell.xib; sourceTree = "<group>"; };
@@ -190,6 +197,14 @@
 			path = CustomTabBar;
 			sourceTree = "<group>";
 		};
+		11C621AD2B938D0C006B15F7 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				11C621AE2B938D1A006B15F7 /* HomeKitManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		F6505C512B936DC200D47128 /* RoomsBottomSheets */ = {
 			isa = PBXGroup;
 			children = (
@@ -251,6 +266,7 @@
 			children = (
 				F6505C552B93729800D47128 /* Light */,
 				F6505C542B93729100D47128 /* Rooms */,
+				11A1D3EA2B94F8E6003184AA /* ScannerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -296,6 +312,8 @@
 		F6EB00F62B8C9FBB005139CC /* LedLamp */ = {
 			isa = PBXGroup;
 			children = (
+				11C621B02B939314006B15F7 /* LedLamp.entitlements */,
+				11C621AD2B938D0C006B15F7 /* Managers */,
 				11C6219C2B93647E006B15F7 /* CustomTabBar */,
 				F6A0BC2B2B8CB00F0084A0E8 /* Extentions */,
 				F6EB01282B8C9FD3005139CC /* Classes */,
@@ -345,6 +363,7 @@
 				F6A0BC322B8E3F290084A0E8 /* Views */,
 				F6EB012E2B8CA048005139CC /* Cells */,
 				F6EB012A2B8CA012005139CC /* ViewControllers */,
+				11A1D3EC2B94F911003184AA /* QRCodePreviewLayer.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -608,11 +627,14 @@
 				F6B176DF2B91EA5400932231 /* MainScreenCell.swift in Sources */,
 				F6C91EE02B94D7C3005FB008 /* AddLightViewController.swift in Sources */,
 				F6A0BC2D2B8CB02B0084A0E8 /* String+localization.swift in Sources */,
+				11A1D3ED2B94F911003184AA /* QRCodePreviewLayer.swift in Sources */,
 				F6F827612B90810A00F1BB61 /* DeviceLocationCell.swift in Sources */,
 				11C621A62B936493006B15F7 /* BEKTabBarViewModelType.swift in Sources */,
+				11C621AF2B938D1A006B15F7 /* HomeKitManager.swift in Sources */,
 				F6A0BC1E2B8CAB230084A0E8 /* SettingsModel.swift in Sources */,
 				11C621A52B936493006B15F7 /* BEKCurveTabbarController.swift in Sources */,
 				11C621A32B936493006B15F7 /* DefaultTabBarViewModel.swift in Sources */,
+				11A1D3EB2B94F8E6003184AA /* ScannerView.swift in Sources */,
 				F6F8275B2B907EF100F1BB61 /* DeviceNameLocationViewController.swift in Sources */,
 				11C621A82B936493006B15F7 /* BEKCurveTabbar.swift in Sources */,
 				F68EAA3C2B91F3E7002B4DF0 /* ColorPickerViewController.swift in Sources */,
@@ -823,6 +845,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LedLamp/LedLamp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6NNWR2JHQ8;
@@ -830,6 +853,7 @@
 				INFOPLIST_FILE = LedLamp/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Qr code scanner";
+				INFOPLIST_KEY_NSHomeKitUsageDescription = "We need it for add devices, room to your Home";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -853,6 +877,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LedLamp/LedLamp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6NNWR2JHQ8;
@@ -860,6 +885,7 @@
 				INFOPLIST_FILE = LedLamp/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Qr code scanner";
+				INFOPLIST_KEY_NSHomeKitUsageDescription = "We need it for add devices, room to your Home";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

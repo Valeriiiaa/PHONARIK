@@ -17,6 +17,8 @@ class MainViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var backgroundMainView: UIView!
     
+    let homeKitManager = HomeManager.shared
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         youDontHaveLight.text = "youDontHaveLight".localized
@@ -29,7 +31,7 @@ class MainViewController: UIViewController {
     }
   
     @IBAction func addLightButtonDidTap(_ sender: Any) {
-        let entrance = UIStoryboard(name: "ScanDeviceView", bundle: nil).instantiateViewController(identifier: "ScanDeviceView")
+        let entrance = UIStoryboard(name: "ScanDeviceView", bundle: nil).instantiateViewController(identifier: "DeviceNameLocationViewController")
         let navigationContorller = BottomSheetNavigationController(rootViewController: entrance, configuration: BottomSheetConfiguration(
             cornerRadius: 40,
             pullBarConfiguration: .hidden,
@@ -42,7 +44,6 @@ class MainViewController: UIViewController {
             pullBarConfiguration: .hidden,
             shadowConfiguration: .init(backgroundColor: UIColor(red: 34/255, green: 34/255, blue: 34/255, alpha: 0.46), blur: .regular)
         ))
-
     }
     
     @IBAction func settingsButtonDidTap(_ sender: Any) {

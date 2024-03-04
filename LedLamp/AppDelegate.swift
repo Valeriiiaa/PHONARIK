@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.resignOnTouchOutside = true
         IQKeyboardManager.shared.keyboardDistanceFromTextField = 0
-       
+        HomeManager.shared.checkHomes()
         return true
     }
 
