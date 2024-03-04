@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ChakraPetch-Medium.ttf">
+            <string>ChakraPetch-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Collection Images View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="CollectionImagesViewController" id="Y6W-OH-hqX" customClass="CollectionImagesViewController" customModule="LedLamp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Collection" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mTm-KN-TGA">
+                                <rect key="frame" x="16" y="79" width="148" height="41.666666666666657"/>
+                                <fontDescription key="fontDescription" name="ChakraPetch-Medium" family="Chakra Petch" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QX0-cp-dYp">
+                                <rect key="frame" x="299" y="59" width="94" height="68"/>
+                                <inset key="contentEdgeInsets" minX="50" minY="24" maxX="20" maxY="20"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="close"/>
+                                <connections>
+                                    <action selector="closeBtnDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Aps-gk-WMR"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lHr-VS-dbI">
+                                <rect key="frame" x="0.0" y="136.66666666666669" width="393" height="715.33333333333326"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1f1-px-SvM">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="IbT-A2-duc">
+                                        <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="8f8-is-I2n">
+                                            <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" name="BottomShit(#747474)"/>
+                        <constraints>
+                            <constraint firstItem="QX0-cp-dYp" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="6QD-cd-ziS"/>
+                            <constraint firstItem="mTm-KN-TGA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="833-lS-afL"/>
+                            <constraint firstItem="mTm-KN-TGA" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="92I-Or-4Gf"/>
+                            <constraint firstItem="lHr-VS-dbI" firstAttribute="top" secondItem="mTm-KN-TGA" secondAttribute="bottom" constant="16" id="Jcy-DJ-Wke"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="lHr-VS-dbI" secondAttribute="trailing" id="W5E-4B-RMs"/>
+                            <constraint firstItem="lHr-VS-dbI" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="WJ2-YE-CTe"/>
+                            <constraint firstAttribute="trailing" secondItem="QX0-cp-dYp" secondAttribute="trailing" id="ZvQ-0e-SCU"/>
+                            <constraint firstAttribute="bottom" secondItem="lHr-VS-dbI" secondAttribute="bottom" id="boy-af-ieb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionLabel" destination="mTm-KN-TGA" id="6FS-jT-BPG"/>
+                        <outlet property="collectionView" destination="lHr-VS-dbI" id="lec-k8-CL2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="102" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="close" width="24" height="24"/>
+        <namedColor name="BottomShit(#747474)">
+            <color red="0.45500001311302185" green="0.45500001311302185" blue="0.45500001311302185" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
