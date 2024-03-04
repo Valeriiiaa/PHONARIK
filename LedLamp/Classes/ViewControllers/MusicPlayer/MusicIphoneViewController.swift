@@ -16,7 +16,8 @@ class MusicIphoneViewController: UIViewController {
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        musicOnIPhoneLabel.text = "musicOnIphone".localized
+        playBackLightBtn.setTitle("playbackLight".localized, for: .normal)
+        musicOnIPhoneLabel.text = "musicOnIphone2".localized
         selectLightButton.setTitle("selectLight".localized, for: .normal)
         selectLightButton.layer.cornerRadius = 30
         selectLightButton.layer.masksToBounds = true
