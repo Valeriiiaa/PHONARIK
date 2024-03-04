@@ -26,6 +26,7 @@ class DeviceNameLocationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        textFieldName.delegate = self
         preferredContentSize = .init(width: view.frame.width, height: 503)
         nextLabel.text = "next".localized
         locationLabel.text = "whereDeviceLocated".localized
@@ -114,3 +115,12 @@ extension DeviceNameLocationViewController: UICollectionViewDelegateFlowLayout, 
         return cell
     }
 }
+
+extension DeviceNameLocationViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+            textField.resignFirstResponder()
+            return true
+        }
+}
+

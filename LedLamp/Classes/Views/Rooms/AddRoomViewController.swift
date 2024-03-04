@@ -8,7 +8,7 @@
 import UIKit
 import BottomSheet
 
-class AddRoomViewController: UIViewController, UITextFieldDelegate {
+class AddRoomViewController: UIViewController {
    
     @IBOutlet weak var openCameraButton: UIButton!
     @IBOutlet weak var galleryButton: UIButton!
@@ -59,6 +59,8 @@ class AddRoomViewController: UIViewController, UITextFieldDelegate {
         
         textFieldNameDevice.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
     }
+    
+   
     
     private func pushToNext(with image: UIImage) {
         let entrance = UIStoryboard(name: "RoomBottomSheets", bundle: nil).instantiateViewController(identifier: "ChoosenRoomViewController")
@@ -123,3 +125,12 @@ extension AddRoomViewController: UINavigationControllerDelegate, UIImagePickerCo
         pushToNext(with: newImage)
     }
 }
+
+extension AddRoomViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+            textField.resignFirstResponder()
+            return true
+        }
+}
+

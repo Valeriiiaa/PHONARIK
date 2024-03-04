@@ -28,8 +28,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mSG-eu-lz6">
-                                <rect key="frame" x="299" y="59" width="94" height="54"/>
-                                <inset key="contentEdgeInsets" minX="50" minY="10" maxX="20" maxY="20"/>
+                                <rect key="frame" x="299" y="59" width="94" height="68"/>
+                                <inset key="contentEdgeInsets" minX="50" minY="24" maxX="20" maxY="20"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="close"/>
                                 <connections>
@@ -37,19 +37,19 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add room" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4H2-HI-EWX">
-                                <rect key="frame" x="15" y="86" width="141.33333333333334" height="41.666666666666657"/>
+                                <rect key="frame" x="15" y="79" width="142" height="41.666666666666657"/>
                                 <fontDescription key="fontDescription" name="ChakraPetch-Medium" family="Chakra Petch" pointSize="32"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please input the room's name and choose a wallpaper design." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9gn-X2-Y51">
-                                <rect key="frame" x="15" y="135.66666666666666" width="346" height="39"/>
+                                <rect key="frame" x="15" y="128.66666666666666" width="346" height="39"/>
                                 <fontDescription key="fontDescription" name="ChakraPetch-Regular" family="Chakra Petch" pointSize="15"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uVM-tR-Xcb" customClass="TextField" customModule="LedLamp" customModuleProvider="target">
-                                <rect key="frame" x="15" y="190.66666666666666" width="361" height="64"/>
+                                <rect key="frame" x="15" y="183.66666666666666" width="361" height="64"/>
                                 <color key="backgroundColor" red="0.1333333333" green="0.1333333333" blue="0.1333333333" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="cVQ-XJ-JvS"/>
@@ -58,13 +58,13 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wallpaper" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k49-Aq-HL9">
-                                <rect key="frame" x="15" y="278.66666666666669" width="94.333333333333329" height="26"/>
+                                <rect key="frame" x="15" y="271.66666666666669" width="94.333333333333329" height="26"/>
                                 <fontDescription key="fontDescription" name="ChakraPetch-Bold" family="Chakra Petch" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YPn-1l-uJw">
-                                <rect key="frame" x="15" y="320.66666666666669" width="361" height="68"/>
+                                <rect key="frame" x="15" y="313.66666666666669" width="361" height="68"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bb4-g6-2E0">
                                         <rect key="frame" x="336" y="26" width="10" height="16"/>
@@ -78,7 +78,7 @@
                                         <rect key="frame" x="16" y="22" width="24" height="24"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Collection" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="syg-OG-F1e">
-                                        <rect key="frame" x="48" y="23.666666666666629" width="73" height="20.666666666666671"/>
+                                        <rect key="frame" x="48" y="23.666666666666629" width="72" height="20.666666666666671"/>
                                         <fontDescription key="fontDescription" name="ChakraPetch-Regular" family="Chakra Petch" pointSize="16"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -103,7 +103,7 @@
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fc9-fV-uBZ">
-                                <rect key="frame" x="15" y="396.66666666666669" width="361" height="68"/>
+                                <rect key="frame" x="15" y="389.66666666666669" width="361" height="68"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3pr-iQ-PK6">
                                         <rect key="frame" x="336.33333333333331" y="26" width="9.6666666666666856" height="16"/>
@@ -143,7 +143,7 @@
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="27e-gU-rwf">
-                                <rect key="frame" x="15" y="472.66666666666669" width="361" height="68.000000000000057"/>
+                                <rect key="frame" x="15" y="465.66666666666669" width="361" height="68.000000000000057"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mzv-sf-wZI">
                                         <rect key="frame" x="336.33333333333331" y="26" width="9.6666666666666856" height="16"/>
@@ -157,7 +157,7 @@
                                         <rect key="frame" x="16" y="22" width="24" height="24"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Open camera" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B3P-Y0-pjJ">
-                                        <rect key="frame" x="48.000000000000007" y="23.666666666666629" width="96.666666666666686" height="20.666666666666671"/>
+                                        <rect key="frame" x="48" y="23.666666666666629" width="97" height="20.666666666666671"/>
                                         <fontDescription key="fontDescription" name="ChakraPetch-Regular" family="Chakra Petch" pointSize="16"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -198,7 +198,7 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="9gn-X2-Y51" secondAttribute="trailing" constant="32" id="a5v-wU-drw"/>
                             <constraint firstItem="YPn-1l-uJw" firstAttribute="top" secondItem="k49-Aq-HL9" secondAttribute="bottom" constant="16" id="dSF-dv-l7K"/>
                             <constraint firstItem="4H2-HI-EWX" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="e6b-af-sZB"/>
-                            <constraint firstItem="4H2-HI-EWX" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="27" id="eZv-0j-zxb"/>
+                            <constraint firstItem="4H2-HI-EWX" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="eZv-0j-zxb"/>
                             <constraint firstItem="27e-gU-rwf" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="gbm-8f-kwr"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="mSG-eu-lz6" secondAttribute="trailing" id="gdi-Jl-OgV"/>
                             <constraint firstItem="mSG-eu-lz6" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="gns-qH-MKB"/>
@@ -253,8 +253,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g63-us-oZc">
-                                <rect key="frame" x="299" y="59" width="94" height="54"/>
-                                <inset key="contentEdgeInsets" minX="50" minY="10" maxX="20" maxY="20"/>
+                                <rect key="frame" x="299" y="59" width="94" height="68"/>
+                                <inset key="contentEdgeInsets" minX="50" minY="24" maxX="20" maxY="20"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="close"/>
                                 <connections>
@@ -262,16 +262,16 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Living room" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXC-be-YDX">
-                                <rect key="frame" x="16" y="86" width="313" height="41.666666666666657"/>
+                                <rect key="frame" x="16" y="79" width="313" height="41.666666666666657"/>
                                 <fontDescription key="fontDescription" name="ChakraPetch-Medium" family="Chakra Petch" pointSize="32"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="livingroom" translatesAutoresizingMaskIntoConstraints="NO" id="xFx-hf-lCT">
-                                <rect key="frame" x="15" y="143.66666666666666" width="362" height="366.33333333333337"/>
+                                <rect key="frame" x="15" y="136.66666666666666" width="362" height="366.33333333333337"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fxa-ib-lhV">
-                                <rect key="frame" x="14" y="534" width="364" height="72"/>
+                                <rect key="frame" x="14" y="527" width="364" height="72"/>
                                 <color key="backgroundColor" name="Background(#222222)"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="72" id="1LK-Ds-KHh"/>
@@ -297,7 +297,7 @@
                             <constraint firstItem="xFx-hf-lCT" firstAttribute="leading" secondItem="UTg-5c-SMP" secondAttribute="leading" constant="15" id="JoQ-bM-7Cd"/>
                             <constraint firstItem="nXC-be-YDX" firstAttribute="leading" secondItem="UTg-5c-SMP" secondAttribute="leading" constant="16" id="MC8-Zu-Awf"/>
                             <constraint firstItem="UTg-5c-SMP" firstAttribute="trailing" secondItem="fxa-ib-lhV" secondAttribute="trailing" constant="15" id="Q8R-6k-ZRE"/>
-                            <constraint firstItem="nXC-be-YDX" firstAttribute="top" secondItem="UTg-5c-SMP" secondAttribute="top" constant="27" id="g7T-gO-JLV"/>
+                            <constraint firstItem="nXC-be-YDX" firstAttribute="top" secondItem="UTg-5c-SMP" secondAttribute="top" constant="20" id="g7T-gO-JLV"/>
                             <constraint firstItem="UTg-5c-SMP" firstAttribute="trailing" secondItem="xFx-hf-lCT" secondAttribute="trailing" constant="16" id="had-Lz-P1b"/>
                             <constraint firstItem="xFx-hf-lCT" firstAttribute="height" secondItem="7Gt-Ng-eKk" secondAttribute="height" multiplier="0.43" id="klz-XK-cx2"/>
                             <constraint firstItem="fxa-ib-lhV" firstAttribute="top" secondItem="xFx-hf-lCT" secondAttribute="bottom" constant="24" id="oov-Hk-7zn"/>

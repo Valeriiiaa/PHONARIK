@@ -43,6 +43,10 @@
 		F6B8B84C2B94C6E3001FE671 /* AddedRoomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6B8B84B2B94C6E3001FE671 /* AddedRoomCell.xib */; };
 		F6B8B84E2B94C711001FE671 /* AddedRoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B8B84D2B94C711001FE671 /* AddedRoomCell.swift */; };
 		F6C91EE02B94D7C3005FB008 /* AddLightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C91EDF2B94D7C3005FB008 /* AddLightViewController.swift */; };
+		F6C91EE22B961327005FB008 /* MusicPlayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6C91EE12B961327005FB008 /* MusicPlayer.storyboard */; };
+		F6C91EE52B96145C005FB008 /* PlaybackLightView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6C91EE42B96145C005FB008 /* PlaybackLightView.storyboard */; };
+		F6C91EE72B961476005FB008 /* MusicPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C91EE62B961476005FB008 /* MusicPlayerViewController.swift */; };
+		F6C91EEA2B961755005FB008 /* PlaybackLightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C91EE92B961755005FB008 /* PlaybackLightViewController.swift */; };
 		F6E415A92B9076E600D8B418 /* LightingDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E415A82B9076E600D8B418 /* LightingDeviceViewController.swift */; };
 		F6E415AB2B907A3600D8B418 /* ConnectionDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E415AA2B907A3600D8B418 /* ConnectionDeviceViewController.swift */; };
 		F6EB00F82B8C9FBB005139CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EB00F72B8C9FBB005139CC /* AppDelegate.swift */; };
@@ -130,6 +134,10 @@
 		F6B8B84B2B94C6E3001FE671 /* AddedRoomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddedRoomCell.xib; sourceTree = "<group>"; };
 		F6B8B84D2B94C711001FE671 /* AddedRoomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddedRoomCell.swift; sourceTree = "<group>"; };
 		F6C91EDF2B94D7C3005FB008 /* AddLightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLightViewController.swift; sourceTree = "<group>"; };
+		F6C91EE12B961327005FB008 /* MusicPlayer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MusicPlayer.storyboard; sourceTree = "<group>"; };
+		F6C91EE42B96145C005FB008 /* PlaybackLightView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PlaybackLightView.storyboard; sourceTree = "<group>"; };
+		F6C91EE62B961476005FB008 /* MusicPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerViewController.swift; sourceTree = "<group>"; };
+		F6C91EE92B961755005FB008 /* PlaybackLightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackLightViewController.swift; sourceTree = "<group>"; };
 		F6E415A82B9076E600D8B418 /* LightingDeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightingDeviceViewController.swift; sourceTree = "<group>"; };
 		F6E415AA2B907A3600D8B418 /* ConnectionDeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionDeviceViewController.swift; sourceTree = "<group>"; };
 		F6EB00F42B8C9FBB005139CC /* LedLamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LedLamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -264,6 +272,7 @@
 		F6A0BC322B8E3F290084A0E8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F6C91EE82B961745005FB008 /* MusicPlayer */,
 				F6505C552B93729800D47128 /* Light */,
 				F6505C542B93729100D47128 /* Rooms */,
 				11A1D3EA2B94F8E6003184AA /* ScannerView.swift */,
@@ -274,6 +283,7 @@
 		F6A0BC332B8E3F300084A0E8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F6C91EE32B96132D005FB008 /* MusicPlayer */,
 				F6505C512B936DC200D47128 /* RoomsBottomSheets */,
 				F6A0BC342B8E3F380084A0E8 /* ScanDeviceView */,
 				F6505C4B2B936A3700D47128 /* SelectAccessoryViewController.storyboard */,
@@ -287,6 +297,22 @@
 				F6A0BC392B8E44FA0084A0E8 /* ScanDeviceView.storyboard */,
 			);
 			path = ScanDeviceView;
+			sourceTree = "<group>";
+		};
+		F6C91EE32B96132D005FB008 /* MusicPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				F6C91EE42B96145C005FB008 /* PlaybackLightView.storyboard */,
+			);
+			path = MusicPlayer;
+			sourceTree = "<group>";
+		};
+		F6C91EE82B961745005FB008 /* MusicPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				F6C91EE92B961755005FB008 /* PlaybackLightViewController.swift */,
+			);
+			path = MusicPlayer;
 			sourceTree = "<group>";
 		};
 		F6EB00EB2B8C9FBB005139CC = {
@@ -376,6 +402,7 @@
 				F6B176E02B91EED400932231 /* ColorPicker.storyboard */,
 				11C621AB2B936715006B15F7 /* CustomTabBar.storyboard */,
 				F6B8B8472B94C1E4001FE671 /* Rooms.storyboard */,
+				F6C91EE12B961327005FB008 /* MusicPlayer.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -388,6 +415,7 @@
 				F68EAA3B2B91F3E7002B4DF0 /* ColorPickerViewController.swift */,
 				F6B8B8492B94C210001FE671 /* RoomsViewController.swift */,
 				F6C91EDF2B94D7C3005FB008 /* AddLightViewController.swift */,
+				F6C91EE62B961476005FB008 /* MusicPlayerViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -586,9 +614,11 @@
 				F6B176DC2B91EA4300932231 /* MainScreenCell.xib in Resources */,
 				F6EB01382B8CA156005139CC /* ChakraPetch-Light.ttf in Resources */,
 				F6505C4C2B936A3700D47128 /* SelectAccessoryViewController.storyboard in Resources */,
+				F6C91EE22B961327005FB008 /* MusicPlayer.storyboard in Resources */,
 				F6EB01362B8CA156005139CC /* ChakraPetch-SemiBold.ttf in Resources */,
 				F6F8275F2B9080A200F1BB61 /* DeviceLocationCell.xib in Resources */,
 				F6505C4E2B936C3000D47128 /* SelectAccessoryCell.xib in Resources */,
+				F6C91EE52B96145C005FB008 /* PlaybackLightView.storyboard in Resources */,
 				F6EB00FF2B8C9FBB005139CC /* Main.storyboard in Resources */,
 				F6B176E12B91EED400932231 /* ColorPicker.storyboard in Resources */,
 				F6A0BC162B8CA4DD0084A0E8 /* Settings.storyboard in Resources */,
@@ -633,8 +663,10 @@
 				11C621AF2B938D1A006B15F7 /* HomeKitManager.swift in Sources */,
 				F6A0BC1E2B8CAB230084A0E8 /* SettingsModel.swift in Sources */,
 				11C621A52B936493006B15F7 /* BEKCurveTabbarController.swift in Sources */,
+				F6C91EE72B961476005FB008 /* MusicPlayerViewController.swift in Sources */,
 				11C621A32B936493006B15F7 /* DefaultTabBarViewModel.swift in Sources */,
 				11A1D3EB2B94F8E6003184AA /* ScannerView.swift in Sources */,
+				F6C91EEA2B961755005FB008 /* PlaybackLightViewController.swift in Sources */,
 				F6F8275B2B907EF100F1BB61 /* DeviceNameLocationViewController.swift in Sources */,
 				11C621A82B936493006B15F7 /* BEKCurveTabbar.swift in Sources */,
 				F68EAA3C2B91F3E7002B4DF0 /* ColorPickerViewController.swift in Sources */,
