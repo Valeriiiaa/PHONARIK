@@ -94,6 +94,16 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MainScreenCell", for: indexPath)
         let lightModel = DatabaseManager.shared.load()[indexPath.row]
         (cell as? MainScreenCell)?.configure(deviceName: lightModel.name, roomName: lightModel.room ?? "", stateLabel: lightModel.isEnabled)
+        
+        (cell as? MainScreenCell)?.menuDidTap = { [unowned self] in
+            // TODO: Lera sdelay kak y kostika
+        }
+        
+        (cell as? MainScreenCell)?.switchValueChanged = { [lightModel] value in
+            lightModel.isEnabled = value
+            DatabaseManager.shared.update(lightModel)
+            print("saved")
+        }
         return cell
     }
 }

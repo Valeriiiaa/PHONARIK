@@ -9,7 +9,7 @@ import UIKit
 import CoreData
 import HomeKit
 
-struct RoomModel: SelectableRoom {
+class RoomModel {
     var name: String
     var background: Data?
     var lamps: String
@@ -19,14 +19,30 @@ struct RoomModel: SelectableRoom {
     var titel: String {
         name
     }
+    
+    init(name: String, background: Data? = nil, lamps: String, status: Bool, room: HMRoom? = nil) {
+        self.name = name
+        self.background = background
+        self.lamps = lamps
+        self.status = status
+        self.room = room
+    }
 }
 
-struct LampModel {
+class LampModel {
     var name: String
     let deviceId: String
     var room: String?
     var accessory: HMAccessory?
-    let isEnabled: Bool
+    var isEnabled: Bool
+    
+    init(name: String, deviceId: String, room: String? = nil, accessory: HMAccessory? = nil, isEnabled: Bool) {
+        self.name = name
+        self.deviceId = deviceId
+        self.room = room
+        self.accessory = accessory
+        self.isEnabled = isEnabled
+    }
 }
 
 
@@ -99,6 +115,20 @@ class DatabaseManager: DatabaseManagerProtocol {
         save(model)
     }
     
+    func update(_ model: LampModel) {
+        let request: NSFetchRequest<LightLamp> = LightLamp.fetchRequest()
+        do {
+            let fetchedItems = try persistentContainer.viewContext.fetch(request)
+            if let item = fetchedItems.first(where: { $0.deviceId == model.deviceId }) {
+                persistentContainer.viewContext.delete(item)
+                saveContext()
+                
+                save(model)
+            }
+        } catch let error {
+            print("Lamp delete error: \(error)")
+        }
+    }
     
     func update(_ model: LampModel, oldName: String, roomUpdate: Bool = false) {
         let request: NSFetchRequest<LightLamp> = LightLamp.fetchRequest()

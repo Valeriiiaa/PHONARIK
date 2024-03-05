@@ -8,11 +8,7 @@
 import Foundation
 import SwiftUI
 
-protocol SelectableRoom {
-    var titel: String { get }
-}
-
-enum LocationCollectionViewModel: CaseIterable, SelectableRoom {
+enum LocationCollectionViewModel: CaseIterable {
     case livingroom
     case bedroom
     case kitchen

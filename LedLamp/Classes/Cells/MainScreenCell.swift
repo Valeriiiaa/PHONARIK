@@ -16,6 +16,7 @@ class MainScreenCell: UITableViewCell {
     @IBOutlet weak var lightSmartLabel: UILabel!
     
     var menuDidTap: (()-> Void)?
+    var switchValueChanged: ((Bool) -> Void)?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,6 +30,7 @@ class MainScreenCell: UITableViewCell {
     }
    
     @IBAction func switchDidTap(_ sender: Any) {
+        switchValueChanged?(switchState.isOn)
     }
    
     @IBAction func menuBtnDidTap(_ sender: Any) {
@@ -38,6 +40,7 @@ class MainScreenCell: UITableViewCell {
     func configure(deviceName: String, roomName: String, stateLabel: Bool) {
         roomNameLabel.text = roomName
         lightSmartLabel.text = deviceName
+        switchState.isOn = stateLabel
         self.stateLabel.text = stateLabel ? "connect".localized : "disconnect".localized
     }
 }
