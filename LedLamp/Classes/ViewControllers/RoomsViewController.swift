@@ -125,6 +125,15 @@ extension RoomsViewController: UICollectionViewDataSource, UICollectionViewDeleg
             image = img
         }
         (cell as? AddedRoomCell)?.configure(roomImage: image, stateLabel: room.status, roomNameLabel: room.name)
+        
+        (cell as? AddedRoomCell)?.menuButtonDidTap = {
+            //TODO: Do the same as in the LightViewController
+        }
+        
+        (cell as? AddedRoomCell)?.switchValueChanged = { value in
+            room.status = value
+            DatabaseManager.shared.update(room, oldName: room.name)
+        }
         return cell
     }
 }

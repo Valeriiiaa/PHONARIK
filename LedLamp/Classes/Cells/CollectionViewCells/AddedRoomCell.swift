@@ -16,6 +16,7 @@ class AddedRoomCell: UICollectionViewCell {
     @IBOutlet weak var lightSmartBulbLabel: UILabel!
     
     var menuButtonDidTap: (() -> Void)?
+    var switchValueChanged: ((Bool) -> Void)?
    
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,6 +28,7 @@ class AddedRoomCell: UICollectionViewCell {
     }
    
     @IBAction func switchDidTap(_ sender: Any) {
+        switchValueChanged?(switchState.isOn)
     }
     
     @IBAction func menuBtnDidTap(_ sender: Any) {
@@ -36,6 +38,7 @@ class AddedRoomCell: UICollectionViewCell {
     func configure(roomImage: UIImage, stateLabel: Bool, roomNameLabel: String) {
         self.roomImage.image = roomImage
         self.stateLabel.text = stateLabel ? "connect".localized : "disconnect".localized
+        switchState.isOn = stateLabel
         self.roomNameLabel.text = roomNameLabel
     }
 }

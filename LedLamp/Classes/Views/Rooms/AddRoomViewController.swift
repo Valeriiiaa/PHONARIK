@@ -7,6 +7,7 @@
 
 import UIKit
 import BottomSheet
+import IQKeyboardManagerSwift
 
 class AddRoomViewController: UIViewController {
    
@@ -42,7 +43,8 @@ class AddRoomViewController: UIViewController {
         [openCameraView, galleryView, collectionView].forEach({ item in
             item?.isUserInteractionEnabled = false
         })
-        
+        textFieldNameDevice.iq.enableMode = .disabled
+        textFieldNameDevice.iq.toolbar.isHidden = true
         textFieldNameDevice.layer.cornerRadius = 30
         textFieldNameDevice.layer.masksToBounds = true
         textFieldNameDevice.keyboardAppearance =  .dark
@@ -102,7 +104,9 @@ class AddRoomViewController: UIViewController {
     
    
     @IBAction func collectionBtnDidTap(_ sender: Any) {
-        pushToNext(with: UIImage())
+        let entrance = UIStoryboard(name: "CollectionImages", bundle: nil).instantiateViewController(identifier: "CollectionImagesViewController")
+        (entrance as? CollectionImagesViewController)?.roomName = textFieldNameDevice.text ?? ""
+        navigationController?.pushViewController(entrance, animated: true)
     }
     
     @IBAction func closeBtnDidTap(_ sender: Any) {

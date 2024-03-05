@@ -261,14 +261,17 @@
                                     <action selector="closeBtnDidTap:" destination="G5a-8e-Fsm" eventType="touchUpInside" id="adX-Ru-wJ5"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Living room" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXC-be-YDX">
-                                <rect key="frame" x="16" y="78.999999999999986" width="313" height="226.66666666666663"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="Living room" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXC-be-YDX">
+                                <rect key="frame" x="16" y="79" width="313" height="351"/>
                                 <fontDescription key="fontDescription" name="ChakraPetch-Medium" family="Chakra Petch" pointSize="32"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="livingroom" translatesAutoresizingMaskIntoConstraints="NO" id="xFx-hf-lCT">
-                                <rect key="frame" x="15" y="321.66666666666674" width="362" height="366.33333333333326"/>
+                                <rect key="frame" x="15" y="446" width="362" height="242"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="242" id="twt-np-VOn"/>
+                                </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fxa-ib-lhV">
                                 <rect key="frame" x="14" y="712" width="364" height="72"/>
@@ -300,7 +303,6 @@
                             <constraint firstItem="UTg-5c-SMP" firstAttribute="bottom" secondItem="fxa-ib-lhV" secondAttribute="bottom" constant="34" id="WPm-rL-SyP"/>
                             <constraint firstItem="nXC-be-YDX" firstAttribute="top" secondItem="UTg-5c-SMP" secondAttribute="top" constant="20" id="g7T-gO-JLV"/>
                             <constraint firstItem="UTg-5c-SMP" firstAttribute="trailing" secondItem="xFx-hf-lCT" secondAttribute="trailing" constant="16" id="had-Lz-P1b"/>
-                            <constraint firstItem="xFx-hf-lCT" firstAttribute="height" secondItem="7Gt-Ng-eKk" secondAttribute="height" multiplier="0.43" id="klz-XK-cx2"/>
                             <constraint firstItem="fxa-ib-lhV" firstAttribute="top" secondItem="xFx-hf-lCT" secondAttribute="bottom" constant="24" id="oov-Hk-7zn"/>
                             <constraint firstItem="fxa-ib-lhV" firstAttribute="leading" secondItem="UTg-5c-SMP" secondAttribute="leading" constant="14" id="qWu-t5-b9p"/>
                         </constraints>
