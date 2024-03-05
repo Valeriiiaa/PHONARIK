@@ -49,6 +49,7 @@ class MainViewController: UIViewController {
     private func configureTableView() {
         let isEmptyLights = DatabaseManager.shared.load().isEmpty
         lightsTableView.showsVerticalScrollIndicator = false
+        lightsTableView.contentInset = .init(top: 0, left: 0, bottom: 100, right: 0)
         lightsTableView.isHidden = isEmptyLights
         lightImageView.isHidden = !isEmptyLights
         youDontHaveSmartLightsLabel.isHidden = !isEmptyLights
