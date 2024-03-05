@@ -82,7 +82,6 @@
                                 </state>
                                 <connections>
                                     <action selector="musicOnIphoneBtnDidTap:" destination="v5f-25-UeJ" eventType="touchUpInside" id="6C1-Uk-UsM"/>
-                                    <action selector="syncWithMusicBtnDidTap:" destination="v5f-25-UeJ" eventType="touchUpInside" id="J7c-86-I79"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OyL-zS-x27">
@@ -92,6 +91,9 @@
                                 <state key="normal" title="Sync with music" backgroundImage="syncWithMusic">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="syncWithMusicBtnDidTap:" destination="v5f-25-UeJ" eventType="touchUpInside" id="03J-M8-Whc"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hRi-wk-cRm"/>
@@ -183,15 +185,35 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3kF-k8-Vb0">
-                                <rect key="frame" x="16" y="196.33333333333334" width="219" height="22"/>
+                                <rect key="frame" x="16" y="196.33333333333334" width="224" height="22"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="  Playback light reflection" image="question">
+                                <state key="normal" title="   Playback light reflection" image="question">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="playBackLightBtnDidTap:" destination="BV5-Xl-OD1" eventType="touchUpInside" id="f1N-Ud-UiG"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="gse-W2-nSD">
+                                <rect key="frame" x="80.666666666666686" y="659" width="232" height="72"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uWy-mS-CIM">
+                                        <rect key="frame" x="0.0" y="0.0" width="48" height="72"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="backMusic"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MVZ-0R-tSj">
+                                        <rect key="frame" x="79.999999999999986" y="0.0" width="72.000000000000014" height="72"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="play"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lBL-cJ-Z40">
+                                        <rect key="frame" x="184" y="0.0" width="48" height="72"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="aheadMusic"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Khs-uv-JWv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -202,6 +224,7 @@
                             <constraint firstItem="4zM-0f-3lr" firstAttribute="leading" secondItem="Khs-uv-JWv" secondAttribute="leading" constant="16" id="DTi-Yn-q2M"/>
                             <constraint firstItem="auj-bZ-0G2" firstAttribute="leading" secondItem="Khs-uv-JWv" secondAttribute="leading" constant="16" id="Efd-KI-SMk"/>
                             <constraint firstItem="ooc-jw-t4B" firstAttribute="top" secondItem="Khs-uv-JWv" secondAttribute="top" constant="10" id="M99-x5-3f3"/>
+                            <constraint firstItem="gse-W2-nSD" firstAttribute="centerX" secondItem="CwS-iA-xgX" secondAttribute="centerX" id="RxS-Gj-hBc"/>
                             <constraint firstAttribute="bottom" secondItem="9Wf-9k-80u" secondAttribute="bottom" id="S6W-KK-uKp"/>
                             <constraint firstItem="9Wf-9k-80u" firstAttribute="top" secondItem="CwS-iA-xgX" secondAttribute="top" id="SKA-5Q-uO7"/>
                             <constraint firstItem="auj-bZ-0G2" firstAttribute="top" secondItem="Khs-uv-JWv" secondAttribute="top" constant="8" id="VUP-kH-nIA"/>
@@ -209,6 +232,7 @@
                             <constraint firstItem="9Wf-9k-80u" firstAttribute="leading" secondItem="Khs-uv-JWv" secondAttribute="leading" id="eME-2P-1pH"/>
                             <constraint firstItem="4zM-0f-3lr" firstAttribute="top" secondItem="auj-bZ-0G2" secondAttribute="bottom" constant="26" id="hAB-Mq-dD7"/>
                             <constraint firstItem="3kF-k8-Vb0" firstAttribute="top" secondItem="4zM-0f-3lr" secondAttribute="bottom" constant="8" id="lsy-Ni-QWM"/>
+                            <constraint firstItem="Khs-uv-JWv" firstAttribute="bottom" secondItem="gse-W2-nSD" secondAttribute="bottom" constant="87" id="uut-LU-sLs"/>
                         </constraints>
                     </view>
                     <connections>
@@ -239,12 +263,117 @@
             </objects>
             <point key="canvasLocation" x="1900" y="-2.1126760563380285"/>
         </scene>
+        <!--Sync With Music View Controller-->
+        <scene sceneID="l7z-MO-PMh">
+            <objects>
+                <viewController storyboardIdentifier="SyncWithMusicViewController" id="Gqq-OD-hmE" customClass="SyncWithMusicViewController" customModule="LedLamp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="L86-Ik-ZNr">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="musicOnPhoneBackground" translatesAutoresizingMaskIntoConstraints="NO" id="2Bp-Ui-1Jk">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w6D-7K-rG2">
+                                <rect key="frame" x="16" y="67" width="64" height="64"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="backButton"/>
+                                <connections>
+                                    <action selector="backBtnDidTap:" destination="Gqq-OD-hmE" eventType="touchUpInside" id="vSL-9y-akf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ceq-AF-oqV">
+                                <rect key="frame" x="203" y="69" width="175" height="60"/>
+                                <color key="backgroundColor" red="0.90588235289999997" green="0.99607843139999996" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="8Bq-8J-lCe"/>
+                                    <constraint firstAttribute="width" constant="175" id="pbh-r1-1Eq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ChakraPetch-Regular" family="Chakra Petch" pointSize="15"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Select light">
+                                    <color key="titleColor" name="Background(#222222)"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectLightBtnDidTap:" destination="Gqq-OD-hmE" eventType="touchUpInside" id="DqM-Te-VTq"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sync with music" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jyk-vv-as8">
+                                <rect key="frame" x="16" y="157" width="357" height="31.333333333333343"/>
+                                <fontDescription key="fontDescription" name="ChakraPetch-Regular" family="Chakra Petch" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CEA-Kx-Hdo">
+                                <rect key="frame" x="16" y="196.33333333333334" width="224" height="22"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="   Playback light reflection" image="question">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="playbackLightBtnDidTap:" destination="Gqq-OD-hmE" eventType="touchUpInside" id="xOA-cS-lcz"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="rXF-im-HS3">
+                                <rect key="frame" x="80.666666666666686" y="659" width="232" height="72"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Am-A4-MCU">
+                                        <rect key="frame" x="0.0" y="0.0" width="48" height="72"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="backMusic"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Dc-mw-d1C">
+                                        <rect key="frame" x="79.999999999999986" y="0.0" width="72.000000000000014" height="72"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="play"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wu8-Cp-njB">
+                                        <rect key="frame" x="184" y="0.0" width="48" height="72"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="aheadMusic"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LeG-7N-OO9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2Bp-Ui-1Jk" firstAttribute="leading" secondItem="LeG-7N-OO9" secondAttribute="leading" id="FJS-FO-wcu"/>
+                            <constraint firstItem="LeG-7N-OO9" firstAttribute="trailing" secondItem="ceq-AF-oqV" secondAttribute="trailing" constant="15" id="LfP-MD-iJa"/>
+                            <constraint firstItem="LeG-7N-OO9" firstAttribute="trailing" secondItem="2Bp-Ui-1Jk" secondAttribute="trailing" id="NnV-uy-xbi"/>
+                            <constraint firstItem="Jyk-vv-as8" firstAttribute="top" secondItem="w6D-7K-rG2" secondAttribute="bottom" constant="26" id="No2-Qb-Abc"/>
+                            <constraint firstItem="Jyk-vv-as8" firstAttribute="leading" secondItem="LeG-7N-OO9" secondAttribute="leading" constant="16" id="PO8-MN-7x2"/>
+                            <constraint firstItem="rXF-im-HS3" firstAttribute="centerX" secondItem="L86-Ik-ZNr" secondAttribute="centerX" id="U1h-X2-O6B"/>
+                            <constraint firstAttribute="bottom" secondItem="2Bp-Ui-1Jk" secondAttribute="bottom" id="Vth-TK-RK4"/>
+                            <constraint firstItem="LeG-7N-OO9" firstAttribute="trailing" secondItem="Jyk-vv-as8" secondAttribute="trailing" constant="20" id="duS-9t-tOd"/>
+                            <constraint firstItem="w6D-7K-rG2" firstAttribute="leading" secondItem="LeG-7N-OO9" secondAttribute="leading" constant="16" id="eVZ-Gd-Nh9"/>
+                            <constraint firstItem="w6D-7K-rG2" firstAttribute="top" secondItem="LeG-7N-OO9" secondAttribute="top" constant="8" id="jCH-Dd-muJ"/>
+                            <constraint firstItem="LeG-7N-OO9" firstAttribute="bottom" secondItem="rXF-im-HS3" secondAttribute="bottom" constant="87" id="joq-Dk-gNu"/>
+                            <constraint firstItem="CEA-Kx-Hdo" firstAttribute="top" secondItem="Jyk-vv-as8" secondAttribute="bottom" constant="8" id="lA4-UY-Te2"/>
+                            <constraint firstItem="CEA-Kx-Hdo" firstAttribute="leading" secondItem="LeG-7N-OO9" secondAttribute="leading" constant="16" id="pmK-5W-gFc"/>
+                            <constraint firstItem="2Bp-Ui-1Jk" firstAttribute="top" secondItem="L86-Ik-ZNr" secondAttribute="top" id="uhE-pD-vWN"/>
+                            <constraint firstItem="ceq-AF-oqV" firstAttribute="top" secondItem="LeG-7N-OO9" secondAttribute="top" constant="10" id="vZc-Gv-F48"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="playbackLightBtn" destination="CEA-Kx-Hdo" id="rbE-MO-sXi"/>
+                        <outlet property="selectLightButton" destination="ceq-AF-oqV" id="Hut-HQ-87M"/>
+                        <outlet property="syncWithMusicLabel" destination="Jyk-vv-as8" id="7zI-Tw-lUp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0hB-fW-1fy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4509" y="-2"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="aheadMusic" width="48" height="48"/>
         <image name="backButton" width="64" height="64"/>
+        <image name="backMusic" width="48" height="48"/>
         <image name="mainBackground" width="390" height="844"/>
         <image name="musicOnIphone" width="176" height="170"/>
         <image name="musicOnPhoneBackground" width="390" height="844"/>
+        <image name="play" width="72" height="72"/>
         <image name="question" width="18" height="18.333333969116211"/>
         <image name="setingsButton" width="64" height="64"/>
         <image name="syncWithMusic" width="176" height="170"/>

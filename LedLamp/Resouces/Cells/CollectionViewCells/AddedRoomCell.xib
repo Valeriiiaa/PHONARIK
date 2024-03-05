@@ -34,19 +34,19 @@
                                 <rect key="frame" x="0.0" y="0.0" width="301" height="270"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dIx-og-01P">
-                                <rect key="frame" x="13.999999999999996" y="278" width="51.666666666666657" height="26"/>
+                                <rect key="frame" x="13.999999999999996" y="278" width="50.666666666666657" height="26"/>
                                 <fontDescription key="fontDescription" name="ChakraPetch-SemiBold" family="Chakra Petch" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Light smart bulb RGB" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6dY-i5-DjR">
-                                <rect key="frame" x="16" y="310" width="154" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Light smart bulb RGB" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6dY-i5-DjR">
+                                <rect key="frame" x="16" y="310" width="154" height="65"/>
                                 <fontDescription key="fontDescription" name="ChakraPetch-Regular" family="Chakra Petch" pointSize="16"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CTD-vJ-Myi">
-                                <rect key="frame" x="16" y="337" width="40" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CTD-vJ-Myi">
+                                <rect key="frame" x="16" y="381" width="40" height="21"/>
                                 <fontDescription key="fontDescription" name="ChakraPetch-Medium" family="Chakra Petch" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -79,6 +79,7 @@
                             <constraint firstItem="dIx-og-01P" firstAttribute="leading" secondItem="42L-jR-piD" secondAttribute="leading" constant="14" id="CPG-m3-2d9"/>
                             <constraint firstItem="CTD-vJ-Myi" firstAttribute="leading" secondItem="42L-jR-piD" secondAttribute="leading" constant="16" id="QY3-tO-ohQ"/>
                             <constraint firstAttribute="trailing" secondItem="VFF-h0-DdS" secondAttribute="trailing" id="Rq3-RC-adU"/>
+                            <constraint firstAttribute="bottom" secondItem="CTD-vJ-Myi" secondAttribute="bottom" constant="24" id="ZAu-Se-Nhz"/>
                             <constraint firstAttribute="bottom" secondItem="Vq7-Ae-zex" secondAttribute="bottom" constant="24" id="bef-xP-IOn"/>
                             <constraint firstItem="NwS-TV-2rU" firstAttribute="top" secondItem="42L-jR-piD" secondAttribute="top" id="cb0-ul-mis"/>
                             <constraint firstItem="CTD-vJ-Myi" firstAttribute="top" secondItem="6dY-i5-DjR" secondAttribute="bottom" constant="6" id="dqL-Xk-zJp"/>

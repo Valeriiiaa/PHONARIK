@@ -31,6 +31,8 @@ class MusicPlayerViewController: UIViewController {
        }
     
     @IBAction func syncWithMusicBtnDidTap(_ sender: Any) {
+        let entrance = UIStoryboard(name: "MusicPlayer", bundle: nil).instantiateViewController(withIdentifier: "SyncWithMusicViewController")
+        navigationController?.pushViewController(entrance, animated: true)
     }
    
     @IBAction func musicOnIphoneBtnDidTap(_ sender: Any) {

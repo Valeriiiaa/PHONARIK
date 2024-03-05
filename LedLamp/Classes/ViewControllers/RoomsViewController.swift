@@ -44,7 +44,8 @@ class RoomsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         brightenYourEnviroment.text = "brightenYourEnv".localized
-        addButton.text = "addLight".localized
+        addButton.text = "addRoom".localized
+        youDontHaveAnyRoomsLabel.text = "youDontHaveRooms".localized
         backgroundBrightenView.layer.cornerRadius = 40
         backgroundBrightenView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
         backgroundAddRoomView.layer.cornerRadius = 36
