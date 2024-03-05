@@ -68,13 +68,13 @@
                                 <rect key="frame" x="141.66666666666666" y="284" width="110" height="166"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You don’t have any rooms" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fq-jR-Tec">
-                                <rect key="frame" x="20" y="466" width="353" height="366"/>
+                                <rect key="frame" x="20" y="466" width="353" height="23.666666666666686"/>
                                 <fontDescription key="fontDescription" name="ChakraPetch-Regular" family="Chakra Petch" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vlo-77-99z">
-                                <rect key="frame" x="30" y="864" width="333" height="72"/>
+                                <rect key="frame" x="30" y="521.66666666666663" width="333" height="72"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p8s-oh-qEm">
                                         <rect key="frame" x="271" y="10" width="52" height="52"/>
@@ -107,11 +107,8 @@
                                 </connections>
                             </view>
                             <collectionView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="THx-I4-gF7">
-                                <rect key="frame" x="0.0" y="199" width="393" height="630"/>
+                                <rect key="frame" x="0.0" y="223.00000000000003" width="393" height="263.66666666666674"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" priority="750" constant="630" id="fEh-oL-iZc"/>
-                                </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xXD-O0-Beu" customClass="UPCarouselFlowLayout" customModule="LedLamp" customModuleProvider="target">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -120,10 +117,10 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="due-Y8-hqL">
-                                        <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                        <rect key="frame" x="0.0" y="68" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="c4h-E6-z4W">
-                                            <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </collectionViewCellContentView>
                                     </collectionViewCell>
@@ -140,7 +137,7 @@
                             <constraint firstItem="vlo-77-99z" firstAttribute="top" secondItem="0fq-jR-Tec" secondAttribute="bottom" constant="32" id="9fv-Do-Ugm"/>
                             <constraint firstItem="Ijx-nc-goA" firstAttribute="trailing" secondItem="vlo-77-99z" secondAttribute="trailing" constant="30" id="CxG-Qf-5DS"/>
                             <constraint firstItem="yK9-5u-hVo" firstAttribute="leading" secondItem="Ijx-nc-goA" secondAttribute="leading" id="G3N-Pv-ZQH"/>
-                            <constraint firstItem="THx-I4-gF7" firstAttribute="top" secondItem="yK9-5u-hVo" secondAttribute="bottom" id="Lke-fy-NIV"/>
+                            <constraint firstItem="THx-I4-gF7" firstAttribute="top" secondItem="yK9-5u-hVo" secondAttribute="bottom" constant="24" id="Lke-fy-NIV"/>
                             <constraint firstAttribute="bottom" secondItem="W0V-eI-q64" secondAttribute="bottom" id="SOB-fm-fX5"/>
                             <constraint firstItem="0fq-jR-Tec" firstAttribute="leading" secondItem="Ijx-nc-goA" secondAttribute="leading" constant="20" id="XCb-MW-yzi"/>
                             <constraint firstItem="Ijx-nc-goA" firstAttribute="trailing" secondItem="THx-I4-gF7" secondAttribute="trailing" id="aGb-wa-xB4"/>

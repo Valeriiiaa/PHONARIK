@@ -62,8 +62,8 @@ class RoomsViewController: UIViewController {
             self.configureCollectionView()
             self.roomCollectionView.reloadData()
         }
-        setupLayout()
         configureCollectionView()
+        setupLayout()
     }
     
     private func configureCollectionView() {
@@ -74,13 +74,21 @@ class RoomsViewController: UIViewController {
         buttonTopConstraint.isActive = isEmptyRooms
         if !isEmptyRooms {
             backgroundAddRoomView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16).isActive = true
+            roomCollectionView.heightAnchor.constraint(lessThanOrEqualToConstant: 630).isActive = true
         }
     }
     
-    private func setupLayout() {
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
         let layout = self.roomCollectionView.collectionViewLayout as! UPCarouselFlowLayout
-        layout.spacingMode = UPCarouselFlowLayoutSpacingMode.overlap(visibleOffset: 30)
-        layout.itemSize = .init(width: 384, height: roomCollectionView.frame.height - 100)
+        layout.itemSize = .init(width: roomCollectionView.frame.height * 0.8, height: roomCollectionView.frame.height)
+    }
+    
+    private func setupLayout() {
+        roomCollectionView.layoutIfNeeded()
+        let layout = self.roomCollectionView.collectionViewLayout as! UPCarouselFlowLayout
+        layout.spacingMode = UPCarouselFlowLayoutSpacingMode.fixed(spacing: 10)
+        
     }
    
     @IBAction func addRoomBtnDidTap(_ sender: Any) {

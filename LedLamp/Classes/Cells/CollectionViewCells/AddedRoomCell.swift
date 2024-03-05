@@ -19,6 +19,8 @@ class AddedRoomCell: UICollectionViewCell {
    
     override func awakeFromNib() {
         super.awakeFromNib()
+        roomImage.layer.cornerRadius = 16
+        roomImage.layer.masksToBounds = true
         lightSmartBulbLabel.text = "lightSmartLulb".localized
         backgroundMainView.layer.cornerRadius = 40
         backgroundMainView.layer.masksToBounds = true
