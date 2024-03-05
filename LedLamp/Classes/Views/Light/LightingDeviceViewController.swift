@@ -15,6 +15,8 @@ class LightingDeviceViewController: UIViewController {
     @IBOutlet weak var lampImage: UIImageView!
     @IBOutlet weak var lightingDeviceLabel: UILabel!
     
+    var scannedValue: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         addToAppleHomeLabel.text = "addAppleHome".localized
@@ -27,6 +29,7 @@ class LightingDeviceViewController: UIViewController {
     
     @IBAction func addBtnDidTap(_ sender: Any) {
         let entrance = UIStoryboard(name: "ScanDeviceView", bundle: nil).instantiateViewController(identifier: "ConnectionDeviceViewController")
+        (entrance as? ConnectionDeviceViewController)?.scannedValue = scannedValue
         navigationController?.pushViewController(entrance, animated: true)
     }
    

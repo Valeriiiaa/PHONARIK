@@ -35,8 +35,9 @@ class MainScreenCell: UITableViewCell {
         menuDidTap?()
     }
     
-    func configure(roomName: String, stateLabel: Bool) {
-        self.roomNameLabel.text = roomName
+    func configure(deviceName: String, roomName: String, stateLabel: Bool) {
+        roomNameLabel.text = roomName
+        lightSmartLabel.text = deviceName
         self.stateLabel.text = stateLabel ? "connect".localized : "disconnect".localized
     }
 }

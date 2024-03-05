@@ -15,6 +15,8 @@ class ConnectionDeviceViewController: UIViewController {
     @IBOutlet weak var nativeProgressView: UIProgressView!
     var currentProgress: Float = 0.0
     var timer: Timer?
+    
+    var scannedValue: String!
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +40,7 @@ class ConnectionDeviceViewController: UIViewController {
         timer?.invalidate()
         timer = nil
         let vc = storyboard.instantiateViewController(withIdentifier: "DeviceNameLocationViewController")
+        (vc as? DeviceNameLocationViewController)?.scannedValue = scannedValue
         navigationController?.pushViewController(vc, animated: true)
     }
     

@@ -90,9 +90,10 @@ class ScanDeviceView: UIViewController {
         captureSession.startRunning()
     }
     
-    private func showLightning() {
+    private func showLightning(scannedValue: String) {
         let storyboard = UIStoryboard(name: "ScanDeviceView", bundle: nil)
         let lightingDeviceViewController = storyboard.instantiateViewController(withIdentifier: "LightingDeviceViewController")
+        (lightingDeviceViewController as? LightingDeviceViewController)?.scannedValue = scannedValue
         navigationController?.pushViewController(lightingDeviceViewController, animated: true)
     }
    
@@ -111,7 +112,7 @@ extension ScanDeviceView: AVCaptureMetadataOutputObjectsDelegate {
         if let metadataObject = metadataObjects.first as? AVMetadataMachineReadableCodeObject {
             if metadataObject.type == .qr, let qrCode = metadataObject.stringValue {
                 DispatchQueue.main.async {
-                    self.showLightning()
+                    self.showLightning(scannedValue: qrCode)
                 }
                 captureSession?.stopRunning()
             }

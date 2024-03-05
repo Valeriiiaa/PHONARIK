@@ -14,6 +14,8 @@ class DeviceAddedViewController: UIViewController {
     @IBOutlet weak var deviceAddedLabel: UILabel!
     
     var deviceName = ""
+    var room: RoomModel!
+    var value: String!
   
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +37,9 @@ class DeviceAddedViewController: UIViewController {
     
     
     @IBAction func doneBtnDidTap(_ sender: Any) {
-        
+        DatabaseManager.shared.save(LampModel(name: deviceName, deviceId: value, room: room.name, isEnabled: false))
+        ActionManager.shared.reload()
+        dismiss(animated: true)
     }
     
 }

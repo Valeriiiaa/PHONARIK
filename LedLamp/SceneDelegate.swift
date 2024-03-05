@@ -22,6 +22,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window?.windowScene = windowScene
         window?.rootViewController = getConfiguredController()
         self.window?.makeKeyAndVisible()
+        
+        guard !UserDefaults.standard.bool(forKey: "isNotFirstLaunch") else { return }
+        UserDefaults.standard.set(true, forKey: "isNotFirstLaunch")
+        
+        LocationCollectionViewModel.allCases.forEach({ item in
+            DatabaseManager.shared.save(RoomModel(name: item.titel, background: UIImage(resource: item.image).pngData(), lamps: "", status: false))
+        })
     }
     
     func getConfiguredController() -> UITabBarController {

@@ -6,8 +6,13 @@
 //
 
 import Foundation
+import SwiftUI
 
-enum LocationCollectionViewModel: CaseIterable {
+protocol SelectableRoom {
+    var titel: String { get }
+}
+
+enum LocationCollectionViewModel: CaseIterable, SelectableRoom {
     case livingroom
     case bedroom
     case kitchen
@@ -23,6 +28,22 @@ enum LocationCollectionViewModel: CaseIterable {
             return "kitchen".localized
         case .bathroom:
             return "bathroom".localized
+        }
+    }
+    
+    var image: ImageResource {
+        switch self {
+        case .livingroom:
+            ImageResource.livingRoom
+            
+        case .bedroom:
+            ImageResource.bedroom
+            
+        case .kitchen:
+            ImageResource.kitchen
+            
+        case .bathroom:
+            ImageResource.bathroom
         }
     }
 }

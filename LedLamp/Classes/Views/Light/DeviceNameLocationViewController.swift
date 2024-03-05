@@ -21,8 +21,10 @@ class DeviceNameLocationViewController: UIViewController {
     @IBOutlet weak var deviceNameLabel: UILabel!
     @IBOutlet weak var lightingDevicaLabel: UILabel!
     
-    let items = LocationCollectionViewModel.allCases
+    var items = [RoomModel]()
+    
     var selectedIndex: Int?
+    var scannedValue: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,10 +57,14 @@ class DeviceNameLocationViewController: UIViewController {
         
         textFieldName.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         
+        items.append(contentsOf: DatabaseManager.shared.loadRooms())
+        
     }
     @IBAction func nextBtnDidTap(_ sender: Any) {
         let entrance = UIStoryboard(name: "ScanDeviceView", bundle: nil).instantiateViewController(identifier: "DeviceAddedViewController")
         (entrance as? DeviceAddedViewController)?.deviceName = textFieldName.text ?? ""
+        (entrance as? DeviceAddedViewController)?.room = items[selectedIndex ?? 0]
+        (entrance as? DeviceAddedViewController)?.value = scannedValue
         navigationController?.setViewControllers([entrance], animated: true)
     }
     
@@ -92,7 +98,7 @@ extension DeviceNameLocationViewController: UICollectionViewDelegateFlowLayout, 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout:
                         UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
        
-        return CGSize(width: collectionView.frame.width / 2 - 20, height: 48)
+        return CGSize(width: collectionView.frame.width / 2 - 20, height: 46)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
@@ -104,7 +110,6 @@ extension DeviceNameLocationViewController: UICollectionViewDelegateFlowLayout, 
         collectionView.reloadData()
         activateNextBtn()
     }
-    
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let item = items[indexPath.row]

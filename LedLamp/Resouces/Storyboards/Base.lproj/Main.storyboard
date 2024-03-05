@@ -72,6 +72,11 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="white" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="FFJ-lt-UhF">
+                                <rect key="frame" x="16" y="207" width="361" height="645"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="epP-Jq-len">
                                 <rect key="frame" x="30" y="521.66666666666663" width="333" height="72"/>
                                 <subviews>
@@ -109,12 +114,15 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FFJ-lt-UhF" secondAttribute="trailing" constant="16" id="1pt-Oa-Cr2"/>
+                            <constraint firstItem="FFJ-lt-UhF" firstAttribute="top" secondItem="8EF-iM-R6Q" secondAttribute="bottom" constant="8" id="4v0-Ec-Ta7"/>
                             <constraint firstItem="CeA-Ex-aoo" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="BkP-3N-ca1"/>
                             <constraint firstItem="CeA-Ex-aoo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="C8Y-UJ-4LY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8EF-iM-R6Q" secondAttribute="trailing" id="GE9-gH-BHm"/>
                             <constraint firstItem="jzo-Ge-ZPM" firstAttribute="top" secondItem="8EF-iM-R6Q" secondAttribute="bottom" constant="85" id="Khw-Cj-LbJ"/>
                             <constraint firstItem="epP-Jq-len" firstAttribute="top" secondItem="92L-IF-jZv" secondAttribute="bottom" constant="32" id="Knv-a9-Szx"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CeA-Ex-aoo" secondAttribute="trailing" id="MBB-ke-58o"/>
+                            <constraint firstItem="FFJ-lt-UhF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="N1C-Li-7kX"/>
                             <constraint firstItem="92L-IF-jZv" firstAttribute="top" secondItem="jzo-Ge-ZPM" secondAttribute="bottom" constant="16" id="PYk-Mc-Qfb"/>
                             <constraint firstItem="8EF-iM-R6Q" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Rzd-Da-fjS"/>
                             <constraint firstItem="epP-Jq-len" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="aGm-lS-CfN"/>
@@ -125,6 +133,7 @@
                             <constraint firstAttribute="bottom" secondItem="CeA-Ex-aoo" secondAttribute="bottom" id="k6r-SQ-RL0"/>
                             <constraint firstItem="jzo-Ge-ZPM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lLG-pM-9Gs"/>
                             <constraint firstItem="8EF-iM-R6Q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="s4X-m2-wle"/>
+                            <constraint firstAttribute="bottom" secondItem="FFJ-lt-UhF" secondAttribute="bottom" id="wlV-Il-KCw"/>
                             <constraint firstItem="8EF-iM-R6Q" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.233568" id="yG9-rW-sFh"/>
                         </constraints>
                     </view>
@@ -133,8 +142,12 @@
                         <outlet property="addLightLabel" destination="vVe-rp-au1" id="USD-tf-ZR3"/>
                         <outlet property="backgroundButtonView" destination="epP-Jq-len" id="oRc-ab-CRS"/>
                         <outlet property="backgroundMainView" destination="8EF-iM-R6Q" id="UAS-nF-fyN"/>
+                        <outlet property="buttonTopConstraint" destination="Knv-a9-Szx" id="ikB-kh-a2m"/>
+                        <outlet property="lightImageView" destination="jzo-Ge-ZPM" id="lNP-jY-0UJ"/>
+                        <outlet property="lightsTableView" destination="FFJ-lt-UhF" id="CRT-RF-cGG"/>
                         <outlet property="titleLabel" destination="OhY-qZ-D3b" id="Xc2-5q-hie"/>
                         <outlet property="youDontHaveLight" destination="92L-IF-jZv" id="dYL-Ny-8vN"/>
+                        <outlet property="youDontHaveSmartLightsLabel" destination="92L-IF-jZv" id="k9H-FX-ssc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

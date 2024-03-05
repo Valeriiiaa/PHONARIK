@@ -9,12 +9,16 @@ import UIKit
 import CoreData
 import HomeKit
 
-struct RoomModel {
+struct RoomModel: SelectableRoom {
     var name: String
     var background: Data?
     var lamps: String
     var status: Bool
     var room: HMRoom?
+    
+    var titel: String {
+        name
+    }
 }
 
 struct LampModel {
@@ -22,6 +26,7 @@ struct LampModel {
     let deviceId: String
     var room: String?
     var accessory: HMAccessory?
+    let isEnabled: Bool
 }
 
 
@@ -69,12 +74,12 @@ class DatabaseManager: DatabaseManagerProtocol {
         }
     }
     
-    
     func save(_ model: LampModel) {
         let item = LightLamp(context: persistentContainer.viewContext)
         item.name = model.name
         item.deviceId = model.deviceId
         item.room = model.room
+        item.isEnabled = model.isEnabled
         saveContext()
     }
     
@@ -153,7 +158,7 @@ class DatabaseManager: DatabaseManagerProtocol {
             
             var models: [LampModel] = []
             for item in fetchedItems {
-                models.append(LampModel(name: item.name ?? "", deviceId: item.deviceId ?? "", room: item.room))
+                models.append(LampModel(name: item.name ?? "", deviceId: item.deviceId ?? "", room: item.room, isEnabled: item.isEnabled))
             }
 
             return models

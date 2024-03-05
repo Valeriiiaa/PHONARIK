@@ -28,8 +28,6 @@ class RoomsViewController: UIViewController {
     @IBOutlet weak var addButton: UILabel!
     @IBOutlet weak var brightenYourEnviroment: UILabel!
     
-    private var currentPage: Int = 0
-    
     private var pageSize: CGSize {
         let layout = self.roomCollectionView.collectionViewLayout as! UPCarouselFlowLayout
         var pageSize = layout.itemSize
