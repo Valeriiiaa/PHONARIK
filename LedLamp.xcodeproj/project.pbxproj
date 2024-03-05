@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		118EAD0C2B965CC900F6A8BD /* UPCarouselFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118EAD0B2B965CC900F6A8BD /* UPCarouselFlowLayout.swift */; };
+		118EAD0E2B9663A800F6A8BD /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118EAD0D2B9663A800F6A8BD /* DatabaseManager.swift */; };
+		118EAD112B96641700F6A8BD /* LEDapp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 118EAD0F2B96641600F6A8BD /* LEDapp.xcdatamodeld */; };
 		11A1D3EB2B94F8E6003184AA /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A1D3EA2B94F8E6003184AA /* ScannerView.swift */; };
 		11A1D3ED2B94F911003184AA /* QRCodePreviewLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A1D3EC2B94F911003184AA /* QRCodePreviewLayer.swift */; };
 		11C621A32B936493006B15F7 /* DefaultTabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C6219D2B936493006B15F7 /* DefaultTabBarViewModel.swift */; };
@@ -95,6 +98,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		118EAD0B2B965CC900F6A8BD /* UPCarouselFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UPCarouselFlowLayout.swift; sourceTree = "<group>"; };
+		118EAD0D2B9663A800F6A8BD /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		118EAD102B96641600F6A8BD /* LEDapp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LEDapp.xcdatamodel; sourceTree = "<group>"; };
 		11A1D3EA2B94F8E6003184AA /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
 		11A1D3EC2B94F911003184AA /* QRCodePreviewLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodePreviewLayer.swift; sourceTree = "<group>"; };
 		11C6219D2B936493006B15F7 /* DefaultTabBarViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultTabBarViewModel.swift; sourceTree = "<group>"; };
@@ -202,6 +208,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		118EAD0A2B965CBD00F6A8BD /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				118EAD0B2B965CC900F6A8BD /* UPCarouselFlowLayout.swift */,
+			);
+			path = Layouts;
+			sourceTree = "<group>";
+		};
 		11C6219C2B93647E006B15F7 /* CustomTabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				11C621AE2B938D1A006B15F7 /* HomeKitManager.swift */,
+				118EAD0D2B9663A800F6A8BD /* DatabaseManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -395,6 +410,7 @@
 		F6EB01272B8C9FC7005139CC /* Resouces */ = {
 			isa = PBXGroup;
 			children = (
+				118EAD0F2B96641600F6A8BD /* LEDapp.xcdatamodeld */,
 				F6EB012D2B8CA041005139CC /* Cells */,
 				F6A0BC332B8E3F300084A0E8 /* Views */,
 				F6EB01292B8C9FFF005139CC /* Storyboards */,
@@ -406,6 +422,7 @@
 		F6EB01282B8C9FD3005139CC /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				118EAD0A2B965CBD00F6A8BD /* Layouts */,
 				F6A0BC1B2B8CA9160084A0E8 /* Models */,
 				F6A0BC322B8E3F290084A0E8 /* Views */,
 				F6EB012E2B8CA048005139CC /* Cells */,
@@ -681,6 +698,7 @@
 				F6EB00FC2B8C9FBB005139CC /* SettingsViewController.swift in Sources */,
 				F6B176DF2B91EA5400932231 /* MainScreenCell.swift in Sources */,
 				F6C91EE02B94D7C3005FB008 /* AddLightViewController.swift in Sources */,
+				118EAD0E2B9663A800F6A8BD /* DatabaseManager.swift in Sources */,
 				F6A0BC2D2B8CB02B0084A0E8 /* String+localization.swift in Sources */,
 				11A1D3ED2B94F911003184AA /* QRCodePreviewLayer.swift in Sources */,
 				F6F827612B90810A00F1BB61 /* DeviceLocationCell.swift in Sources */,
@@ -693,6 +711,7 @@
 				11A1D3EB2B94F8E6003184AA /* ScannerView.swift in Sources */,
 				F6C91EEA2B961755005FB008 /* PlaybackLightViewController.swift in Sources */,
 				F6F8275B2B907EF100F1BB61 /* DeviceNameLocationViewController.swift in Sources */,
+				118EAD0C2B965CC900F6A8BD /* UPCarouselFlowLayout.swift in Sources */,
 				11C621A82B936493006B15F7 /* BEKCurveTabbar.swift in Sources */,
 				F68EAA3C2B91F3E7002B4DF0 /* ColorPickerViewController.swift in Sources */,
 				F6C91EEE2B965455005FB008 /* CollectionImagesViewController.swift in Sources */,
@@ -703,6 +722,7 @@
 				F6B8B8462B938F68001FE671 /* ChoosenRoomViewController.swift in Sources */,
 				F6F827692B9089B900F1BB61 /* DeviceAddedViewController.swift in Sources */,
 				F6B68A732B96630500A86418 /* MusicIphoneViewController.swift in Sources */,
+				118EAD112B96641700F6A8BD /* LEDapp.xcdatamodeld in Sources */,
 				F6A0BC3C2B8E450C0084A0E8 /* ScanDeviceView.swift in Sources */,
 				F6E415AB2B907A3600D8B418 /* ConnectionDeviceViewController.swift in Sources */,
 				F6C91EF22B965585005FB008 /* CollectionImageCell.swift in Sources */,
@@ -1112,6 +1132,19 @@
 			productName = IQKeyboardManagerSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		118EAD0F2B96641600F6A8BD /* LEDapp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				118EAD102B96641600F6A8BD /* LEDapp.xcdatamodel */,
+			);
+			currentVersion = 118EAD102B96641600F6A8BD /* LEDapp.xcdatamodel */;
+			path = LEDapp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F6EB00EC2B8C9FBB005139CC /* Project object */;
 }

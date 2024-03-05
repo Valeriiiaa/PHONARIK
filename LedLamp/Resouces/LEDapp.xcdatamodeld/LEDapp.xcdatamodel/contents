@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22522" systemVersion="23C71" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+    <entity name="LightLamp" representedClassName="LightLamp" syncable="YES" codeGenerationType="class">
+        <attribute name="deviceId" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="room" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="MyRoom" representedClassName="MyRoom" syncable="YES" codeGenerationType="class">
+        <attribute name="background" optional="YES" attributeType="Binary"/>
+        <attribute name="lamps" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="status" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+    </entity>
+</model>

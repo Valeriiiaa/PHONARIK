@@ -26,9 +26,16 @@ class ChoosenRoomViewController: UIViewController {
         saveButton.layer.masksToBounds = true
         roomImage.layer.cornerRadius = 32
         roomImage.layer.masksToBounds = true
+        loadViewIfNeeded()
+        view.setNeedsLayout()
+        view.layoutIfNeeded()
+        view.layoutSubviews()
     }
     
     @IBAction func saveButtonDidTap(_ sender: Any) {
+        DatabaseManager.shared.save(RoomModel(name: roomsName, background: imageRoom?.pngData(), lamps: "", status: true))
+        ActionManager.shared.reload()
+        dismiss(animated: true)
     }
     
     @IBAction func closeBtnDidTap(_ sender: Any) {

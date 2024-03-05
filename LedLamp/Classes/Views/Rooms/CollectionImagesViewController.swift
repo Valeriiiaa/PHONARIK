@@ -30,15 +30,15 @@ class CollectionImagesViewController: UIViewController {
 
 }
 
-//extension CollectionImagesViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
-//   
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//         w
-//    }
-//    
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//         w
-//    }
-//    
-//    
-//}
+extension CollectionImagesViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+   
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        3
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        UICollectionViewCell()
+    }
+    
+    
+}

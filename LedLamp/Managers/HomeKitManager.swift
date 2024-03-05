@@ -13,7 +13,7 @@ protocol HomeManagerProtocol {
     
     var home: HMHome? { get set }
     var accessories: (([HMAccessory]) -> Void)? { set get }
-    var reloadData: (() -> Void)? { set get }
+    var reloadDatas: [() -> Void] { get set }
     
     func showCamera(_ callback: @escaping() -> Void)
     func checkHomes()
@@ -39,7 +39,11 @@ class HomeManager: NSObject, HomeManagerProtocol {
     
     static let shared = HomeManager()
     
-    var home: HMHome?
+    var home: HMHome? {
+        didSet {
+            home?.delegate = self
+        }
+    }
     private var manager: HMHomeManager!
     private var browser: HMAccessoryBrowser!
     private var room: HMRoom?
@@ -50,7 +54,8 @@ class HomeManager: NSObject, HomeManagerProtocol {
     }
     
     var accessories: (([HMAccessory]) -> Void)?
-    var reloadData: (() -> Void)?
+    
+    var reloadDatas = [() -> Void]()
     
     override init() {
         self.manager = HMHomeManager()
@@ -81,8 +86,9 @@ class HomeManager: NSObject, HomeManagerProtocol {
     func checkHomes() {
         print("homes: \(manager.homes)")
 //        manager.
+        print(manager.authorizationStatus)
         if manager.homes.isEmpty {
-            self.createHome(withName: "My Home5") { status in
+            self.createHome(withName: "My Home99") { status in
                 print("home add status: \(status)")
             }
             return
@@ -302,17 +308,31 @@ extension HomeManager: HMAccessoryBrowserDelegate {
     }
 }
 
-
-
-extension HomeManager: HMAccessoryDelegate, HMHomeDelegate {
-    
-    func accessory(_ accessory: HMAccessory, service: HMService, didUpdateValueFor characteristic: HMCharacteristic) {
-        reloadData?()
-    }
-    
+extension HomeManager: HMHomeDelegate {
     func home(_ home: HMHome, didAdd accessory: HMAccessory) {
         print("new device added!")
     //    connectedAccessory?(accessory)
+    }
+    
+    func home(_ home: HMHome, didUpdateNameFor room: HMRoom) {
+        reloadDatas.forEach({ $0() })
+    }
+    
+    func home(_ home: HMHome, didUpdate trigger: HMTrigger) {
+        reloadDatas.forEach({ $0() })
+    }
+    
+    func home(_ home: HMHome, didUpdate homeHubState: HMHomeHubState) {
+        reloadDatas.forEach({ $0() })
+    }
+    
+}
+
+
+extension HomeManager: HMAccessoryDelegate {
+    
+    func accessory(_ accessory: HMAccessory, service: HMService, didUpdateValueFor characteristic: HMCharacteristic) {
+        reloadDatas.forEach({ $0() })
     }
 }
 

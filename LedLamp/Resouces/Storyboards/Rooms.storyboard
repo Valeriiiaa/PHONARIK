@@ -6,6 +6,7 @@
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -67,13 +68,13 @@
                                 <rect key="frame" x="141.66666666666666" y="284" width="110" height="166"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You don’t have any rooms" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fq-jR-Tec">
-                                <rect key="frame" x="20" y="466" width="353" height="23.666666666666686"/>
+                                <rect key="frame" x="20" y="466" width="353" height="366"/>
                                 <fontDescription key="fontDescription" name="ChakraPetch-Regular" family="Chakra Petch" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vlo-77-99z">
-                                <rect key="frame" x="30" y="521.66666666666663" width="333" height="72"/>
+                                <rect key="frame" x="30" y="864" width="333" height="72"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p8s-oh-qEm">
                                         <rect key="frame" x="271" y="10" width="52" height="52"/>
@@ -105,21 +106,48 @@
                                     <outletCollection property="gestureRecognizers" destination="e3L-ND-4JM" appends="YES" id="6gH-bb-i3O"/>
                                 </connections>
                             </view>
+                            <collectionView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="THx-I4-gF7">
+                                <rect key="frame" x="0.0" y="199" width="393" height="630"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="750" constant="630" id="fEh-oL-iZc"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xXD-O0-Beu" customClass="UPCarouselFlowLayout" customModule="LedLamp" customModuleProvider="target">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="due-Y8-hqL">
+                                        <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="c4h-E6-z4W">
+                                            <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ijx-nc-goA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="THx-I4-gF7" firstAttribute="leading" secondItem="Ijx-nc-goA" secondAttribute="leading" id="0Gc-t5-IAG"/>
                             <constraint firstItem="vlo-77-99z" firstAttribute="leading" secondItem="Ijx-nc-goA" secondAttribute="leading" constant="30" id="2Qq-hl-pFE"/>
                             <constraint firstItem="W0V-eI-q64" firstAttribute="leading" secondItem="Ijx-nc-goA" secondAttribute="leading" id="39R-om-fcC"/>
                             <constraint firstItem="W0V-eI-q64" firstAttribute="top" secondItem="EQk-TV-33L" secondAttribute="top" id="9fs-MI-Ugf"/>
                             <constraint firstItem="vlo-77-99z" firstAttribute="top" secondItem="0fq-jR-Tec" secondAttribute="bottom" constant="32" id="9fv-Do-Ugm"/>
                             <constraint firstItem="Ijx-nc-goA" firstAttribute="trailing" secondItem="vlo-77-99z" secondAttribute="trailing" constant="30" id="CxG-Qf-5DS"/>
                             <constraint firstItem="yK9-5u-hVo" firstAttribute="leading" secondItem="Ijx-nc-goA" secondAttribute="leading" id="G3N-Pv-ZQH"/>
+                            <constraint firstItem="THx-I4-gF7" firstAttribute="top" secondItem="yK9-5u-hVo" secondAttribute="bottom" id="Lke-fy-NIV"/>
                             <constraint firstAttribute="bottom" secondItem="W0V-eI-q64" secondAttribute="bottom" id="SOB-fm-fX5"/>
                             <constraint firstItem="0fq-jR-Tec" firstAttribute="leading" secondItem="Ijx-nc-goA" secondAttribute="leading" constant="20" id="XCb-MW-yzi"/>
+                            <constraint firstItem="Ijx-nc-goA" firstAttribute="trailing" secondItem="THx-I4-gF7" secondAttribute="trailing" id="aGb-wa-xB4"/>
                             <constraint firstItem="Ijx-nc-goA" firstAttribute="trailing" secondItem="0fq-jR-Tec" secondAttribute="trailing" constant="20" id="aXh-oS-B1I"/>
                             <constraint firstItem="yK9-5u-hVo" firstAttribute="height" secondItem="EQk-TV-33L" secondAttribute="height" multiplier="0.233568" id="hLG-zq-LdK"/>
                             <constraint firstItem="0fq-jR-Tec" firstAttribute="top" secondItem="bli-SO-5a8" secondAttribute="bottom" constant="16" id="mRh-fD-HDR"/>
+                            <constraint firstItem="vlo-77-99z" firstAttribute="top" secondItem="THx-I4-gF7" secondAttribute="bottom" constant="35" id="nDB-lL-Toe"/>
                             <constraint firstItem="bli-SO-5a8" firstAttribute="top" secondItem="yK9-5u-hVo" secondAttribute="bottom" constant="85" id="oGV-9O-4X1"/>
                             <constraint firstItem="bli-SO-5a8" firstAttribute="height" secondItem="EQk-TV-33L" secondAttribute="height" multiplier="0.194836" id="qFJ-du-U4i"/>
                             <constraint firstItem="Ijx-nc-goA" firstAttribute="trailing" secondItem="W0V-eI-q64" secondAttribute="trailing" id="qG7-OB-WgU"/>
@@ -134,6 +162,10 @@
                         <outlet property="backgroundAddRoomView" destination="vlo-77-99z" id="3eU-Ta-nVC"/>
                         <outlet property="backgroundBrightenView" destination="yK9-5u-hVo" id="2bn-Aw-fRr"/>
                         <outlet property="brightenYourEnviroment" destination="IFQ-jF-V1R" id="z7r-zu-oeQ"/>
+                        <outlet property="buttonTopConstraint" destination="9fv-Do-Ugm" id="gLn-p1-kvO"/>
+                        <outlet property="roomCollectionView" destination="THx-I4-gF7" id="lQP-NN-Wul"/>
+                        <outlet property="sofaImageView" destination="bli-SO-5a8" id="0Dn-Rd-y20"/>
+                        <outlet property="youDontHaveAnyRoomsLabel" destination="0fq-jR-Tec" id="hSk-3z-1lb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qg7-cF-Cfb" sceneMemberID="firstResponder"/>
@@ -181,13 +213,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UYl-px-PP8">
-                                <rect key="frame" x="16" y="156" width="45" height="24"/>
+                                <rect key="frame" x="16" y="156" width="45" height="23.666666666666657"/>
                                 <fontDescription key="fontDescription" name="ChakraPetch-Regular" family="Chakra Petch" pointSize="18"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="796-7T-w6u">
-                                <rect key="frame" x="16" y="188" width="59" height="32"/>
+                                <rect key="frame" x="16" y="187.66666666666666" width="59" height="31.333333333333343"/>
                                 <fontDescription key="fontDescription" name="ChakraPetch-Regular" family="Chakra Petch" pointSize="24"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>

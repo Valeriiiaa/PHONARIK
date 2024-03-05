@@ -262,16 +262,16 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Living room" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXC-be-YDX">
-                                <rect key="frame" x="16" y="79" width="313" height="41.666666666666657"/>
+                                <rect key="frame" x="16" y="78.999999999999986" width="313" height="226.66666666666663"/>
                                 <fontDescription key="fontDescription" name="ChakraPetch-Medium" family="Chakra Petch" pointSize="32"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="livingroom" translatesAutoresizingMaskIntoConstraints="NO" id="xFx-hf-lCT">
-                                <rect key="frame" x="15" y="136.66666666666666" width="362" height="366.33333333333337"/>
+                                <rect key="frame" x="15" y="321.66666666666674" width="362" height="366.33333333333326"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fxa-ib-lhV">
-                                <rect key="frame" x="14" y="527" width="364" height="72"/>
+                                <rect key="frame" x="14" y="712" width="364" height="72"/>
                                 <color key="backgroundColor" name="Background(#222222)"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="72" id="1LK-Ds-KHh"/>
@@ -297,6 +297,7 @@
                             <constraint firstItem="xFx-hf-lCT" firstAttribute="leading" secondItem="UTg-5c-SMP" secondAttribute="leading" constant="15" id="JoQ-bM-7Cd"/>
                             <constraint firstItem="nXC-be-YDX" firstAttribute="leading" secondItem="UTg-5c-SMP" secondAttribute="leading" constant="16" id="MC8-Zu-Awf"/>
                             <constraint firstItem="UTg-5c-SMP" firstAttribute="trailing" secondItem="fxa-ib-lhV" secondAttribute="trailing" constant="15" id="Q8R-6k-ZRE"/>
+                            <constraint firstItem="UTg-5c-SMP" firstAttribute="bottom" secondItem="fxa-ib-lhV" secondAttribute="bottom" constant="34" id="WPm-rL-SyP"/>
                             <constraint firstItem="nXC-be-YDX" firstAttribute="top" secondItem="UTg-5c-SMP" secondAttribute="top" constant="20" id="g7T-gO-JLV"/>
                             <constraint firstItem="UTg-5c-SMP" firstAttribute="trailing" secondItem="xFx-hf-lCT" secondAttribute="trailing" constant="16" id="had-Lz-P1b"/>
                             <constraint firstItem="xFx-hf-lCT" firstAttribute="height" secondItem="7Gt-Ng-eKk" secondAttribute="height" multiplier="0.43" id="klz-XK-cx2"/>
