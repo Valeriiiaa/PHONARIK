@@ -79,6 +79,10 @@ class MainViewController: UIViewController {
         let entrance = UIStoryboard(name: "Settings", bundle: nil).instantiateViewController(withIdentifier: "SettingsViewController")
         navigationController?.pushViewController(entrance, animated: true)
     }
+    
+    func editName(_ action: Any) {
+        
+    }
 }
 
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
@@ -96,7 +100,19 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         (cell as? MainScreenCell)?.configure(deviceName: lightModel.name, roomName: lightModel.room ?? "", stateLabel: lightModel.isEnabled)
         
         (cell as? MainScreenCell)?.menuDidTap = { [unowned self] in
-            // TODO: Lera sdelay kak y kostika
+            let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+            alert.addAction(UIAlertAction(title: "editName".localized, style: .default, handler: editName))
+            alert.addAction(UIAlertAction(title: "delete".localized, style: .destructive, handler: { [unowned self] _ in
+                deleteCell()
+            }))
+            alert.addAction(UIAlertAction(title: "cancel".localized, style: .cancel))
+            alert.popoverPresentationController?.barButtonItem = self.navigationItem.rightBarButtonItem
+            present(alert, animated: true)
+        }
+        
+        func deleteCell() {
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+            tableView.reloadData()
         }
         
         (cell as? MainScreenCell)?.switchValueChanged = { [lightModel] value in
