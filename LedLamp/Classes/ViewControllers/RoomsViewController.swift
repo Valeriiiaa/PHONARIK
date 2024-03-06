@@ -28,6 +28,8 @@ class RoomsViewController: UIViewController {
     @IBOutlet weak var addButton: UILabel!
     @IBOutlet weak var brightenYourEnviroment: UILabel!
     
+    var bottomButtomConstraint: NSLayoutConstraint!
+    
     private var pageSize: CGSize {
         let layout = self.roomCollectionView.collectionViewLayout as! UPCarouselFlowLayout
         var pageSize = layout.itemSize
@@ -70,8 +72,10 @@ class RoomsViewController: UIViewController {
         sofaImageView.isHidden = !isEmptyRooms
         youDontHaveAnyRoomsLabel.isHidden = !isEmptyRooms
         buttonTopConstraint.isActive = isEmptyRooms
+        bottomButtomConstraint?.isActive = false
         if !isEmptyRooms {
-            backgroundAddRoomView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16).isActive = true
+            bottomButtomConstraint = backgroundAddRoomView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16)
+            bottomButtomConstraint.isActive = true
             roomCollectionView.heightAnchor.constraint(lessThanOrEqualToConstant: 630).isActive = true
         }
     }

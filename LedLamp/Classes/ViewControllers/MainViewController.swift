@@ -20,6 +20,8 @@ class MainViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var backgroundMainView: UIView!
     
+    var bottomButtonConstraint: NSLayoutConstraint!
+    
     @IBOutlet var buttonTopConstraint: NSLayoutConstraint!
     let homeKitManager = HomeManager.shared
     
@@ -54,8 +56,10 @@ class MainViewController: UIViewController {
         lightImageView.isHidden = !isEmptyLights
         youDontHaveSmartLightsLabel.isHidden = !isEmptyLights
         buttonTopConstraint.isActive = isEmptyLights
+        bottomButtonConstraint?.isActive = false
         if !isEmptyLights {
-            backgroundButtonView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16).isActive = true
+            bottomButtonConstraint = backgroundButtonView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16)
+            bottomButtonConstraint.isActive = true
         }
     }
   
@@ -102,17 +106,13 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         (cell as? MainScreenCell)?.menuDidTap = { [unowned self] in
             let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
             alert.addAction(UIAlertAction(title: "editName".localized, style: .default, handler: editName))
-            alert.addAction(UIAlertAction(title: "delete".localized, style: .destructive, handler: { [unowned self] _ in
-                deleteCell()
+            alert.addAction(UIAlertAction(title: "delete".localized, style: .destructive, handler: { [unowned tableView] _ in
+                DatabaseManager.shared.remove(lightModel.name)
+                ActionManager.shared.reload()
             }))
             alert.addAction(UIAlertAction(title: "cancel".localized, style: .cancel))
             alert.popoverPresentationController?.barButtonItem = self.navigationItem.rightBarButtonItem
             present(alert, animated: true)
-        }
-        
-        func deleteCell() {
-            tableView.deleteRows(at: [indexPath], with: .automatic)
-            tableView.reloadData()
         }
         
         (cell as? MainScreenCell)?.switchValueChanged = { [lightModel] value in
