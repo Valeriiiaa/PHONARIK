@@ -20,6 +20,8 @@
 		11C621AA2B9364B9006B15F7 /* MyCustomTabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C621A92B9364B9006B15F7 /* MyCustomTabBarViewModel.swift */; };
 		11C621AC2B936715006B15F7 /* CustomTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11C621AB2B936715006B15F7 /* CustomTabBar.storyboard */; };
 		11C621AF2B938D1A006B15F7 /* HomeKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C621AE2B938D1A006B15F7 /* HomeKitManager.swift */; };
+		11E0BA0D2B98EE7000656C31 /* AxisTabView in Frameworks */ = {isa = PBXBuildFile; productRef = 11E0BA0C2B98EE7000656C31 /* AxisTabView */; };
+		11E0BA0F2B98F06500656C31 /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E0BA0E2B98F06500656C31 /* CustomTabBarView.swift */; };
 		F6078D972B97370800C9575A /* SyncWithMusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6078D962B97370800C9575A /* SyncWithMusicViewController.swift */; };
 		F6505C4A2B936A2800D47128 /* SelectAccessoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6505C492B936A2800D47128 /* SelectAccessoryViewController.swift */; };
 		F6505C4C2B936A3700D47128 /* SelectAccessoryViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6505C4B2B936A3700D47128 /* SelectAccessoryViewController.storyboard */; };
@@ -113,6 +115,7 @@
 		11C621AB2B936715006B15F7 /* CustomTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomTabBar.storyboard; sourceTree = "<group>"; };
 		11C621AE2B938D1A006B15F7 /* HomeKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeKitManager.swift; sourceTree = "<group>"; };
 		11C621B02B939314006B15F7 /* LedLamp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LedLamp.entitlements; sourceTree = "<group>"; };
+		11E0BA0E2B98F06500656C31 /* CustomTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
 		F6078D962B97370800C9575A /* SyncWithMusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncWithMusicViewController.swift; sourceTree = "<group>"; };
 		F6505C492B936A2800D47128 /* SelectAccessoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAccessoryViewController.swift; sourceTree = "<group>"; };
 		F6505C4B2B936A3700D47128 /* SelectAccessoryViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectAccessoryViewController.storyboard; sourceTree = "<group>"; };
@@ -188,6 +191,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11E0BA0D2B98EE7000656C31 /* AxisTabView in Frameworks */,
 				F6EFECAA2B8E491300041B96 /* BottomSheet in Frameworks */,
 				F6F827672B9086D300F1BB61 /* IQKeyboardManagerSwift in Frameworks */,
 			);
@@ -227,6 +231,7 @@
 				11C621A02B936493006B15F7 /* BEKTabBarViewModelType.swift */,
 				11C6219D2B936493006B15F7 /* DefaultTabBarViewModel.swift */,
 				11C621A12B936493006B15F7 /* TabbarHeightRatios.swift */,
+				11E0BA0E2B98F06500656C31 /* CustomTabBarView.swift */,
 			);
 			path = CustomTabBar;
 			sourceTree = "<group>";
@@ -542,6 +547,7 @@
 			packageProductDependencies = (
 				F6EFECA92B8E491300041B96 /* BottomSheet */,
 				F6F827662B9086D300F1BB61 /* IQKeyboardManagerSwift */,
+				11E0BA0C2B98EE7000656C31 /* AxisTabView */,
 			);
 			productName = LedLamp;
 			productReference = F6EB00F42B8C9FBB005139CC /* LedLamp.app */;
@@ -625,6 +631,7 @@
 			packageReferences = (
 				F6EFECA82B8E491300041B96 /* XCRemoteSwiftPackageReference "BottomSheet" */,
 				F6F827652B9086D300F1BB61 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				11E0BA0B2B98EE7000656C31 /* XCRemoteSwiftPackageReference "AxisTabView" */,
 			);
 			productRefGroup = F6EB00F52B8C9FBB005139CC /* Products */;
 			projectDirPath = "";
@@ -718,6 +725,7 @@
 				11C621A82B936493006B15F7 /* BEKCurveTabbar.swift in Sources */,
 				F68EAA3C2B91F3E7002B4DF0 /* ColorPickerViewController.swift in Sources */,
 				F6C91EEE2B965455005FB008 /* CollectionImagesViewController.swift in Sources */,
+				11E0BA0F2B98F06500656C31 /* CustomTabBarView.swift in Sources */,
 				F6EB00F82B8C9FBB005139CC /* AppDelegate.swift in Sources */,
 				F6B8B84E2B94C711001FE671 /* AddedRoomCell.swift in Sources */,
 				F6F827642B90820000F1BB61 /* LocationCollectionViewModel.swift in Sources */,
@@ -1106,6 +1114,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		11E0BA0B2B98EE7000656C31 /* XCRemoteSwiftPackageReference "AxisTabView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jasudev/AxisTabView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.1;
+			};
+		};
 		F6EFECA82B8E491300041B96 /* XCRemoteSwiftPackageReference "BottomSheet" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/joomcode/BottomSheet";
@@ -1125,6 +1141,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		11E0BA0C2B98EE7000656C31 /* AxisTabView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 11E0BA0B2B98EE7000656C31 /* XCRemoteSwiftPackageReference "AxisTabView" */;
+			productName = AxisTabView;
+		};
 		F6EFECA92B8E491300041B96 /* BottomSheet */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F6EFECA82B8E491300041B96 /* XCRemoteSwiftPackageReference "BottomSheet" */;

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -20,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         self.window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         self.window?.windowScene = windowScene
-        window?.rootViewController = getConfiguredController()
+        window?.rootViewController = UIHostingController(rootView: CustomTabBarView())
         self.window?.makeKeyAndVisible()
         
         guard !UserDefaults.standard.bool(forKey: "isNotFirstLaunch") else { return }

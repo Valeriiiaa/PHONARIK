@@ -25,7 +25,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainBackground" translatesAutoresizingMaskIntoConstraints="NO" id="5VV-O9-sXx">
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainBackground" translatesAutoresizingMaskIntoConstraints="NO" id="5VV-O9-sXx">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yRQ-F0-uzt">
@@ -97,7 +97,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hRi-wk-cRm"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="yRQ-F0-uzt" firstAttribute="height" secondItem="cax-fG-Vok" secondAttribute="height" multiplier="0.233568" id="0X7-Xj-PWh"/>
                             <constraint firstItem="IgV-x3-jZ4" firstAttribute="leading" secondItem="hRi-wk-cRm" secondAttribute="leading" constant="20" id="2m4-lp-jfi"/>
