@@ -93,3 +93,8 @@
 "playbackLight" = "播放灯光反射";
 "thisFeatureWorks" = "此功能通过您的 iPhone 麦克风工作。";
 "pressPlay" = "按“播放”并将您的手机靠近声源。";
+
+//alert
+"yes" = "是的";
+"no" = "不";
+"wantToDelete" = "您确定要删除吗？";

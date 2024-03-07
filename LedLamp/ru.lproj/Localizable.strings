@@ -88,3 +88,7 @@
 "musicOnIphone2" = "Музыка на iPhone";
 "syncWithMusic2" = "Синхронизировать с музыкой";
 
+//alert
+"yes" = "Да";
+"no" = "Нет";
+"wantToDelete" = "Вы уверены, что хотите удалить?";

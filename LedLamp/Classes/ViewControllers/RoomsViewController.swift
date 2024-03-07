@@ -131,8 +131,31 @@ extension RoomsViewController: UICollectionViewDataSource, UICollectionViewDeleg
         (cell as? AddedRoomCell)?.configure(roomImage: image, stateLabel: room.status, roomNameLabel: room.name)
         
         (cell as? AddedRoomCell)?.menuButtonDidTap = {
-            //TODO: Do the same as in the LightViewController
+            let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+            alert.addAction(UIAlertAction(title: "editName".localized, style: .default, handler: editName))
+            alert.addAction(UIAlertAction(title: "delete".localized, style: .destructive, handler: { [unowned self] _ in
+                let alert = UIAlertController(title: nil, message: "wantToDelete".localized, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "yes".localized, style: .default, handler: { _ in
+                    DispatchQueue.main.async {
+                        deleteCell()
+                    }
+                }))
+                alert.addAction(UIAlertAction(title: "no".localized, style: .cancel))
+                self.present(alert, animated: true)
+            }))
+            
+            alert.addAction(UIAlertAction(title: "cancel".localized, style: .cancel))
+            alert.popoverPresentationController?.barButtonItem = self.navigationItem.rightBarButtonItem
+            self.present(alert, animated: true)
         }
+        func deleteCell() {
+            collectionView.deleteItems(at: [indexPath])
+            collectionView.reloadData()
+        }
+        func editName(_ action: Any) {
+            
+        }
+        
         
         (cell as? AddedRoomCell)?.switchValueChanged = { value in
             room.status = value

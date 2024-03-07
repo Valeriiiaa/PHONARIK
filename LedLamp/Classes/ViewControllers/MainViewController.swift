@@ -107,9 +107,19 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
             let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
             alert.addAction(UIAlertAction(title: "editName".localized, style: .default, handler: editName))
             alert.addAction(UIAlertAction(title: "delete".localized, style: .destructive, handler: { [unowned tableView] _ in
-                DatabaseManager.shared.remove(lightModel.name)
-                ActionManager.shared.reload()
+                let alert = UIAlertController(title: nil, message: "wantToDelete".localized, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "yes".localized, style: .default, handler: { _ in
+                    DispatchQueue.main.async {
+                        DatabaseManager.shared.remove(lightModel.name)
+                        ActionManager.shared.reload()
+                    }
+                }))
+                alert.addAction(UIAlertAction(title: "no".localized, style: .cancel))
+                self.present(alert, animated: true)
+                
+                
             }))
+           
             alert.addAction(UIAlertAction(title: "cancel".localized, style: .cancel))
             alert.popoverPresentationController?.barButtonItem = self.navigationItem.rightBarButtonItem
             present(alert, animated: true)

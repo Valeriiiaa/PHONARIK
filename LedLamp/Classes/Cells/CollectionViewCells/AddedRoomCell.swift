@@ -28,7 +28,10 @@ class AddedRoomCell: UICollectionViewCell {
     }
    
     @IBAction func switchDidTap(_ sender: Any) {
-        switchValueChanged?(switchState.isOn)
+            switchValueChanged?(switchState.isOn)
+        switchState.onTintColor = .green
+        switchState.tintColor = .red
+        switchState.subviews[0].subviews[0].backgroundColor = .red
     }
     
     @IBAction func menuBtnDidTap(_ sender: Any) {
@@ -38,7 +41,19 @@ class AddedRoomCell: UICollectionViewCell {
     func configure(roomImage: UIImage, stateLabel: Bool, roomNameLabel: String) {
         self.roomImage.image = roomImage
         self.stateLabel.text = stateLabel ? "connect".localized : "disconnect".localized
+        switchState.onTintColor = .green
+        switchState.tintColor = .red
+        switchState.subviews[0].subviews[0].backgroundColor = .red
+        switchState.setNeedsDisplay()
+        switchState.layoutSubviews()
+        switchState.tintColorDidChange()
         switchState.isOn = stateLabel
         self.roomNameLabel.text = roomNameLabel
+        switchState.onTintColor = .green
+        switchState.tintColor = .red
+        switchState.subviews[0].subviews[0].backgroundColor = .red
+        switchState.setNeedsDisplay()
+        switchState.layoutSubviews()
+        switchState.tintColorDidChange()
     }
 }

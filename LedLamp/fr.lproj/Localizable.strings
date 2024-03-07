@@ -94,3 +94,10 @@
 "pressPlay" = "Appuyez sur “Lecture” et approchez votre téléphone de la source sonore.";
 "musicOnIphone2" = "Musique sur iPhone";
 "syncWithMusic2" = "Synchroniser avec la musique";
+
+//alert
+"yes" = "Oui";
+"no" = "Non";
+"wantToDelete" = "Êtes-vous sûr de vouloir supprimer ?";
+
+

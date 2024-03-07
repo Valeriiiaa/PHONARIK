@@ -93,3 +93,8 @@
 "pressPlay" = "Drücken Sie auf „Wiedergabe“ und halten Sie Ihr Telefon nah an die Klangquelle.";
 "musicOnIphone2" = "Musik auf dem iPhone";
 "syncWithMusic2" = "Mit Musik synchronisieren";
+
+//alert
+"yes" = "Ja";
+"no" = "Nein";
+"wantToDelete" = "Möchten Sie wirklich löschen?";

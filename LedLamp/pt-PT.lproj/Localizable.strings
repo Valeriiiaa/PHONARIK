@@ -94,3 +94,10 @@
 "pressPlay" = "Pressione “Reproduzir” e aproxime seu telefone da fonte sonora.";
 "musicOnIphone2" = "Música no iPhone";
 "syncWithMusic2" = "Sincronizar com música";
+
+//alert
+"yes" = "Sim";
+"no" = "Não";
+"wantToDelete" = "Tem certeza de que deseja excluir?";
+
+
