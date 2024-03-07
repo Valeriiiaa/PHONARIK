@@ -51,8 +51,6 @@ struct CustomTabBarView: View {
             Image(.mainBackground)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-//                .resizable()
-//                .zIndex(1)
             AxisTabView(selection: $selection, constant: constant) { state in
                 ATCapsuleStyle(state, color: color, horizontalSpacing: 61)
             } content: {

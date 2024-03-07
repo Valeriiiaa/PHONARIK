@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		115E476A2B9A3E7E009E8B85 /* FlexColorPicker in Frameworks */ = {isa = PBXBuildFile; productRef = 115E47692B9A3E7E009E8B85 /* FlexColorPicker */; };
 		118EAD0C2B965CC900F6A8BD /* UPCarouselFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118EAD0B2B965CC900F6A8BD /* UPCarouselFlowLayout.swift */; };
 		118EAD0E2B9663A800F6A8BD /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118EAD0D2B9663A800F6A8BD /* DatabaseManager.swift */; };
 		118EAD112B96641700F6A8BD /* LEDapp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 118EAD0F2B96641600F6A8BD /* LEDapp.xcdatamodeld */; };
@@ -125,8 +126,8 @@
 		11C621A92B9364B9006B15F7 /* MyCustomTabBarViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCustomTabBarViewModel.swift; sourceTree = "<group>"; };
 		11C621AB2B936715006B15F7 /* CustomTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomTabBar.storyboard; sourceTree = "<group>"; };
 		11C621AE2B938D1A006B15F7 /* HomeKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeKitManager.swift; sourceTree = "<group>"; };
-		11C621B02B939314006B15F7 /* LedLamp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LedLamp.entitlements; sourceTree = "<group>"; };
 		11E0BA0E2B98F06500656C31 /* CustomTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
+		11F63F9F2B9A62B000523E22 /* LedLampRelease.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = LedLampRelease.entitlements; sourceTree = "<group>"; };
 		F6078D962B97370800C9575A /* SyncWithMusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncWithMusicViewController.swift; sourceTree = "<group>"; };
 		F62DE9232B9A3B39002F8FDA /* ConfigurableSwitchControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurableSwitchControl.swift; sourceTree = "<group>"; };
 		F62DE9242B9A3B39002F8FDA /* UIConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIConstant.swift; sourceTree = "<group>"; };
@@ -216,6 +217,7 @@
 				11E0BA0D2B98EE7000656C31 /* AxisTabView in Frameworks */,
 				F6EFECAA2B8E491300041B96 /* BottomSheet in Frameworks */,
 				F6F827672B9086D300F1BB61 /* IQKeyboardManagerSwift in Frameworks */,
+				115E476A2B9A3E7E009E8B85 /* FlexColorPicker in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,7 +431,7 @@
 			isa = PBXGroup;
 			children = (
 				F62DE9222B9A3B39002F8FDA /* CustomSwitch */,
-				11C621B02B939314006B15F7 /* LedLamp.entitlements */,
+				11F63F9F2B9A62B000523E22 /* LedLampRelease.entitlements */,
 				11C621AD2B938D0C006B15F7 /* Managers */,
 				11C6219C2B93647E006B15F7 /* CustomTabBar */,
 				F6A0BC2B2B8CB00F0084A0E8 /* Extentions */,
@@ -597,6 +599,7 @@
 				F6EFECA92B8E491300041B96 /* BottomSheet */,
 				F6F827662B9086D300F1BB61 /* IQKeyboardManagerSwift */,
 				11E0BA0C2B98EE7000656C31 /* AxisTabView */,
+				115E47692B9A3E7E009E8B85 /* FlexColorPicker */,
 			);
 			productName = LedLamp;
 			productReference = F6EB00F42B8C9FBB005139CC /* LedLamp.app */;
@@ -681,6 +684,7 @@
 				F6EFECA82B8E491300041B96 /* XCRemoteSwiftPackageReference "BottomSheet" */,
 				F6F827652B9086D300F1BB61 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 				11E0BA0B2B98EE7000656C31 /* XCRemoteSwiftPackageReference "AxisTabView" */,
+				115E47682B9A3E7E009E8B85 /* XCRemoteSwiftPackageReference "FlexColorPicker" */,
 			);
 			productRefGroup = F6EB00F52B8C9FBB005139CC /* Products */;
 			projectDirPath = "";
@@ -924,7 +928,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -982,7 +986,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -1003,7 +1007,7 @@
 				DEVELOPMENT_TEAM = 6NNWR2JHQ8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LedLamp/Info.plist;
-				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_CFBundleDisplayName = Ledtttttt;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Qr code scanner";
 				INFOPLIST_KEY_NSHomeKitUsageDescription = "We need it for add devices, room to your Home";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1011,16 +1015,21 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = w.LedLamp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.applage.w.Led;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1029,13 +1038,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = LedLamp/LedLamp.entitlements;
+				CODE_SIGN_ENTITLEMENTS = LedLamp/LedLampRelease.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6NNWR2JHQ8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LedLamp/Info.plist;
-				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_CFBundleDisplayName = Ledtttttt;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Qr code scanner";
 				INFOPLIST_KEY_NSHomeKitUsageDescription = "We need it for add devices, room to your Home";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1043,16 +1052,21 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = w.LedLamp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.applage.w.Led;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -1087,7 +1101,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = w.LedLampTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.applage.w.Led;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -1123,7 +1137,7 @@
 				DEVELOPMENT_TEAM = 6NNWR2JHQ8;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = w.LedLampUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.applage.w.Led;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -1174,6 +1188,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		115E47682B9A3E7E009E8B85 /* XCRemoteSwiftPackageReference "FlexColorPicker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RastislavMirek/FlexColorPicker.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.4.4;
+			};
+		};
 		11E0BA0B2B98EE7000656C31 /* XCRemoteSwiftPackageReference "AxisTabView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/jasudev/AxisTabView.git";
@@ -1201,6 +1223,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		115E47692B9A3E7E009E8B85 /* FlexColorPicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 115E47682B9A3E7E009E8B85 /* XCRemoteSwiftPackageReference "FlexColorPicker" */;
+			productName = FlexColorPicker;
+		};
 		11E0BA0C2B98EE7000656C31 /* AxisTabView */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 11E0BA0B2B98EE7000656C31 /* XCRemoteSwiftPackageReference "AxisTabView" */;

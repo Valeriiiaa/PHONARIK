@@ -98,6 +98,15 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         UITableView.automaticDimension
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let light = DatabaseManager.shared.load()[indexPath.row]
+        let entrance = UIStoryboard(name: "ColorPicker", bundle: nil).instantiateInitialViewController()
+        entrance?.modalPresentationStyle = .fullScreen
+        entrance?.modalTransitionStyle = .crossDissolve
+        present(entrance!, animated: true)
+//        navigationController?.pushViewController(entrance!, animated: true)
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MainScreenCell", for: indexPath)
         let lightModel = DatabaseManager.shared.load()[indexPath.row]

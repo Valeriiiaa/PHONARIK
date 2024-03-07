@@ -29,7 +29,5 @@
 			</array>
 		</dict>
 	</dict>
-	<key>com.apple.developer.homekit.allow-setup-payload</key>
-	<true/>
 </dict>
 </plist>
