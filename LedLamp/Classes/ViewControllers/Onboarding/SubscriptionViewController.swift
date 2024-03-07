@@ -9,6 +9,7 @@ import UIKit
 
 class SubscriptionViewController: UIViewController {
    
+    @IBOutlet weak var backgroundNextView: UIView!
     @IBOutlet weak var subscriptionStack: UIStackView!
     @IBOutlet weak var yearView: UIView!
     @IBOutlet weak var weekView: UIView!
@@ -18,14 +19,48 @@ class SubscriptionViewController: UIViewController {
     @IBOutlet weak var privacyButton: UIButton!
     @IBOutlet weak var termButton: UIButton!
     @IBOutlet weak var tryFreeTrialLabel: UILabel!
-    @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var unrestrictedLabel: UILabel!
     
+    private var timer: Timer?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        backgroundNextView.layer.cornerRadius = 30
+        backgroundNextView.layer.masksToBounds = true
+        unrestrictedLabel.text = "unrestrictedLed".localized
+        descriptionLabel.text = "choosingOptimal".localized
+        tryFreeTrialLabel.text = "startTrialThen".localized
+        termButton.setTitle("terms".localized, for: .normal)
+        privacyButton.setTitle("privacy".localized, for: .normal)
+        restoreButton.setTitle("restore".localized, for: .normal)
+        notNowButton.setTitle("notNow".localized, for: .normal)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        setTimer()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        timer?.invalidate()
+        timer = nil
         
     }
+    
+    private func setTimer() {
+        if timer != nil {
+            return
+        }
+        fireTimer()
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(fireTimer), userInfo: nil, repeats: true)
+        RunLoop.main.add(timer!, forMode: .common)
+    }
+    
+    @objc private func fireTimer() {
+        self.backgroundNextView.btnAnimation()
+    }
+    
     @IBAction func notNowBtnDidTap(_ sender: Any) {
     }
     

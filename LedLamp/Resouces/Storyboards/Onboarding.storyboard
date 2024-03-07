@@ -632,7 +632,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="backgroundView" destination="eSf-Xp-68d" id="gSz-B3-ijT"/>
+                        <outlet property="backgroundNextView" destination="eSf-Xp-68d" id="4Rh-OD-NIA"/>
                         <outlet property="descriptionLabel" destination="fFj-2n-qYm" id="vhD-A9-B94"/>
                         <outlet property="monthView" destination="u38-eT-59r" id="lE4-DK-O0g"/>
                         <outlet property="notNowButton" destination="No2-CG-NMt" id="Peo-VJ-0xj"/>
@@ -795,6 +795,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backgroundNextView" destination="HsA-KX-L0L" id="u1q-nc-68N"/>
                         <outlet property="descriptionLabel" destination="1tS-2i-Zyk" id="eCV-oZ-Zne"/>
                         <outlet property="notNowBtn" destination="KVo-Dp-SRk" id="99o-Cj-eYa"/>
                         <outlet property="privacyBtn" destination="t4Z-SQ-gQ1" id="luU-Uv-J9W"/>

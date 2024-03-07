@@ -39,6 +39,7 @@
 		F6505C532B936DDD00D47128 /* RoomBottomSheets.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6505C522B936DDD00D47128 /* RoomBottomSheets.storyboard */; };
 		F6505C572B9372C100D47128 /* AddRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6505C562B9372C100D47128 /* AddRoomViewController.swift */; };
 		F6739B9E2B9A4CA400734226 /* SubscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6739B9D2B9A4CA400734226 /* SubscriptionViewController.swift */; };
+		F6739BA02B9A4F0000734226 /* Animation Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6739B9F2B9A4F0000734226 /* Animation Button.swift */; };
 		F68EAA3C2B91F3E7002B4DF0 /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68EAA3B2B91F3E7002B4DF0 /* ColorPickerViewController.swift */; };
 		F6A0BC162B8CA4DD0084A0E8 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6A0BC152B8CA4DD0084A0E8 /* Settings.storyboard */; };
 		F6A0BC182B8CA5CA0084A0E8 /* SettingsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6A0BC172B8CA5CA0084A0E8 /* SettingsCell.xib */; };
@@ -143,6 +144,7 @@
 		F6505C522B936DDD00D47128 /* RoomBottomSheets.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RoomBottomSheets.storyboard; sourceTree = "<group>"; };
 		F6505C562B9372C100D47128 /* AddRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRoomViewController.swift; sourceTree = "<group>"; };
 		F6739B9D2B9A4CA400734226 /* SubscriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionViewController.swift; sourceTree = "<group>"; };
+		F6739B9F2B9A4F0000734226 /* Animation Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Animation Button.swift"; sourceTree = "<group>"; };
 		F68EAA3B2B91F3E7002B4DF0 /* ColorPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerViewController.swift; sourceTree = "<group>"; };
 		F6A0BC152B8CA4DD0084A0E8 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		F6A0BC172B8CA5CA0084A0E8 /* SettingsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsCell.xib; sourceTree = "<group>"; };
@@ -341,6 +343,7 @@
 			children = (
 				F6A0BC2C2B8CB02B0084A0E8 /* String+localization.swift */,
 				F6F827582B907DC800F1BB61 /* TextField.swift */,
+				F6739B9F2B9A4F0000734226 /* Animation Button.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -780,6 +783,7 @@
 				F68EAA3C2B91F3E7002B4DF0 /* ColorPickerViewController.swift in Sources */,
 				F6C91EEE2B965455005FB008 /* CollectionImagesViewController.swift in Sources */,
 				11E0BA0F2B98F06500656C31 /* CustomTabBarView.swift in Sources */,
+				F6739BA02B9A4F0000734226 /* Animation Button.swift in Sources */,
 				F62DE9312B9A447D002F8FDA /* SecondPageViewController.swift in Sources */,
 				F6EB00F82B8C9FBB005139CC /* AppDelegate.swift in Sources */,
 				F6B8B84E2B94C711001FE671 /* AddedRoomCell.swift in Sources */,
