@@ -8,9 +8,9 @@
 import UIKit
 
 class AddedRoomCell: UICollectionViewCell {
+    @IBOutlet weak var switcher: ConfigurableSwitchControl!
     @IBOutlet weak var backgroundMainView: UIView!
     @IBOutlet weak var roomImage: UIImageView!
-    @IBOutlet weak var switchState: UISwitch!
     @IBOutlet weak var roomNameLabel: UILabel!
     @IBOutlet weak var stateLabel: UILabel!
     @IBOutlet weak var lightSmartBulbLabel: UILabel!
@@ -28,10 +28,7 @@ class AddedRoomCell: UICollectionViewCell {
     }
    
     @IBAction func switchDidTap(_ sender: Any) {
-            switchValueChanged?(switchState.isOn)
-        switchState.onTintColor = .green
-        switchState.tintColor = .red
-        switchState.subviews[0].subviews[0].backgroundColor = .red
+            switchValueChanged?(switcher.isOn)
     }
     
     @IBAction func menuBtnDidTap(_ sender: Any) {
@@ -41,19 +38,7 @@ class AddedRoomCell: UICollectionViewCell {
     func configure(roomImage: UIImage, stateLabel: Bool, roomNameLabel: String) {
         self.roomImage.image = roomImage
         self.stateLabel.text = stateLabel ? "connect".localized : "disconnect".localized
-        switchState.onTintColor = .green
-        switchState.tintColor = .red
-        switchState.subviews[0].subviews[0].backgroundColor = .red
-        switchState.setNeedsDisplay()
-        switchState.layoutSubviews()
-        switchState.tintColorDidChange()
-        switchState.isOn = stateLabel
         self.roomNameLabel.text = roomNameLabel
-        switchState.onTintColor = .green
-        switchState.tintColor = .red
-        switchState.subviews[0].subviews[0].backgroundColor = .red
-        switchState.setNeedsDisplay()
-        switchState.layoutSubviews()
-        switchState.tintColorDidChange()
+       
     }
 }

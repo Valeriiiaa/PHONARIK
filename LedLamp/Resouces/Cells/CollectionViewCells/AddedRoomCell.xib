@@ -51,16 +51,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Vq7-Ae-zex">
-                                <rect key="frame" x="199" y="299" width="53" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="51" id="Mgk-Gh-GtK"/>
-                                </constraints>
-                                <color key="tintColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <action selector="switchDidTap:" destination="VpE-l0-5Gg" eventType="valueChanged" id="gEM-ZG-7Y9"/>
-                                </connections>
-                            </switch>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VFF-h0-DdS">
                                 <rect key="frame" x="215" y="242" width="50" height="47"/>
                                 <inset key="contentEdgeInsets" minX="13" minY="8" maxX="13" maxY="15"/>
@@ -70,21 +60,37 @@
                                     <action selector="menuBtnDidTap:" destination="VpE-l0-5Gg" eventType="touchUpInside" id="BRg-Wb-GLY"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SAz-0h-BcS" customClass="ConfigurableSwitchControl" customModule="LedLamp" customModuleProvider="target">
+                                <rect key="frame" x="196" y="299" width="61" height="36"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="COS-os-FM4"/>
+                                    <constraint firstAttribute="width" constant="61" id="Tah-dj-W52"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="onTintColor">
+                                        <color key="value" systemColor="systemGreenColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="offTintColor">
+                                        <color key="value" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="0.32000000000000001" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="NwS-TV-2rU" secondAttribute="trailing" id="03g-i1-D3X"/>
-                            <constraint firstAttribute="trailing" secondItem="Vq7-Ae-zex" secondAttribute="trailing" constant="15" id="0kM-WX-aeZ"/>
+                            <constraint firstAttribute="trailing" secondItem="SAz-0h-BcS" secondAttribute="trailing" constant="8" id="2w7-wm-wnm"/>
                             <constraint firstItem="VFF-h0-DdS" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6dY-i5-DjR" secondAttribute="trailing" constant="20" id="9NK-4m-fkd"/>
                             <constraint firstItem="VFF-h0-DdS" firstAttribute="top" secondItem="NwS-TV-2rU" secondAttribute="bottom" id="CN4-Q5-okY"/>
                             <constraint firstItem="dIx-og-01P" firstAttribute="leading" secondItem="42L-jR-piD" secondAttribute="leading" constant="14" id="CPG-m3-2d9"/>
                             <constraint firstItem="CTD-vJ-Myi" firstAttribute="leading" secondItem="42L-jR-piD" secondAttribute="leading" constant="16" id="QY3-tO-ohQ"/>
                             <constraint firstAttribute="trailing" secondItem="VFF-h0-DdS" secondAttribute="trailing" id="Rq3-RC-adU"/>
                             <constraint firstAttribute="bottom" secondItem="CTD-vJ-Myi" secondAttribute="bottom" constant="24" id="ZAu-Se-Nhz"/>
-                            <constraint firstAttribute="bottom" secondItem="Vq7-Ae-zex" secondAttribute="bottom" constant="24" id="bef-xP-IOn"/>
                             <constraint firstItem="NwS-TV-2rU" firstAttribute="top" secondItem="42L-jR-piD" secondAttribute="top" id="cb0-ul-mis"/>
                             <constraint firstItem="CTD-vJ-Myi" firstAttribute="top" secondItem="6dY-i5-DjR" secondAttribute="bottom" constant="6" id="dqL-Xk-zJp"/>
                             <constraint firstItem="6dY-i5-DjR" firstAttribute="top" secondItem="dIx-og-01P" secondAttribute="bottom" constant="6" id="nqz-NX-3EH"/>
+                            <constraint firstItem="SAz-0h-BcS" firstAttribute="top" secondItem="VFF-h0-DdS" secondAttribute="bottom" constant="10" id="odW-bN-TJi"/>
                             <constraint firstItem="NwS-TV-2rU" firstAttribute="leading" secondItem="42L-jR-piD" secondAttribute="leading" id="oiR-ko-4Wd"/>
                             <constraint firstItem="dIx-og-01P" firstAttribute="top" secondItem="NwS-TV-2rU" secondAttribute="bottom" constant="8" id="qpN-fp-8RW"/>
                             <constraint firstItem="6dY-i5-DjR" firstAttribute="leading" secondItem="42L-jR-piD" secondAttribute="leading" constant="16" id="u96-TY-vj9"/>
@@ -108,7 +114,7 @@
                 <outlet property="roomImage" destination="NwS-TV-2rU" id="Z9k-LJ-Hf2"/>
                 <outlet property="roomNameLabel" destination="dIx-og-01P" id="4tf-hP-kFv"/>
                 <outlet property="stateLabel" destination="CTD-vJ-Myi" id="AVM-mV-O0B"/>
-                <outlet property="switchState" destination="Vq7-Ae-zex" id="Arx-xo-Zar"/>
+                <outlet property="switcher" destination="SAz-0h-BcS" id="cc3-K8-XG0"/>
             </connections>
             <point key="canvasLocation" x="35.877862595419849" y="38.028169014084511"/>
         </collectionViewCell>
@@ -116,5 +122,8 @@
     <resources>
         <image name="kitchen" width="306" height="270"/>
         <image name="menuButton" width="24" height="24"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

@@ -37,13 +37,13 @@
                                 <rect key="frame" x="0.0" y="29.666666666666671" width="196" height="147.66666666666663"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zl6-fl-HBt">
-                                <rect key="frame" x="331" y="92.666666666666671" width="40" height="21"/>
+                                <rect key="frame" x="331" y="87.666666666666671" width="40" height="21"/>
                                 <fontDescription key="fontDescription" name="ChakraPetch-Regular" family="Chakra Petch" pointSize="16"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tFg-6g-PlT">
-                                <rect key="frame" x="337" y="0.0" width="56" height="84.666666666666671"/>
+                                <rect key="frame" x="337" y="0.0" width="56" height="79.666666666666671"/>
                                 <inset key="contentEdgeInsets" minX="10" minY="8" maxX="22" maxY="10"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="menuButton"/>
@@ -52,32 +52,42 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="myp-XP-hWo">
-                                <rect key="frame" x="336" y="121.66666666666664" width="35" height="18.333333333333329"/>
+                                <rect key="frame" x="336" y="116.66666666666667" width="35" height="18.333333333333329"/>
                                 <fontDescription key="fontDescription" name="ChakraPetch-Regular" family="Chakra Petch" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FuD-wl-sT7">
-                                <rect key="frame" x="322" y="156" width="51" height="31"/>
-                                <connections>
-                                    <action selector="switchDidTap:" destination="CfX-Cg-hNU" eventType="valueChanged" id="3AX-TG-eEk"/>
-                                </connections>
-                            </switch>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0qT-DW-Ti2" customClass="ConfigurableSwitchControl" customModule="LedLamp" customModuleProvider="target">
+                                <rect key="frame" x="310" y="155" width="61" height="36"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="61" id="egp-8w-xET"/>
+                                    <constraint firstAttribute="height" constant="36" id="qs7-da-XYx"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="onTintColor">
+                                        <color key="value" systemColor="systemGreenColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="offTintColor">
+                                        <color key="value" red="0.1333333333" green="0.1333333333" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" name="BottomShit(#747474)"/>
                         <constraints>
                             <constraint firstItem="AhA-es-ET3" firstAttribute="leading" secondItem="naj-28-g3U" secondAttribute="leading" constant="70" id="9cd-iV-zHl"/>
                             <constraint firstAttribute="trailing" secondItem="tFg-6g-PlT" secondAttribute="trailing" id="GHR-NN-Qmi"/>
-                            <constraint firstAttribute="trailing" secondItem="FuD-wl-sT7" secondAttribute="trailing" constant="22" id="Ikg-CQ-Q0v"/>
+                            <constraint firstAttribute="bottom" secondItem="0qT-DW-Ti2" secondAttribute="bottom" constant="16" id="MHi-Nb-Knr"/>
                             <constraint firstItem="AhA-es-ET3" firstAttribute="top" secondItem="naj-28-g3U" secondAttribute="top" constant="10" id="Olw-TD-xsc"/>
                             <constraint firstItem="m50-uu-jnQ" firstAttribute="leading" secondItem="naj-28-g3U" secondAttribute="leading" id="P8J-6V-7be"/>
                             <constraint firstAttribute="trailing" secondItem="myp-XP-hWo" secondAttribute="trailing" constant="22" id="T9q-rC-Ez5"/>
                             <constraint firstItem="zl6-fl-HBt" firstAttribute="top" secondItem="tFg-6g-PlT" secondAttribute="bottom" constant="8" id="abd-2S-P8G"/>
+                            <constraint firstItem="0qT-DW-Ti2" firstAttribute="top" secondItem="myp-XP-hWo" secondAttribute="bottom" constant="20" id="b6v-XE-wJ4"/>
                             <constraint firstAttribute="trailing" secondItem="zl6-fl-HBt" secondAttribute="trailing" constant="22" id="dkm-6T-aEF"/>
-                            <constraint firstAttribute="bottom" secondItem="FuD-wl-sT7" secondAttribute="bottom" constant="20" id="fOF-2y-v0L"/>
                             <constraint firstAttribute="trailing" secondItem="AhA-es-ET3" secondAttribute="trailing" constant="70" id="fnC-uH-x8Q"/>
-                            <constraint firstItem="FuD-wl-sT7" firstAttribute="top" secondItem="myp-XP-hWo" secondAttribute="bottom" constant="16" id="ggk-R2-7Xp"/>
                             <constraint firstItem="m50-uu-jnQ" firstAttribute="centerY" secondItem="naj-28-g3U" secondAttribute="centerY" id="jNf-XA-3Oi"/>
+                            <constraint firstAttribute="trailing" secondItem="0qT-DW-Ti2" secondAttribute="trailing" constant="22" id="t9U-ld-V9n"/>
                             <constraint firstItem="tFg-6g-PlT" firstAttribute="top" secondItem="naj-28-g3U" secondAttribute="top" id="tXI-LO-7aw"/>
                             <constraint firstItem="myp-XP-hWo" firstAttribute="top" secondItem="zl6-fl-HBt" secondAttribute="bottom" constant="8" id="yKo-V9-nF1"/>
                         </constraints>
@@ -98,7 +108,7 @@
                 <outlet property="lightSmartLabel" destination="AhA-es-ET3" id="DmI-10-b3C"/>
                 <outlet property="roomNameLabel" destination="zl6-fl-HBt" id="E8X-a0-EYn"/>
                 <outlet property="stateLabel" destination="myp-XP-hWo" id="uEu-eh-JRV"/>
-                <outlet property="switchState" destination="FuD-wl-sT7" id="j6k-wM-w4D"/>
+                <outlet property="switcher" destination="0qT-DW-Ti2" id="Nj0-sV-rJR"/>
             </connections>
             <point key="canvasLocation" x="46.564885496183201" y="79.929577464788736"/>
         </tableViewCell>
@@ -109,5 +119,8 @@
         <namedColor name="BottomShit(#747474)">
             <color red="0.45500001311302185" green="0.45500001311302185" blue="0.45500001311302185" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

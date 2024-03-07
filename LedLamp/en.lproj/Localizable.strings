@@ -99,3 +99,35 @@
 "yes" = "Yes";
 "no" = "No";
 "wantToDelete" = "Are you sure you want to delete?";
+
+//onbirding+subscription
+"welcomeLedLamp" = "Welcome to LED Lamp Controller ";
+"discription1" = "Effortlessly control the lighting throughout your home with a unified and user-friendly application";
+"yourFeedback" = "Your feedback Our improvements";
+"discription2" = "Your ratings and feedback enhance the app and shape its improvements";
+"adjustLight" = "Adjust light color and brightness";
+"discription3" = "Choosing the perfect color and intensity for each room";
+"startUse" = "Start to use LED Lamp Controller";
+"discription4" = "Begin your LED Lamp app experience with a 3-day trial, followed by at $5.99 per week";
+"tryFreeTrial" = "Try Free Trial";
+"terms" = "Terms";
+"privacy" = "Privacy";
+"restore" = "Restore";
+"notNow" = "Not now";
+"unrestrictedLed" = "Unrestricted LED Lamp Controller";
+"choosingOptimal" = "Choosing optimal colors and brightness for each room";
+"popular" = "POPULAR";
+"3dayFree" = "3 DAYS FREE TRIAL";
+"bestDeal" = "BEST DEAL";
+"monthly" = "Monthly";
+"weekly" = "Weekly";
+"yearly" = "Yearly";
+"perWeek4" = "$4,99 per week";
+"perWeek5" = "$5,99 per week";
+"perWeek0,7" = "$0,79 per week";
+"19month" = "$19,99/month";
+"5week" = "$5,99/week";
+"39year" = "$39,99/year";
+"startTrialThen" = "Start Trial then Subscribe";
+
+

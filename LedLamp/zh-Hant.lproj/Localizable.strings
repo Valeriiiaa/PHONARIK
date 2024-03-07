@@ -98,3 +98,33 @@
 "yes" = "是的";
 "no" = "不";
 "wantToDelete" = "您确定要删除吗？";
+
+//onbirding+subscription
+"welcomeLedLamp" = "欢迎使用 LED 灯控制器";
+"discription1" = "通过一个统一且用户友好的应用轻松控制您家中的照明";
+"yourFeedback" = "您的反馈，我们的改进";
+"discription2" = "您的评价和反馈将增强该应用程序并塑造其改进";
+"adjustLight" = "调整灯光颜色和亮度";
+"discription3" = "为每个房间选择完美的颜色和强度";
+"startUse" = "开始使用 LED 灯控制器";
+"discription4" = "通过 3 天的试用体验开始 LED 灯应用的体验，然后每周收费 $5.99";
+"tryFreeTrial" = "尝试免费试用";
+"terms" = "条款";
+"privacy" = "隐私";
+"restore" = "恢复";
+"notNow" = "暂时不";
+"unrestrictedLed" = "无限制的 LED 灯控制器";
+"choosingOptimal" = "为每个房间选择最佳的颜色和亮度";
+"popular" = "热门";
+"3dayFree" = "3 天免费试用";
+"bestDeal" = "最佳交易";
+"monthly" = "每月";
+"weekly" = "每周";
+"yearly" = "每年";
+"perWeek4" = "每周 $4.99";
+"perWeek5" = "每周 $5.99";
+"perWeek0,7" = "每周 $0.79";
+"19month" = "每月 $19.99";
+"5week" = "每周 $5.99";
+"39year" = "每年 $39.99";
+"startTrialThen" = "开始试用，然后订阅";

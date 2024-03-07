@@ -98,3 +98,34 @@
 "yes" = "Ja";
 "no" = "Nein";
 "wantToDelete" = "Möchten Sie wirklich löschen?";
+
+//onbirding+subscription
+"welcomeLedLamp" = "Willkommen beim LED-Lampensteuergerät";
+"discription1" = "Steueren Sie mühelos die Beleuchtung in Ihrem gesamten Zuhause mit einer einheitlichen und benutzerfreundlichen Anwendung";
+"yourFeedback" = "Ihre Rückmeldungen, unsere Verbesserungen";
+"discription2" = "Ihre Bewertungen und Rückmeldungen verbessern die App und gestalten ihre Verbesserungen";
+"adjustLight" = "Lichtfarbe und Helligkeit anpassen";
+"discription3" = "Wählen Sie für jeden Raum die perfekte Farbe und Intensität";
+"startUse" = "Beginnen Sie mit der Nutzung des LED-Lampensteuergeräts";
+"discription4" = "Beginnen Sie Ihr LED-Lampen-App-Erlebnis mit einer 3-tägigen Testversion, gefolgt von 5,99 $ pro Woche";
+"tryFreeTrial" = "Kostenlose Testversion ausprobieren";
+"terms" = "Bedingungen";
+"privacy" = "Datenschutz";
+"restore" = "Wiederherstellen";
+"notNow" = "Jetzt nicht";
+"unrestrictedLed" = "Uneingeschränktes LED-Lampensteuergerät";
+"choosingOptimal" = "Optimale Farben und Helligkeiten für jeden Raum auswählen";
+"popular" = "BELIEBT";
+"3dayFree" = "3 TAGE KOSTENLOSE TESTVERSION";
+"bestDeal" = "BESTES ANGEBOT";
+"monthly" = "Monatlich";
+"weekly" = "Wöchentlich";
+"yearly" = "Jährlich";
+"perWeek4" = "4,99 $ pro Woche";
+"perWeek5" = "5,99 $ pro Woche";
+"perWeek0,7" = "0,79 $ pro Woche";
+"19month" = "19,99 $ pro Monat";
+"5week" = "5,99 $ pro Woche";
+"39year" = "39,99 $ pro Jahr";
+"startTrialThen" = "Testversion starten, dann abonnieren";
+

@@ -8,9 +8,9 @@
 import UIKit
 
 class MainScreenCell: UITableViewCell {
+    @IBOutlet weak var switcher: ConfigurableSwitchControl!
     @IBOutlet weak var backgrounCellView: UIView!
     @IBOutlet weak var lampImage: UIImageView!
-    @IBOutlet weak var switchState: UISwitch!
     @IBOutlet weak var stateLabel: UILabel!
     @IBOutlet weak var roomNameLabel: UILabel!
     @IBOutlet weak var lightSmartLabel: UILabel!
@@ -30,7 +30,7 @@ class MainScreenCell: UITableViewCell {
     }
    
     @IBAction func switchDidTap(_ sender: Any) {
-        switchValueChanged?(switchState.isOn)
+        switchValueChanged?(switcher.isOn)
     }
    
     @IBAction func menuBtnDidTap(_ sender: Any) {
@@ -40,7 +40,7 @@ class MainScreenCell: UITableViewCell {
     func configure(deviceName: String, roomName: String, stateLabel: Bool) {
         roomNameLabel.text = roomName
         lightSmartLabel.text = deviceName
-        switchState.isOn = stateLabel
+//        self.stateLabel.isOn = stateLabel
         self.stateLabel.text = stateLabel ? "connect".localized : "disconnect".localized
     }
 }

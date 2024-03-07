@@ -23,12 +23,22 @@
 		11E0BA0D2B98EE7000656C31 /* AxisTabView in Frameworks */ = {isa = PBXBuildFile; productRef = 11E0BA0C2B98EE7000656C31 /* AxisTabView */; };
 		11E0BA0F2B98F06500656C31 /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E0BA0E2B98F06500656C31 /* CustomTabBarView.swift */; };
 		F6078D972B97370800C9575A /* SyncWithMusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6078D962B97370800C9575A /* SyncWithMusicViewController.swift */; };
+		F62DE9272B9A3B39002F8FDA /* ConfigurableSwitchControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62DE9232B9A3B39002F8FDA /* ConfigurableSwitchControl.swift */; };
+		F62DE9282B9A3B39002F8FDA /* UIConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62DE9242B9A3B39002F8FDA /* UIConstant.swift */; };
+		F62DE9292B9A3B39002F8FDA /* LayoutGuideProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62DE9252B9A3B39002F8FDA /* LayoutGuideProtocol.swift */; };
+		F62DE92A2B9A3B39002F8FDA /* UtilityExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62DE9262B9A3B39002F8FDA /* UtilityExtensions.swift */; };
+		F62DE92C2B9A3D26002F8FDA /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F62DE92B2B9A3D26002F8FDA /* Onboarding.storyboard */; };
+		F62DE92F2B9A4474002F8FDA /* FirstPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62DE92E2B9A4474002F8FDA /* FirstPageViewController.swift */; };
+		F62DE9312B9A447D002F8FDA /* SecondPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62DE9302B9A447D002F8FDA /* SecondPageViewController.swift */; };
+		F62DE9332B9A4488002F8FDA /* ThirdPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62DE9322B9A4488002F8FDA /* ThirdPageViewController.swift */; };
+		F62DE9352B9A4493002F8FDA /* FourthPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62DE9342B9A4493002F8FDA /* FourthPageViewController.swift */; };
 		F6505C4A2B936A2800D47128 /* SelectAccessoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6505C492B936A2800D47128 /* SelectAccessoryViewController.swift */; };
 		F6505C4C2B936A3700D47128 /* SelectAccessoryViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6505C4B2B936A3700D47128 /* SelectAccessoryViewController.storyboard */; };
 		F6505C4E2B936C3000D47128 /* SelectAccessoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6505C4D2B936C3000D47128 /* SelectAccessoryCell.xib */; };
 		F6505C502B936C4B00D47128 /* SelectAccessoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6505C4F2B936C4B00D47128 /* SelectAccessoryCell.swift */; };
 		F6505C532B936DDD00D47128 /* RoomBottomSheets.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6505C522B936DDD00D47128 /* RoomBottomSheets.storyboard */; };
 		F6505C572B9372C100D47128 /* AddRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6505C562B9372C100D47128 /* AddRoomViewController.swift */; };
+		F6739B9E2B9A4CA400734226 /* SubscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6739B9D2B9A4CA400734226 /* SubscriptionViewController.swift */; };
 		F68EAA3C2B91F3E7002B4DF0 /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68EAA3B2B91F3E7002B4DF0 /* ColorPickerViewController.swift */; };
 		F6A0BC162B8CA4DD0084A0E8 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6A0BC152B8CA4DD0084A0E8 /* Settings.storyboard */; };
 		F6A0BC182B8CA5CA0084A0E8 /* SettingsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6A0BC172B8CA5CA0084A0E8 /* SettingsCell.xib */; };
@@ -117,12 +127,22 @@
 		11C621B02B939314006B15F7 /* LedLamp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LedLamp.entitlements; sourceTree = "<group>"; };
 		11E0BA0E2B98F06500656C31 /* CustomTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
 		F6078D962B97370800C9575A /* SyncWithMusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncWithMusicViewController.swift; sourceTree = "<group>"; };
+		F62DE9232B9A3B39002F8FDA /* ConfigurableSwitchControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurableSwitchControl.swift; sourceTree = "<group>"; };
+		F62DE9242B9A3B39002F8FDA /* UIConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIConstant.swift; sourceTree = "<group>"; };
+		F62DE9252B9A3B39002F8FDA /* LayoutGuideProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutGuideProtocol.swift; sourceTree = "<group>"; };
+		F62DE9262B9A3B39002F8FDA /* UtilityExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilityExtensions.swift; sourceTree = "<group>"; };
+		F62DE92B2B9A3D26002F8FDA /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		F62DE92E2B9A4474002F8FDA /* FirstPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPageViewController.swift; sourceTree = "<group>"; };
+		F62DE9302B9A447D002F8FDA /* SecondPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPageViewController.swift; sourceTree = "<group>"; };
+		F62DE9322B9A4488002F8FDA /* ThirdPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPageViewController.swift; sourceTree = "<group>"; };
+		F62DE9342B9A4493002F8FDA /* FourthPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthPageViewController.swift; sourceTree = "<group>"; };
 		F6505C492B936A2800D47128 /* SelectAccessoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAccessoryViewController.swift; sourceTree = "<group>"; };
 		F6505C4B2B936A3700D47128 /* SelectAccessoryViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectAccessoryViewController.storyboard; sourceTree = "<group>"; };
 		F6505C4D2B936C3000D47128 /* SelectAccessoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectAccessoryCell.xib; sourceTree = "<group>"; };
 		F6505C4F2B936C4B00D47128 /* SelectAccessoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAccessoryCell.swift; sourceTree = "<group>"; };
 		F6505C522B936DDD00D47128 /* RoomBottomSheets.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RoomBottomSheets.storyboard; sourceTree = "<group>"; };
 		F6505C562B9372C100D47128 /* AddRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRoomViewController.swift; sourceTree = "<group>"; };
+		F6739B9D2B9A4CA400734226 /* SubscriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionViewController.swift; sourceTree = "<group>"; };
 		F68EAA3B2B91F3E7002B4DF0 /* ColorPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerViewController.swift; sourceTree = "<group>"; };
 		F6A0BC152B8CA4DD0084A0E8 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		F6A0BC172B8CA5CA0084A0E8 /* SettingsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsCell.xib; sourceTree = "<group>"; };
@@ -243,6 +263,29 @@
 				118EAD0D2B9663A800F6A8BD /* DatabaseManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		F62DE9222B9A3B39002F8FDA /* CustomSwitch */ = {
+			isa = PBXGroup;
+			children = (
+				F62DE9232B9A3B39002F8FDA /* ConfigurableSwitchControl.swift */,
+				F62DE9242B9A3B39002F8FDA /* UIConstant.swift */,
+				F62DE9252B9A3B39002F8FDA /* LayoutGuideProtocol.swift */,
+				F62DE9262B9A3B39002F8FDA /* UtilityExtensions.swift */,
+			);
+			path = CustomSwitch;
+			sourceTree = "<group>";
+		};
+		F62DE92D2B9A4465002F8FDA /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				F62DE92E2B9A4474002F8FDA /* FirstPageViewController.swift */,
+				F62DE9302B9A447D002F8FDA /* SecondPageViewController.swift */,
+				F62DE9322B9A4488002F8FDA /* ThirdPageViewController.swift */,
+				F62DE9342B9A4493002F8FDA /* FourthPageViewController.swift */,
+				F6739B9D2B9A4CA400734226 /* SubscriptionViewController.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 		F6505C512B936DC200D47128 /* RoomsBottomSheets */ = {
@@ -382,6 +425,7 @@
 		F6EB00F62B8C9FBB005139CC /* LedLamp */ = {
 			isa = PBXGroup;
 			children = (
+				F62DE9222B9A3B39002F8FDA /* CustomSwitch */,
 				11C621B02B939314006B15F7 /* LedLamp.entitlements */,
 				11C621AD2B938D0C006B15F7 /* Managers */,
 				11C6219C2B93647E006B15F7 /* CustomTabBar */,
@@ -449,6 +493,7 @@
 				11C621AB2B936715006B15F7 /* CustomTabBar.storyboard */,
 				F6B8B8472B94C1E4001FE671 /* Rooms.storyboard */,
 				F6C91EE12B961327005FB008 /* MusicPlayer.storyboard */,
+				F62DE92B2B9A3D26002F8FDA /* Onboarding.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -456,6 +501,7 @@
 		F6EB012A2B8CA012005139CC /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				F62DE92D2B9A4465002F8FDA /* Onboarding */,
 				F6C91EF72B9661E7005FB008 /* MusicPlayer */,
 				F6EB00FB2B8C9FBB005139CC /* SettingsViewController.swift */,
 				F6A0BC2E2B8CB9900084A0E8 /* MainViewController.swift */,
@@ -652,6 +698,7 @@
 				F6EB01342B8CA156005139CC /* ChakraPetch-Regular.ttf in Resources */,
 				F6B8B84C2B94C6E3001FE671 /* AddedRoomCell.xib in Resources */,
 				F6EB01372B8CA156005139CC /* ChakraPetch-Medium.ttf in Resources */,
+				F62DE92C2B9A3D26002F8FDA /* Onboarding.storyboard in Resources */,
 				F6C91EF02B965564005FB008 /* CollectionImageCell.xib in Resources */,
 				F6A0BC312B8CBA9F0084A0E8 /* Assets.xcassets in Resources */,
 				F6A0BC3A2B8E44FA0084A0E8 /* ScanDeviceView.storyboard in Resources */,
@@ -704,11 +751,15 @@
 				F6B8B84A2B94C210001FE671 /* RoomsViewController.swift in Sources */,
 				F6E415A92B9076E600D8B418 /* LightingDeviceViewController.swift in Sources */,
 				F6505C572B9372C100D47128 /* AddRoomViewController.swift in Sources */,
+				F62DE92A2B9A3B39002F8FDA /* UtilityExtensions.swift in Sources */,
 				F6505C4A2B936A2800D47128 /* SelectAccessoryViewController.swift in Sources */,
 				F6EB00FC2B8C9FBB005139CC /* SettingsViewController.swift in Sources */,
+				F62DE9332B9A4488002F8FDA /* ThirdPageViewController.swift in Sources */,
+				F6739B9E2B9A4CA400734226 /* SubscriptionViewController.swift in Sources */,
 				F6B176DF2B91EA5400932231 /* MainScreenCell.swift in Sources */,
 				F6C91EE02B94D7C3005FB008 /* AddLightViewController.swift in Sources */,
 				118EAD0E2B9663A800F6A8BD /* DatabaseManager.swift in Sources */,
+				F62DE92F2B9A4474002F8FDA /* FirstPageViewController.swift in Sources */,
 				F6A0BC2D2B8CB02B0084A0E8 /* String+localization.swift in Sources */,
 				11A1D3ED2B94F911003184AA /* QRCodePreviewLayer.swift in Sources */,
 				F6F827612B90810A00F1BB61 /* DeviceLocationCell.swift in Sources */,
@@ -720,14 +771,19 @@
 				11C621A32B936493006B15F7 /* DefaultTabBarViewModel.swift in Sources */,
 				11A1D3EB2B94F8E6003184AA /* ScannerView.swift in Sources */,
 				F6C91EEA2B961755005FB008 /* PlaybackLightViewController.swift in Sources */,
+				F62DE9272B9A3B39002F8FDA /* ConfigurableSwitchControl.swift in Sources */,
+				F62DE9282B9A3B39002F8FDA /* UIConstant.swift in Sources */,
 				F6F8275B2B907EF100F1BB61 /* DeviceNameLocationViewController.swift in Sources */,
+				F62DE9352B9A4493002F8FDA /* FourthPageViewController.swift in Sources */,
 				118EAD0C2B965CC900F6A8BD /* UPCarouselFlowLayout.swift in Sources */,
 				11C621A82B936493006B15F7 /* BEKCurveTabbar.swift in Sources */,
 				F68EAA3C2B91F3E7002B4DF0 /* ColorPickerViewController.swift in Sources */,
 				F6C91EEE2B965455005FB008 /* CollectionImagesViewController.swift in Sources */,
 				11E0BA0F2B98F06500656C31 /* CustomTabBarView.swift in Sources */,
+				F62DE9312B9A447D002F8FDA /* SecondPageViewController.swift in Sources */,
 				F6EB00F82B8C9FBB005139CC /* AppDelegate.swift in Sources */,
 				F6B8B84E2B94C711001FE671 /* AddedRoomCell.swift in Sources */,
+				F62DE9292B9A3B39002F8FDA /* LayoutGuideProtocol.swift in Sources */,
 				F6F827642B90820000F1BB61 /* LocationCollectionViewModel.swift in Sources */,
 				F6A0BC1A2B8CA5DC0084A0E8 /* SettingsCell.swift in Sources */,
 				F6B8B8462B938F68001FE671 /* ChoosenRoomViewController.swift in Sources */,

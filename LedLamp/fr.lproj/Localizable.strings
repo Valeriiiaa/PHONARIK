@@ -100,4 +100,32 @@
 "no" = "Non";
 "wantToDelete" = "Êtes-vous sûr de vouloir supprimer ?";
 
-
+//onbirding+subscription
+"welcomeLedLamp" = "Bienvenue sur le contrôleur de lampe LED";
+"discription1" = "Contrôlez facilement l'éclairage dans toute votre maison avec une application unifiée et conviviale";
+"yourFeedback" = "Vos retours, nos améliorations";
+"discription2" = "Vos notes et retours enrichissent l'application et façonnent ses améliorations";
+"adjustLight" = "Ajuster la couleur et la luminosité de la lumière";
+"discription3" = "Choisir la couleur et l'intensité parfaites pour chaque pièce";
+"startUse" = "Commencez à utiliser le contrôleur de lampe LED";
+"discription4" = "Commencez votre expérience d'application de lampe LED avec un essai de 3 jours, suivi de 5,99 $ par semaine";
+"tryFreeTrial" = "Essayer l'essai gratuit";
+"terms" = "Termes";
+"privacy" = "Confidentialité";
+"restore" = "Restaurer";
+"notNow" = "Pas maintenant";
+"unrestrictedLed" = "Contrôleur de lampe LED sans restrictions";
+"choosingOptimal" = "Choisir des couleurs et une luminosité optimales pour chaque pièce";
+"popular" = "POPULAIRE";
+"3dayFree" = "ESSAI GRATUIT DE 3 JOURS";
+"bestDeal" = "MEILLEURE OFFRE";
+"monthly" = "Mensuel";
+"weekly" = "Hebdomadaire";
+"yearly" = "Annuel";
+"perWeek4" = "4,99 $ par semaine";
+"perWeek5" = "5,99 $ par semaine";
+"perWeek0,7" = "0,79 $ par semaine";
+"19month" = "19,99 $ par mois";
+"5week" = "5,99 $ par semaine";
+"39year" = "39,99 $ par an";
+"startTrialThen" = "Commencer l'essai puis s'abonner";
