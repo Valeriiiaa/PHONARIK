@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -311,7 +312,8 @@
                         <outlet property="roomLabel" destination="1K7-bz-8b5" id="HSA-it-hHa"/>
                         <outlet property="saturationLabel" destination="HIN-y2-32Q" id="nMf-8Q-2gt"/>
                         <outlet property="saturationSlider" destination="Lq6-zN-5cb" id="Cje-61-Wn4"/>
-                        <outlet property="saveButton" destination="clJ-ld-2Kr" id="k3Z-dm-fmg"/>
+                        <outlet property="saveButton" destination="clJ-ld-2Kr" id="vlb-Ss-mVb"/>
+                        <outlet property="stackColours" destination="bqV-4Q-nVd" id="jdh-YK-MPy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

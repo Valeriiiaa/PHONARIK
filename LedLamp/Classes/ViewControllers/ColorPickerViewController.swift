@@ -10,6 +10,7 @@ import FlexColorPicker
 
 class ColorPickerViewController: UIViewController {
 
+    @IBOutlet weak var stackColours: UIStackView!
     @IBOutlet weak var colorPaletterView: RadialPaletteControl!
     @IBOutlet weak var brightness: UILabel!
     @IBOutlet weak var saturationLabel: UILabel!

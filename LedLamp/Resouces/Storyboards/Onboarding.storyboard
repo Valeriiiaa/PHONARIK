@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -124,12 +125,13 @@
                     </view>
                     <connections>
                         <outlet property="discriptionLabel" destination="bfD-3w-emS" id="rGs-YB-Ead"/>
+                        <outlet property="stackViews" destination="Dhl-ok-8I1" id="X3w-cS-Fmc"/>
                         <outlet property="welcomeLabel" destination="dkT-qo-nR3" id="aIM-qK-Zvy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="79" y="-2"/>
+            <point key="canvasLocation" x="79" y="-15"/>
         </scene>
         <!--Second Page View Controller-->
         <scene sceneID="KAz-BA-smt">
@@ -232,6 +234,7 @@
                     </view>
                     <connections>
                         <outlet property="discriptionLabel" destination="NMe-on-smS" id="lvO-Ib-bdK"/>
+                        <outlet property="stackViews" destination="7GT-If-I0L" id="Bob-se-Aph"/>
                         <outlet property="yourFeedbackLabel" destination="AmL-Zf-9M3" id="v9i-2C-KDK"/>
                     </connections>
                 </viewController>
@@ -849,7 +852,7 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="aheadBlack"/>
                                 <connections>
-                                    <action selector="aheadBtnDidTap:" destination="XQm-id-TkR" eventType="touchUpInside" id="LLo-lo-1w0"/>
+                                    <action selector="aheadBtnDidTap:" destination="XQm-id-TkR" eventType="touchUpInside" id="qH8-E6-5zL"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="0wO-us-Mb5">
@@ -916,6 +919,7 @@
                     <connections>
                         <outlet property="adjustLabel" destination="OJR-j1-c5C" id="gGH-I0-5uI"/>
                         <outlet property="descriptionLabel" destination="5Bl-iY-M1N" id="s1Q-pt-1rS"/>
+                        <outlet property="stackViews" destination="0wO-us-Mb5" id="Fgh-CY-gW4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FmO-Hi-gxl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

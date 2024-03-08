@@ -60,6 +60,9 @@ class FourthPageViewController: UIViewController {
     
   
     @IBAction func notNowBtnDidTap(_ sender: Any) {
+        if let viewController = navigationController?.viewControllers.first(where: { $0 is MainViewController }) {
+            navigationController?.popToViewController(viewController, animated: true)
+        }
     }
    
     @IBAction func restoreBtnDidTap(_ sender: Any) {
@@ -73,6 +76,8 @@ class FourthPageViewController: UIViewController {
     
    
     @IBAction func aheadBtnDidTap(_ sender: Any) {
+        let entrance = UIStoryboard(name: "Onboarding", bundle: nil).instantiateViewController(withIdentifier: "SubscriptionViewController")
+        navigationController?.pushViewController(entrance, animated: true)
     }
     
 }

@@ -8,6 +8,7 @@
 import UIKit
 
 class ThirdPageViewController: UIViewController {
+    @IBOutlet weak var stackViews: UIStackView!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var adjustLabel: UILabel!
    
@@ -16,11 +17,14 @@ class ThirdPageViewController: UIViewController {
         super.viewDidLoad()
         adjustLabel.text = "adjustLight".localized
         descriptionLabel.text = "discription3".localized
-       
-    }
-    
-
-    @IBAction func aheadBtnDidTap(_ sender: Any) {
-    }
-    
+        stackViews.arrangedSubviews.forEach({ item in
+            item.layer.cornerRadius = 6
+            item.layer.masksToBounds = true
+    })
 }
+    @IBAction func aheadBtnDidTap(_ sender: Any) {
+        let entrance = UIStoryboard(name: "Onboarding", bundle: nil).instantiateViewController(identifier: "FourthPageViewController")
+        present(entrance, animated: true)
+    }
+}
+
