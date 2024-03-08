@@ -121,7 +121,7 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="colorPickerLamp" translatesAutoresizingMaskIntoConstraints="NO" id="Uu1-Qw-a4K">
-                                <rect key="frame" x="286.66666666666669" y="203.33333333333334" width="134.33333333333331" height="285.33333333333326"/>
+                                <rect key="frame" x="286.66666666666669" y="203.33333333333337" width="134.33333333333331" height="288"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bg6-4O-oYx" customClass="RadialPaletteControl" customModule="FlexColorPicker">
                                 <rect key="frame" x="86" y="331.33333333333331" width="221" height="220.99999999999994"/>
@@ -251,10 +251,14 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="expandOnTap" value="NO"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pizda" translatesAutoresizingMaskIntoConstraints="NO" id="wbc-XU-2jV">
+                                <rect key="frame" x="241.33333333333337" y="163.33333333333337" width="165" height="288"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" name="Background(#222222)"/>
                         <constraints>
+                            <constraint firstItem="wbc-XU-2jV" firstAttribute="centerX" secondItem="Uu1-Qw-a4K" secondAttribute="centerX" constant="-30" id="0Yf-3o-6Rs"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Lq6-zN-5cb" secondAttribute="trailing" constant="32" id="1zB-KO-LRK"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="i09-LT-56X" secondAttribute="trailing" constant="32" id="3YV-Cm-Uhg"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="gwS-0x-N78" secondAttribute="trailing" constant="32" id="5C2-jB-Ev3"/>
@@ -270,6 +274,8 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="clJ-ld-2Kr" secondAttribute="trailing" constant="23" id="KrF-tr-OWZ"/>
                             <constraint firstItem="Ebl-3r-CS9" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="LLV-uJ-7hv"/>
                             <constraint firstItem="i09-LT-56X" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="LlN-co-dDP"/>
+                            <constraint firstItem="wbc-XU-2jV" firstAttribute="centerY" secondItem="Uu1-Qw-a4K" secondAttribute="centerY" constant="-40" id="MeW-yY-dMA"/>
+                            <constraint firstItem="wbc-XU-2jV" firstAttribute="height" secondItem="Uu1-Qw-a4K" secondAttribute="height" id="Pgx-gO-JBL"/>
                             <constraint firstItem="Bg6-4O-oYx" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.25939" id="SGp-5q-Ilj"/>
                             <constraint firstItem="uYq-66-bE0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="U5a-nb-MCJ"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="S8M-cd-GsI" secondAttribute="trailing" constant="16" id="a8e-Yd-e5M"/>
@@ -285,6 +291,7 @@
                             <constraint firstItem="Lq6-zN-5cb" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="ian-lV-Pp4"/>
                             <constraint firstItem="1K7-bz-8b5" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="jL6-AK-ab2"/>
                             <constraint firstItem="bqV-4Q-nVd" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="kAv-06-0xU"/>
+                            <constraint firstItem="wbc-XU-2jV" firstAttribute="width" secondItem="Uu1-Qw-a4K" secondAttribute="width" multiplier="1.22829" id="lDw-bD-XVr"/>
                             <constraint firstItem="Lq6-zN-5cb" firstAttribute="top" secondItem="HIN-y2-32Q" secondAttribute="bottom" constant="9" id="oZC-OR-BGi"/>
                             <constraint firstItem="i09-LT-56X" firstAttribute="top" secondItem="Lq6-zN-5cb" secondAttribute="bottom" constant="8" id="pvV-8x-ZuI"/>
                             <constraint firstItem="HIN-y2-32Q" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="qQu-KU-MEn"/>
@@ -326,6 +333,7 @@
         <image name="colorPickerLamp" width="134.33332824707031" height="285.33334350585938"/>
         <image name="menuColorPicker" width="64" height="64"/>
         <image name="offButton" width="86.666664123535156" height="89.333335876464844"/>
+        <image name="pizda" width="165" height="288"/>
         <namedColor name="Background(#222222)">
             <color red="0.13300000131130219" green="0.13300000131130219" blue="0.13300000131130219" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

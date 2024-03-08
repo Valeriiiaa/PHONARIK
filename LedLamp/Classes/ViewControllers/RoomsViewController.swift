@@ -28,6 +28,8 @@ class RoomsViewController: UIViewController {
     @IBOutlet weak var addButton: UILabel!
     @IBOutlet weak var brightenYourEnviroment: UILabel!
     
+    var previousCell: AddedRoomCell?
+    
     var bottomButtomConstraint: NSLayoutConstraint!
     
     private var pageSize: CGSize {
@@ -73,11 +75,29 @@ class RoomsViewController: UIViewController {
         youDontHaveAnyRoomsLabel.isHidden = !isEmptyRooms
         buttonTopConstraint.isActive = isEmptyRooms
         bottomButtomConstraint?.isActive = false
+        
+        let layout = roomCollectionView.collectionViewLayout as! UPCarouselFlowLayout
+        layout.centeredIndexPath = { [unowned self] indexPath in
+            let center = self.view.convert(roomCollectionView.center, to: self.roomCollectionView)
+            guard let index = roomCollectionView!.indexPathForItem(at: center) else { return }
+            let cell = roomCollectionView.cellForItem(at: index) as? AddedRoomCell
+            previousCell?.backgroundMainView.layer.borderColor = UIColor.clear.cgColor
+            cell?.backgroundMainView.layer.borderColor = UIColor(red: 231/255, green: 254/255, blue: 85/255, alpha: 1).cgColor
+            print(roomCollectionView.indexPathsForVisibleItems)
+            previousCell = cell
+        }
+        
         if !isEmptyRooms {
             bottomButtomConstraint = backgroundAddRoomView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16)
             bottomButtomConstraint.isActive = true
             roomCollectionView.heightAnchor.constraint(lessThanOrEqualToConstant: 630).isActive = true
         }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: { [unowned self] in
+            let firIndexPath = IndexPath(row: 0, section: 0)
+            let cell = roomCollectionView.cellForItem(at: firIndexPath)
+            (cell as? AddedRoomCell)?.backgroundMainView.layer.borderColor = UIColor(red: 231/255, green: 254/255, blue: 85/255, alpha: 1).cgColor
+            previousCell = cell as? AddedRoomCell
+        })
     }
     
     override func viewDidLayoutSubviews() {
@@ -145,7 +165,8 @@ extension RoomsViewController: UICollectionViewDataSource, UICollectionViewDeleg
                 let alert = UIAlertController(title: nil, message: "wantToDelete".localized, preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "yes".localized, style: .default, handler: { _ in
                     DispatchQueue.main.async {
-                        deleteCell()
+                        DatabaseManager.shared.removeRoom(room.name)
+                        ActionManager.shared.reload()
                     }
                 }))
                 alert.addAction(UIAlertAction(title: "no".localized, style: .cancel))

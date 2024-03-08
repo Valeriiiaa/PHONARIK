@@ -32,6 +32,7 @@ open class UPCarouselFlowLayout: UICollectionViewFlowLayout {
     
     fileprivate var state = LayoutState(size: CGSize.zero, direction: .horizontal)
     
+    var centeredIndexPath: ((IndexPath?) -> Void)?
     
     override open func prepare() {
         super.prepare()
@@ -132,6 +133,11 @@ open class UPCarouselFlowLayout: UICollectionViewFlowLayout {
             targetContentOffset = CGPoint(x: proposedContentOffset.x, y: floor(closest.center.y - midSide))
         }
         
+        defer {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+                self.centeredIndexPath?(collectionView.indexPathForItem(at: targetContentOffset))
+            })
+        }
         return targetContentOffset
     }
 }

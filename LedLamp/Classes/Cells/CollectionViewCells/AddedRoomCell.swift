@@ -25,10 +25,14 @@ class AddedRoomCell: UICollectionViewCell {
         lightSmartBulbLabel.text = "lightSmartLulb".localized
         backgroundMainView.layer.cornerRadius = 40
         backgroundMainView.layer.masksToBounds = true
+        backgroundMainView.layer.borderWidth = 2
+        backgroundMainView.layer.borderColor = UIColor.clear.cgColor
     }
    
     @IBAction func switchDidTap(_ sender: Any) {
-            switchValueChanged?(switcher.isOn)
+        switchValueChanged?(switcher.isOn)
+        stateLabel.text = switcher.isOn ? "connect".localized : "disconnect".localized
+        stateLabel.textColor = switcher.isOn ? .activeText : .inactiveText
     }
     
     @IBAction func menuBtnDidTap(_ sender: Any) {
@@ -38,6 +42,7 @@ class AddedRoomCell: UICollectionViewCell {
     func configure(roomImage: UIImage, stateLabel: Bool, roomNameLabel: String) {
         self.roomImage.image = roomImage
         self.stateLabel.text = stateLabel ? "connect".localized : "disconnect".localized
+        self.stateLabel.textColor = stateLabel ? .activeText : .inactiveText
         self.roomNameLabel.text = roomNameLabel
        
     }

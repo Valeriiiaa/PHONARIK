@@ -22,15 +22,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         self.window?.windowScene = windowScene
         let onboardingVC = UIStoryboard(name: "Onboarding", bundle: nil).instantiateInitialViewController()
-        window?.rootViewController = onboardingVC!//UIHostingController(rootView: CustomTabBarView())
+        window?.rootViewController = UIHostingController(rootView: CustomTabBarView())
         self.window?.makeKeyAndVisible()
         
         guard !UserDefaults.standard.bool(forKey: "isNotFirstLaunch") else { return }
         UserDefaults.standard.set(true, forKey: "isNotFirstLaunch")
         
-        LocationCollectionViewModel.allCases.forEach({ item in
-            DatabaseManager.shared.save(RoomModel(name: item.titel, background: UIImage(resource: item.image).pngData(), lamps: "", status: false))
-        })
+//        LocationCollectionViewModel.allCases.forEach({ item in
+//            DatabaseManager.shared.save(RoomModel(name: item.titel, background: UIImage(resource: item.image).pngData(), lamps: "", status: false))
+//        })
     }
     
     func getConfiguredController() -> UITabBarController {
