@@ -9,6 +9,21 @@ import UIKit
 
 class SubscriptionViewController: UIViewController {
    
+    @IBOutlet weak var perWeekThirdLabel: UILabel!
+    @IBOutlet weak var yearlyLabel: UILabel!
+    @IBOutlet weak var bestDialLabel: UILabel!
+    @IBOutlet weak var yearAmountLabel: UILabel!
+    @IBOutlet weak var monthAmountLabel: UILabel!
+    @IBOutlet weak var weekLabel: UILabel!
+    @IBOutlet weak var daysFreeTrial: UILabel!
+    @IBOutlet weak var perWeekSecondLabel: UILabel!
+    @IBOutlet weak var weeklyLabel: UILabel!
+    @IBOutlet weak var perWeekFirstLabel: UILabel!
+    @IBOutlet weak var monthlyLabel: UILabel!
+    @IBOutlet weak var popularLabel: UILabel!
+    @IBOutlet weak var bestDealView: UIView!
+    @IBOutlet weak var freeTrialView: UIView!
+    @IBOutlet weak var popularView: UIView!
     @IBOutlet weak var backgroundNextView: UIView!
     @IBOutlet weak var subscriptionStack: UIStackView!
     @IBOutlet weak var yearView: UIView!
@@ -35,11 +50,49 @@ class SubscriptionViewController: UIViewController {
         privacyButton.setTitle("privacy".localized, for: .normal)
         restoreButton.setTitle("restore".localized, for: .normal)
         notNowButton.setTitle("notNow".localized, for: .normal)
+        popularLabel.text = "popular".localized
+        monthlyLabel.text = "monthly".localized
+        daysFreeTrial.text = "3dayFree".localized
+        perWeekFirstLabel.text = "perWeek4".localized
+        monthAmountLabel.text = "19month".localized
+        perWeekSecondLabel.text = "perWeek5".localized
+        bestDialLabel.text = "bestDeal".localized
+        yearlyLabel.text = "yearly".localized
+        perWeekThirdLabel.text = "perWeek0,7".localized
+        yearAmountLabel.text = "39year".localized
+        weekLabel.text = "5week".localized
+        weeklyLabel.text = "weekly".localized
         
-        [yearView, weekView, monthView].forEach({ item in
+        
+        [ weekView, monthView].forEach({ item in
             item?.layer.cornerRadius = 24
             item?.layer.masksToBounds = true
         })
+        
+        notNowButton.titleLabel?.numberOfLines = 0
+        notNowButton.titleLabel?.textAlignment = .center
+        restoreButton.titleLabel?.numberOfLines = 0
+        restoreButton.titleLabel?.textAlignment = .center
+        privacyButton.titleLabel?.numberOfLines = 0
+        privacyButton.titleLabel?.textAlignment = .center
+        termButton.titleLabel?.numberOfLines = 0
+        termButton.titleLabel?.textAlignment = .center
+        
+        bestDealView.layer.cornerRadius = 15
+        bestDealView.layer.masksToBounds = true
+        popularView.layer.cornerRadius = 15
+        popularView.layer.masksToBounds = true
+        freeTrialView.layer.cornerRadius = 25
+        freeTrialView.layer.masksToBounds = true
+        
+        yearView.layer.cornerRadius = 24
+        yearView.layer.shadowColor = UIColor(red: 231/255, green: 254/255, blue: 85/255, alpha: 1).cgColor
+        yearView.layer.shadowOpacity = 0.5
+        yearView.layer.shadowOffset = CGSize(width: 2, height: 0)
+        yearView.layer.shadowRadius = 4
+        yearView.layer.shouldRasterize = true
+        yearView.layer.masksToBounds = false
+        yearView.layer.rasterizationScale = UIScreen.main.scale
     }
     
     override func viewWillAppear(_ animated: Bool) {
