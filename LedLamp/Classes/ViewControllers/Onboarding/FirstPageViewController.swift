@@ -27,7 +27,7 @@ class FirstPageViewController: UIViewController {
 
     @IBAction func buttonAheadDidTap(_ sender: Any) {
         let entrance = UIStoryboard(name: "Onboarding", bundle: nil).instantiateViewController(identifier: "SecondPageViewController")
-        present(entrance, animated: true)
+        navigationController?.pushViewController(entrance, animated: true)
     }
     
 

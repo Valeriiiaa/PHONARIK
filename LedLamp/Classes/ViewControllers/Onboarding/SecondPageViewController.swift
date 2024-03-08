@@ -26,7 +26,7 @@ class SecondPageViewController: UIViewController {
 
     @IBAction func aheadBtnDidTap(_ sender: Any) {
         let entrance = UIStoryboard(name: "Onboarding", bundle: nil).instantiateViewController(identifier: "ThirdPageViewController")
-        present(entrance, animated: true)
+        navigationController?.pushViewController(entrance, animated: true)
     }
     
 }
