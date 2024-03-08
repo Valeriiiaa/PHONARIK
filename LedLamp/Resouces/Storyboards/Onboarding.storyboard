@@ -67,7 +67,7 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EDF-df-xcu">
                                         <rect key="frame" x="0.0" y="0.0" width="12" height="12"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="12" id="FjL-h5-IuM"/>
                                             <constraint firstAttribute="height" constant="12" id="yqv-84-PoA"/>
@@ -75,7 +75,7 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DDY-Am-Ia4">
                                         <rect key="frame" x="18" y="0.0" width="12" height="12"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" red="0.61960784313725492" green="0.61960784313725492" blue="0.61960784313725492" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="12" id="8L1-yP-rM1"/>
                                             <constraint firstAttribute="width" constant="12" id="M4j-DD-PMW"/>
@@ -83,7 +83,7 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bKA-HX-nXA">
                                         <rect key="frame" x="36" y="0.0" width="12" height="12"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" red="0.61960784313725492" green="0.61960784313725492" blue="0.61960784313725492" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="12" id="0Cz-Mi-JK0"/>
                                             <constraint firstAttribute="height" constant="12" id="A8U-26-1UP"/>
@@ -91,7 +91,7 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FbD-je-fa4">
                                         <rect key="frame" x="54" y="0.0" width="12" height="12"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" red="0.61960784313725492" green="0.61960784313725492" blue="0.61960784313725492" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="12" id="Nci-NP-MjL"/>
                                             <constraint firstAttribute="width" constant="12" id="fj8-yS-s69"/>
@@ -177,7 +177,7 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TOz-Mp-tY7">
                                         <rect key="frame" x="0.0" y="0.0" width="12" height="12"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" red="0.61960784313725492" green="0.61960784313725492" blue="0.61960784313725492" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="12" id="mnx-37-pEt"/>
                                             <constraint firstAttribute="height" constant="12" id="q9A-RM-SZO"/>
@@ -185,7 +185,7 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ENA-Rp-wYi">
                                         <rect key="frame" x="18" y="0.0" width="12" height="12"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="12" id="e21-Mg-11t"/>
                                             <constraint firstAttribute="height" constant="12" id="fpz-Z0-Asy"/>
@@ -193,7 +193,7 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9mn-pc-RJU">
                                         <rect key="frame" x="36" y="0.0" width="12" height="12"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" red="0.61960784313725492" green="0.61960784313725492" blue="0.61960784313725492" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="12" id="eLM-l5-rNO"/>
                                             <constraint firstAttribute="height" constant="12" id="rzI-7d-UFp"/>
@@ -201,7 +201,7 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FU9-fL-PDg">
                                         <rect key="frame" x="54" y="0.0" width="12" height="12"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" red="0.61960784313725492" green="0.61960784313725492" blue="0.61960784313725492" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="12" id="F1d-Yp-N1R"/>
                                             <constraint firstAttribute="height" constant="12" id="KUk-1l-HWD"/>
@@ -357,7 +357,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choosing optimal colors and brightness for each room" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fFj-2n-qYm">
-                                <rect key="frame" x="20" y="462.66666666666669" width="353" height="41.666666666666686"/>
+                                <rect key="frame" x="20" y="453.66666666666669" width="353" height="41.666666666666686"/>
                                 <fontDescription key="fontDescription" name="ChakraPetch-Regular" family="Chakra Petch" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -366,12 +366,12 @@
                                 <rect key="frame" x="23.666666666666657" y="519" width="345.66666666666674" height="175"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u38-eT-59r">
-                                        <rect key="frame" x="0.0" y="31.666666666666629" width="109.33333333333333" height="143.33333333333334"/>
+                                        <rect key="frame" x="0.0" y="35" width="109.33333333333333" height="140"/>
                                         <subviews>
                                             <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="92I-s0-cgP">
                                                 <rect key="frame" x="7" y="8.0000000000000018" width="95.333333333333329" height="31.666666666666671"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POPULAR" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="caq-oU-pDN">
+                                                    <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POPULAR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="caq-oU-pDN">
                                                         <rect key="frame" x="8.3333333333333357" y="7.9999999999999991" width="78.333333333333314" height="15.666666666666664"/>
                                                         <fontDescription key="fontDescription" name="ChakraPetch-Bold" family="Chakra Petch" pointSize="12"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -387,30 +387,30 @@
                                                     <constraint firstItem="caq-oU-pDN" firstAttribute="centerY" secondItem="92I-s0-cgP" secondAttribute="centerY" id="zai-jX-dsT"/>
                                                 </constraints>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$19,99 / month" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wvb-Cf-eAp">
-                                                <rect key="frame" x="7.6666666666666643" y="116.33333333333337" width="94" height="17"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$19,99 / month" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wvb-Cf-eAp">
+                                                <rect key="frame" x="7.6666666666666643" y="113" width="94" height="17"/>
                                                 <fontDescription key="fontDescription" name="ChakraPetch-Bold" family="Chakra Petch" pointSize="13"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="71o-Df-4z2">
-                                                <rect key="frame" x="0.0" y="107.33333333333337" width="109.33333333333333" height="1"/>
-                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <rect key="frame" x="0.0" y="104" width="109.33333333333333" height="1"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="c6e-tz-opo"/>
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Npa-zM-PPu">
-                                                <rect key="frame" x="12.999999999999993" y="52.666666666666742" width="83.333333333333314" height="41"/>
+                                                <rect key="frame" x="12.999999999999993" y="51" width="83.333333333333314" height="41"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monthly" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbe-xj-h53">
+                                                    <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monthly" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fbe-xj-h53">
                                                         <rect key="frame" x="0.0" y="0.0" width="83.333333333333329" height="22.333333333333332"/>
                                                         <fontDescription key="fontDescription" name="ChakraPetch-Bold" family="Chakra Petch" pointSize="17"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$4,99 per week" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wwc-UO-Sm1">
-                                                        <rect key="frame" x="0.0" y="25.333333333333261" width="83.333333333333329" height="15.666666666666668"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$4,99 per week" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wwc-UO-Sm1">
+                                                        <rect key="frame" x="0.0" y="25.333333333333375" width="83.333333333333329" height="15.666666666666668"/>
                                                         <fontDescription key="fontDescription" name="ChakraPetch-Regular" family="Chakra Petch" pointSize="12"/>
                                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -418,7 +418,7 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ub4-C7-eha">
-                                                <rect key="frame" x="0.0" y="0.0" width="109.33333333333333" height="143.33333333333334"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="109.33333333333333" height="140"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <connections>
                                                     <action selector="monthBtnDidTap:" destination="R4W-32-XMk" eventType="touchUpInside" id="0i7-mt-OmC"/>
@@ -432,15 +432,19 @@
                                             <constraint firstAttribute="trailing" secondItem="ub4-C7-eha" secondAttribute="trailing" id="C9N-dz-VDH"/>
                                             <constraint firstItem="ub4-C7-eha" firstAttribute="top" secondItem="u38-eT-59r" secondAttribute="top" id="Grz-nJ-Dut"/>
                                             <constraint firstItem="Npa-zM-PPu" firstAttribute="centerY" secondItem="u38-eT-59r" secondAttribute="centerY" multiplier="1.02" id="Jd6-kK-Vlm"/>
+                                            <constraint firstItem="Wvb-Cf-eAp" firstAttribute="leading" secondItem="u38-eT-59r" secondAttribute="leading" constant="7.6699999999999999" id="Npa-hm-1GF"/>
                                             <constraint firstItem="92I-s0-cgP" firstAttribute="width" secondItem="u38-eT-59r" secondAttribute="width" multiplier="0.872" id="QYz-GP-vwA"/>
                                             <constraint firstAttribute="bottom" secondItem="Wvb-Cf-eAp" secondAttribute="bottom" constant="10" id="UMZ-e5-UI7"/>
                                             <constraint firstItem="92I-s0-cgP" firstAttribute="centerX" secondItem="u38-eT-59r" secondAttribute="centerX" id="Ycn-tH-J7C"/>
                                             <constraint firstItem="92I-s0-cgP" firstAttribute="top" secondItem="u38-eT-59r" secondAttribute="top" constant="8" id="bXR-0x-6bI"/>
+                                            <constraint firstAttribute="trailing" secondItem="Npa-zM-PPu" secondAttribute="trailing" constant="13" id="cPZ-UH-hPR"/>
                                             <constraint firstItem="71o-Df-4z2" firstAttribute="leading" secondItem="u38-eT-59r" secondAttribute="leading" id="cXd-ad-z44"/>
                                             <constraint firstItem="ub4-C7-eha" firstAttribute="leading" secondItem="u38-eT-59r" secondAttribute="leading" id="iag-Q8-RaS"/>
                                             <constraint firstAttribute="bottom" secondItem="ub4-C7-eha" secondAttribute="bottom" id="kKe-Ht-cek"/>
                                             <constraint firstAttribute="trailing" secondItem="71o-Df-4z2" secondAttribute="trailing" id="q95-f7-0xZ"/>
                                             <constraint firstItem="Npa-zM-PPu" firstAttribute="centerX" secondItem="u38-eT-59r" secondAttribute="centerX" id="s7q-E9-07e"/>
+                                            <constraint firstAttribute="trailing" secondItem="Wvb-Cf-eAp" secondAttribute="trailing" constant="7.6699999999999999" id="v17-Bb-dbo"/>
+                                            <constraint firstItem="Npa-zM-PPu" firstAttribute="leading" secondItem="u38-eT-59r" secondAttribute="leading" constant="13" id="xw6-fX-Shx"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EGe-Et-fYq">
@@ -449,7 +453,7 @@
                                             <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rVN-Kg-R1f">
                                                 <rect key="frame" x="7" y="8" width="95" height="47.333333333333336"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 DAYS FREE TRIAL" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6fs-WF-5k8">
+                                                    <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 DAYS FREE TRIAL" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="6" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6fs-WF-5k8">
                                                         <rect key="frame" x="8.3333333333333428" y="7.9999999999999982" width="78.333333333333329" height="31.333333333333329"/>
                                                         <fontDescription key="fontDescription" name="ChakraPetch-Bold" family="Chakra Petch" pointSize="12"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -465,7 +469,7 @@
                                                     <constraint firstItem="6fs-WF-5k8" firstAttribute="centerY" secondItem="rVN-Kg-R1f" secondAttribute="centerY" id="yLB-qY-Hdf"/>
                                                 </constraints>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$5,99 / week" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9EX-6v-U8b">
+                                            <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$5,99 / week" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9EX-6v-U8b">
                                                 <rect key="frame" x="7.6666666666666572" y="145.33333333333337" width="93.666666666666671" height="19.666666666666657"/>
                                                 <fontDescription key="fontDescription" name="ChakraPetch-Bold" family="Chakra Petch" pointSize="15"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -473,7 +477,7 @@
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cuE-fq-4xf">
                                                 <rect key="frame" x="0.0" y="134.33333333333337" width="109" height="1"/>
-                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="xuL-Kw-Juv"/>
                                                 </constraints>
@@ -481,13 +485,13 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="lwn-jb-Z9c">
                                                 <rect key="frame" x="9.3333333333333428" y="74.666666666666629" width="90.333333333333329" height="43.333333333333343"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weekly" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6H-9w-qLH">
+                                                    <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weekly" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L6H-9w-qLH">
                                                         <rect key="frame" x="0.0" y="0.0" width="90.333333333333329" height="22.333333333333332"/>
                                                         <fontDescription key="fontDescription" name="ChakraPetch-Bold" family="Chakra Petch" pointSize="17"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$5,99 per week" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UxS-ne-sFF">
+                                                    <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$5,99 per week" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UxS-ne-sFF">
                                                         <rect key="frame" x="0.0" y="26.333333333333371" width="90.333333333333329" height="17"/>
                                                         <fontDescription key="fontDescription" name="ChakraPetch-Regular" family="Chakra Petch" pointSize="13"/>
                                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -511,23 +515,27 @@
                                             <constraint firstAttribute="trailing" secondItem="cuE-fq-4xf" secondAttribute="trailing" id="2q8-rP-J7e"/>
                                             <constraint firstItem="Osv-LJ-kM7" firstAttribute="top" secondItem="EGe-Et-fYq" secondAttribute="top" id="6P4-g2-TMA"/>
                                             <constraint firstAttribute="bottom" secondItem="9EX-6v-U8b" secondAttribute="bottom" constant="10" id="8wf-T1-kcH"/>
+                                            <constraint firstAttribute="trailing" secondItem="9EX-6v-U8b" secondAttribute="trailing" constant="7.6699999999999999" id="A7d-Yb-FCw"/>
                                             <constraint firstAttribute="trailing" secondItem="Osv-LJ-kM7" secondAttribute="trailing" id="BL2-nv-n8F"/>
+                                            <constraint firstAttribute="trailing" secondItem="lwn-jb-Z9c" secondAttribute="trailing" constant="9.3300000000000001" id="JFp-E2-PrG"/>
                                             <constraint firstItem="rVN-Kg-R1f" firstAttribute="width" secondItem="EGe-Et-fYq" secondAttribute="width" multiplier="0.872" id="RVa-8P-LXe"/>
                                             <constraint firstItem="Osv-LJ-kM7" firstAttribute="leading" secondItem="EGe-Et-fYq" secondAttribute="leading" id="Yam-h2-d7x"/>
                                             <constraint firstItem="9EX-6v-U8b" firstAttribute="top" secondItem="cuE-fq-4xf" secondAttribute="bottom" constant="10" id="c7L-gZ-sBF"/>
                                             <constraint firstItem="rVN-Kg-R1f" firstAttribute="top" secondItem="EGe-Et-fYq" secondAttribute="top" constant="8" id="cOW-0W-SEJ"/>
                                             <constraint firstItem="rVN-Kg-R1f" firstAttribute="centerX" secondItem="EGe-Et-fYq" secondAttribute="centerX" id="dQ5-64-y93"/>
                                             <constraint firstItem="cuE-fq-4xf" firstAttribute="leading" secondItem="EGe-Et-fYq" secondAttribute="leading" id="hMV-3e-3WL"/>
+                                            <constraint firstItem="9EX-6v-U8b" firstAttribute="leading" secondItem="EGe-Et-fYq" secondAttribute="leading" constant="7.6699999999999999" id="iMg-1y-41p"/>
                                             <constraint firstItem="lwn-jb-Z9c" firstAttribute="centerX" secondItem="EGe-Et-fYq" secondAttribute="centerX" id="n9D-BY-Pw8"/>
+                                            <constraint firstItem="lwn-jb-Z9c" firstAttribute="leading" secondItem="EGe-Et-fYq" secondAttribute="leading" constant="9.3300000000000001" id="sfb-iz-162"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tu0-UK-OfD">
-                                        <rect key="frame" x="236.33333333333334" y="31.666666666666629" width="109.33333333333334" height="143.33333333333334"/>
+                                        <rect key="frame" x="236.33333333333334" y="35" width="109.33333333333334" height="140"/>
                                         <subviews>
                                             <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uLo-KO-cMn">
                                                 <rect key="frame" x="7" y="8.0000000000000018" width="95.333333333333329" height="31.666666666666671"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BEST DEAL" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E20-jS-dmS">
+                                                    <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BEST DEAL" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="6" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E20-jS-dmS">
                                                         <rect key="frame" x="8.6666666666666856" y="7.9999999999999991" width="78.333333333333329" height="15.666666666666664"/>
                                                         <fontDescription key="fontDescription" name="ChakraPetch-Bold" family="Chakra Petch" pointSize="12"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -543,21 +551,21 @@
                                                     <constraint firstItem="E20-jS-dmS" firstAttribute="width" secondItem="uLo-KO-cMn" secondAttribute="width" multiplier="0.82" id="nqZ-v3-R9A"/>
                                                 </constraints>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$39,99 / year" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lrh-KO-tQO">
-                                                <rect key="frame" x="12" y="116.33333333333337" width="85.666666666666671" height="17"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$39,99 / year" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lrh-KO-tQO">
+                                                <rect key="frame" x="12" y="113" width="85.666666666666671" height="17"/>
                                                 <fontDescription key="fontDescription" name="ChakraPetch-Bold" family="Chakra Petch" pointSize="13"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wWw-Wb-Bm0">
-                                                <rect key="frame" x="0.0" y="107.33333333333337" width="109.33333333333333" height="1"/>
-                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <rect key="frame" x="0.0" y="104" width="109.33333333333333" height="1"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="oVa-7y-e6O"/>
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="yGh-6o-8bg">
-                                                <rect key="frame" x="13.333333333333314" y="52.666666666666742" width="82.666666666666671" height="41"/>
+                                                <rect key="frame" x="13.333333333333314" y="51" width="82.666666666666671" height="41"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yearly" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cM-y1-YPI">
                                                         <rect key="frame" x="0.0" y="0.0" width="82.666666666666671" height="22.333333333333332"/>
@@ -566,7 +574,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0,79 per week" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lfo-Za-8Xa">
-                                                        <rect key="frame" x="0.0" y="25.333333333333261" width="82.666666666666671" height="15.666666666666668"/>
+                                                        <rect key="frame" x="0.0" y="25.333333333333375" width="82.666666666666671" height="15.666666666666668"/>
                                                         <fontDescription key="fontDescription" name="ChakraPetch-Regular" family="Chakra Petch" pointSize="12"/>
                                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -574,7 +582,7 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wkX-oM-L5W">
-                                                <rect key="frame" x="0.0" y="0.0" width="109.33333333333333" height="143.33333333333334"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="109.33333333333333" height="140"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <connections>
                                                     <action selector="yearBtnDidTap:" destination="R4W-32-XMk" eventType="touchUpInside" id="HZs-Cz-M7i"/>
@@ -587,6 +595,7 @@
                                             <constraint firstAttribute="trailing" secondItem="wkX-oM-L5W" secondAttribute="trailing" id="2it-Ph-6zU"/>
                                             <constraint firstItem="uLo-KO-cMn" firstAttribute="width" secondItem="Tu0-UK-OfD" secondAttribute="width" multiplier="0.872" id="3PJ-gc-LMu"/>
                                             <constraint firstItem="wWw-Wb-Bm0" firstAttribute="leading" secondItem="Tu0-UK-OfD" secondAttribute="leading" id="5AR-eu-xNe"/>
+                                            <constraint firstItem="yGh-6o-8bg" firstAttribute="top" secondItem="uLo-KO-cMn" secondAttribute="bottom" constant="11.33" id="GFq-GM-fwo"/>
                                             <constraint firstAttribute="bottom" secondItem="wkX-oM-L5W" secondAttribute="bottom" id="Irr-th-3Wo"/>
                                             <constraint firstItem="uLo-KO-cMn" firstAttribute="centerX" secondItem="Tu0-UK-OfD" secondAttribute="centerX" id="JFb-Am-Fen"/>
                                             <constraint firstItem="wkX-oM-L5W" firstAttribute="leading" secondItem="Tu0-UK-OfD" secondAttribute="leading" id="LIG-5I-o8L"/>
@@ -595,14 +604,16 @@
                                             <constraint firstItem="lrh-KO-tQO" firstAttribute="top" secondItem="wWw-Wb-Bm0" secondAttribute="bottom" constant="8" id="PDo-8y-Flh"/>
                                             <constraint firstItem="wkX-oM-L5W" firstAttribute="top" secondItem="Tu0-UK-OfD" secondAttribute="top" id="WDB-Kr-tIj"/>
                                             <constraint firstAttribute="trailing" secondItem="wWw-Wb-Bm0" secondAttribute="trailing" id="chC-GA-uHM"/>
+                                            <constraint firstItem="lrh-KO-tQO" firstAttribute="leading" secondItem="Tu0-UK-OfD" secondAttribute="leading" constant="12" id="gSU-l6-q3T"/>
                                             <constraint firstItem="yGh-6o-8bg" firstAttribute="centerY" secondItem="Tu0-UK-OfD" secondAttribute="centerY" multiplier="1.02" id="trc-ss-uAO"/>
+                                            <constraint firstAttribute="trailing" secondItem="lrh-KO-tQO" secondAttribute="trailing" constant="11.67" id="ugo-JZ-Iww"/>
                                             <constraint firstItem="lrh-KO-tQO" firstAttribute="centerX" secondItem="Tu0-UK-OfD" secondAttribute="centerX" id="v2O-C5-mXt"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" secondItem="u38-eT-59r" secondAttribute="height" multiplier="0.82" id="8kC-Vb-AM8"/>
-                                    <constraint firstItem="Tu0-UK-OfD" firstAttribute="height" secondItem="u38-eT-59r" secondAttribute="height" id="f6d-Xy-OYl"/>
+                                    <constraint firstItem="u38-eT-59r" firstAttribute="height" secondItem="EGe-Et-fYq" secondAttribute="height" multiplier="0.8" id="kU8-aO-N2E"/>
+                                    <constraint firstItem="Tu0-UK-OfD" firstAttribute="height" secondItem="EGe-Et-fYq" secondAttribute="height" multiplier="0.8" id="q2S-NC-g7M"/>
                                     <constraint firstAttribute="height" secondItem="EGe-Et-fYq" secondAttribute="height" id="rpd-tf-8Xv"/>
                                 </constraints>
                             </stackView>
@@ -617,6 +628,7 @@
                             <constraint firstItem="W8P-Fc-rmQ" firstAttribute="trailing" secondItem="eSf-Xp-68d" secondAttribute="trailing" constant="30" id="FaS-1t-aGC"/>
                             <constraint firstItem="fFj-2n-qYm" firstAttribute="leading" secondItem="W8P-Fc-rmQ" secondAttribute="leading" constant="20" id="Gxo-2P-rZg"/>
                             <constraint firstItem="eSf-Xp-68d" firstAttribute="top" secondItem="kYs-ts-hdx" secondAttribute="bottom" constant="24" id="JK1-rF-ud9"/>
+                            <constraint firstAttribute="bottom" secondItem="Aei-X5-Ta8" secondAttribute="bottom" constant="24" id="K2R-LW-9tB"/>
                             <constraint firstItem="eSf-Xp-68d" firstAttribute="leading" secondItem="W8P-Fc-rmQ" secondAttribute="leading" constant="30" id="LDZ-9p-PCs"/>
                             <constraint firstItem="rOA-91-IpC" firstAttribute="top" secondItem="jXF-cP-W6j" secondAttribute="bottom" constant="8" id="LQn-9k-IwL"/>
                             <constraint firstItem="qe1-Hg-ADL" firstAttribute="leading" secondItem="W8P-Fc-rmQ" secondAttribute="leading" id="P0Y-qG-LQa"/>
@@ -625,29 +637,43 @@
                             <constraint firstItem="jXF-cP-W6j" firstAttribute="leading" secondItem="W8P-Fc-rmQ" secondAttribute="leading" constant="76" id="V3i-PX-JZI"/>
                             <constraint firstItem="W8P-Fc-rmQ" firstAttribute="trailing" secondItem="rOA-91-IpC" secondAttribute="trailing" constant="20" id="bKk-bW-dtY"/>
                             <constraint firstItem="Aei-X5-Ta8" firstAttribute="leading" secondItem="W8P-Fc-rmQ" secondAttribute="leading" constant="30" id="byG-x8-rnN"/>
-                            <constraint firstItem="fFj-2n-qYm" firstAttribute="top" secondItem="rOA-91-IpC" secondAttribute="bottom" constant="24" id="gxI-nY-4xI"/>
+                            <constraint firstItem="fFj-2n-qYm" firstAttribute="top" secondItem="rOA-91-IpC" secondAttribute="bottom" constant="15" id="gxI-nY-4xI"/>
                             <constraint firstItem="jXF-cP-W6j" firstAttribute="top" secondItem="W8P-Fc-rmQ" secondAttribute="top" constant="150" id="hPK-s8-1V9"/>
                             <constraint firstItem="kYs-ts-hdx" firstAttribute="height" secondItem="W8P-Fc-rmQ" secondAttribute="height" multiplier="0.230567" id="jQc-ek-YJw"/>
                             <constraint firstAttribute="trailing" secondItem="fFj-2n-qYm" secondAttribute="trailing" constant="20" id="kuR-GD-dmf"/>
                             <constraint firstItem="W8P-Fc-rmQ" firstAttribute="trailing" secondItem="jXF-cP-W6j" secondAttribute="trailing" constant="77" id="lIC-No-0ZV"/>
                             <constraint firstItem="W8P-Fc-rmQ" firstAttribute="trailing" secondItem="qe1-Hg-ADL" secondAttribute="trailing" id="nKN-b1-L6w"/>
                             <constraint firstItem="W8P-Fc-rmQ" firstAttribute="trailing" secondItem="Aei-X5-Ta8" secondAttribute="trailing" constant="30" id="pv1-gZ-gNt"/>
-                            <constraint firstItem="Aei-X5-Ta8" firstAttribute="bottom" secondItem="W8P-Fc-rmQ" secondAttribute="bottom" constant="10" id="xuT-cf-vbM"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="backgroundNextView" destination="eSf-Xp-68d" id="4Rh-OD-NIA"/>
+                        <outlet property="bestDealView" destination="uLo-KO-cMn" id="6rT-EG-p84"/>
+                        <outlet property="bestDialLabel" destination="E20-jS-dmS" id="BKE-Fy-U2g"/>
+                        <outlet property="daysFreeTrial" destination="6fs-WF-5k8" id="9ep-4Q-LPQ"/>
                         <outlet property="descriptionLabel" destination="fFj-2n-qYm" id="vhD-A9-B94"/>
+                        <outlet property="freeTrialView" destination="rVN-Kg-R1f" id="fYm-6g-LnV"/>
+                        <outlet property="monthAmountLabel" destination="Wvb-Cf-eAp" id="pCG-EZ-bYB"/>
                         <outlet property="monthView" destination="u38-eT-59r" id="lE4-DK-O0g"/>
+                        <outlet property="monthlyLabel" destination="fbe-xj-h53" id="xTC-AP-8Mu"/>
                         <outlet property="notNowButton" destination="No2-CG-NMt" id="Peo-VJ-0xj"/>
+                        <outlet property="perWeekFirstLabel" destination="wwc-UO-Sm1" id="poo-Rt-FZW"/>
+                        <outlet property="perWeekSecondLabel" destination="UxS-ne-sFF" id="6UN-lb-SMk"/>
+                        <outlet property="perWeekThirdLabel" destination="lfo-Za-8Xa" id="Gj0-kf-Eln"/>
+                        <outlet property="popularLabel" destination="caq-oU-pDN" id="48r-Gl-5go"/>
+                        <outlet property="popularView" destination="92I-s0-cgP" id="sMM-zd-W1p"/>
                         <outlet property="privacyButton" destination="3ws-3U-Xc2" id="8BM-M1-d32"/>
                         <outlet property="restoreButton" destination="aQY-Yu-DPe" id="HcG-qM-V30"/>
                         <outlet property="subscriptionStack" destination="kYs-ts-hdx" id="UoP-iA-StU"/>
                         <outlet property="termButton" destination="3au-rh-Y5g" id="Gcy-uP-csC"/>
                         <outlet property="tryFreeTrialLabel" destination="twc-a4-Fe1" id="97r-TD-dnx"/>
                         <outlet property="unrestrictedLabel" destination="rOA-91-IpC" id="7ba-Em-oOO"/>
+                        <outlet property="weekLabel" destination="9EX-6v-U8b" id="pha-0N-9K4"/>
                         <outlet property="weekView" destination="EGe-Et-fYq" id="vj4-hg-36a"/>
+                        <outlet property="weeklyLabel" destination="L6H-9w-qLH" id="d1d-kK-Ybn"/>
+                        <outlet property="yearAmountLabel" destination="lrh-KO-tQO" id="s8X-BH-EMW"/>
                         <outlet property="yearView" destination="Tu0-UK-OfD" id="OFh-tD-VYg"/>
+                        <outlet property="yearlyLabel" destination="0cM-y1-YPI" id="Kk9-Li-WE7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="90O-QZ-lx5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -690,7 +716,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="54" translatesAutoresizingMaskIntoConstraints="NO" id="P75-kB-4Ov">
-                                <rect key="frame" x="31" y="793.33333333333337" width="331" height="28"/>
+                                <rect key="frame" x="31" y="783.33333333333337" width="331" height="28"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h3y-Td-vV2">
                                         <rect key="frame" x="0.0" y="0.0" width="34" height="28"/>
@@ -739,7 +765,7 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HsA-KX-L0L">
-                                <rect key="frame" x="30" y="711.33333333333337" width="333" height="72"/>
+                                <rect key="frame" x="30" y="701.33333333333337" width="333" height="72"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mol-Vg-Rvf">
                                         <rect key="frame" x="271" y="10" width="52" height="52"/>
@@ -777,7 +803,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="1tS-2i-Zyk" firstAttribute="top" secondItem="Kiw-6X-sue" secondAttribute="bottom" constant="24" id="1fj-bC-ab8"/>
-                            <constraint firstItem="HsA-KX-L0L" firstAttribute="top" secondItem="1tS-2i-Zyk" secondAttribute="bottom" constant="42" id="8L7-bT-Abc"/>
+                            <constraint firstItem="HsA-KX-L0L" firstAttribute="top" secondItem="1tS-2i-Zyk" secondAttribute="bottom" constant="32" id="8L7-bT-Abc"/>
                             <constraint firstItem="NqQ-Fy-d59" firstAttribute="height" secondItem="AE3-40-fIu" secondAttribute="height" id="8wq-He-U5T"/>
                             <constraint firstItem="HsA-KX-L0L" firstAttribute="leading" secondItem="nws-0f-fL9" secondAttribute="leading" constant="30" id="DNp-du-WvQ"/>
                             <constraint firstItem="Kiw-6X-sue" firstAttribute="top" secondItem="izR-9f-m4M" secondAttribute="bottom" constant="20" id="DRk-Xz-OlA"/>
@@ -861,7 +887,7 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j6B-Ph-WAY">
                                         <rect key="frame" x="0.0" y="0.0" width="12" height="12"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" red="0.61960784313725492" green="0.61960784313725492" blue="0.61960784313725492" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="12" id="KRc-tb-Nbv"/>
                                             <constraint firstAttribute="height" constant="12" id="lpu-r6-uRo"/>
@@ -869,7 +895,7 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PuO-OJ-WDP">
                                         <rect key="frame" x="18" y="0.0" width="12" height="12"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" red="0.61960784313725492" green="0.61960784313725492" blue="0.61960784313725492" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="12" id="3Gu-dx-CCn"/>
                                             <constraint firstAttribute="height" constant="12" id="Xyq-bc-YrJ"/>
@@ -877,7 +903,7 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jvS-oD-pW6">
                                         <rect key="frame" x="36" y="0.0" width="12" height="12"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="12" id="0Zn-CH-TxI"/>
                                             <constraint firstAttribute="height" constant="12" id="xBt-Hp-XUb"/>
@@ -885,7 +911,7 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cUn-C0-zCu">
                                         <rect key="frame" x="54" y="0.0" width="12" height="12"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" red="0.61960784313725492" green="0.61960784313725492" blue="0.61960784313725492" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="12" id="9t9-yT-wL0"/>
                                             <constraint firstAttribute="width" constant="12" id="Vi0-Gv-yYk"/>

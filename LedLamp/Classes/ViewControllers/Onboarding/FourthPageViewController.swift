@@ -32,6 +32,15 @@ class FourthPageViewController: UIViewController {
         privacyBtn.setTitle("privacy".localized, for: .normal)
         termsBtn.setTitle("terms".localized, for: .normal)
         
+        notNowBtn.titleLabel?.numberOfLines = 0
+        notNowBtn.titleLabel?.textAlignment = .center
+        restoreBtn.titleLabel?.numberOfLines = 0
+        restoreBtn.titleLabel?.textAlignment = .center
+        privacyBtn.titleLabel?.numberOfLines = 0
+        privacyBtn.titleLabel?.textAlignment = .center
+        termsBtn.titleLabel?.numberOfLines = 0
+        termsBtn.titleLabel?.textAlignment = .center
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

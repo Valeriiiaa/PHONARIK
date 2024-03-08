@@ -2,7 +2,111 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <customFonts key="customFonts">
+        <array key="ChakraPetch-Medium.ttf">
+            <string>ChakraPetch-Medium</string>
+        </array>
+        <array key="ChakraPetch-Regular.ttf">
+            <string>ChakraPetch-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Select Accessory View Controller-->
+        <scene sceneID="7SS-vO-DQP">
+            <objects>
+                <viewController storyboardIdentifier="SelectAccessoryViewController" id="tVG-HD-mUa" customClass="SelectAccessoryViewController" customModule="LedLamp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cvt-Tu-fl5">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q3V-z6-zOh">
+                                <rect key="frame" x="299" y="59" width="94" height="68"/>
+                                <inset key="contentEdgeInsets" minX="50" minY="24" maxX="20" maxY="20"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="close"/>
+                                <connections>
+                                    <action selector="closeBtnDidTap:" destination="tVG-HD-mUa" eventType="touchUpInside" id="De9-bR-Q2o"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select an accessory to add" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="16" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mx2-aV-7Cu">
+                                <rect key="frame" x="16" y="79" width="316" height="83.333333333333314"/>
+                                <fontDescription key="fontDescription" name="ChakraPetch-Medium" family="Chakra Petch" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make sure your device is activated and in close range, or set it to discoverable mode." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N1A-eP-4g6">
+                                <rect key="frame" x="16" y="170.33333333333334" width="335" height="39"/>
+                                <fontDescription key="fontDescription" name="ChakraPetch-Regular" family="Chakra Petch" pointSize="15"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xZ7-jI-BkE">
+                                <rect key="frame" x="0.0" y="225.33333333333331" width="393" height="626.66666666666674"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rqX-RX-SdQ">
+                                <rect key="frame" x="30" y="719" width="333" height="72"/>
+                                <color key="backgroundColor" name="Background(#222222)"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="kiH-IK-8FH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ChakraPetch-Medium" family="Chakra Petch" pointSize="15"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Accessory not listed">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="accessoryNotListedBtnDidTap:" destination="tVG-HD-mUa" eventType="touchUpInside" id="du5-ft-VdE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3qh-i0-dve"/>
+                        <color key="backgroundColor" name="BottomShit(#747474)"/>
+                        <color key="tintColor" name="BottomShit(#747474)"/>
+                        <constraints>
+                            <constraint firstItem="xZ7-jI-BkE" firstAttribute="leading" secondItem="3qh-i0-dve" secondAttribute="leading" id="29a-PV-QK0"/>
+                            <constraint firstItem="3qh-i0-dve" firstAttribute="trailing" secondItem="rqX-RX-SdQ" secondAttribute="trailing" constant="30" id="7nK-Wx-EZm"/>
+                            <constraint firstItem="Mx2-aV-7Cu" firstAttribute="top" secondItem="3qh-i0-dve" secondAttribute="top" constant="20" id="8Ch-zy-kUX"/>
+                            <constraint firstItem="3qh-i0-dve" firstAttribute="bottom" secondItem="rqX-RX-SdQ" secondAttribute="bottom" constant="27" id="GYE-ID-5il"/>
+                            <constraint firstItem="N1A-eP-4g6" firstAttribute="leading" secondItem="3qh-i0-dve" secondAttribute="leading" constant="16" id="LJw-d4-fho"/>
+                            <constraint firstItem="rqX-RX-SdQ" firstAttribute="leading" secondItem="3qh-i0-dve" secondAttribute="leading" constant="30" id="Nm1-7n-SXF"/>
+                            <constraint firstItem="N1A-eP-4g6" firstAttribute="top" secondItem="Mx2-aV-7Cu" secondAttribute="bottom" constant="8" id="OII-5j-LIn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Mx2-aV-7Cu" secondAttribute="trailing" constant="45" id="QzD-03-24y"/>
+                            <constraint firstItem="xZ7-jI-BkE" firstAttribute="top" secondItem="N1A-eP-4g6" secondAttribute="bottom" constant="16" id="RmR-gn-GF7"/>
+                            <constraint firstItem="Q3V-z6-zOh" firstAttribute="top" secondItem="3qh-i0-dve" secondAttribute="top" id="dKN-Ol-QsF"/>
+                            <constraint firstAttribute="bottom" secondItem="xZ7-jI-BkE" secondAttribute="bottom" id="dmU-K8-VAJ"/>
+                            <constraint firstItem="3qh-i0-dve" firstAttribute="trailing" secondItem="Q3V-z6-zOh" secondAttribute="trailing" id="frr-ah-eeZ"/>
+                            <constraint firstItem="3qh-i0-dve" firstAttribute="trailing" secondItem="N1A-eP-4g6" secondAttribute="trailing" constant="42" id="iwj-wO-f6R"/>
+                            <constraint firstItem="Mx2-aV-7Cu" firstAttribute="leading" secondItem="3qh-i0-dve" secondAttribute="leading" constant="16" id="pTM-Db-FSj"/>
+                            <constraint firstItem="3qh-i0-dve" firstAttribute="trailing" secondItem="xZ7-jI-BkE" secondAttribute="trailing" id="rwo-rd-27i"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="accessoryNotListedButton" destination="rqX-RX-SdQ" id="g9r-Aj-txI"/>
+                        <outlet property="makeSureDeviceCloseLabel" destination="N1A-eP-4g6" id="gUH-Xc-Zx4"/>
+                        <outlet property="selectAccessoryLabel" destination="Mx2-aV-7Cu" id="ezI-by-wLt"/>
+                        <outlet property="tableView" destination="xZ7-jI-BkE" id="fXr-jQ-pNb"/>
+                    </connections>
+                </viewController>
+                <tapGestureRecognizer id="1Jg-Es-KmT"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MWf-n3-ghq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="578" y="1"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="close" width="24" height="24"/>
+        <namedColor name="Background(#222222)">
+            <color red="0.13300000131130219" green="0.13300000131130219" blue="0.13300000131130219" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BottomShit(#747474)">
+            <color red="0.45500001311302185" green="0.45500001311302185" blue="0.45500001311302185" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
