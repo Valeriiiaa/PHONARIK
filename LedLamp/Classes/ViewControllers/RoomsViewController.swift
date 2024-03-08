@@ -92,6 +92,14 @@ class RoomsViewController: UIViewController {
         layout.spacingMode = UPCarouselFlowLayoutSpacingMode.fixed(spacing: 10)
         
     }
+    
+    @IBAction func settingsDidTap(_ sender: Any) {
+        let entrance = UIStoryboard(name: "Settings", bundle: nil).instantiateViewController(withIdentifier: "SettingsViewController")
+        entrance.modalPresentationStyle = .fullScreen
+        entrance.modalTransitionStyle = .coverVertical
+        present(entrance, animated: true)
+    }
+    
    
     @IBAction func addRoomBtnDidTap(_ sender: Any) {
         let entrance = UIStoryboard(name: "RoomBottomSheets", bundle: nil).instantiateViewController(identifier: "AddRoomViewController")

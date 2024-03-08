@@ -118,6 +118,7 @@
 		118EAD102B96641600F6A8BD /* LEDapp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LEDapp.xcdatamodel; sourceTree = "<group>"; };
 		11A1D3EA2B94F8E6003184AA /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
 		11A1D3EC2B94F911003184AA /* QRCodePreviewLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodePreviewLayer.swift; sourceTree = "<group>"; };
+		11A9CFE82B9B775100F4B392 /* LedLamp.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = LedLamp.entitlements; sourceTree = "<group>"; };
 		11C6219D2B936493006B15F7 /* DefaultTabBarViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultTabBarViewModel.swift; sourceTree = "<group>"; };
 		11C6219F2B936493006B15F7 /* BEKCurveTabbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BEKCurveTabbarController.swift; sourceTree = "<group>"; };
 		11C621A02B936493006B15F7 /* BEKTabBarViewModelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BEKTabBarViewModelType.swift; sourceTree = "<group>"; };
@@ -442,6 +443,7 @@
 				F6A0BC302B8CBA9F0084A0E8 /* Assets.xcassets */,
 				F6EB00F72B8C9FBB005139CC /* AppDelegate.swift */,
 				F6EB00F92B8C9FBB005139CC /* SceneDelegate.swift */,
+				11A9CFE82B9B775100F4B392 /* LedLamp.entitlements */,
 				F6EB01052B8C9FBC005139CC /* Info.plist */,
 			);
 			path = LedLamp;
@@ -1001,6 +1003,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ALLOW_ENTITLEMENTS_MODIFICATION = YES;
 				CODE_SIGN_ENTITLEMENTS = LedLamp/LedLamp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1038,6 +1041,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ALLOW_ENTITLEMENTS_MODIFICATION = YES;
 				CODE_SIGN_ENTITLEMENTS = LedLamp/LedLampRelease.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;

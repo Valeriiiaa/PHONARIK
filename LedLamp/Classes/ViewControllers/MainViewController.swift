@@ -81,7 +81,9 @@ class MainViewController: UIViewController {
     
     @IBAction func settingsButtonDidTap(_ sender: Any) {
         let entrance = UIStoryboard(name: "Settings", bundle: nil).instantiateViewController(withIdentifier: "SettingsViewController")
-        navigationController?.pushViewController(entrance, animated: true)
+        entrance.modalPresentationStyle = .fullScreen
+        entrance.modalTransitionStyle = .coverVertical
+        present(entrance, animated: true)
     }
     
     func editName(_ action: Any) {

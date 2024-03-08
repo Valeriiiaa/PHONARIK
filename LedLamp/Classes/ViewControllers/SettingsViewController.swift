@@ -24,7 +24,7 @@ class SettingsViewController: UIViewController {
     }
 
     @IBAction func backButtonDidTap(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
+        dismiss(animated: true)
     }
 }
 
