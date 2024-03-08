@@ -43,6 +43,29 @@ class ColorPickerViewController: UIViewController {
         saturationSlider.addTarget(self, action: #selector(colorPicked(by:)), for: .valueChanged)
         
         hidesBottomBarWhenPushed = true
+       
+        saveButton.layer.cornerRadius = 30
+        saveButton.layer.masksToBounds = true
+        
+        stackColours.arrangedSubviews.forEach({ item in
+            item.layer.cornerRadius = 17
+            item.layer.masksToBounds = true
+        })
+        
+        stackColours.arrangedSubviews[1].layer.borderWidth = 1
+        stackColours.arrangedSubviews[1].layer.borderColor = UIColor(red: 136/255, green: 166/255, blue: 248/255, alpha: 1).cgColor
+        stackColours.arrangedSubviews[2].layer.borderWidth = 1
+        stackColours.arrangedSubviews[2].layer.borderColor = UIColor(red: 165/255, green: 251/255, blue: 254/255, alpha: 1).cgColor
+        stackColours.arrangedSubviews[3].layer.borderWidth = 1
+        stackColours.arrangedSubviews[3].layer.borderColor = UIColor(red: 177/255, green: 253/255, blue: 153/255, alpha: 1).cgColor
+        stackColours.arrangedSubviews[4].layer.borderWidth = 1
+        stackColours.arrangedSubviews[4].layer.borderColor = UIColor(red: 191/255, green: 115/255, blue: 87/255, alpha: 1).cgColor
+        stackColours.arrangedSubviews[5].layer.borderWidth = 1
+        stackColours.arrangedSubviews[5].layer.borderColor = UIColor(red: 228/255, green: 101/255, blue: 98/255, alpha: 1).cgColor
+        stackColours.arrangedSubviews[6].layer.borderWidth = 1
+        stackColours.arrangedSubviews[6].layer.borderColor = UIColor(red: 195/255, green: 101/255, blue: 128/255, alpha: 1).cgColor
+        stackColours.arrangedSubviews[7].layer.borderWidth = 1
+        stackColours.arrangedSubviews[7].layer.borderColor = UIColor(red: 159/255, green: 89/255, blue: 214/255, alpha: 1).cgColor
         
         [hexView, plinthView, intensityView].forEach( { item in
             item?.layer.cornerRadius =  10

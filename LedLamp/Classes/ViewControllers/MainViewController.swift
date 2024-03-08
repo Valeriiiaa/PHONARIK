@@ -64,21 +64,20 @@ class MainViewController: UIViewController {
     }
   
     @IBAction func addLightButtonDidTap(_ sender: Any) {
-//        let entrance = UIStoryboard(name: "ScanDeviceView", bundle: nil).instantiateViewController(identifier: "ScanDeviceView")
-//        let navigationContorller = BottomSheetNavigationController(rootViewController: entrance, configuration: BottomSheetConfiguration(
-//            cornerRadius: 40,
-//            pullBarConfiguration: .hidden,
-//            shadowConfiguration: .init(backgroundColor: UIColor(red: 34/255, green: 34/255, blue: 34/255, alpha: 0.46), blur: .regular)
-//        ))
-//        navigationContorller.navigationBar.isHidden = true
-//        navigationContorller.view.backgroundColor = UIColor(red: 116/255, green: 116/255, blue: 116/255, alpha: 1)
-//        presentBottomSheet(viewController: navigationContorller, configuration: BottomSheetConfiguration(
-//            cornerRadius: 40,
-//            pullBarConfiguration: .hidden,
-//            shadowConfiguration: .init(backgroundColor: UIColor(red: 34/255, green: 34/255, blue: 34/255, alpha: 0.46), blur: .regular)
-//        ))
-        let entrance = UIStoryboard(name: "Onboarding", bundle: nil).instantiateViewController(identifier: "FirstPageViewController")
-        navigationController?.pushViewController(entrance, animated: true)
+        let entrance = UIStoryboard(name: "ScanDeviceView", bundle: nil).instantiateViewController(identifier: "ScanDeviceView")
+        let navigationContorller = BottomSheetNavigationController(rootViewController: entrance, configuration: BottomSheetConfiguration(
+            cornerRadius: 40,
+            pullBarConfiguration: .hidden,
+            shadowConfiguration: .init(backgroundColor: UIColor(red: 34/255, green: 34/255, blue: 34/255, alpha: 0.46), blur: .regular)
+        ))
+        navigationContorller.navigationBar.isHidden = true
+        navigationContorller.view.backgroundColor = UIColor(red: 116/255, green: 116/255, blue: 116/255, alpha: 1)
+        presentBottomSheet(viewController: navigationContorller, configuration: BottomSheetConfiguration(
+            cornerRadius: 40,
+            pullBarConfiguration: .hidden,
+            shadowConfiguration: .init(backgroundColor: UIColor(red: 34/255, green: 34/255, blue: 34/255, alpha: 0.46), blur: .regular)
+        ))
+       
     }
     
     @IBAction func settingsButtonDidTap(_ sender: Any) {
