@@ -35,6 +35,11 @@ class SubscriptionViewController: UIViewController {
         privacyButton.setTitle("privacy".localized, for: .normal)
         restoreButton.setTitle("restore".localized, for: .normal)
         notNowButton.setTitle("notNow".localized, for: .normal)
+        
+        [yearView, weekView, monthView].forEach({ item in
+            item?.layer.cornerRadius = 24
+            item?.layer.masksToBounds = true
+        })
     }
     
     override func viewWillAppear(_ animated: Bool) {

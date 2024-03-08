@@ -1,0 +1,41 @@
+{
+  "pins" : [
+    {
+      "identity" : "axistabview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jasudev/AxisTabView.git",
+      "state" : {
+        "revision" : "5677e874634a2ccf890a1a5ed9258b4d5d9a3d7a",
+        "version" : "0.5.1"
+      }
+    },
+    {
+      "identity" : "bottomsheet",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/joomcode/BottomSheet",
+      "state" : {
+        "revision" : "15ab2cf96b757b72b09a6515f667685ff55924e1",
+        "version" : "2.0.5"
+      }
+    },
+    {
+      "identity" : "flexcolorpicker",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/RastislavMirek/FlexColorPicker.git",
+      "state" : {
+        "revision" : "72a5c2c5e28074e6c5f13efe3c98eb780ae2f906",
+        "version" : "1.4.4"
+      }
+    },
+    {
+      "identity" : "iqkeyboardmanager",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/hackiftekhar/IQKeyboardManager.git",
+      "state" : {
+        "revision" : "aa656e1f0d95f0154622f453599318602848be3b",
+        "version" : "7.0.1"
+      }
+    }
+  ],
+  "version" : 2
+}
