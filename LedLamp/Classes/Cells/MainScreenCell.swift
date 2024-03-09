@@ -13,6 +13,7 @@ class MainScreenCell: UITableViewCell {
     @IBOutlet weak var lampImage: UIImageView!
     @IBOutlet weak var stateLabel: UILabel!
     @IBOutlet weak var roomNameLabel: UILabel!
+    @IBOutlet weak var pizdaLightImageView: UIImageView!
     @IBOutlet weak var lightSmartLabel: UILabel!
     
     var menuDidTap: (()-> Void)?
@@ -30,6 +31,8 @@ class MainScreenCell: UITableViewCell {
     }
    
     @IBAction func switchDidTap(_ sender: Any) {
+        stateLabel.text = switcher.isOn ? "connect".localized : "disconnect".localized
+        stateLabel.textColor = switcher.isOn ? .activeText : .inactiveText
         switchValueChanged?(switcher.isOn)
     }
    
@@ -37,10 +40,14 @@ class MainScreenCell: UITableViewCell {
         menuDidTap?()
     }
     
-    func configure(deviceName: String, roomName: String, stateLabel: Bool) {
+    func configure(deviceName: String, roomName: String, stateLabel: Bool, color: Int) {
         roomNameLabel.text = roomName
         lightSmartLabel.text = deviceName
-//        self.stateLabel.isOn = stateLabel
+        pizdaLightImageView.tintColor = UIColor(hex: color)
+        self.stateLabel.textColor = stateLabel ? .activeText : .inactiveText
+        DispatchQueue.main.async {
+            self.switcher.setOn(stateLabel, animated: false)
+        }
         self.stateLabel.text = stateLabel ? "connect".localized : "disconnect".localized
     }
 }

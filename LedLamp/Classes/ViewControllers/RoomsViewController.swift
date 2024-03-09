@@ -185,7 +185,6 @@ extension RoomsViewController: UICollectionViewDataSource, UICollectionViewDeleg
             
         }
         
-        
         (cell as? AddedRoomCell)?.switchValueChanged = { value in
             room.status = value
             DatabaseManager.shared.update(room, oldName: room.name)

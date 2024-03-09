@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		112A0F412B9CBFDB00F5B5D0 /* UIColor+hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112A0F402B9CBFDB00F5B5D0 /* UIColor+hex.swift */; };
 		115E476A2B9A3E7E009E8B85 /* FlexColorPicker in Frameworks */ = {isa = PBXBuildFile; productRef = 115E47692B9A3E7E009E8B85 /* FlexColorPicker */; };
 		118EAD0C2B965CC900F6A8BD /* UPCarouselFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118EAD0B2B965CC900F6A8BD /* UPCarouselFlowLayout.swift */; };
 		118EAD0E2B9663A800F6A8BD /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118EAD0D2B9663A800F6A8BD /* DatabaseManager.swift */; };
@@ -113,6 +114,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		112A0F402B9CBFDB00F5B5D0 /* UIColor+hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+hex.swift"; sourceTree = "<group>"; };
 		118EAD0B2B965CC900F6A8BD /* UPCarouselFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UPCarouselFlowLayout.swift; sourceTree = "<group>"; };
 		118EAD0D2B9663A800F6A8BD /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		118EAD102B96641600F6A8BD /* LEDapp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LEDapp.xcdatamodel; sourceTree = "<group>"; };
@@ -347,6 +349,7 @@
 				F6A0BC2C2B8CB02B0084A0E8 /* String+localization.swift */,
 				F6F827582B907DC800F1BB61 /* TextField.swift */,
 				F6739B9F2B9A4F0000734226 /* Animation Button.swift */,
+				112A0F402B9CBFDB00F5B5D0 /* UIColor+hex.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -805,6 +808,7 @@
 				F6C91EF22B965585005FB008 /* CollectionImageCell.swift in Sources */,
 				F6EB00FA2B8C9FBB005139CC /* SceneDelegate.swift in Sources */,
 				F6078D972B97370800C9575A /* SyncWithMusicViewController.swift in Sources */,
+				112A0F412B9CBFDB00F5B5D0 /* UIColor+hex.swift in Sources */,
 				11C621A72B936493006B15F7 /* TabbarHeightRatios.swift in Sources */,
 				F6505C502B936C4B00D47128 /* SelectAccessoryCell.swift in Sources */,
 			);

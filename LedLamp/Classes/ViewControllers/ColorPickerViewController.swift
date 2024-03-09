@@ -30,10 +30,12 @@ class ColorPickerViewController: UIViewController {
     @IBOutlet weak var hexLabel: UILabel!
     @IBOutlet weak var offButton: UIButton!
     
+    var lampModel: LampModel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         saveButton.setTitle("save".localized, for: .normal)
-        lightSamartLabel.text = "lightSmartLulb".localized
+        lightSamartLabel.text = lampModel.name
         plinthLabel.text = "plinth".localized + " E27"
         intensityLabel.text = "intensity".localized
         brightness.text = "brightness".localized
@@ -42,7 +44,13 @@ class ColorPickerViewController: UIViewController {
         brightnessSlider.addTarget(self, action: #selector(colorPicked(by:)), for: .valueChanged)
         brightnessSlider.reversePercentage = true
         saturationSlider.addTarget(self, action: #selector(colorPicked(by:)), for: .valueChanged)
-        
+        let color = UIColor(hex: lampModel.color)
+        colorPaletterView.selectedColor = color
+        brightnessSlider.selectedColor = color
+        saturationSlider.selectedColor = color
+        pizdaImageView.tintColor = color
+        hexLabel.text = "HEX: #" + colorPaletterView.selectedColor.hexValue()
+        roomLabel.text = lampModel.room
         hidesBottomBarWhenPushed = true
         
         saveButton.layer.cornerRadius = 30
@@ -88,21 +96,26 @@ class ColorPickerViewController: UIViewController {
             intensityLabel.text = "intensity".localized + " " + stringValue.description + "%"
             let baseColor = colorPaletterView.selectedHSBColor
             colorPaletterView.setSelectedHSBColor(baseColor.withBrightness(posis.selectedHSBColor.brightness), isInteractive: true)
-            hexLabel.text = colorPaletterView.selectedColor.hexValue()
+            hexLabel.text = "HEX: #" + colorPaletterView.selectedColor.hexValue()
             pizdaImageView.tintColor = colorPaletterView.selectedColor
         } else if let posis = control as? SaturationSliderControl   {
             let baseColor = colorPaletterView.selectedHSBColor
             colorPaletterView.setSelectedHSBColor(baseColor.withSaturation(posis.selectedHSBColor.saturation), isInteractive: true)
-            hexLabel.text = colorPaletterView.selectedColor.hexValue()
+            hexLabel.text = "HEX: #" + colorPaletterView.selectedColor.hexValue()
             pizdaImageView.tintColor = colorPaletterView.selectedColor
         } else if let huesos = control as? ColorPaletteControl {
-            hexLabel.text = huesos.selectedColor.hexValue()
+            hexLabel.text = "HEX: #" + huesos.selectedColor.hexValue()
             pizdaImageView.tintColor = colorPaletterView.selectedColor
         }
     }
     
     
     @IBAction func saveBtnDidTap(_ sender: Any) {
+        guard let intColor = Int(colorPaletterView.selectedColor.hexValue(), radix: 16) else { return }
+        lampModel.color = intColor
+        DatabaseManager.shared.update(lampModel)
+        ActionManager.shared.reload()
+        dismiss(animated: true)
     }
     
     @IBAction func offBtnDidTap(_ sender: Any) {

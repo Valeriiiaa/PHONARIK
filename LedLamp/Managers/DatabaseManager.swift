@@ -33,14 +33,14 @@ class LampModel {
     var name: String
     let deviceId: String
     var room: String?
-    var accessory: HMAccessory?
     var isEnabled: Bool
+    var color: Int
     
-    init(name: String, deviceId: String, room: String? = nil, accessory: HMAccessory? = nil, isEnabled: Bool) {
+    init(name: String, deviceId: String, room: String? = nil, color: Int, isEnabled: Bool) {
         self.name = name
         self.deviceId = deviceId
         self.room = room
-        self.accessory = accessory
+        self.color = color
         self.isEnabled = isEnabled
     }
 }
@@ -96,6 +96,7 @@ class DatabaseManager: DatabaseManagerProtocol {
         item.deviceId = model.deviceId
         item.room = model.room
         item.isEnabled = model.isEnabled
+        item.color = Int32(model.color)
         saveContext()
     }
     
@@ -188,7 +189,7 @@ class DatabaseManager: DatabaseManagerProtocol {
             
             var models: [LampModel] = []
             for item in fetchedItems {
-                models.append(LampModel(name: item.name ?? "", deviceId: item.deviceId ?? "", room: item.room, isEnabled: item.isEnabled))
+                models.append(LampModel(name: item.name ?? "", deviceId: item.deviceId ?? "", room: item.room, color: Int(item.color), isEnabled: item.isEnabled))
             }
 
             return models
