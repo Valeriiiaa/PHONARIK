@@ -290,9 +290,9 @@
                                 </connections>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="54" translatesAutoresizingMaskIntoConstraints="NO" id="Aei-X5-Ta8">
-                                <rect key="frame" x="30" y="800" width="333" height="28"/>
+                                <rect key="frame" x="31.666666666666657" y="800" width="330" height="28"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3au-rh-Y5g">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3au-rh-Y5g">
                                         <rect key="frame" x="0.0" y="0.0" width="34" height="28"/>
                                         <fontDescription key="fontDescription" name="ChakraPetch-Regular" family="Chakra Petch" pointSize="12"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -304,7 +304,7 @@
                                             <action selector="termsBtnDidTap:" destination="R4W-32-XMk" eventType="touchUpInside" id="M4x-HD-aMN"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ws-3U-Xc2">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ws-3U-Xc2">
                                         <rect key="frame" x="88" y="0.0" width="41" height="28"/>
                                         <fontDescription key="fontDescription" name="ChakraPetch-Regular" family="Chakra Petch" pointSize="12"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -317,7 +317,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQY-Yu-DPe">
-                                        <rect key="frame" x="183" y="0.0" width="58" height="28"/>
+                                        <rect key="frame" x="183" y="0.0" width="44" height="28"/>
                                         <fontDescription key="fontDescription" name="ChakraPetch-Regular" family="Chakra Petch" pointSize="12"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Restore">
@@ -328,11 +328,11 @@
                                             <action selector="restoreBtnDidTap:" destination="R4W-32-XMk" eventType="touchUpInside" id="yaZ-Kj-PLc"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="No2-CG-NMt">
-                                        <rect key="frame" x="295" y="0.0" width="38" height="28"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="No2-CG-NMt">
+                                        <rect key="frame" x="281" y="0.0" width="49" height="28"/>
                                         <fontDescription key="fontDescription" name="ChakraPetch-Regular" family="Chakra Petch" pointSize="12"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Button">
+                                        <state key="normal" title="Now now">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -624,6 +624,7 @@
                             <constraint firstItem="rOA-91-IpC" firstAttribute="leading" secondItem="W8P-Fc-rmQ" secondAttribute="leading" constant="20" id="0gi-HV-lyZ"/>
                             <constraint firstItem="Aei-X5-Ta8" firstAttribute="top" secondItem="eSf-Xp-68d" secondAttribute="bottom" constant="10" id="3Zd-hN-HYq"/>
                             <constraint firstItem="kYs-ts-hdx" firstAttribute="centerX" secondItem="dCm-Jv-Qag" secondAttribute="centerX" id="BOy-jv-oOj"/>
+                            <constraint firstItem="W8P-Fc-rmQ" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Aei-X5-Ta8" secondAttribute="trailing" constant="10" id="DHN-1k-4s1"/>
                             <constraint firstItem="kYs-ts-hdx" firstAttribute="width" secondItem="dCm-Jv-Qag" secondAttribute="width" multiplier="0.88" id="E3F-8C-GzR"/>
                             <constraint firstItem="W8P-Fc-rmQ" firstAttribute="trailing" secondItem="eSf-Xp-68d" secondAttribute="trailing" constant="30" id="FaS-1t-aGC"/>
                             <constraint firstItem="fFj-2n-qYm" firstAttribute="leading" secondItem="W8P-Fc-rmQ" secondAttribute="leading" constant="20" id="Gxo-2P-rZg"/>
@@ -634,16 +635,16 @@
                             <constraint firstItem="qe1-Hg-ADL" firstAttribute="leading" secondItem="W8P-Fc-rmQ" secondAttribute="leading" id="P0Y-qG-LQa"/>
                             <constraint firstItem="qe1-Hg-ADL" firstAttribute="top" secondItem="dCm-Jv-Qag" secondAttribute="top" id="PXD-Do-aBc"/>
                             <constraint firstAttribute="bottom" secondItem="qe1-Hg-ADL" secondAttribute="bottom" id="Rvx-pn-OPc"/>
+                            <constraint firstItem="Aei-X5-Ta8" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="W8P-Fc-rmQ" secondAttribute="leading" constant="10" id="SKh-Ei-nTf"/>
                             <constraint firstItem="jXF-cP-W6j" firstAttribute="leading" secondItem="W8P-Fc-rmQ" secondAttribute="leading" constant="76" id="V3i-PX-JZI"/>
                             <constraint firstItem="W8P-Fc-rmQ" firstAttribute="trailing" secondItem="rOA-91-IpC" secondAttribute="trailing" constant="20" id="bKk-bW-dtY"/>
-                            <constraint firstItem="Aei-X5-Ta8" firstAttribute="leading" secondItem="W8P-Fc-rmQ" secondAttribute="leading" constant="30" id="byG-x8-rnN"/>
+                            <constraint firstItem="Aei-X5-Ta8" firstAttribute="centerX" secondItem="dCm-Jv-Qag" secondAttribute="centerX" id="caR-Yh-Vl2"/>
                             <constraint firstItem="fFj-2n-qYm" firstAttribute="top" secondItem="rOA-91-IpC" secondAttribute="bottom" constant="15" id="gxI-nY-4xI"/>
                             <constraint firstItem="jXF-cP-W6j" firstAttribute="top" secondItem="W8P-Fc-rmQ" secondAttribute="top" constant="150" id="hPK-s8-1V9"/>
                             <constraint firstItem="kYs-ts-hdx" firstAttribute="height" secondItem="W8P-Fc-rmQ" secondAttribute="height" multiplier="0.230567" id="jQc-ek-YJw"/>
                             <constraint firstAttribute="trailing" secondItem="fFj-2n-qYm" secondAttribute="trailing" constant="20" id="kuR-GD-dmf"/>
                             <constraint firstItem="W8P-Fc-rmQ" firstAttribute="trailing" secondItem="jXF-cP-W6j" secondAttribute="trailing" constant="77" id="lIC-No-0ZV"/>
                             <constraint firstItem="W8P-Fc-rmQ" firstAttribute="trailing" secondItem="qe1-Hg-ADL" secondAttribute="trailing" id="nKN-b1-L6w"/>
-                            <constraint firstItem="W8P-Fc-rmQ" firstAttribute="trailing" secondItem="Aei-X5-Ta8" secondAttribute="trailing" constant="30" id="pv1-gZ-gNt"/>
                         </constraints>
                     </view>
                     <connections>
