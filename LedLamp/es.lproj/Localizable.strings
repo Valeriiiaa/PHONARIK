@@ -67,6 +67,7 @@
 "wallpaper" = "Wallpaper";
 "addFromGallery" = "Agregar desde la galería";
 "OpenCamera" = "Abrir cámara";
+"enterRoomName" = "Por favor, ingresa un nombre de sala";
 
 "collection" = "Colección";
 "devicesConnected" = "Dispositivos conectados";

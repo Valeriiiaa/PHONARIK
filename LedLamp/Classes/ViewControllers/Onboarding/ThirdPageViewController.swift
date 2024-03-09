@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import StoreKit
 
 class ThirdPageViewController: UIViewController {
     @IBOutlet weak var stackViews: UIStackView!
@@ -25,6 +26,7 @@ class ThirdPageViewController: UIViewController {
     @IBAction func aheadBtnDidTap(_ sender: Any) {
         let entrance = UIStoryboard(name: "Onboarding", bundle: nil).instantiateViewController(identifier: "FourthPageViewController")
         navigationController?.pushViewController(entrance, animated: true)
+        SKStoreReviewController.requestReview()
     }
 }
 
