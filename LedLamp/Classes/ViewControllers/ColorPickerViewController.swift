@@ -53,6 +53,8 @@ class ColorPickerViewController: UIViewController {
         roomLabel.text = lampModel.room
         hidesBottomBarWhenPushed = true
         
+        offButton.isSelected = lampModel.isEnabled
+        
         saveButton.layer.cornerRadius = 30
         saveButton.layer.masksToBounds = true
         hexView.layer.cornerRadius = 10
@@ -113,7 +115,6 @@ class ColorPickerViewController: UIViewController {
         }
     }
     
-    
     @IBAction func saveBtnDidTap(_ sender: Any) {
         guard let intColor = Int(colorPaletterView.selectedColor.hexValue(), radix: 16) else { return }
         lampModel.color = intColor
@@ -123,6 +124,10 @@ class ColorPickerViewController: UIViewController {
     }
     
     @IBAction func offBtnDidTap(_ sender: Any) {
+        lampModel.isEnabled.toggle()
+        offButton.isSelected = lampModel.isEnabled
+        DatabaseManager.shared.update(lampModel)
+        ActionManager.shared.reload()
     }
     
     @IBAction func backBtnDidTap(_ sender: Any) {

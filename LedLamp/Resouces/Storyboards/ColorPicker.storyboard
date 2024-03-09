@@ -58,6 +58,7 @@
                                 <rect key="frame" x="301.33333333333331" y="155" width="86.666666666666686" height="89.333333333333314"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="offButton"/>
+                                <state key="selected" image="onButton"/>
                                 <connections>
                                     <action selector="offBtnDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="YX8-Ip-2aT"/>
                                 </connections>
@@ -336,6 +337,7 @@
         <image name="colorPickerLamp" width="134.33332824707031" height="285.33334350585938"/>
         <image name="menuColorPicker" width="64" height="64"/>
         <image name="offButton" width="86.666664123535156" height="89.333335876464844"/>
+        <image name="onButton" width="86.666664123535156" height="89.333335876464844"/>
         <image name="pizda" width="165" height="288"/>
         <namedColor name="Background(#222222)">
             <color red="0.13300000131130219" green="0.13300000131130219" blue="0.13300000131130219" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

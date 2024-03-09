@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         self.window?.windowScene = windowScene
         let onboardingVC = UIStoryboard(name: "Onboarding", bundle: nil).instantiateInitialViewController()
-        window?.rootViewController = onboardingVC//UIHostingController(rootView: CustomTabBarView())
+        window?.rootViewController = UIHostingController(rootView: CustomTabBarView())
         self.window?.makeKeyAndVisible()
         
         guard !UserDefaults.standard.bool(forKey: "isNotFirstLaunch") else { return }
