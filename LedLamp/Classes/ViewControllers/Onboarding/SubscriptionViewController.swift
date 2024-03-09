@@ -6,7 +6,14 @@
 //
 
 import UIKit
+import Combine
 import SwiftUI
+
+enum SubType {
+    case weekly
+    case monthly
+    case yearly
+}
 
 class SubscriptionViewController: UIViewController {
     @IBOutlet weak var yearButton: UIButton!
@@ -39,6 +46,14 @@ class SubscriptionViewController: UIViewController {
     @IBOutlet weak var tryFreeTrialLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var unrestrictedLabel: UILabel!
+    var cancellabel = Set<AnyCancellable>()
+    @Published var selectedSubType = SubType.weekly
+    
+    weak var selectedTitle: UILabel?
+    weak var selectedBackgroundMainView: UIView?
+    weak var selectedSubbackgroundView: UIView?
+    weak var periodTitle: UILabel?
+    weak var perPeriodTitle: UILabel?
     
     private var timer: Timer?
     
@@ -68,7 +83,6 @@ class SubscriptionViewController: UIViewController {
         backgorund85OffView.layer.cornerRadius = 9
         backgorund85OffView.layer.borderWidth = 1.85
         backgorund85OffView.layer.borderColor = UIColor.black.cgColor
-
         
         [ weekView, monthView].forEach({ item in
             item?.layer.cornerRadius = 24
@@ -91,21 +105,12 @@ class SubscriptionViewController: UIViewController {
         freeTrialView.layer.cornerRadius = 25
         freeTrialView.layer.masksToBounds = true
         
-//        yearView.layer.cornerRadius = 24
-//        yearView.layer.shadowColor = UIColor(red: 231/255, green: 254/255, blue: 85/255, alpha: 1).cgColor
-//        yearView.layer.shadowOpacity = 0.5
-//        yearView.layer.shadowOffset = CGSize(width: 2, height: 0)
-//        yearView.layer.shadowRadius = 4
-        
-
         yearView.layer.cornerRadius = 24
         yearView.layer.shadowColor = UIColor(red: 231/255, green: 254/255, blue: 85/255, alpha: 1).cgColor
         yearView.layer.shadowOpacity = 1
         yearView.layer.shadowOffset = .zero
         yearView.layer.shadowRadius = 10
-        
-//        yearView.layer.masksToBounds = false
-    
+        bind()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -117,6 +122,57 @@ class SubscriptionViewController: UIViewController {
         timer?.invalidate()
         timer = nil
         
+    }
+    
+    func bind() {
+        $selectedSubType.sink(receiveValue: { [unowned self] value in
+            switch value {
+            case .monthly:
+                configureMonthly()
+                
+            case .weekly:
+                configureWeekly()
+                
+            case .yearly:
+                configureYearly()
+            }
+        }).store(in: &cancellabel)
+    }
+    
+    func configureMonthly() {
+        resetPrevious()
+    }
+    
+    func configureYearly() {
+        resetPrevious()
+    }
+    
+    func configureWeekly() {
+        resetPrevious()
+        
+        selectedTitle = daysFreeTrial
+        selectedSubbackgroundView = freeTrialView
+        selectedBackgroundMainView = weekView
+        periodTitle = weeklyLabel
+        perPeriodTitle = weekLabel
+        
+        activateState()
+    }
+    
+    func activateState() {
+        selectedTitle?.textColor = .white
+        selectedSubbackgroundView?.backgroundColor = UIColor(hex: 0x151515)
+        selectedBackgroundMainView?.backgroundColor = UIColor(hex: 0xE7FE55)
+        periodTitle?.textColor = UIColor(hex: 0x151515)
+        perPeriodTitle?.textColor = UIColor(hex: 0x151515)
+    }
+    
+    func resetPrevious() {
+        selectedTitle?.textColor = UIColor(hex: 0x222222)
+        selectedSubbackgroundView?.backgroundColor = .white
+        selectedBackgroundMainView?.backgroundColor = UIColor(hex: 0x434343)
+        periodTitle?.textColor = .white
+        perPeriodTitle?.textColor = .white
     }
     
     private func setTimer() {
@@ -152,11 +208,14 @@ class SubscriptionViewController: UIViewController {
     }
    
     @IBAction func monthBtnDidTap(_ sender: Any) {
+        selectedSubType = .monthly
     }
     
     @IBAction func weekBtnDidTap(_ sender: Any) {
+        selectedSubType = .weekly
     }
   
     @IBAction func yearBtnDidTap(_ sender: Any) {
+        selectedSubType = .yearly
     }
 }
