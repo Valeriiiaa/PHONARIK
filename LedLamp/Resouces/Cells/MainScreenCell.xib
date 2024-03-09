@@ -116,7 +116,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="emptyLight" width="176" height="160"/>
+        <image name="emptyLight" width="176" height="159.66667175292969"/>
         <image name="menuButton" width="24" height="24"/>
         <namedColor name="BottomShit(#747474)">
             <color red="0.45500001311302185" green="0.45500001311302185" blue="0.45500001311302185" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

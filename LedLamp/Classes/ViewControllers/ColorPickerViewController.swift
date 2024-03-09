@@ -9,7 +9,8 @@ import UIKit
 import FlexColorPicker
 
 class ColorPickerViewController: UIViewController {
-
+    
+    @IBOutlet weak var hexView: UIView!
     @IBOutlet weak var pizdaImageView: UIImageView!
     @IBOutlet weak var stackColours: UIStackView!
     @IBOutlet weak var colorPaletterView: RadialPaletteControl!
@@ -27,9 +28,8 @@ class ColorPickerViewController: UIViewController {
     @IBOutlet weak var plinthLabel: UILabel!
     @IBOutlet weak var plinthView: UIView!
     @IBOutlet weak var hexLabel: UILabel!
-    @IBOutlet weak var hexView: UIView!
     @IBOutlet weak var offButton: UIButton!
-   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         saveButton.setTitle("save".localized, for: .normal)
@@ -44,9 +44,11 @@ class ColorPickerViewController: UIViewController {
         saturationSlider.addTarget(self, action: #selector(colorPicked(by:)), for: .valueChanged)
         
         hidesBottomBarWhenPushed = true
-       
+        
         saveButton.layer.cornerRadius = 30
         saveButton.layer.masksToBounds = true
+        hexView.layer.cornerRadius = 10
+        hexView.layer.masksToBounds = true
         
         stackColours.arrangedSubviews.forEach({ item in
             item.layer.cornerRadius = 17
@@ -80,7 +82,7 @@ class ColorPickerViewController: UIViewController {
             return
         }
         if control === brightnessSlider,
-        let posis = control as? BrightnessSliderControl {
+           let posis = control as? BrightnessSliderControl {
             let value = posis.sliderDelegate.valueAndGradient(for: posis.selectedHSBColor).value
             let stringValue = Int(round((posis.reversePercentage ? 1 - value : value) * 100))
             intensityLabel.text = "intensity".localized + " " + stringValue.description + "%"
@@ -98,22 +100,34 @@ class ColorPickerViewController: UIViewController {
             pizdaImageView.tintColor = colorPaletterView.selectedColor
         }
     }
-
+    
     
     @IBAction func saveBtnDidTap(_ sender: Any) {
     }
     
     @IBAction func offBtnDidTap(_ sender: Any) {
     }
-  
+    
     @IBAction func backBtnDidTap(_ sender: Any) {
-//        navigationController?.popViewController(animated: true)
         dismiss(animated: true)
     }
     
     @IBAction func menuBtnDidTap(_ sender: Any) {
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "editName".localized, style: .default, handler: editName))
+        alert.addAction(UIAlertAction(title: "delete".localized, style: .destructive, handler: deleteCell))
+        alert.addAction(UIAlertAction(title: "cancel".localized, style: .cancel))
+        alert.popoverPresentationController?.barButtonItem = self.navigationItem.rightBarButtonItem
+        present(alert, animated: true)
+    }
+    
+    func deleteCell(action: UIAlertAction) {
+       
+    }
+    
+    func editName(_ action: Any) {
         
-    }    
+    }
 }
 
 extension ColorPickerViewController: ColorPickerDelegate {
