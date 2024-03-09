@@ -106,14 +106,22 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         let entrance = UIStoryboard(name: "ColorPicker", bundle: nil).instantiateInitialViewController()
         entrance?.modalPresentationStyle = .fullScreen
         entrance?.modalTransitionStyle = .crossDissolve
+        (entrance as? ColorPickerViewController)?.lampModel = light
         present(entrance!, animated: true)
-//        navigationController?.pushViewController(entrance!, animated: true)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MainScreenCell", for: indexPath)
         let lightModel = DatabaseManager.shared.load()[indexPath.row]
-        (cell as? MainScreenCell)?.configure(deviceName: lightModel.name, roomName: lightModel.room ?? "", stateLabel: lightModel.isEnabled)
+        (cell as? MainScreenCell)?.configure(deviceName: lightModel.name, 
+                                             roomName: lightModel.room ?? "",
+                                             stateLabel: lightModel.isEnabled,
+                                             color: lightModel.color)
+        
+        (cell as? MainScreenCell)?.switchValueChanged = { [unowned self] value in
+            lightModel.isEnabled = value
+            DatabaseManager.shared.update(lightModel)
+        }
         
         (cell as? MainScreenCell)?.menuDidTap = { [unowned self] in
             let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
@@ -128,19 +136,11 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
                 }))
                 alert.addAction(UIAlertAction(title: "no".localized, style: .cancel))
                 self.present(alert, animated: true)
-                
-                
             }))
            
             alert.addAction(UIAlertAction(title: "cancel".localized, style: .cancel))
             alert.popoverPresentationController?.barButtonItem = self.navigationItem.rightBarButtonItem
             present(alert, animated: true)
-        }
-        
-        (cell as? MainScreenCell)?.switchValueChanged = { [lightModel] value in
-            lightModel.isEnabled = value
-            DatabaseManager.shared.update(lightModel)
-            print("saved")
         }
         return cell
     }

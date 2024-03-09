@@ -37,7 +37,7 @@ class DeviceAddedViewController: UIViewController {
     
     
     @IBAction func doneBtnDidTap(_ sender: Any) {
-        DatabaseManager.shared.save(LampModel(name: deviceName, deviceId: value, room: room.name, isEnabled: false))
+        DatabaseManager.shared.save(LampModel(name: deviceName, deviceId: value, room: room.name, color: 0xE7FE55, isEnabled: false))
         ActionManager.shared.reload()
         dismiss(animated: true)
     }

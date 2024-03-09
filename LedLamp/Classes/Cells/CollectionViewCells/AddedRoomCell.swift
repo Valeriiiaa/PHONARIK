@@ -44,6 +44,8 @@ class AddedRoomCell: UICollectionViewCell {
         self.stateLabel.text = stateLabel ? "connect".localized : "disconnect".localized
         self.stateLabel.textColor = stateLabel ? .activeText : .inactiveText
         self.roomNameLabel.text = roomNameLabel
-       
+        DispatchQueue.main.async {
+            self.switcher.setOn(stateLabel, animated: false)
+        }
     }
 }
