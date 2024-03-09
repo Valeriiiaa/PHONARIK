@@ -66,6 +66,7 @@ struct CustomTabBarView: View {
         }
         .animation(.easeInOut, value: constant)
         .navigationTitle("Screen \(selection + 1)")
+        .ignoresSafeArea(.keyboard, edges: .all)
     }
 }
 
@@ -87,6 +88,7 @@ struct RoomsViewWprapper: View {
             }, select: {
                 TabButton(constant: $constant, selection: $selection, tag: tag, isSelection: true, title: "rooms".localized, image: .roomsTabBar)
             })
+            .ignoresSafeArea(.keyboard, edges: .all)
     }
     
     private func getTopPadding() -> CGFloat {
@@ -117,6 +119,7 @@ struct MusicViewWprapper: View {
             }, select: {
                 TabButton(constant: $constant, selection: $selection, tag: tag, isSelection: true, title: "music".localized, image: .musicTabBar)
             })
+            .ignoresSafeArea(.keyboard, edges: .all)
         
     }
     
@@ -150,6 +153,7 @@ struct MainViewWprapper: View {
             }, select: {
                 TabButton(constant: $constant, selection: $selection, tag: tag, isSelection: true, title: "light".localized, image: .lightTabBar)
             })
+            .ignoresSafeArea(.keyboard, edges: .all)
         
     }
     
