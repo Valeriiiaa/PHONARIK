@@ -10,6 +10,7 @@ import FlexColorPicker
 
 class ColorPickerViewController: UIViewController {
 
+    @IBOutlet weak var pizdaImageView: UIImageView!
     @IBOutlet weak var stackColours: UIStackView!
     @IBOutlet weak var colorPaletterView: RadialPaletteControl!
     @IBOutlet weak var brightness: UILabel!
@@ -86,12 +87,15 @@ class ColorPickerViewController: UIViewController {
             let baseColor = colorPaletterView.selectedHSBColor
             colorPaletterView.setSelectedHSBColor(baseColor.withBrightness(posis.selectedHSBColor.brightness), isInteractive: true)
             hexLabel.text = colorPaletterView.selectedColor.hexValue()
+            pizdaImageView.tintColor = colorPaletterView.selectedColor
         } else if let posis = control as? SaturationSliderControl   {
             let baseColor = colorPaletterView.selectedHSBColor
             colorPaletterView.setSelectedHSBColor(baseColor.withSaturation(posis.selectedHSBColor.saturation), isInteractive: true)
             hexLabel.text = colorPaletterView.selectedColor.hexValue()
+            pizdaImageView.tintColor = colorPaletterView.selectedColor
         } else if let huesos = control as? ColorPaletteControl {
             hexLabel.text = huesos.selectedColor.hexValue()
+            pizdaImageView.tintColor = colorPaletterView.selectedColor
         }
     }
 

@@ -131,7 +131,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="clJ-ld-2Kr">
-                                <rect key="frame" x="23" y="780" width="347" height="72"/>
+                                <rect key="frame" x="23" y="738" width="347" height="72"/>
                                 <color key="backgroundColor" name="Label(#E7FE55)"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="72" id="wLh-BH-cCp"/>
@@ -146,7 +146,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="bqV-4Q-nVd">
-                                <rect key="frame" x="39.666666666666657" y="724" width="314" height="34"/>
+                                <rect key="frame" x="39.666666666666657" y="682" width="314" height="34"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oiZ-X1-pOm">
                                         <rect key="frame" x="0.0" y="0.0" width="34" height="34"/>
@@ -253,6 +253,7 @@
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pizda" translatesAutoresizingMaskIntoConstraints="NO" id="wbc-XU-2jV">
                                 <rect key="frame" x="241.33333333333337" y="163.33333333333337" width="165" height="288"/>
+                                <color key="tintColor" red="0.96862745100000003" green="0.47450980390000003" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
@@ -262,9 +263,9 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Lq6-zN-5cb" secondAttribute="trailing" constant="32" id="1zB-KO-LRK"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="i09-LT-56X" secondAttribute="trailing" constant="32" id="3YV-Cm-Uhg"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="gwS-0x-N78" secondAttribute="trailing" constant="32" id="5C2-jB-Ev3"/>
-                            <constraint firstAttribute="bottom" secondItem="clJ-ld-2Kr" secondAttribute="bottom" id="64h-F0-0fO"/>
                             <constraint firstItem="1K7-bz-8b5" firstAttribute="top" secondItem="wMG-dr-wIJ" secondAttribute="bottom" constant="8" id="6Vw-5q-yih"/>
                             <constraint firstItem="Bg6-4O-oYx" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="7Qz-gh-dYi"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="clJ-ld-2Kr" secondAttribute="bottom" constant="8" id="7cZ-9W-E3R"/>
                             <constraint firstItem="nW1-dh-raJ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="7xY-QP-wls"/>
                             <constraint firstItem="28f-TR-hq8" firstAttribute="leading" secondItem="Ebl-3r-CS9" secondAttribute="trailing" constant="4" id="99N-Mz-2ov"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="naG-DP-8il" secondAttribute="trailing" constant="5" id="DBf-t3-N9H"/>
@@ -314,6 +315,7 @@
                         <outlet property="lampImage" destination="Uu1-Qw-a4K" id="cH0-Ef-5Gj"/>
                         <outlet property="lightSamartLabel" destination="wMG-dr-wIJ" id="H9W-Ij-s4W"/>
                         <outlet property="offButton" destination="naG-DP-8il" id="iU7-cF-NaW"/>
+                        <outlet property="pizdaImageView" destination="wbc-XU-2jV" id="8BI-ue-H6f"/>
                         <outlet property="plinthLabel" destination="uSi-pb-ctZ" id="bqo-Kv-MVl"/>
                         <outlet property="plinthView" destination="28f-TR-hq8" id="ejL-y5-g6i"/>
                         <outlet property="roomLabel" destination="1K7-bz-8b5" id="HSA-it-hHa"/>
