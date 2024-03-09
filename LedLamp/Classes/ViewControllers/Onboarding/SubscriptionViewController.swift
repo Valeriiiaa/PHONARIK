@@ -9,7 +9,8 @@ import UIKit
 import SwiftUI
 
 class SubscriptionViewController: UIViewController {
-   
+    @IBOutlet weak var yearButton: UIButton!
+    
     @IBOutlet weak var backgorund85OffView: UIView!
     @IBOutlet weak var perWeekThirdLabel: UILabel!
     @IBOutlet weak var yearlyLabel: UILabel!
@@ -90,12 +91,20 @@ class SubscriptionViewController: UIViewController {
         freeTrialView.layer.cornerRadius = 25
         freeTrialView.layer.masksToBounds = true
         
+//        yearView.layer.cornerRadius = 24
+//        yearView.layer.shadowColor = UIColor(red: 231/255, green: 254/255, blue: 85/255, alpha: 1).cgColor
+//        yearView.layer.shadowOpacity = 0.5
+//        yearView.layer.shadowOffset = CGSize(width: 2, height: 0)
+//        yearView.layer.shadowRadius = 4
+        
+
         yearView.layer.cornerRadius = 24
         yearView.layer.shadowColor = UIColor(red: 231/255, green: 254/255, blue: 85/255, alpha: 1).cgColor
-        yearView.layer.shadowOpacity = 0.5
-        yearView.layer.shadowOffset = CGSize(width: 2, height: 0)
-        yearView.layer.shadowRadius = 4
-        yearView.layer.masksToBounds = false
+        yearView.layer.shadowOpacity = 1
+        yearView.layer.shadowOffset = .zero
+        yearView.layer.shadowRadius = 10
+        
+//        yearView.layer.masksToBounds = false
     
     }
     

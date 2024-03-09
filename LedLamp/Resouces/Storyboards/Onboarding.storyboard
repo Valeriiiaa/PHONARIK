@@ -602,7 +602,7 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.22745098039215686" green="0.22745098039215686" blue="0.22745098039215686" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="ezc-OE-Gzt" firstAttribute="top" secondItem="Tu0-UK-OfD" secondAttribute="top" constant="-20" id="1UN-1n-f5j"/>
                                             <constraint firstItem="uLo-KO-cMn" firstAttribute="top" secondItem="Tu0-UK-OfD" secondAttribute="top" constant="8" id="1Wr-a5-OFY"/>
@@ -691,6 +691,7 @@
                         <outlet property="weekView" destination="EGe-Et-fYq" id="vj4-hg-36a"/>
                         <outlet property="weeklyLabel" destination="L6H-9w-qLH" id="d1d-kK-Ybn"/>
                         <outlet property="yearAmountLabel" destination="lrh-KO-tQO" id="s8X-BH-EMW"/>
+                        <outlet property="yearButton" destination="wkX-oM-L5W" id="m5j-Jc-u43"/>
                         <outlet property="yearView" destination="Tu0-UK-OfD" id="OFh-tD-VYg"/>
                         <outlet property="yearlyLabel" destination="0cM-y1-YPI" id="Kk9-Li-WE7"/>
                     </connections>
