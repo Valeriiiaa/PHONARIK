@@ -141,10 +141,26 @@ class SubscriptionViewController: UIViewController {
     
     func configureMonthly() {
         resetPrevious()
+        
+        selectedTitle = popularLabel
+        selectedSubbackgroundView = popularView
+        selectedBackgroundMainView = monthView
+        periodTitle = perWeekFirstLabel
+        perPeriodTitle = monthlyLabel
+        
+        activateState()
     }
     
     func configureYearly() {
         resetPrevious()
+        
+        selectedTitle = bestDialLabel
+        selectedSubbackgroundView = bestDealView
+        selectedBackgroundMainView = yearView
+        periodTitle = yearAmountLabel
+        perPeriodTitle = yearlyLabel
+        
+        activateState()
     }
     
     func configureWeekly() {

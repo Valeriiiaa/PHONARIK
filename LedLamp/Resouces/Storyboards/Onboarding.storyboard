@@ -622,7 +622,6 @@
                                             <constraint firstAttribute="trailing" secondItem="ezc-OE-Gzt" secondAttribute="trailing" constant="25" id="tgC-3Y-F9E"/>
                                             <constraint firstItem="yGh-6o-8bg" firstAttribute="centerY" secondItem="Tu0-UK-OfD" secondAttribute="centerY" multiplier="1.02" id="trc-ss-uAO"/>
                                             <constraint firstAttribute="trailing" secondItem="lrh-KO-tQO" secondAttribute="trailing" constant="11.67" id="ugo-JZ-Iww"/>
-                                            <constraint firstItem="lrh-KO-tQO" firstAttribute="centerX" secondItem="Tu0-UK-OfD" secondAttribute="centerX" id="v2O-C5-mXt"/>
                                         </constraints>
                                     </view>
                                 </subviews>
