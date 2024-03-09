@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class FourthPageViewController: UIViewController {
    
@@ -69,8 +70,9 @@ class FourthPageViewController: UIViewController {
     
   
     @IBAction func notNowBtnDidTap(_ sender: Any) {
-        if let viewController = navigationController?.viewControllers.first(where: { $0 is MainViewController }) {
-            navigationController?.popToViewController(viewController, animated: true)
+        if let viewController = navigationController?.viewControllers.first(where: { $0 is FirstPageViewController }) {
+            let main = CustomTabBarView()
+            navigationController?.setViewControllers([UIHostingController(rootView: main)], animated: true)
         }
     }
    

@@ -50,7 +50,6 @@
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="setingsButton"/>
                                         <connections>
-                                            <action selector="settingBtnDidTap:" destination="se5-zo-ckb" eventType="touchUpInside" id="yXz-9b-n09"/>
                                             <action selector="settingsDidTap:" destination="se5-zo-ckb" eventType="touchUpInside" id="sFl-0r-S9a"/>
                                         </connections>
                                     </button>

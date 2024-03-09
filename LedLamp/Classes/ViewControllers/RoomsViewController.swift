@@ -160,11 +160,6 @@ class RoomsViewController: UIViewController {
             shadowConfiguration: .init(backgroundColor: UIColor(red: 34/255, green: 34/255, blue: 34/255, alpha: 0.46), blur: .regular)
         ))
     }
-    
-    @IBAction func settingBtnDidTap(_ sender: Any) {
-        let entrance = UIStoryboard(name: "Settings", bundle: nil).instantiateViewController(withIdentifier: "SettingsViewController")
-        navigationController?.pushViewController(entrance, animated: true)
-    }
 }
 
 extension RoomsViewController: UICollectionViewDataSource, UICollectionViewDelegate {
