@@ -68,6 +68,7 @@
 "addFromGallery" = "Agregar desde la galería";
 "OpenCamera" = "Abrir cámara";
 "enterRoomName" = "Por favor, ingresa un nombre de sala";
+"enterLightName" = "Por favor, ingresa un nombre de luz";
 
 "collection" = "Colección";
 "devicesConnected" = "Dispositivos conectados";

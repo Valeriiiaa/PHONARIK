@@ -9,6 +9,7 @@ import UIKit
 
 class SubscriptionViewController: UIViewController {
    
+    @IBOutlet weak var backgorund85OffView: UIView!
     @IBOutlet weak var perWeekThirdLabel: UILabel!
     @IBOutlet weak var yearlyLabel: UILabel!
     @IBOutlet weak var bestDialLabel: UILabel!
@@ -62,7 +63,10 @@ class SubscriptionViewController: UIViewController {
         yearAmountLabel.text = "39year".localized
         weekLabel.text = "5week".localized
         weeklyLabel.text = "weekly".localized
-        
+        backgorund85OffView.layer.cornerRadius = 9
+        backgorund85OffView.layer.borderWidth = 1.85
+        backgorund85OffView.layer.borderColor = UIColor.black.cgColor
+
         
         [ weekView, monthView].forEach({ item in
             item?.layer.cornerRadius = 24
@@ -90,9 +94,8 @@ class SubscriptionViewController: UIViewController {
         yearView.layer.shadowOpacity = 0.5
         yearView.layer.shadowOffset = CGSize(width: 2, height: 0)
         yearView.layer.shadowRadius = 4
-        yearView.layer.shouldRasterize = true
         yearView.layer.masksToBounds = false
-        yearView.layer.rasterizationScale = UIScreen.main.scale
+    
     }
     
     override func viewWillAppear(_ animated: Bool) {
