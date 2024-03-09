@@ -74,6 +74,7 @@
 "addFromGallery" = "Ajouter depuis la galerie";
 "OpenCamera" = "Ouvrir l'appareil photo";
 "enterRoomName" = "Veuillez saisir un nom de chambre";
+"enterLightName" = "Veuillez saisir un nom de lumière";
 
 
 //collection

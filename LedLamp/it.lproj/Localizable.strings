@@ -72,6 +72,7 @@
 "addFromGallery" = "Aggiungi dalla galleria";
 "OpenCamera" = "Apri la fotocamera";
 "enterRoomName" = "Si prega di inserire un nome per la stanza";
+"enterLightName" = "Si prega di inserire un nome per la luce";
 
 //collection
 "collection" = "Collezione";

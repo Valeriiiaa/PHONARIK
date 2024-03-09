@@ -75,6 +75,7 @@
 "addFromGallery" = "从相册添加";
 "OpenCamera" = "打开相机";
 "enterRoomName" = "请输入房间名称";
+"enterLightName" = "请输入灯的名称";
 
 
 //collection
