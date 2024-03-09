@@ -87,8 +87,28 @@ class MainViewController: UIViewController {
         present(entrance, animated: true)
     }
     
-    func editName(_ action: Any) {
-        
+    func editName(lightModel: LampModel) {
+        let alertController = UIAlertController(title: "New Room", message: "Please enter a room name", preferredStyle: .alert)
+        alertController.addTextField { textField in
+            textField.text = lightModel.name
+            textField.placeholder = "Room name..."
+            textField.keyboardType = .default
+            textField.autocorrectionType = .no
+        }
+        let okAction = UIAlertAction(title: "Save", style: .default) {
+            action in guard let textField = alertController.textFields?.first,
+                            let text = textField.text else {
+                return
+            }
+            lightModel.name = text
+            DatabaseManager.shared.update(lightModel)
+            ActionManager.shared.reload()
+            
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(okAction)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true, completion: nil)
     }
 }
 
@@ -125,7 +145,9 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         
         (cell as? MainScreenCell)?.menuDidTap = { [unowned self] in
             let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-            alert.addAction(UIAlertAction(title: "editName".localized, style: .default, handler: editName))
+            alert.addAction(UIAlertAction(title: "editName".localized, style: .default, handler: { [unowned self] _ in
+                self.editName(lightModel: lightModel)
+            }))
             alert.addAction(UIAlertAction(title: "delete".localized, style: .destructive, handler: { [unowned tableView] _ in
                 let alert = UIAlertController(title: nil, message: "wantToDelete".localized, preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "yes".localized, style: .default, handler: { _ in

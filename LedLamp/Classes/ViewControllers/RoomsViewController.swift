@@ -100,6 +100,30 @@ class RoomsViewController: UIViewController {
         })
     }
     
+    func editName(roomModel: RoomModel) {
+        let alertController = UIAlertController(title: "New Room", message: "Please enter a room name", preferredStyle: .alert)
+        alertController.addTextField { textField in
+            textField.text = roomModel.name
+            textField.placeholder = "Room name..."
+            textField.keyboardType = .default
+            textField.autocorrectionType = .no
+        }
+        let okAction = UIAlertAction(title: "Save", style: .default) {
+            action in guard let textField = alertController.textFields?.first,
+                            let text = textField.text else {
+                return
+            }
+            let oldName = roomModel.name
+            roomModel.name = text
+            DatabaseManager.shared.update(roomModel, oldName: oldName)
+            ActionManager.shared.reload()
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(okAction)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true, completion: nil)
+    }
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         let layout = self.roomCollectionView.collectionViewLayout as! UPCarouselFlowLayout
@@ -160,7 +184,9 @@ extension RoomsViewController: UICollectionViewDataSource, UICollectionViewDeleg
         
         (cell as? AddedRoomCell)?.menuButtonDidTap = {
             let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-            alert.addAction(UIAlertAction(title: "editName".localized, style: .default, handler: editName))
+            alert.addAction(UIAlertAction(title: "editName".localized, style: .default, handler: { [unowned self] _ in
+                self.editName(roomModel: room)
+            }))
             alert.addAction(UIAlertAction(title: "delete".localized, style: .destructive, handler: { [unowned self] _ in
                 let alert = UIAlertController(title: nil, message: "wantToDelete".localized, preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "yes".localized, style: .default, handler: { _ in
@@ -176,13 +202,6 @@ extension RoomsViewController: UICollectionViewDataSource, UICollectionViewDeleg
             alert.addAction(UIAlertAction(title: "cancel".localized, style: .cancel))
             alert.popoverPresentationController?.barButtonItem = self.navigationItem.rightBarButtonItem
             self.present(alert, animated: true)
-        }
-        func deleteCell() {
-            collectionView.deleteItems(at: [indexPath])
-            collectionView.reloadData()
-        }
-        func editName(_ action: Any) {
-            
         }
         
         (cell as? AddedRoomCell)?.switchValueChanged = { value in

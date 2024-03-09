@@ -131,19 +131,53 @@ class ColorPickerViewController: UIViewController {
     
     @IBAction func menuBtnDidTap(_ sender: Any) {
         let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        alert.addAction(UIAlertAction(title: "editName".localized, style: .default, handler: editName))
-        alert.addAction(UIAlertAction(title: "delete".localized, style: .destructive, handler: deleteCell))
+        alert.addAction(UIAlertAction(title: "editName".localized, style: .default, handler: { [unowned self] _ in
+            editName(lightModel: lampModel)
+        }))
+        alert.addAction(UIAlertAction(title: "delete".localized, style: .destructive, handler: { [unowned self] _ in
+            deleteCell(lightModel: lampModel)
+        }))
         alert.addAction(UIAlertAction(title: "cancel".localized, style: .cancel))
         alert.popoverPresentationController?.barButtonItem = self.navigationItem.rightBarButtonItem
         present(alert, animated: true)
     }
     
-    func deleteCell(action: UIAlertAction) {
-       
+    func deleteCell(lightModel: LampModel) {
+        let alert = UIAlertController(title: nil, message: "wantToDelete".localized, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "yes".localized, style: .default, handler: { [unowned self] _ in
+            DispatchQueue.main.async {
+                DatabaseManager.shared.remove(lightModel.name)
+                ActionManager.shared.reload()
+                self.dismiss(animated: true)
+            }
+        }))
+        alert.addAction(UIAlertAction(title: "no".localized, style: .cancel))
+        self.present(alert, animated: true)
     }
     
-    func editName(_ action: Any) {
-        
+    func editName(lightModel: LampModel) {
+        let alertController = UIAlertController(title: "New Room", message: "Please enter a room name", preferredStyle: .alert)
+        alertController.addTextField { textField in
+            textField.text = lightModel.name
+            textField.placeholder = "Room name..."
+            textField.keyboardType = .default
+            textField.autocorrectionType = .no
+        }
+        let okAction = UIAlertAction(title: "Save", style: .default) { [unowned self]
+            action in guard let textField = alertController.textFields?.first,
+                            let text = textField.text else {
+                return
+            }
+            lightModel.name = text
+            self.lightSamartLabel.text = text
+            DatabaseManager.shared.update(lightModel)
+            ActionManager.shared.reload()
+            
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(okAction)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true, completion: nil)
     }
 }
 
