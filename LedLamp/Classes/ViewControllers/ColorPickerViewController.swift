@@ -82,6 +82,10 @@ class ColorPickerViewController: UIViewController {
             item?.layer.cornerRadius =  10
             item?.layer.masksToBounds = true
         })
+        
+        let value = brightnessSlider.sliderDelegate.valueAndGradient(for: brightnessSlider.selectedHSBColor).value
+        let stringValue = Int(round((brightnessSlider.reversePercentage ? 1 - value : value) * 100))
+        intensityLabel.text = "intensity".localized + " " + stringValue.description + "%"
     }
     
     @objc
