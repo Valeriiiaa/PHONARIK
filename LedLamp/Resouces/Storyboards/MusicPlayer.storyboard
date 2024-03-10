@@ -75,7 +75,10 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l3R-My-U7N">
-                                <rect key="frame" x="15" y="392.33333333333331" width="176" height="169.99999999999994"/>
+                                <rect key="frame" x="15" y="392.33333333333331" width="176" height="175.99999999999994"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="l3R-My-U7N" secondAttribute="height" multiplier="1:1" id="b56-lX-7NV"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="ChakraPetch-SemiBold" family="Chakra Petch" pointSize="18"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Music on iPhone" backgroundImage="musicOnIphone">
@@ -86,7 +89,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OyL-zS-x27">
-                                <rect key="frame" x="202" y="392.33333333333331" width="176" height="169.99999999999994"/>
+                                <rect key="frame" x="202" y="392.33333333333331" width="176" height="175.99999999999994"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="OyL-zS-x27" secondAttribute="height" multiplier="1:1" id="IYv-d6-Mo0"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="ChakraPetch-SemiBold" family="Chakra Petch" pointSize="18"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Sync with music" backgroundImage="syncWithMusic">
@@ -106,6 +112,7 @@
                             <constraint firstItem="5VV-O9-sXx" firstAttribute="leading" secondItem="hRi-wk-cRm" secondAttribute="leading" id="6CE-hZ-OxO"/>
                             <constraint firstItem="O1t-Ex-0LZ" firstAttribute="top" secondItem="yRQ-F0-uzt" secondAttribute="bottom" id="7u7-R3-tHT"/>
                             <constraint firstItem="hRi-wk-cRm" firstAttribute="trailing" secondItem="IgV-x3-jZ4" secondAttribute="trailing" constant="20" id="MB9-pf-1gC"/>
+                            <constraint firstItem="l3R-My-U7N" firstAttribute="width" secondItem="cax-fG-Vok" secondAttribute="width" multiplier="0.447837" id="MxI-n3-jRS"/>
                             <constraint firstItem="IgV-x3-jZ4" firstAttribute="top" secondItem="O1t-Ex-0LZ" secondAttribute="bottom" constant="10" id="Qq5-zU-gH9"/>
                             <constraint firstItem="O1t-Ex-0LZ" firstAttribute="leading" secondItem="hRi-wk-cRm" secondAttribute="leading" id="RfW-0V-RRo"/>
                             <constraint firstItem="hRi-wk-cRm" firstAttribute="trailing" secondItem="5VV-O9-sXx" secondAttribute="trailing" id="S4W-9J-2R9"/>
@@ -113,6 +120,7 @@
                             <constraint firstItem="hRi-wk-cRm" firstAttribute="trailing" secondItem="yRQ-F0-uzt" secondAttribute="trailing" id="dDq-VQ-jnf"/>
                             <constraint firstItem="hRi-wk-cRm" firstAttribute="trailing" secondItem="OyL-zS-x27" secondAttribute="trailing" constant="15" id="dcy-Q7-ghV"/>
                             <constraint firstItem="OyL-zS-x27" firstAttribute="top" secondItem="IgV-x3-jZ4" secondAttribute="bottom" constant="24" id="gFC-dR-oNs"/>
+                            <constraint firstItem="OyL-zS-x27" firstAttribute="width" secondItem="cax-fG-Vok" secondAttribute="width" multiplier="0.447837" id="glN-q6-2Rg"/>
                             <constraint firstItem="l3R-My-U7N" firstAttribute="leading" secondItem="hRi-wk-cRm" secondAttribute="leading" constant="15" id="iOI-7o-6ce"/>
                             <constraint firstItem="hRi-wk-cRm" firstAttribute="trailing" secondItem="O1t-Ex-0LZ" secondAttribute="trailing" id="mlI-Ky-GmP"/>
                             <constraint firstItem="yRQ-F0-uzt" firstAttribute="top" secondItem="cax-fG-Vok" secondAttribute="top" id="pbs-Vo-moP"/>

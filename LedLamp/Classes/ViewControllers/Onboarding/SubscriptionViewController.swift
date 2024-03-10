@@ -208,6 +208,9 @@ class SubscriptionViewController: UIViewController {
         if let viewController = navigationController?.viewControllers.first(where: { $0 is FirstPageViewController }) {
             let main = CustomTabBarView()
             navigationController?.setViewControllers([UIHostingController(rootView: main)], animated: true)
+        } else if navigationController?.viewControllers.first is SubscriptionViewController {
+            let main = CustomTabBarView()
+            navigationController?.setViewControllers([UIHostingController(rootView: main)], animated: true)
         }
     }
     

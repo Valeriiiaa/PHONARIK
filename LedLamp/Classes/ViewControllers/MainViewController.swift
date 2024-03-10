@@ -47,7 +47,7 @@ class MainViewController: UIViewController {
         
         HomeManager.shared.itemDidAdded = { [weak self] hm in
             guard let self else { return }
-            DatabaseManager.shared.save(LampModel(name: hm.name, deviceId: hm.uniqueIdentifier.uuidString, color: 0xE7FE55, isEnabled: false, accessory: hm))
+            DatabaseManager.shared.save(LampModel(name: hm.name, deviceId: hm.uniqueIdentifier.uuidString, room: hm.room?.name ?? "bedroom".localized,  color: 0xE7FE55, isEnabled: false, accessory: hm))
             ActionManager.shared.reload()
         }
         

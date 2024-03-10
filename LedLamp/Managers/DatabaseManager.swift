@@ -193,8 +193,8 @@ class DatabaseManager: DatabaseManagerProtocol {
             let devices = HomeManager.shared.loadConnectedDevices()
             var models: [LampModel] = []
             for item in fetchedItems {
-                print(devices.first(where: { $0.uniqueIdentifier.uuidString == item.deviceId }))
-                models.append(LampModel(name: item.name ?? "", deviceId: item.deviceId ?? "", room: item.room, color: Int(item.color), isEnabled: item.isEnabled, accessory: devices.first(where: { $0.uniqueIdentifier.uuidString == item.deviceId })))
+                let device = devices.first(where: { $0.uniqueIdentifier.uuidString == item.deviceId })
+                models.append(LampModel(name: item.name ?? "", deviceId: item.deviceId ?? "", room: item.room ?? device?.room?.name, color: Int(item.color), isEnabled: item.isEnabled, accessory: device))
             }
             return models
         } catch let error {
@@ -226,4 +226,62 @@ class DatabaseManager: DatabaseManagerProtocol {
         }
     }
     
+}
+
+enum LocalStorageKey: String, CaseIterable, CustomStringConvertible {
+    case isFirstOpen
+    
+    var description: String {
+        self.rawValue
+    }
+}
+
+
+public protocol LocalStorageService<TKey> {
+    associatedtype TKey: CustomStringConvertible
+    func set(_ value: Any?, key: TKey)
+    func get(key: TKey) -> Any?
+    func getBool(key: TKey) -> Bool
+    func getString(key: TKey) -> String?
+    func get<T>(key: TKey) -> T? where T : Decodable
+    func get<T>(key: TKey, defaultValue: T) -> T where T : Decodable
+    func set<T>(key: TKey, value: T) where T : Codable
+}
+
+public final class UserDefaultsService<TKey: CustomStringConvertible>: LocalStorageService {
+    public typealias TKey = TKey
+    
+    public init() { }
+    
+    private let defaults = UserDefaults.standard
+
+    public func set(_ value: Any?, key: TKey) {
+        defaults.setValue(value, forKey: key.description)
+    }
+    
+    public func set<T>(key: TKey, value: T) where T : Codable {
+        defaults.set(try? JSONEncoder().encode(value), forKey: key.description)
+    }
+
+    public func get(key: TKey) -> Any? {
+        return defaults.value(forKey: key.description)
+    }
+    
+    public func get<T>(key: TKey) -> T? where T : Decodable {
+        guard let data = defaults.object(forKey: key.description) as? Data else { return nil }
+        return try? JSONDecoder().decode(T.self, from: data)
+    }
+    
+    public func get<T>(key: TKey, defaultValue: T) -> T where T : Decodable {
+        guard let data = defaults.object(forKey: key.description) as? Data else { return defaultValue }
+        return (try? JSONDecoder().decode(T.self, from: data)) ?? defaultValue
+    }
+
+    public func getBool(key: TKey) -> Bool {
+        return defaults.bool(forKey: key.description)
+    }
+
+    public func getString(key: TKey) -> String? {
+        return defaults.string(forKey: key.description)
+    }
 }

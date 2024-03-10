@@ -445,6 +445,21 @@
                   endingLineNumber = "129"
                   offsetFromSymbolStart = "852">
                </Location>
+               <Location
+                  uuid = "52EACA5F-DD8F-46F8-BDF9-9EF1897831AD - 1ea88a60444a886e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LedLamp.ColorPickerViewController.saveBtnDidTap(Any) -&gt; ()"
+                  moduleName = "LedLamp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/PHONARIK/LedLamp/Classes/ViewControllers/ColorPickerViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "129"
+                  endingLineNumber = "129"
+                  offsetFromSymbolStart = "860">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -525,6 +540,22 @@
             startingLineNumber = "287"
             endingLineNumber = "287"
             landmarkName = "loadConnectedDevices()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5BE72551-459F-4007-8680-E0DFA38172DD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LedLamp/SceneDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "getRootVC()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

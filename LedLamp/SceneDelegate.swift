@@ -23,56 +23,32 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window?.windowScene = windowScene
         HomeManager.shared.init1()
         let onboardingVC = UIStoryboard(name: "Onboarding", bundle: nil).instantiateInitialViewController()
-        window?.rootViewController = onboardingVC//UIHostingController(rootView: CustomTabBarView())
+        window?.rootViewController = getRootVC()//onboardingVC//UIHostingController(rootView: CustomTabBarView())
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
             HomeManager.shared.checkHomes()
             self.window?.makeKeyAndVisible()
         })
        
-        
         guard !UserDefaults.standard.bool(forKey: "isNotFirstLaunch") else { return }
         UserDefaults.standard.set(true, forKey: "isNotFirstLaunch")
-        
-//        LocationCollectionViewModel.allCases.forEach({ item in
-//            DatabaseManager.shared.save(RoomModel(name: item.titel, background: UIImage(resource: item.image).pngData(), lamps: "", status: false))
-//        })
     }
     
-    func getConfiguredController() -> UITabBarController {
-        //1- Initiate your viewControllers
-        let tabBarItem = UITabBarItem(title: "light".localized, image: UIImage(resource: .lightTabBar), tag: 0)
-        let firstViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()!
-        firstViewController.tabBarItem = tabBarItem
-        
-        let secondViewController = UIStoryboard(name: "Rooms", bundle: nil).instantiateInitialViewController()!
-        secondViewController.tabBarItem = UITabBarItem(title: "rooms".localized, image: UIImage(resource: .roomsTabBar), tag: 1)
-        let third = UIStoryboard(name: "MusicPlayer", bundle: nil).instantiateInitialViewController()!
-        third.tabBarItem = UITabBarItem(title: "music".localized, image: UIImage(resource: .musicTabBar), tag: 2)
-        //2- get instance of BEKCurveTabbarController
-        let tabBarViewController = BEKCurveTabbarController.instantiate()
-        
-        //3- Config your own TabBar ViewModel
-        let myViewModel = MyCustomTabBarViewModel()
-        
-        //4- setup TabBar Controller with you viewModel
-        tabBarViewController.setupViewModel(viewModel: myViewModel)
-        
-        //5- set viewControllers to the tabbar
-        tabBarViewController.setViewControllers([firstViewController, secondViewController, third], animated: true)
-        (tabBarViewController.tabBar as? BEKCurveTabbar)?.addCircleShape()
-        DispatchQueue.main.async {
-            if let itemView = (tabBarItem.value(forKey: "view") as? UIView) {
-                UIView.setAnimationsEnabled(false)
-                UIView.performWithoutAnimation {
-                    (tabBarViewController.tabBar as? BEKCurveTabbar)?.circleLayer?.position = itemView.frame.origin
-                }
-                
-                UIView.setAnimationsEnabled(true)
-            }
+    func getRootVC() -> UIViewController {
+        let isFirstLaunch = UserDefaultsService().get(key: LocalStorageKey.isFirstOpen, defaultValue: true)
+        print(isFirstLaunch)
+        guard isFirstLaunch else {
+            let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
+            let rootVC = storyboard.instantiateViewController(withIdentifier: "SubscriptionViewController")
+            let navigationController = UINavigationController()
+            navigationController.navigationBar.isHidden = true
+            navigationController.setViewControllers([rootVC], animated: true)
+            return navigationController
         }
-        return tabBarViewController
+        UserDefaultsService().set(key: LocalStorageKey.isFirstOpen, value: false)
+        let onboardingVC = UIStoryboard(name: "Onboarding", bundle: nil).instantiateInitialViewController()!
+        return onboardingVC
     }
-
+    
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
         // This occurs shortly after the scene enters the background, or when its session is discarded.
