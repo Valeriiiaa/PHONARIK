@@ -21,9 +21,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         self.window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         self.window?.windowScene = windowScene
+        HomeManager.shared.init1()
         let onboardingVC = UIStoryboard(name: "Onboarding", bundle: nil).instantiateInitialViewController()
         window?.rootViewController = onboardingVC//UIHostingController(rootView: CustomTabBarView())
-        self.window?.makeKeyAndVisible()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+            HomeManager.shared.checkHomes()
+            self.window?.makeKeyAndVisible()
+        })
+       
         
         guard !UserDefaults.standard.bool(forKey: "isNotFirstLaunch") else { return }
         UserDefaults.standard.set(true, forKey: "isNotFirstLaunch")

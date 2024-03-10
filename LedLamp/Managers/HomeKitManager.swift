@@ -15,7 +15,7 @@ protocol HomeManagerProtocol {
     var accessories: (([HMAccessory]) -> Void)? { set get }
     var reloadDatas: [() -> Void] { get set }
     
-    func showCamera(_ callback: @escaping() -> Void)
+    func showCamera()
     func checkHomes()
     func startDeviceDiscovering()
     func stopDeviceDiscovering()
@@ -55,12 +55,17 @@ class HomeManager: NSObject, HomeManagerProtocol {
     
     var accessories: (([HMAccessory]) -> Void)?
     
+    var itemDidAdded: ((HMAccessory) -> Void)?
+    
     var reloadDatas = [() -> Void]()
     
     override init() {
         self.manager = HMHomeManager()
     }
     
+    func init1() {
+        manager.delegate = self
+    }
     
     //MARK: Device Browser (Scanner)
     func startDeviceDiscovering() {
@@ -72,7 +77,6 @@ class HomeManager: NSObject, HomeManagerProtocol {
         browser.startSearchingForNewAccessories()
     }
     
-    
     func stopDeviceDiscovering() {
         browser?.stopSearchingForNewAccessories()
         if discoveredAccessories.isEmpty {
@@ -81,14 +85,12 @@ class HomeManager: NSObject, HomeManagerProtocol {
         }
     }
     
-    
     //MARK: Home Management
     func checkHomes() {
         print("homes: \(manager.homes)")
-//        manager.
         print(manager.authorizationStatus)
         if manager.homes.isEmpty {
-            self.createHome(withName: "My Home99") { status in
+            self.createHome(withName: "My Home") { status in
                 print("home add status: \(status)")
             }
             return
@@ -100,7 +102,6 @@ class HomeManager: NSObject, HomeManagerProtocol {
             self.room = home?.rooms[0]
         }
     }
-    
     
     private func createHome(withName name: String, _ callback: @escaping(Bool) -> Void) {
         self.manager.addHome(withName: name) { home, error in
@@ -120,8 +121,6 @@ class HomeManager: NSObject, HomeManagerProtocol {
         }
     }
     
-    
-    
     //MARK: Room Management
     func createRoom(withName room: String, _ callback: @escaping(HMRoom) -> Void) {
         home?.addRoom(withName: room) { room, error in
@@ -133,7 +132,6 @@ class HomeManager: NSObject, HomeManagerProtocol {
             print("room not created")
         }
     }
-    
     
     func updateRoom(_ room: HMRoom?, name: String, _ callback: @escaping(Bool) -> Void) {
         guard let room = room else {
@@ -162,7 +160,6 @@ class HomeManager: NSObject, HomeManagerProtocol {
             callback(newRoom)
         }
     }
-    
     
     func updateRoom(_ device: HMAccessory, newRoom: String, _ callback: @escaping(Bool) -> Void) {
         getRoom(withName: newRoom) { room in
@@ -219,24 +216,36 @@ class HomeManager: NSObject, HomeManagerProtocol {
     }
     
     
-    func showCamera(_ callback: @escaping() -> Void) {
+    func showCamera() {
         self.home?.delegate = self
+//        let accessotyRequest = HMAccessorySetupRequest()
+//        accessotyRequest.payload = HMAccessorySetupPayload(url: URL(string: "X-HM://00195JERG4W7D"))!
+//        HMAccessorySetupManager().performAccessorySetup(using: accessotyRequest, completionHandler: { result, error in
+//            print(result)
+//            print(error)
+//        })
+        home?.addAndSetupAccessories(completionHandler: { error in
+            print("errror \(error)")
+        })
 //        HMAccessorySetupManager().performAccessorySetup(using: .init(), completionHandler: { result, error in
 //            result
 //        })
 //        self.home?.addAnd
 //        self.home?.addAndSetUpAccessories(payload: HMAccessorySetupPayload(url: URL))
 //        self.home?.add,AndSetupAccessories(with: HMAccessorySetupPayload, completionHandler: <#T##([HMAccessory]?, Error?) -> Void#>)
-        self.home?.addAndSetupAccessories(with: HMAccessorySetupPayload(url: URL(string: "X-HM://00195JERG4W7D"))!, completionHandler: { error, pisum  in
-            if let error = error {
-//                print("camera error: \(error.localizedDescription)")
-                callback()
-                return
-            }
-            
-            print("device added")
-            callback()
-        })
+        
+//        home.perform
+        
+//        self.home!.addAndSetupAccessories(with: HMAccessorySetupPayload(url: URL(string: "X-HM://00195JERG4W7D"))!, completionHandler: { error, pisum  in
+//            if let error = error {
+////                print("camera error: \(error.localizedDescription)")
+//                callback()
+//                return
+//            }
+//            
+//            print("device added")
+//            callback()
+//        })
     }
     
     
@@ -273,27 +282,12 @@ class HomeManager: NSObject, HomeManagerProtocol {
         return home?.rooms ?? []
     }
     
-    
     func loadConnectedDevices() -> [HMAccessory] {
         guard let homeAccessories = home?.accessories else {
             return []
         }
         
-        var deices: [HMAccessory] = []
-        
-        for accessory in homeAccessories {
-            if let characteristic = accessory.getCharacteristic(forType: .power) {
-                deices.append(accessory)
-                accessory.delegate = self
-                characteristic.enableNotification(true) { error in
-                    if error != nil {
-                        print("Something went wrong when enabling notification for a characteristic.")
-                    }
-                }
-            }
-        }
-        
-        return deices
+        return homeAccessories
     }
     
 }
@@ -309,10 +303,6 @@ extension HomeManager: HMAccessoryBrowserDelegate {
 }
 
 extension HomeManager: HMHomeDelegate {
-    func home(_ home: HMHome, didAdd accessory: HMAccessory) {
-        print("new device added!")
-    //    connectedAccessory?(accessory)
-    }
     
     func home(_ home: HMHome, didUpdateNameFor room: HMRoom) {
         reloadDatas.forEach({ $0() })
@@ -332,14 +322,30 @@ extension HomeManager: HMHomeDelegate {
 extension HomeManager: HMAccessoryDelegate {
     
     func accessory(_ accessory: HMAccessory, service: HMService, didUpdateValueFor characteristic: HMCharacteristic) {
-        reloadDatas.forEach({ $0() })
+    }
+    
+    func home(_ home: HMHome, didAdd accessory: HMAccessory) {
+        itemDidAdded?(accessory)
     }
 }
 
+extension HomeManager: HMHomeManagerDelegate {
+    func homeManagerDidUpdateHomes(_ manager: HMHomeManager) {
+        print("updated eptr \(manager.homes.count)")
+      }
+}
 
 extension HMAccessory {
     
     func getCharacteristic(forType type: CharacteristicType) -> HMCharacteristic? {
+        services.forEach({ item in
+            print("test" + item.serviceType)
+            print("test bool \(HMServiceTypeLightbulb == item.serviceType)")
+        })
+        services.lazy.forEach({ item in
+            print("test" + item.serviceType)
+            print("test bool \(HMServiceTypeLightbulb == item.serviceType)")
+        })
         switch type {
         case .hue:
             return services.lazy

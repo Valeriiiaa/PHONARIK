@@ -117,6 +117,15 @@ class ColorPickerViewController: UIViewController {
     
     @IBAction func saveBtnDidTap(_ sender: Any) {
         guard let intColor = Int(colorPaletterView.selectedColor.hexValue(), radix: 16) else { return }
+        lampModel.accessory!.getCharacteristic(forType: .hue)!.writeValue(colorPaletterView.selectedHSBColor.hue * 360, completionHandler: { error in
+            print(error)
+        })
+        lampModel.accessory!.getCharacteristic(forType: .saturation)!.writeValue(colorPaletterView.selectedHSBColor.saturation * 100, completionHandler: { error in
+            print(error)
+        })
+        lampModel.accessory!.getCharacteristic(forType: .brightness)!.writeValue(colorPaletterView.selectedHSBColor.brightness * 100, completionHandler: { error in
+            print(error)
+        })
         lampModel.color = intColor
         DatabaseManager.shared.update(lampModel)
         ActionManager.shared.reload()
@@ -127,6 +136,9 @@ class ColorPickerViewController: UIViewController {
         lampModel.isEnabled.toggle()
         offButton.isSelected = lampModel.isEnabled
         DatabaseManager.shared.update(lampModel)
+        lampModel.accessory?.getCharacteristic(forType: .power)?.writeValue(lampModel.isEnabled, completionHandler: { error in
+            print(error)
+        })
         ActionManager.shared.reload()
     }
     
@@ -178,6 +190,9 @@ class ColorPickerViewController: UIViewController {
             DatabaseManager.shared.update(lightModel)
             ActionManager.shared.reload()
             
+            guard let accessory = lightModel.accessory else { return }
+            
+            HomeManager.shared.updateName(accessory, name: text, { _ in })
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         alertController.addAction(okAction)

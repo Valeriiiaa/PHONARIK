@@ -7,209 +7,49 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "7C32941B-98BB-43F2-80B0-C5C76078F740"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "LedLamp/Managers/HomeKitManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
-            landmarkName = "checkHomes()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "7C32941B-98BB-43F2-80B0-C5C76078F740 - f6d054f3db4af950"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "LedLamp.HomeManager.checkHomes() -&gt; ()"
-                  moduleName = "LedLamp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/PHONARIK/LedLamp/Managers/HomeKitManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "98"
-                  endingLineNumber = "98"
-                  offsetFromSymbolStart = "1592">
-               </Location>
-               <Location
-                  uuid = "7C32941B-98BB-43F2-80B0-C5C76078F740 - f6d054f3db4af933"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "LedLamp.HomeManager.checkHomes() -&gt; ()"
-                  moduleName = "LedLamp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/PHONARIK/LedLamp/Managers/HomeKitManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "97"
-                  endingLineNumber = "97"
-                  offsetFromSymbolStart = "1340">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "0E3052DA-4A24-46D3-AB54-7CB36BD30937"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "LedLamp/Managers/HomeKitManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
-            landmarkName = "checkHomes()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "0E3052DA-4A24-46D3-AB54-7CB36BD30937 - f6d054f3db4af971"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "LedLamp.HomeManager.checkHomes() -&gt; ()"
-                  moduleName = "LedLamp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/PHONARIK/LedLamp/Managers/HomeKitManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "99"
-                  endingLineNumber = "99"
-                  offsetFromSymbolStart = "1928">
-               </Location>
-               <Location
-                  uuid = "0E3052DA-4A24-46D3-AB54-7CB36BD30937 - f6d054f3db4af971"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "LedLamp.HomeManager.checkHomes() -&gt; ()"
-                  moduleName = "LedLamp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/PHONARIK/LedLamp/Managers/HomeKitManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "99"
-                  endingLineNumber = "99"
-                  offsetFromSymbolStart = "1592">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "63AEE64D-87A6-4A58-8896-59939EB3684D"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "LedLamp/Managers/HomeKitManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "232"
-            endingLineNumber = "232"
-            landmarkName = "showCamera(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "63AEE64D-87A6-4A58-8896-59939EB3684D - 2be9ee8a64788705"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;__C.HMAccessory&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in LedLamp.HomeManager.showCamera(() -&gt; ()) -&gt; ()"
-                  moduleName = "LedLamp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/PHONARIK/LedLamp/Managers/HomeKitManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "232"
-                  endingLineNumber = "232"
-                  offsetFromSymbolStart = "376">
-               </Location>
-               <Location
-                  uuid = "63AEE64D-87A6-4A58-8896-59939EB3684D - 2be9ee8a64788764"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;__C.HMAccessory&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in LedLamp.HomeManager.showCamera(() -&gt; ()) -&gt; ()"
-                  moduleName = "LedLamp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/PHONARIK/LedLamp/Managers/HomeKitManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "233"
-                  endingLineNumber = "233"
-                  offsetFromSymbolStart = "376">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "CAF74F72-5161-41F1-BF45-182B4A8D8150"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "LedLamp/Managers/HomeKitManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "237"
-            endingLineNumber = "237"
-            landmarkName = "showCamera(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "CAF74F72-5161-41F1-BF45-182B4A8D8150 - 2be9ee8a647886e0"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;__C.HMAccessory&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in LedLamp.HomeManager.showCamera(() -&gt; ()) -&gt; ()"
-                  moduleName = "LedLamp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/PHONARIK/LedLamp/Managers/HomeKitManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "237"
-                  endingLineNumber = "237"
-                  offsetFromSymbolStart = "316">
-               </Location>
-               <Location
-                  uuid = "CAF74F72-5161-41F1-BF45-182B4A8D8150 - 2be9ee8a647886e0"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;__C.HMAccessory&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in LedLamp.HomeManager.showCamera(() -&gt; ()) -&gt; ()"
-                  moduleName = "LedLamp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/PHONARIK/LedLamp/Managers/HomeKitManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "237"
-                  endingLineNumber = "237"
-                  offsetFromSymbolStart = "192">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "0F706F01-5BA6-45EE-B9C4-83DD71D7BD5A"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LedLamp/Managers/DatabaseManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
             landmarkName = "update(_:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0F706F01-5BA6-45EE-B9C4-83DD71D7BD5A - ff86fa1237f86be5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LedLamp.DatabaseManager.update(LedLamp.LampModel) -&gt; ()"
+                  moduleName = "LedLamp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/PHONARIK/LedLamp/Managers/DatabaseManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "124"
+                  endingLineNumber = "124"
+                  offsetFromSymbolStart = "504">
+               </Location>
+               <Location
+                  uuid = "0F706F01-5BA6-45EE-B9C4-83DD71D7BD5A - ff86fa1237f86bc6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LedLamp.DatabaseManager.update(LedLamp.LampModel) -&gt; ()"
+                  moduleName = "LedLamp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/PHONARIK/LedLamp/Managers/DatabaseManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "125"
+                  endingLineNumber = "125"
+                  offsetFromSymbolStart = "504">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -222,10 +62,42 @@
             filePath = "LedLamp/Managers/DatabaseManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "126"
-            endingLineNumber = "126"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
             landmarkName = "update(_:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A7830765-4437-477E-8E34-B9B4C7FFB80F - ff86fa1237f86cdd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LedLamp.DatabaseManager.update(LedLamp.LampModel) -&gt; ()"
+                  moduleName = "LedLamp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/PHONARIK/LedLamp/Managers/DatabaseManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "132"
+                  endingLineNumber = "132"
+                  offsetFromSymbolStart = "224">
+               </Location>
+               <Location
+                  uuid = "A7830765-4437-477E-8E34-B9B4C7FFB80F - ff86fa1237f86cfc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LedLamp.DatabaseManager.update(LedLamp.LampModel) -&gt; ()"
+                  moduleName = "LedLamp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/PHONARIK/LedLamp/Managers/DatabaseManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "131"
+                  endingLineNumber = "131"
+                  offsetFromSymbolStart = "600">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -254,9 +126,405 @@
             filePath = "LedLamp/Classes/ViewControllers/ColorPickerViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
-            landmarkName = "colorPicked(by:)"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9BFEDF39-7A5E-4E15-BEB3-144BDEB43806"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LedLamp/Managers/DatabaseManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
+            landmarkName = "update(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C5BD6EA6-301A-4F00-BEB7-8BDF650E3789"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LedLamp/Managers/DatabaseManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
+            landmarkName = "update(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "85CF6EA1-445A-479A-91AB-C42540B39153"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LedLamp/Managers/DatabaseManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
+            landmarkName = "update(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0534E121-F492-48FD-BF7C-2ED4FFBAD0E0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LedLamp/Classes/Views/ScannerView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
+            landmarkName = "captureOutput(_:didOutput:from:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6586C4F0-446B-4662-AF7F-4822DF31ABA4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LedLamp/Managers/HomeKitManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "228"
+            endingLineNumber = "228"
+            landmarkName = "showCamera()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6586C4F0-446B-4662-AF7F-4822DF31ABA4 - 14fb21de2f6ff583"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "function signature specialization &lt;Arg[1] = Dead&gt; of LedLamp.MainViewController.addLightButtonDidTap(Any) -&gt; ()"
+                  moduleName = "LedLamp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/PHONARIK/LedLamp/Managers/HomeKitManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "228"
+                  endingLineNumber = "228"
+                  offsetFromSymbolStart = "116">
+               </Location>
+               <Location
+                  uuid = "6586C4F0-446B-4662-AF7F-4822DF31ABA4 - 5c954e7b37e19199"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in LedLamp.HomeManager.showCamera() -&gt; ()"
+                  moduleName = "LedLamp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/PHONARIK/LedLamp/Managers/HomeKitManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "228"
+                  endingLineNumber = "228"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  uuid = "6586C4F0-446B-4662-AF7F-4822DF31ABA4 - 5c954e7b37e19199"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in LedLamp.HomeManager.showCamera() -&gt; ()"
+                  moduleName = "LedLamp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/PHONARIK/LedLamp/Managers/HomeKitManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "228"
+                  endingLineNumber = "228"
+                  offsetFromSymbolStart = "84">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CAE91BDD-E6A4-4720-9B6E-B20C4A1DE8AD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LedLamp/Classes/ViewControllers/ColorPickerViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
+            landmarkName = "saveBtnDidTap(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "CAE91BDD-E6A4-4720-9B6E-B20C4A1DE8AD - 1ea88a60444a8b28"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LedLamp.ColorPickerViewController.saveBtnDidTap(Any) -&gt; ()"
+                  moduleName = "LedLamp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/PHONARIK/LedLamp/Classes/ViewControllers/ColorPickerViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "123"
+                  endingLineNumber = "123"
+                  offsetFromSymbolStart = "472">
+               </Location>
+               <Location
+                  uuid = "CAE91BDD-E6A4-4720-9B6E-B20C4A1DE8AD - 1ea88a60444a8b28"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LedLamp.ColorPickerViewController.saveBtnDidTap(Any) -&gt; ()"
+                  moduleName = "LedLamp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/PHONARIK/LedLamp/Classes/ViewControllers/ColorPickerViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "123"
+                  endingLineNumber = "123"
+                  offsetFromSymbolStart = "476">
+               </Location>
+               <Location
+                  uuid = "CAE91BDD-E6A4-4720-9B6E-B20C4A1DE8AD - 1ea88a60444a8b28"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LedLamp.ColorPickerViewController.saveBtnDidTap(Any) -&gt; ()"
+                  moduleName = "LedLamp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/PHONARIK/LedLamp/Classes/ViewControllers/ColorPickerViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "123"
+                  endingLineNumber = "123"
+                  offsetFromSymbolStart = "480">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2ACFB391-029C-4DD1-8FF4-179444850666"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LedLamp/Classes/ViewControllers/ColorPickerViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
+            landmarkName = "saveBtnDidTap(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2ACFB391-029C-4DD1-8FF4-179444850666 - 1ea88a60444a8bcd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LedLamp.ColorPickerViewController.saveBtnDidTap(Any) -&gt; ()"
+                  moduleName = "LedLamp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/PHONARIK/LedLamp/Classes/ViewControllers/ColorPickerViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "126"
+                  endingLineNumber = "126"
+                  offsetFromSymbolStart = "688">
+               </Location>
+               <Location
+                  uuid = "2ACFB391-029C-4DD1-8FF4-179444850666 - 1ea88a60444a8bcd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LedLamp.ColorPickerViewController.saveBtnDidTap(Any) -&gt; ()"
+                  moduleName = "LedLamp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/PHONARIK/LedLamp/Classes/ViewControllers/ColorPickerViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "126"
+                  endingLineNumber = "126"
+                  offsetFromSymbolStart = "680">
+               </Location>
+               <Location
+                  uuid = "2ACFB391-029C-4DD1-8FF4-179444850666 - 1ea88a60444a8bcd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LedLamp.ColorPickerViewController.saveBtnDidTap(Any) -&gt; ()"
+                  moduleName = "LedLamp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/PHONARIK/LedLamp/Classes/ViewControllers/ColorPickerViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "126"
+                  endingLineNumber = "126"
+                  offsetFromSymbolStart = "668">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "52EACA5F-DD8F-46F8-BDF9-9EF1897831AD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LedLamp/Classes/ViewControllers/ColorPickerViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
+            landmarkName = "saveBtnDidTap(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "52EACA5F-DD8F-46F8-BDF9-9EF1897831AD - 1ea88a60444a886e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LedLamp.ColorPickerViewController.saveBtnDidTap(Any) -&gt; ()"
+                  moduleName = "LedLamp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/PHONARIK/LedLamp/Classes/ViewControllers/ColorPickerViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "129"
+                  endingLineNumber = "129"
+                  offsetFromSymbolStart = "896">
+               </Location>
+               <Location
+                  uuid = "52EACA5F-DD8F-46F8-BDF9-9EF1897831AD - 1ea88a60444a886e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LedLamp.ColorPickerViewController.saveBtnDidTap(Any) -&gt; ()"
+                  moduleName = "LedLamp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/PHONARIK/LedLamp/Classes/ViewControllers/ColorPickerViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "129"
+                  endingLineNumber = "129"
+                  offsetFromSymbolStart = "868">
+               </Location>
+               <Location
+                  uuid = "52EACA5F-DD8F-46F8-BDF9-9EF1897831AD - 1ea88a60444a886e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LedLamp.ColorPickerViewController.saveBtnDidTap(Any) -&gt; ()"
+                  moduleName = "LedLamp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/PHONARIK/LedLamp/Classes/ViewControllers/ColorPickerViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "129"
+                  endingLineNumber = "129"
+                  offsetFromSymbolStart = "852">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3990D104-B192-4D74-8BC5-F5C1A2A908CC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LedLamp/Classes/ViewControllers/ColorPickerViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
+            landmarkName = "offBtnDidTap(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A526BC4A-6A78-4D47-AB49-94CF9C816A0D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LedLamp/Classes/ViewControllers/MainViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A526BC4A-6A78-4D47-AB49-94CF9C816A0D - 25fdd78f7abcca06"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool) -&gt; () in LedLamp.MainViewController.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "LedLamp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/PHONARIK/LedLamp/Classes/ViewControllers/MainViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "143"
+                  endingLineNumber = "143"
+                  offsetFromSymbolStart = "232">
+               </Location>
+               <Location
+                  uuid = "A526BC4A-6A78-4D47-AB49-94CF9C816A0D - 548a590aabbfd299"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (Swift.Bool) -&gt; () in LedLamp.MainViewController.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "LedLamp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/PHONARIK/LedLamp/Classes/ViewControllers/MainViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "142"
+                  endingLineNumber = "142"
+                  offsetFromSymbolStart = "92">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3654F621-74BA-429C-964A-A4E84F32384D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LedLamp/Managers/HomeKitManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "287"
+            endingLineNumber = "287"
+            landmarkName = "loadConnectedDevices()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

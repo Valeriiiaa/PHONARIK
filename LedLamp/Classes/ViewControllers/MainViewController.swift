@@ -45,6 +45,12 @@ class MainViewController: UIViewController {
             self.lightsTableView.reloadData()
         }
         
+        HomeManager.shared.itemDidAdded = { [weak self] hm in
+            guard let self else { return }
+            DatabaseManager.shared.save(LampModel(name: hm.name, deviceId: hm.uniqueIdentifier.uuidString, color: 0xE7FE55, isEnabled: false, accessory: hm))
+            ActionManager.shared.reload()
+        }
+        
         configureTableView()
     }
     
@@ -64,20 +70,7 @@ class MainViewController: UIViewController {
     }
   
     @IBAction func addLightButtonDidTap(_ sender: Any) {
-        let entrance = UIStoryboard(name: "ScanDeviceView", bundle: nil).instantiateViewController(identifier: "ScanDeviceView")
-        let navigationContorller = BottomSheetNavigationController(rootViewController: entrance, configuration: BottomSheetConfiguration(
-            cornerRadius: 40,
-            pullBarConfiguration: .hidden,
-            shadowConfiguration: .init(backgroundColor: UIColor(red: 34/255, green: 34/255, blue: 34/255, alpha: 0.46), blur: .regular)
-        ))
-        navigationContorller.navigationBar.isHidden = true
-        navigationContorller.view.backgroundColor = UIColor(red: 116/255, green: 116/255, blue: 116/255, alpha: 1)
-        presentBottomSheet(viewController: navigationContorller, configuration: BottomSheetConfiguration(
-            cornerRadius: 40,
-            pullBarConfiguration: .hidden,
-            shadowConfiguration: .init(backgroundColor: UIColor(red: 34/255, green: 34/255, blue: 34/255, alpha: 0.46), blur: .regular)
-        ))
-       
+        HomeManager.shared.showCamera()
     }
     
     @IBAction func settingsButtonDidTap(_ sender: Any) {
@@ -104,6 +97,9 @@ class MainViewController: UIViewController {
             DatabaseManager.shared.update(lightModel)
             ActionManager.shared.reload()
             
+            guard let accessory = lightModel.accessory else { return }
+            
+            HomeManager.shared.updateName(accessory, name: text, { _ in })
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         alertController.addAction(okAction)
@@ -126,6 +122,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         let entrance = UIStoryboard(name: "ColorPicker", bundle: nil).instantiateInitialViewController()
         entrance?.modalPresentationStyle = .fullScreen
         entrance?.modalTransitionStyle = .crossDissolve
+        print(light.accessory)
         (entrance as? ColorPickerViewController)?.lampModel = light
         present(entrance!, animated: true)
     }
@@ -141,6 +138,9 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         (cell as? MainScreenCell)?.switchValueChanged = { [unowned self] value in
             lightModel.isEnabled = value
             DatabaseManager.shared.update(lightModel)
+            lightModel.accessory?.getCharacteristic(forType: .power)?.writeValue(lightModel.isEnabled, completionHandler: { error in
+                print(error)
+            })
         }
         
         (cell as? MainScreenCell)?.menuDidTap = { [unowned self] in
@@ -154,6 +154,8 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
                     DispatchQueue.main.async {
                         DatabaseManager.shared.remove(lightModel.name)
                         ActionManager.shared.reload()
+                        guard let accessory = lightModel.accessory else { return }
+                        HomeManager.shared.removeDevice(accessory, { _ in })
                     }
                 }))
                 alert.addAction(UIAlertAction(title: "no".localized, style: .cancel))

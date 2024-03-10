@@ -10,6 +10,7 @@ import CoreData
 import HomeKit
 
 class RoomModel {
+    let roomId: String
     var name: String
     var background: Data?
     var lamps: String
@@ -20,7 +21,8 @@ class RoomModel {
         name
     }
     
-    init(name: String, background: Data? = nil, lamps: String, status: Bool, room: HMRoom? = nil) {
+    init(roomId: String, name: String, background: Data? = nil, lamps: String, status: Bool, room: HMRoom? = nil) {
+        self.roomId = roomId
         self.name = name
         self.background = background
         self.lamps = lamps
@@ -35,13 +37,15 @@ class LampModel {
     var room: String?
     var isEnabled: Bool
     var color: Int
+    var accessory: HMAccessory?
     
-    init(name: String, deviceId: String, room: String? = nil, color: Int, isEnabled: Bool) {
+    init(name: String, deviceId: String, room: String? = nil, color: Int, isEnabled: Bool, accessory: HMAccessory?) {
         self.name = name
         self.deviceId = deviceId
         self.room = room
         self.color = color
         self.isEnabled = isEnabled
+        self.accessory = accessory
     }
 }
 
@@ -186,12 +190,19 @@ class DatabaseManager: DatabaseManagerProtocol {
         let request: NSFetchRequest<LightLamp> = LightLamp.fetchRequest()
         do {
             let fetchedItems = try persistentContainer.viewContext.fetch(request)
-            
+            let devices = HomeManager.shared.loadConnectedDevices()
             var models: [LampModel] = []
+            print(devices.count)
+            print(fetchedItems.count)
+            print(devices.first?.uniqueIdentifier.uuidString)
+            print(fetchedItems.first?.deviceId)
             for item in fetchedItems {
-                models.append(LampModel(name: item.name ?? "", deviceId: item.deviceId ?? "", room: item.room, color: Int(item.color), isEnabled: item.isEnabled))
+                print(devices.first(where: { $0.uniqueIdentifier.uuidString == item.deviceId }))
+                models.append(LampModel(name: item.name ?? "", deviceId: item.deviceId ?? "", room: item.room, color: Int(item.color), isEnabled: item.isEnabled, accessory: devices.first(where: { $0.uniqueIdentifier.uuidString == item.deviceId })!))
             }
-
+            models.forEach({ item in
+                print(item.accessory!)
+            })
             return models
         } catch let error {
             print("Error fetching history \(error)")
@@ -204,13 +215,15 @@ class DatabaseManager: DatabaseManagerProtocol {
         let request: NSFetchRequest<MyRoom> = MyRoom.fetchRequest()
         do {
             let fetchedItems = try persistentContainer.viewContext.fetch(request)
-            
+            let rooms = HomeManager.shared.loadRooms()
             var models: [RoomModel] = []
             for item in fetchedItems {
-                models.append(RoomModel(name: item.name ?? "",
+                models.append(RoomModel(roomId: item.roomId ?? "",
+                                        name: item.name ?? "",
                                         background: item.background,
                                         lamps: item.lamps ?? "",
-                                        status: item.status))
+                                        status: item.status,
+                                        room: rooms.first(where: { $0.uniqueIdentifier.uuidString == item.roomId })))
             }
 
             return models

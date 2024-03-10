@@ -62,17 +62,10 @@ class AddRoomViewController: UIViewController {
         textFieldNameDevice.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
     }
     
-   
-    
     private func pushToNext(with image: UIImage) {
         let entrance = UIStoryboard(name: "RoomBottomSheets", bundle: nil).instantiateViewController(identifier: "ChoosenRoomViewController")
         (entrance as? ChoosenRoomViewController)?.roomsName = textFieldNameDevice.text ?? ""
         (entrance as? ChoosenRoomViewController)?.imageRoom = image
-//        presentBottomSheet(viewController: entrance, configuration: BottomSheetConfiguration(
-//            cornerRadius: 40,
-//            pullBarConfiguration: .hidden,
-//            shadowConfiguration: .init(backgroundColor: UIColor(red: 34/255, green: 34/255, blue: 34/255, alpha: 0.46), blur: .regular)
-//        ))
         navigationController?.pushViewController(entrance, animated: true)
     }
     

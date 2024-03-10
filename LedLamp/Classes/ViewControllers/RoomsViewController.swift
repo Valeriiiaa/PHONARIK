@@ -117,6 +117,9 @@ class RoomsViewController: UIViewController {
             roomModel.name = text
             DatabaseManager.shared.update(roomModel, oldName: oldName)
             ActionManager.shared.reload()
+            
+            guard let room = roomModel.room else { return }
+            HomeManager.shared.updateRoom(room, name: text, { _ in })
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         alertController.addAction(okAction)
@@ -134,7 +137,6 @@ class RoomsViewController: UIViewController {
         roomCollectionView.layoutIfNeeded()
         let layout = self.roomCollectionView.collectionViewLayout as! UPCarouselFlowLayout
         layout.spacingMode = UPCarouselFlowLayoutSpacingMode.fixed(spacing: 10)
-        
     }
     
     @IBAction func settingsDidTap(_ sender: Any) {
@@ -144,7 +146,6 @@ class RoomsViewController: UIViewController {
         present(entrance, animated: true)
     }
     
-   
     @IBAction func addRoomBtnDidTap(_ sender: Any) {
         let entrance = UIStoryboard(name: "RoomBottomSheets", bundle: nil).instantiateViewController(identifier: "AddRoomViewController")
         let navigationContorller = BottomSheetNavigationController(rootViewController: entrance, configuration: BottomSheetConfiguration(

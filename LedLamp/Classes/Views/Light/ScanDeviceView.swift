@@ -112,7 +112,8 @@ extension ScanDeviceView: AVCaptureMetadataOutputObjectsDelegate {
         if let metadataObject = metadataObjects.first as? AVMetadataMachineReadableCodeObject {
             if metadataObject.type == .qr, let qrCode = metadataObject.stringValue {
                 DispatchQueue.main.async {
-                    self.showLightning(scannedValue: qrCode)
+                    
+                   
                 }
                 captureSession?.stopRunning()
             }
