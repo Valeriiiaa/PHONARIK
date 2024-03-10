@@ -192,17 +192,10 @@ class DatabaseManager: DatabaseManagerProtocol {
             let fetchedItems = try persistentContainer.viewContext.fetch(request)
             let devices = HomeManager.shared.loadConnectedDevices()
             var models: [LampModel] = []
-            print(devices.count)
-            print(fetchedItems.count)
-            print(devices.first?.uniqueIdentifier.uuidString)
-            print(fetchedItems.first?.deviceId)
             for item in fetchedItems {
                 print(devices.first(where: { $0.uniqueIdentifier.uuidString == item.deviceId }))
-                models.append(LampModel(name: item.name ?? "", deviceId: item.deviceId ?? "", room: item.room, color: Int(item.color), isEnabled: item.isEnabled, accessory: devices.first(where: { $0.uniqueIdentifier.uuidString == item.deviceId })!))
+                models.append(LampModel(name: item.name ?? "", deviceId: item.deviceId ?? "", room: item.room, color: Int(item.color), isEnabled: item.isEnabled, accessory: devices.first(where: { $0.uniqueIdentifier.uuidString == item.deviceId })))
             }
-            models.forEach({ item in
-                print(item.accessory!)
-            })
             return models
         } catch let error {
             print("Error fetching history \(error)")
