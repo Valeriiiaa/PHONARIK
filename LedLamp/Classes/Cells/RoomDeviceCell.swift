@@ -9,6 +9,7 @@ import UIKit
 
 class RoomDeviceCell: UITableViewCell {
    
+    @IBOutlet weak var chooseDeviceButton: UIButton!
     @IBOutlet weak var hexLabel: UILabel!
     @IBOutlet weak var intensityLabel: UILabel!
     @IBOutlet weak var bckgroundCellView: UIView!
@@ -31,7 +32,9 @@ class RoomDeviceCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-   
+    @IBAction func chooseDeviceBtnDidTap(_ sender: Any) {
+    }
+    
     @IBAction func menuBtnDIdTap(_ sender: Any) {
         menuButtonDidTap?()
     }
