@@ -10,6 +10,8 @@ import BottomSheet
 
 class SyncWithMusicViewController: UIViewController {
    
+  
+    @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var playbackLightBtn: UIButton!
     @IBOutlet weak var syncWithMusicLabel: UILabel!
     @IBOutlet weak var selectLightButton: UIButton!

@@ -10,6 +10,7 @@ import BottomSheet
 
 class MusicIphoneViewController: UIViewController {
 
+    @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var playBackLightBtn: UIButton!
     @IBOutlet weak var musicOnIPhoneLabel: UILabel!
     @IBOutlet weak var selectLightButton: UIButton!
