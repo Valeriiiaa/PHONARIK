@@ -62,6 +62,8 @@
 		F6B8B84A2B94C210001FE671 /* RoomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B8B8492B94C210001FE671 /* RoomsViewController.swift */; };
 		F6B8B84C2B94C6E3001FE671 /* AddedRoomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6B8B84B2B94C6E3001FE671 /* AddedRoomCell.xib */; };
 		F6B8B84E2B94C711001FE671 /* AddedRoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B8B84D2B94C711001FE671 /* AddedRoomCell.swift */; };
+		F6BED5982B9F7CA400E14F3C /* RoomDeviceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6BED5972B9F7CA400E14F3C /* RoomDeviceCell.xib */; };
+		F6BED59A2B9F7CC500E14F3C /* RoomDeviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BED5992B9F7CC500E14F3C /* RoomDeviceCell.swift */; };
 		F6C91EE02B94D7C3005FB008 /* AddLightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C91EDF2B94D7C3005FB008 /* AddLightViewController.swift */; };
 		F6C91EE22B961327005FB008 /* MusicPlayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6C91EE12B961327005FB008 /* MusicPlayer.storyboard */; };
 		F6C91EE52B96145C005FB008 /* PlaybackLightView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6C91EE42B96145C005FB008 /* PlaybackLightView.storyboard */; };
@@ -176,6 +178,8 @@
 		F6B8B8492B94C210001FE671 /* RoomsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsViewController.swift; sourceTree = "<group>"; };
 		F6B8B84B2B94C6E3001FE671 /* AddedRoomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddedRoomCell.xib; sourceTree = "<group>"; };
 		F6B8B84D2B94C711001FE671 /* AddedRoomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddedRoomCell.swift; sourceTree = "<group>"; };
+		F6BED5972B9F7CA400E14F3C /* RoomDeviceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomDeviceCell.xib; sourceTree = "<group>"; };
+		F6BED5992B9F7CC500E14F3C /* RoomDeviceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomDeviceCell.swift; sourceTree = "<group>"; };
 		F6C91EDF2B94D7C3005FB008 /* AddLightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLightViewController.swift; sourceTree = "<group>"; };
 		F6C91EE12B961327005FB008 /* MusicPlayer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MusicPlayer.storyboard; sourceTree = "<group>"; };
 		F6C91EE42B96145C005FB008 /* PlaybackLightView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PlaybackLightView.storyboard; sourceTree = "<group>"; };
@@ -541,6 +545,7 @@
 				F6A0BC172B8CA5CA0084A0E8 /* SettingsCell.xib */,
 				F6B176DB2B91EA4300932231 /* MainScreenCell.xib */,
 				F6505C4D2B936C3000D47128 /* SelectAccessoryCell.xib */,
+				F6BED5972B9F7CA400E14F3C /* RoomDeviceCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -552,6 +557,7 @@
 				F6A0BC192B8CA5DC0084A0E8 /* SettingsCell.swift */,
 				F6B176DE2B91EA5400932231 /* MainScreenCell.swift */,
 				F6505C4F2B936C4B00D47128 /* SelectAccessoryCell.swift */,
+				F6BED5992B9F7CC500E14F3C /* RoomDeviceCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -731,6 +737,7 @@
 				F6C91EE52B96145C005FB008 /* PlaybackLightView.storyboard in Resources */,
 				F6C91EEC2B965424005FB008 /* CollectionImages.storyboard in Resources */,
 				F6EB00FF2B8C9FBB005139CC /* Main.storyboard in Resources */,
+				F6BED5982B9F7CA400E14F3C /* RoomDeviceCell.xib in Resources */,
 				F6B176E12B91EED400932231 /* ColorPicker.storyboard in Resources */,
 				F6A0BC162B8CA4DD0084A0E8 /* Settings.storyboard in Resources */,
 			);
@@ -764,6 +771,7 @@
 				F6E415A92B9076E600D8B418 /* LightingDeviceViewController.swift in Sources */,
 				F6505C572B9372C100D47128 /* AddRoomViewController.swift in Sources */,
 				F62DE92A2B9A3B39002F8FDA /* UtilityExtensions.swift in Sources */,
+				F6BED59A2B9F7CC500E14F3C /* RoomDeviceCell.swift in Sources */,
 				F6505C4A2B936A2800D47128 /* SelectAccessoryViewController.swift in Sources */,
 				F6EB00FC2B8C9FBB005139CC /* SettingsViewController.swift in Sources */,
 				F62DE9332B9A4488002F8FDA /* ThirdPageViewController.swift in Sources */,

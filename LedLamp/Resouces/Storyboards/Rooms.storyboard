@@ -238,11 +238,17 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="hnN-H1-11D">
+                                <rect key="frame" x="16" y="235" width="361" height="583"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5eJ-OG-KRj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="5eJ-OG-KRj" firstAttribute="trailing" secondItem="hnN-H1-11D" secondAttribute="trailing" constant="16" id="1Js-ud-0vs"/>
                             <constraint firstItem="5eJ-OG-KRj" firstAttribute="trailing" secondItem="iry-NS-Eyr" secondAttribute="trailing" constant="77" id="1R1-kx-InD"/>
+                            <constraint firstItem="hnN-H1-11D" firstAttribute="leading" secondItem="5eJ-OG-KRj" secondAttribute="leading" constant="16" id="5j2-Sx-fR2"/>
                             <constraint firstItem="eTz-I7-XYZ" firstAttribute="leading" secondItem="5eJ-OG-KRj" secondAttribute="leading" constant="20" id="60d-7A-HUr"/>
                             <constraint firstItem="iry-NS-Eyr" firstAttribute="top" secondItem="eTz-I7-XYZ" secondAttribute="bottom" constant="32.329999999999998" id="7mW-gp-HVe"/>
                             <constraint firstItem="796-7T-w6u" firstAttribute="top" secondItem="UYl-px-PP8" secondAttribute="bottom" constant="8" id="Aq5-xn-WU9"/>
@@ -254,6 +260,7 @@
                             <constraint firstItem="9Yk-gc-jHG" firstAttribute="leading" secondItem="5eJ-OG-KRj" secondAttribute="leading" id="ShN-6o-Xw4"/>
                             <constraint firstAttribute="bottom" secondItem="9Yk-gc-jHG" secondAttribute="bottom" id="Slx-3A-xbn"/>
                             <constraint firstItem="9Yk-gc-jHG" firstAttribute="top" secondItem="Eyj-CV-gE1" secondAttribute="top" id="WKk-bY-sp1"/>
+                            <constraint firstItem="hnN-H1-11D" firstAttribute="bottom" secondItem="Eyj-CV-gE1" secondAttribute="bottomMargin" id="X1a-w2-MTp"/>
                             <constraint firstItem="gZt-uu-CZY" firstAttribute="top" secondItem="5eJ-OG-KRj" secondAttribute="top" constant="8" id="Y89-2M-oDU"/>
                             <constraint firstItem="5eJ-OG-KRj" firstAttribute="trailing" secondItem="2ZY-tb-PUL" secondAttribute="trailing" constant="15" id="ZwX-2a-LLv"/>
                             <constraint firstItem="2ZY-tb-PUL" firstAttribute="top" secondItem="5eJ-OG-KRj" secondAttribute="top" constant="8" id="eZ1-uM-WCu"/>
@@ -261,6 +268,7 @@
                             <constraint firstItem="5eJ-OG-KRj" firstAttribute="bottom" secondItem="iry-NS-Eyr" secondAttribute="bottom" constant="65" id="hWj-lB-Pmt"/>
                             <constraint firstItem="796-7T-w6u" firstAttribute="leading" secondItem="5eJ-OG-KRj" secondAttribute="leading" constant="16" id="hxV-OS-W3m"/>
                             <constraint firstItem="5eJ-OG-KRj" firstAttribute="trailing" secondItem="9Yk-gc-jHG" secondAttribute="trailing" id="kNh-xt-cr4"/>
+                            <constraint firstItem="hnN-H1-11D" firstAttribute="top" secondItem="9cV-Nz-b0f" secondAttribute="bottom" constant="16" id="l4a-Kx-irS"/>
                             <constraint firstItem="gZt-uu-CZY" firstAttribute="leading" secondItem="5eJ-OG-KRj" secondAttribute="leading" constant="16" id="mLM-Fe-9Bx"/>
                             <constraint firstItem="zck-K6-joX" firstAttribute="height" secondItem="Eyj-CV-gE1" secondAttribute="height" multiplier="0.194836" id="rdn-3o-KZw"/>
                             <constraint firstItem="5eJ-OG-KRj" firstAttribute="trailing" secondItem="eTz-I7-XYZ" secondAttribute="trailing" constant="20" id="tDi-F3-7Ce"/>
@@ -271,6 +279,7 @@
                         <outlet property="devicesConnectedLabel" destination="UYl-px-PP8" id="T0m-bE-AbC"/>
                         <outlet property="lampImage" destination="zck-K6-joX" id="M3W-5b-px7"/>
                         <outlet property="roomNameLabel" destination="796-7T-w6u" id="1hi-xI-c9V"/>
+                        <outlet property="tableView" destination="hnN-H1-11D" id="SSA-RB-l5Q"/>
                         <outlet property="youDontHaveAnyLightLabel" destination="eTz-I7-XYZ" id="KD7-8i-jvR"/>
                     </connections>
                 </viewController>
