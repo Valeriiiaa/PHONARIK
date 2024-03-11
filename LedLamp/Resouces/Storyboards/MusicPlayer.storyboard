@@ -10,6 +10,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="ChakraPetch-Medium.ttf">
+            <string>ChakraPetch-Medium</string>
+        </array>
         <array key="ChakraPetch-Regular.ttf">
             <string>ChakraPetch-Regular</string>
         </array>
@@ -166,7 +169,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="auj-bZ-0G2">
                                 <rect key="frame" x="16" y="67" width="64" height="64"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="backButton"/>
+                                <state key="normal" image="backButtonMusic"/>
                                 <connections>
                                     <action selector="backButtonDidTap:" destination="BV5-Xl-OD1" eventType="touchUpInside" id="DJI-KC-dKn"/>
                                 </connections>
@@ -232,6 +235,7 @@
                             <constraint firstItem="Khs-uv-JWv" firstAttribute="trailing" secondItem="ooc-jw-t4B" secondAttribute="trailing" constant="15" id="DJ1-0L-Jgr"/>
                             <constraint firstItem="4zM-0f-3lr" firstAttribute="leading" secondItem="Khs-uv-JWv" secondAttribute="leading" constant="16" id="DTi-Yn-q2M"/>
                             <constraint firstItem="auj-bZ-0G2" firstAttribute="leading" secondItem="Khs-uv-JWv" secondAttribute="leading" constant="16" id="Efd-KI-SMk"/>
+                            <constraint firstItem="Khs-uv-JWv" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3kF-k8-Vb0" secondAttribute="trailing" constant="20" id="Ii3-tb-EWm"/>
                             <constraint firstItem="ooc-jw-t4B" firstAttribute="top" secondItem="Khs-uv-JWv" secondAttribute="top" constant="10" id="M99-x5-3f3"/>
                             <constraint firstItem="gse-W2-nSD" firstAttribute="centerX" secondItem="CwS-iA-xgX" secondAttribute="centerX" id="RxS-Gj-hBc"/>
                             <constraint firstAttribute="bottom" secondItem="9Wf-9k-80u" secondAttribute="bottom" id="S6W-KK-uKp"/>
@@ -286,7 +290,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w6D-7K-rG2">
                                 <rect key="frame" x="16" y="67" width="64" height="64"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="backButton"/>
+                                <state key="normal" image="backButtonMusic"/>
                                 <connections>
                                     <action selector="backBtnDidTap:" destination="Gqq-OD-hmE" eventType="touchUpInside" id="vSL-9y-akf"/>
                                 </connections>
@@ -359,6 +363,7 @@
                             <constraint firstItem="w6D-7K-rG2" firstAttribute="top" secondItem="LeG-7N-OO9" secondAttribute="top" constant="8" id="jCH-Dd-muJ"/>
                             <constraint firstItem="LeG-7N-OO9" firstAttribute="bottom" secondItem="rXF-im-HS3" secondAttribute="bottom" constant="87" id="joq-Dk-gNu"/>
                             <constraint firstItem="CEA-Kx-Hdo" firstAttribute="top" secondItem="Jyk-vv-as8" secondAttribute="bottom" constant="8" id="lA4-UY-Te2"/>
+                            <constraint firstItem="LeG-7N-OO9" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="CEA-Kx-Hdo" secondAttribute="trailing" constant="20" id="mZZ-0g-GbZ"/>
                             <constraint firstItem="CEA-Kx-Hdo" firstAttribute="leading" secondItem="LeG-7N-OO9" secondAttribute="leading" constant="16" id="pmK-5W-gFc"/>
                             <constraint firstItem="2Bp-Ui-1Jk" firstAttribute="top" secondItem="L86-Ik-ZNr" secondAttribute="top" id="uhE-pD-vWN"/>
                             <constraint firstItem="ceq-AF-oqV" firstAttribute="top" secondItem="LeG-7N-OO9" secondAttribute="top" constant="10" id="vZc-Gv-F48"/>
@@ -374,11 +379,147 @@
             </objects>
             <point key="canvasLocation" x="4509" y="-2"/>
         </scene>
+        <!--Music Add Light View Controller-->
+        <scene sceneID="M5Y-M8-gki">
+            <objects>
+                <viewController storyboardIdentifier="MusicAddLightViewController" id="BqP-NY-Jqv" customClass="MusicAddLightViewController" customModule="LedLamp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rvP-8U-fWG">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="musicOnPhoneBackground" translatesAutoresizingMaskIntoConstraints="NO" id="6dF-fV-Us0">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2LT-9k-Pbg">
+                                <rect key="frame" x="16" y="67" width="64" height="64"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="backButtonMusic"/>
+                                <connections>
+                                    <action selector="backButtonDidTap:" destination="BV5-Xl-OD1" eventType="touchUpInside" id="BbA-IS-Ax8"/>
+                                    <action selector="backButtonDidTap:" destination="BqP-NY-Jqv" eventType="touchUpInside" id="IiV-Iq-naY"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lampMain" translatesAutoresizingMaskIntoConstraints="NO" id="Ztr-qO-mWh">
+                                <rect key="frame" x="126.66666666666669" y="283.33333333333331" width="140" height="166"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You don’t have any smart-lights" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="knE-TY-8m4">
+                                <rect key="frame" x="20" y="465.33333333333331" width="353" height="23.666666666666686"/>
+                                <fontDescription key="fontDescription" name="ChakraPetch-Regular" family="Chakra Petch" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="white" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Evp-Os-YNu">
+                                <rect key="frame" x="16" y="234.33333333333331" width="361" height="617.66666666666674"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e8f-cz-33V">
+                                <rect key="frame" x="30" y="521" width="333" height="72"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YXa-BY-dVt">
+                                        <rect key="frame" x="271" y="10" width="52" height="52"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="addBtn"/>
+                                        <connections>
+                                            <action selector="addLightBtnDidTap:" destination="BqP-NY-Jqv" eventType="touchUpInside" id="atp-le-Rwb"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add light" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lRy-QA-eER">
+                                        <rect key="frame" x="27.999999999999996" y="26" width="61.666666666666657" height="20"/>
+                                        <fontDescription key="fontDescription" name="ChakraPetch-Medium" family="Chakra Petch" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="Background(#222222)"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="YXa-BY-dVt" secondAttribute="trailing" constant="10" id="9RR-Yg-91Z"/>
+                                    <constraint firstAttribute="bottom" secondItem="YXa-BY-dVt" secondAttribute="bottom" constant="10" id="IQK-kV-H1T"/>
+                                    <constraint firstAttribute="height" constant="72" id="KEY-vl-lIA"/>
+                                    <constraint firstItem="YXa-BY-dVt" firstAttribute="top" secondItem="e8f-cz-33V" secondAttribute="top" constant="10" id="bBA-uY-XMu"/>
+                                    <constraint firstItem="lRy-QA-eER" firstAttribute="leading" secondItem="e8f-cz-33V" secondAttribute="leading" constant="28" id="c28-Yv-n7s"/>
+                                    <constraint firstAttribute="bottom" secondItem="lRy-QA-eER" secondAttribute="bottom" constant="26" id="c3v-A4-YZw"/>
+                                    <constraint firstItem="lRy-QA-eER" firstAttribute="top" secondItem="e8f-cz-33V" secondAttribute="top" constant="26" id="u55-6f-lYD"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="CD0-o9-BRr" appends="YES" id="EMG-RH-lT2"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lpQ-LR-wO4">
+                                <rect key="frame" x="16" y="196.33333333333334" width="224" height="22"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="   Playback light reflection" image="question">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="playBackLightBtnDidTap:" destination="BV5-Xl-OD1" eventType="touchUpInside" id="i6K-ml-0P0"/>
+                                    <action selector="playbackBtnDidTap:" destination="BqP-NY-Jqv" eventType="touchUpInside" id="3dD-Yc-rnl"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select light" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GJ0-XH-PDp">
+                                <rect key="frame" x="16" y="157" width="357" height="31.333333333333343"/>
+                                <fontDescription key="fontDescription" name="ChakraPetch-Regular" family="Chakra Petch" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7Ix-2h-Moh"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GJ0-XH-PDp" firstAttribute="leading" secondItem="7Ix-2h-Moh" secondAttribute="leading" constant="16" id="2hG-kD-CS8"/>
+                            <constraint firstItem="e8f-cz-33V" firstAttribute="top" secondItem="knE-TY-8m4" secondAttribute="bottom" constant="32" id="3Aw-j7-YmJ"/>
+                            <constraint firstItem="7Ix-2h-Moh" firstAttribute="trailing" secondItem="knE-TY-8m4" secondAttribute="trailing" constant="20" id="5j4-JK-uUC"/>
+                            <constraint firstItem="Evp-Os-YNu" firstAttribute="top" secondItem="lpQ-LR-wO4" secondAttribute="bottom" constant="16" id="951-dW-XJ8"/>
+                            <constraint firstItem="7Ix-2h-Moh" firstAttribute="trailing" secondItem="GJ0-XH-PDp" secondAttribute="trailing" constant="20" id="CCj-S9-HTq"/>
+                            <constraint firstAttribute="bottom" secondItem="Evp-Os-YNu" secondAttribute="bottom" id="D5q-Ms-AWM"/>
+                            <constraint firstItem="Ztr-qO-mWh" firstAttribute="top" secondItem="lpQ-LR-wO4" secondAttribute="bottom" constant="65" id="DME-wf-v9s"/>
+                            <constraint firstItem="e8f-cz-33V" firstAttribute="leading" secondItem="7Ix-2h-Moh" secondAttribute="leading" constant="30" id="J7A-zq-oSy"/>
+                            <constraint firstItem="2LT-9k-Pbg" firstAttribute="leading" secondItem="7Ix-2h-Moh" secondAttribute="leading" constant="16" id="KSM-Gh-9bD"/>
+                            <constraint firstItem="knE-TY-8m4" firstAttribute="top" secondItem="Ztr-qO-mWh" secondAttribute="bottom" constant="16" id="Rbg-cx-nGZ"/>
+                            <constraint firstItem="6dF-fV-Us0" firstAttribute="top" secondItem="rvP-8U-fWG" secondAttribute="top" id="Y8b-Da-FMi"/>
+                            <constraint firstItem="Evp-Os-YNu" firstAttribute="leading" secondItem="7Ix-2h-Moh" secondAttribute="leading" constant="16" id="ZWR-NN-xvh"/>
+                            <constraint firstItem="7Ix-2h-Moh" firstAttribute="trailing" secondItem="6dF-fV-Us0" secondAttribute="trailing" id="bOA-8h-kkA"/>
+                            <constraint firstItem="lpQ-LR-wO4" firstAttribute="top" secondItem="GJ0-XH-PDp" secondAttribute="bottom" constant="8" id="bwX-lZ-DgL"/>
+                            <constraint firstItem="2LT-9k-Pbg" firstAttribute="top" secondItem="7Ix-2h-Moh" secondAttribute="top" constant="8" id="dTH-1P-9G0"/>
+                            <constraint firstItem="6dF-fV-Us0" firstAttribute="leading" secondItem="7Ix-2h-Moh" secondAttribute="leading" id="dTw-1j-NKZ"/>
+                            <constraint firstItem="knE-TY-8m4" firstAttribute="leading" secondItem="7Ix-2h-Moh" secondAttribute="leading" constant="20" id="f2u-v6-I1c"/>
+                            <constraint firstItem="lpQ-LR-wO4" firstAttribute="leading" secondItem="7Ix-2h-Moh" secondAttribute="leading" constant="16" id="gKX-n5-ZUI"/>
+                            <constraint firstItem="7Ix-2h-Moh" firstAttribute="trailing" secondItem="Evp-Os-YNu" secondAttribute="trailing" constant="16" id="h8j-F2-xZd"/>
+                            <constraint firstAttribute="bottom" secondItem="6dF-fV-Us0" secondAttribute="bottom" id="lRy-UZ-bvO"/>
+                            <constraint firstItem="7Ix-2h-Moh" firstAttribute="trailing" secondItem="e8f-cz-33V" secondAttribute="trailing" constant="30" id="oZH-na-Jcc"/>
+                            <constraint firstItem="Ztr-qO-mWh" firstAttribute="height" secondItem="rvP-8U-fWG" secondAttribute="height" multiplier="0.194836" id="qST-BI-vr9"/>
+                            <constraint firstItem="GJ0-XH-PDp" firstAttribute="top" secondItem="2LT-9k-Pbg" secondAttribute="bottom" constant="26" id="qVq-8R-eXv"/>
+                            <constraint firstItem="Ztr-qO-mWh" firstAttribute="centerX" secondItem="rvP-8U-fWG" secondAttribute="centerX" id="uqe-zA-7aT"/>
+                            <constraint firstItem="7Ix-2h-Moh" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="lpQ-LR-wO4" secondAttribute="trailing" constant="20" id="xSE-mu-XmD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="2HT-mQ-5hR"/>
+                    <connections>
+                        <outlet property="addLightLabel" destination="lRy-QA-eER" id="w8b-Nu-ZRv"/>
+                        <outlet property="backgroundAddLight" destination="e8f-cz-33V" id="rkw-XI-Yup"/>
+                        <outlet property="playBackButton" destination="lpQ-LR-wO4" id="Zi6-aq-ZRM"/>
+                        <outlet property="selectLightLabel" destination="GJ0-XH-PDp" id="MqR-Ac-k3Y"/>
+                        <outlet property="tableView" destination="Evp-Os-YNu" id="fuZ-9W-8mF"/>
+                        <outlet property="youDontHaveLightsLabel" destination="knE-TY-8m4" id="tD9-d4-Me8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SYu-h4-Hlf" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="CD0-o9-BRr">
+                    <connections>
+                        <action selector="addLightBtnDidTap:" destination="BqP-NY-Jqv" id="nHy-pC-IRI"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2826.7175572519081" y="686.61971830985919"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="addBtn" width="52" height="52"/>
         <image name="aheadMusic" width="48" height="48"/>
-        <image name="backButton" width="64" height="64"/>
+        <image name="backButtonMusic" width="64" height="64"/>
         <image name="backMusic" width="48" height="48"/>
+        <image name="lampMain" width="140" height="166"/>
         <image name="mainBackground" width="390" height="844"/>
         <image name="musicOnIphone" width="176" height="170"/>
         <image name="musicOnPhoneBackground" width="390" height="844"/>
