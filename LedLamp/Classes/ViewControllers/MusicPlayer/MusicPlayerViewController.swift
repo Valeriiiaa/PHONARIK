@@ -32,12 +32,16 @@ class MusicPlayerViewController: UIViewController {
     
     @IBAction func syncWithMusicBtnDidTap(_ sender: Any) {
         let entrance = UIStoryboard(name: "MusicPlayer", bundle: nil).instantiateViewController(withIdentifier: "SyncWithMusicViewController")
-        navigationController?.pushViewController(entrance, animated: true)
+        entrance.modalPresentationStyle = .fullScreen
+        entrance.modalTransitionStyle = .coverVertical
+        present(entrance, animated: true)
     }
    
     @IBAction func musicOnIphoneBtnDidTap(_ sender: Any) {
         let entrance = UIStoryboard(name: "MusicPlayer", bundle: nil).instantiateViewController(withIdentifier: "MusicIphoneViewController")
-        navigationController?.pushViewController(entrance, animated: true)
+        entrance.modalPresentationStyle = .fullScreen
+        entrance.modalTransitionStyle = .coverVertical
+        present(entrance, animated: true)
     }
     
     

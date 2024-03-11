@@ -10,6 +10,8 @@ import BottomSheet
 
 class MusicAddLightViewController: UIViewController {
    
+    @IBOutlet weak var lampImageView: UIImageView!
+    @IBOutlet weak var plusButton: UIButton!
     @IBOutlet weak var buttonTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var youDontHaveLightsLabel: UILabel!
     @IBOutlet weak var playBackButton: UIButton!
@@ -17,6 +19,12 @@ class MusicAddLightViewController: UIViewController {
     @IBOutlet weak var addLightLabel: UILabel!
     @IBOutlet weak var backgroundAddLight: UIView!
     @IBOutlet weak var tableView: UITableView!
+    
+    var selectedLamps = [LampModel]()
+    
+    var image = ["light1", "light2", "light3"]
+    
+    var lights = [LampModel]()
     
     var bottomButtonConstraint: NSLayoutConstraint!
     let homeKitManager = HomeManager.shared
@@ -27,13 +35,29 @@ class MusicAddLightViewController: UIViewController {
         selectLightLabel.text = "selectLight".localized
         addLightLabel.text = "addLight".localized
         youDontHaveLightsLabel.text = "youDontHaveLight".localized
+        backgroundAddLight.layer.cornerRadius = 30
+        backgroundAddLight.layer.masksToBounds = true
         
         tableView.register(UINib(nibName: "RoomDeviceCell", bundle: nil), forCellReuseIdentifier: "RoomDeviceCell")
         tableView.dataSource = self
         tableView.delegate = self
         
+        lights = DatabaseManager.shared.load()
+        configure()
+        configureTableView()
+        
+        ActionManager.shared.reloadData.append { [weak self] in
+            guard let self else { return }
+            self.configure()
+            self.configureTableView()
+            self.tableView.reloadData()
+        }
+        
     }
-   
+    @IBAction func plusBtnDidTap(_ sender: Any) {
+        HomeManager.shared.showCamera()
+    }
+    
     @IBAction func playbackBtnDidTap(_ sender: Any) {
         let entrance = UIStoryboard(name: "PlaybackLightView", bundle: nil).instantiateViewController(identifier: "PlaybackLightViewController")
         let navigationContorller = BottomSheetNavigationController(rootViewController: entrance, configuration: BottomSheetConfiguration(
@@ -49,9 +73,15 @@ class MusicAddLightViewController: UIViewController {
             shadowConfiguration: .init(backgroundColor: UIColor(red: 34/255, green: 34/255, blue: 34/255, alpha: 0.46), blur: .regular)
         ))
     }
+    
+    private func configure() {
+        backgroundAddLight.isHidden = !lights.isEmpty
+        plusButton.isHidden = lights.isEmpty
+        tableView.isHidden = lights.isEmpty
+    }
 
     @IBAction func backButtonDidTap(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
+        dismiss(animated: true)
     }
     
     @IBAction func addLightBtnDidTap(_ sender: Any) {
@@ -59,18 +89,11 @@ class MusicAddLightViewController: UIViewController {
     }
     
     private func configureTableView() {
-        let isEmptyLights = DatabaseManager.shared.load().isEmpty
+        let isEmptyLights = lights.isEmpty
         tableView.showsVerticalScrollIndicator = false
         tableView.contentInset = .init(top: 0, left: 0, bottom: 100, right: 0)
-        tableView.isHidden = isEmptyLights
-        tableView.isHidden = !isEmptyLights
         youDontHaveLightsLabel.isHidden = !isEmptyLights
-        buttonTopConstraint.isActive = isEmptyLights
-        bottomButtonConstraint?.isActive = false
-        if !isEmptyLights {
-            bottomButtonConstraint = backgroundAddLight.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16)
-            bottomButtonConstraint.isActive = true
-        }
+        lampImageView.isHidden = !isEmptyLights
     }
     func editName(lightModel: LampModel) {
         let alertController = UIAlertController(title: "New Room", message: "Please enter a room name", preferredStyle: .alert)
@@ -105,19 +128,32 @@ class MusicAddLightViewController: UIViewController {
 extension MusicAddLightViewController: UITableViewDelegate, UITableViewDataSource {
    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        DatabaseManager.shared.load().count
+        lights.count
     }
    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         UITableView.automaticDimension
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let lamp = lights[indexPath.row]
+        guard selectedLamps.contains(where: { $0.deviceId == lamp.deviceId }) else {
+            selectedLamps.append(lamp)
+            tableView.reloadData()
+            return
+        }
+        selectedLamps.removeAll(where: { $0.deviceId == lamp.deviceId })
+        tableView.reloadData()
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RoomDeviceCell", for: indexPath)
-        let lightModel = DatabaseManager.shared.load()[indexPath.row]
-        (cell as? RoomDeviceCell)?.configure(imageDevice: UIImage(), stateLabel: lightModel.isEnabled, hexLabel: UIColor(hex: lightModel.color).hexValue(), instensityLabel: <#T##String#>)
+        let lightModel = lights[indexPath.row]
+        let random = Int.random(in: 0...2)
+        let image = UIImage(named: image[random]) ?? UIImage()
+        (cell as? RoomDeviceCell)?.configure(deviceName: lightModel.name, imageDevice: image, stateLabel: lightModel.isEnabled, hexLabel: UIColor(hex: lightModel.color).hexValue(), instensityLabel: "", isSelected: selectedLamps.contains(where: { $0.deviceId == lightModel.deviceId }))
         
-        (cell as? MainScreenCell)?.switchValueChanged = { [unowned self] value in
+        (cell as? RoomDeviceCell)?.switchValueChanged = { value in
             lightModel.isEnabled = value
             DatabaseManager.shared.update(lightModel)
             lightModel.accessory?.getCharacteristic(forType: .power)?.writeValue(lightModel.isEnabled, completionHandler: { error in

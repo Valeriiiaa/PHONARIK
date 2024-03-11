@@ -442,7 +442,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="musicOnPhoneBackground" translatesAutoresizingMaskIntoConstraints="NO" id="6dF-fV-Us0">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="musicOnPhoneBackground" translatesAutoresizingMaskIntoConstraints="NO" id="6dF-fV-Us0">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2LT-9k-Pbg">
@@ -518,9 +518,17 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mcU-FJ-90b">
+                                <rect key="frame" x="257" y="67" width="120" height="64"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="plusButton"/>
+                                <connections>
+                                    <action selector="plusBtnDidTap:" destination="BqP-NY-Jqv" eventType="touchUpInside" id="iWS-9N-RaJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7Ix-2h-Moh"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="GJ0-XH-PDp" firstAttribute="leading" secondItem="7Ix-2h-Moh" secondAttribute="leading" constant="16" id="2hG-kD-CS8"/>
                             <constraint firstItem="e8f-cz-33V" firstAttribute="top" secondItem="knE-TY-8m4" secondAttribute="bottom" constant="32" id="3Aw-j7-YmJ"/>
@@ -532,6 +540,7 @@
                             <constraint firstItem="e8f-cz-33V" firstAttribute="leading" secondItem="7Ix-2h-Moh" secondAttribute="leading" constant="30" id="J7A-zq-oSy"/>
                             <constraint firstItem="2LT-9k-Pbg" firstAttribute="leading" secondItem="7Ix-2h-Moh" secondAttribute="leading" constant="16" id="KSM-Gh-9bD"/>
                             <constraint firstItem="knE-TY-8m4" firstAttribute="top" secondItem="Ztr-qO-mWh" secondAttribute="bottom" constant="16" id="Rbg-cx-nGZ"/>
+                            <constraint firstItem="mcU-FJ-90b" firstAttribute="top" secondItem="7Ix-2h-Moh" secondAttribute="top" constant="8" id="USn-C1-Yzk"/>
                             <constraint firstItem="6dF-fV-Us0" firstAttribute="top" secondItem="rvP-8U-fWG" secondAttribute="top" id="Y8b-Da-FMi"/>
                             <constraint firstItem="Evp-Os-YNu" firstAttribute="leading" secondItem="7Ix-2h-Moh" secondAttribute="leading" constant="16" id="ZWR-NN-xvh"/>
                             <constraint firstItem="7Ix-2h-Moh" firstAttribute="trailing" secondItem="6dF-fV-Us0" secondAttribute="trailing" id="bOA-8h-kkA"/>
@@ -543,6 +552,7 @@
                             <constraint firstItem="7Ix-2h-Moh" firstAttribute="trailing" secondItem="Evp-Os-YNu" secondAttribute="trailing" constant="16" id="h8j-F2-xZd"/>
                             <constraint firstAttribute="bottom" secondItem="6dF-fV-Us0" secondAttribute="bottom" id="lRy-UZ-bvO"/>
                             <constraint firstItem="7Ix-2h-Moh" firstAttribute="trailing" secondItem="e8f-cz-33V" secondAttribute="trailing" constant="30" id="oZH-na-Jcc"/>
+                            <constraint firstItem="7Ix-2h-Moh" firstAttribute="trailing" secondItem="mcU-FJ-90b" secondAttribute="trailing" constant="16" id="pEU-gr-Glm"/>
                             <constraint firstItem="Ztr-qO-mWh" firstAttribute="height" secondItem="rvP-8U-fWG" secondAttribute="height" multiplier="0.194836" id="qST-BI-vr9"/>
                             <constraint firstItem="GJ0-XH-PDp" firstAttribute="top" secondItem="2LT-9k-Pbg" secondAttribute="bottom" constant="26" id="qVq-8R-eXv"/>
                             <constraint firstItem="Ztr-qO-mWh" firstAttribute="centerX" secondItem="rvP-8U-fWG" secondAttribute="centerX" id="uqe-zA-7aT"/>
@@ -554,7 +564,9 @@
                         <outlet property="addLightLabel" destination="lRy-QA-eER" id="w8b-Nu-ZRv"/>
                         <outlet property="backgroundAddLight" destination="e8f-cz-33V" id="rkw-XI-Yup"/>
                         <outlet property="buttonTopConstraint" destination="3Aw-j7-YmJ" id="2SQ-6q-WHx"/>
+                        <outlet property="lampImageView" destination="Ztr-qO-mWh" id="rAA-Qu-Q4h"/>
                         <outlet property="playBackButton" destination="lpQ-LR-wO4" id="Zi6-aq-ZRM"/>
+                        <outlet property="plusButton" destination="mcU-FJ-90b" id="MAz-Xi-vHo"/>
                         <outlet property="selectLightLabel" destination="GJ0-XH-PDp" id="MqR-Ac-k3Y"/>
                         <outlet property="tableView" destination="Evp-Os-YNu" id="fuZ-9W-8mF"/>
                         <outlet property="youDontHaveLightsLabel" destination="knE-TY-8m4" id="tD9-d4-Me8"/>
@@ -580,6 +592,7 @@
         <image name="musicOnIphone" width="176" height="170"/>
         <image name="musicOnPhoneBackground" width="390" height="844"/>
         <image name="play" width="72" height="72"/>
+        <image name="plusButton" width="120" height="64"/>
         <image name="question" width="18" height="18.333333969116211"/>
         <image name="setingsButton" width="64" height="64"/>
         <image name="syncWithMusic" width="176" height="170"/>

@@ -25,10 +25,15 @@ class MusicIphoneViewController: UIViewController {
        
     }
     @IBAction func selectLightDidTap(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "MusicPlayer", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "MusicAddLightViewController")
+        vc.modalPresentationStyle = .fullScreen
+        vc.modalTransitionStyle = .coverVertical
+        present(vc, animated: true)
     }
     
     @IBAction func backButtonDidTap(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
+        dismiss(animated: true)
     }
    
     @IBAction func playBackLightBtnDidTap(_ sender: Any) {

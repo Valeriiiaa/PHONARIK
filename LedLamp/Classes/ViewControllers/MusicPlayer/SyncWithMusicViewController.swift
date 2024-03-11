@@ -42,10 +42,15 @@ class SyncWithMusicViewController: UIViewController {
     }
     
     @IBAction func backBtnDidTap(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
+        dismiss(animated: true)
     }
     
     @IBAction func selectLightBtnDidTap(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "MusicPlayer", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "MusicAddLightViewController")
+        vc.modalPresentationStyle = .fullScreen
+        vc.modalTransitionStyle = .coverVertical
+        present(vc, animated: true)
     }
     
 

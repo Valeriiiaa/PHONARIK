@@ -45,11 +45,14 @@ class RoomDeviceCell: UITableViewCell {
         stateLabel.textColor = switchView.isOn ? .activeText : .inactiveText
     }
     
-   func configure(imageDevice: UIImage, stateLabel: Bool, hexLabel: String, instensityLabel: String) {
+    func configure(deviceName: String, imageDevice: UIImage, stateLabel: Bool, hexLabel: String, instensityLabel: String, isSelected: Bool) {
         self.imageDevice.image = imageDevice
         self.stateLabel.text = stateLabel ? "connect".localized : "disconnect".localized
         self.hexLabel.text = hexLabel
         intensityLabel.text = instensityLabel
+        self.stateLabel.textColor = stateLabel ? .activeText : .inactiveText
+        deviceNameLabel.text = deviceName
+        chooseDeviceButton.isSelected = isSelected
         DispatchQueue.main.async {
             self.switchView.setOn(stateLabel, animated: false)
         }
