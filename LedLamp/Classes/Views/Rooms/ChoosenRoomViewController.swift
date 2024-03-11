@@ -33,16 +33,21 @@ class ChoosenRoomViewController: UIViewController {
     }
     
     @IBAction func saveButtonDidTap(_ sender: Any) {
+        //TODO: Show loader
         HomeManager.shared.createRoom(withName: roomsName, { [unowned self] room in
             DatabaseManager.shared.save(RoomModel(roomId: room.uniqueIdentifier.uuidString,
                                                   name: roomsName,
-                                                  background: imageRoom?.pngData(), 
+                                                  background: imageRoom?.pngData(),
                                                   lamps: "",
                                                   status: true,
                                                   room: room))
+            DispatchQueue.main.async {
+                ActionManager.shared.reload()
+                self.dismiss(animated: true)
+            }
+        }, errorCompletion: { [unowned self] in
+            self.dismiss(animated: true)
         })
-        ActionManager.shared.reload()
-        dismiss(animated: true)
     }
     
     @IBAction func closeBtnDidTap(_ sender: Any) {

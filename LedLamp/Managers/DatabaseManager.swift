@@ -111,6 +111,7 @@ class DatabaseManager: DatabaseManagerProtocol {
         item.background = model.background
         item.lamps = model.lamps
         item.status = model.status
+        item.roomId = model.roomId
         saveContext()
     }
     

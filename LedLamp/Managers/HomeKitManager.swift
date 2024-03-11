@@ -21,7 +21,7 @@ protocol HomeManagerProtocol {
     func stopDeviceDiscovering()
     func addDevice(_ device: HMAccessory, toRoom name: String, _ callback: @escaping(Bool) -> Void)
     
-    func createRoom(withName room: String, _ callback: @escaping(HMRoom) -> Void)
+    func createRoom(withName room: String, _ callback: @escaping(HMRoom) -> Void, errorCompletion: @escaping() -> Void)
     func updateRoom(_ device: HMAccessory, newRoom: String, _ callback: @escaping(Bool) -> Void)
     func updateRoom(_ room: HMRoom?, name: String, _ callback: @escaping(Bool) -> Void)
     func removeRoom(_ room: HMRoom, _ callback: @escaping(Bool) -> Void)
@@ -122,14 +122,15 @@ class HomeManager: NSObject, HomeManagerProtocol {
     }
     
     //MARK: Room Management
-    func createRoom(withName room: String, _ callback: @escaping(HMRoom) -> Void) {
+    func createRoom(withName room: String, _ callback: @escaping(HMRoom) -> Void, errorCompletion: @escaping() -> Void) {
         home?.addRoom(withName: room) { room, error in
             if let _ = room, error == nil {
                 self.room = room
                 callback(room!)
                 return
+            } else {
+                errorCompletion()
             }
-            print("room not created")
         }
     }
     
@@ -150,7 +151,7 @@ class HomeManager: NSObject, HomeManagerProtocol {
     }
     
     
-    private func getRoom(withName room: String, _ callback: @escaping(HMRoom) -> Void) {
+    private func getRoom(withName room: String, _ callback: @escaping(HMRoom) -> Void, errorCompletion: @escaping() -> Void) {
         if let room = home?.rooms.first(where: { $0.name == room }) {
             callback(room)
             return
@@ -158,6 +159,8 @@ class HomeManager: NSObject, HomeManagerProtocol {
         
         createRoom(withName: room) { newRoom in
             callback(newRoom)
+        } errorCompletion: {
+            errorCompletion()
         }
     }
     
@@ -172,9 +175,10 @@ class HomeManager: NSObject, HomeManagerProtocol {
                 print("device room updated to \(newRoom)")
                 callback(true)
             })
+        } errorCompletion: {
+            callback(false)
         }
     }
-    
     
     func removeRoom(_ room: HMRoom, _ callback: @escaping(Bool) -> Void) {
         home?.removeRoom(room, completionHandler: { error in
@@ -261,6 +265,8 @@ class HomeManager: NSObject, HomeManagerProtocol {
                 print("device assigned to room \(name)")
                 callback(true)
             })
+        } errorCompletion: {
+            callback(false)
         }
     }
     

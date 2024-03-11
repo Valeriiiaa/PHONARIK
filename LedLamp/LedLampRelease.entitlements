@@ -4,7 +4,5 @@
 <dict>
 	<key>com.apple.developer.homekit</key>
 	<true/>
-	<key>com.apple.developer.matter.allow-setup-payload</key>
-	<true/>
 </dict>
 </plist>

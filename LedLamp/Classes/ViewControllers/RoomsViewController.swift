@@ -32,6 +32,8 @@ class RoomsViewController: UIViewController {
     
     var bottomButtomConstraint: NSLayoutConstraint!
     
+    var rooms = [RoomModel]()
+    
     private var pageSize: CGSize {
         let layout = self.roomCollectionView.collectionViewLayout as! UPCarouselFlowLayout
         var pageSize = layout.itemSize
@@ -61,6 +63,7 @@ class RoomsViewController: UIViewController {
         
         ActionManager.shared.reloadData.append { [weak self] in
             guard let self else { return }
+            self.rooms = DatabaseManager.shared.loadRooms()
             self.configureCollectionView()
             self.roomCollectionView.reloadData()
         }
@@ -69,7 +72,7 @@ class RoomsViewController: UIViewController {
     }
     
     private func configureCollectionView() {
-        let isEmptyRooms = DatabaseManager.shared.loadRooms().isEmpty
+        let isEmptyRooms = rooms.isEmpty
         roomCollectionView.isHidden = isEmptyRooms
         sofaImageView.isHidden = !isEmptyRooms
         youDontHaveAnyRoomsLabel.isHidden = !isEmptyRooms
@@ -165,12 +168,12 @@ class RoomsViewController: UIViewController {
 
 extension RoomsViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        DatabaseManager.shared.loadRooms().count
+        rooms.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AddedRoomCell", for: indexPath)
-        let room = DatabaseManager.shared.loadRooms()[indexPath.row]
+        let room = rooms[indexPath.row]
         var image = UIImage(resource: .kitchen)
         if let background = room.background,
         let img = UIImage(data: background) {

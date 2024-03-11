@@ -30,7 +30,7 @@
                         <rect key="frame" x="0.0" y="8" width="393" height="289"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Light smart bulb RGB" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AhA-es-ET3">
-                                <rect key="frame" x="70" y="10" width="253" height="21"/>
+                                <rect key="frame" x="70" y="10.000000000000002" width="253" height="18.666666666666671"/>
                                 <fontDescription key="fontDescription" name="ChakraPetch-Medium" family="Chakra Petch" pointSize="16"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -39,7 +39,7 @@
                                 <rect key="frame" x="-2" y="113" width="176" height="160"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zl6-fl-HBt">
-                                <rect key="frame" x="331" y="50" width="40" height="21"/>
+                                <rect key="frame" x="331" y="50" width="40" height="18.666666666666671"/>
                                 <fontDescription key="fontDescription" name="ChakraPetch-Regular" family="Chakra Petch" pointSize="16"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -54,7 +54,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="myp-XP-hWo">
-                                <rect key="frame" x="336" y="79" width="35" height="138"/>
+                                <rect key="frame" x="336" y="76.666666666666671" width="35" height="140.33333333333331"/>
                                 <fontDescription key="fontDescription" name="ChakraPetch-Regular" family="Chakra Petch" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
