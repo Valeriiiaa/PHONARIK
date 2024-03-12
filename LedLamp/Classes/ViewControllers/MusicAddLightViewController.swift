@@ -54,6 +54,7 @@ class MusicAddLightViewController: UIViewController {
         
         ActionManager.shared.reloadData.append { [weak self] in
             guard let self else { return }
+            lights = DatabaseManager.shared.load()
             self.configure()
             self.configureTableView()
             self.tableView.reloadData()
@@ -163,7 +164,13 @@ extension MusicAddLightViewController: UITableViewDelegate, UITableViewDataSourc
         let lightModel = lights[indexPath.row]
        
         let image = UIImage(named: image[indexPath.row]) ?? UIImage()
-        (cell as? MusicDeviceCell)?.configure(deviceName: lightModel.name, imageDevice: image, stateLabel: lightModel.isEnabled, hexLabel: UIColor(hex: lightModel.color).hexValue(), instensityLabel: "", isSelected: selectedLamps.contains(where: { $0.deviceId == lightModel.deviceId }))
+        (cell as? MusicDeviceCell)?.configure(deviceName: lightModel.name,
+                                              roomName: lightModel.room ?? "",
+                                              imageDevice: image,
+                                              stateLabel: lightModel.isEnabled,
+                                              hexLabel: "#" + UIColor(hex: lightModel.color).hexValue(),
+                                              instensityLabel: Int(UIColor(hex: lightModel.color).hsbColor.brightness * 100).description + "%",
+                                              isSelected: selectedLamps.contains(where: { $0.deviceId == lightModel.deviceId }))
         
         (cell as? MusicDeviceCell)?.switchValueChanged = { value in
             lightModel.isEnabled = value

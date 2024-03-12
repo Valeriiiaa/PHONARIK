@@ -64,11 +64,12 @@
 "kitchen" = "Кухня";
 "deviceAdded" = "добавлено в DevHome";
 "lightSmartLulb" = "Умная светодиодная лампа RGB";
-"connect" = "Подключить";
-"disconnect" = "Отключить";
+"connect" = "Подключенно";
+"disconnect" = "Отключенно";
 "youDontHaveRooms" = "У вас нет комнат";
 "pleaseInputRoomsName" = "Пожалуйста, введите название комнаты и выберите дизайн обоев.";
 "deviceName" = "Название устройства";
+"devicesConnected" = "подключенных устройства";
 
 "collection" = "Коллекция";
 "devicesConnected" = "Подключенные устройства";

@@ -267,17 +267,19 @@
                             <constraint firstItem="iry-NS-Eyr" firstAttribute="leading" secondItem="5eJ-OG-KRj" secondAttribute="leading" constant="76" id="hPQ-gO-2FJ"/>
                             <constraint firstItem="5eJ-OG-KRj" firstAttribute="bottom" secondItem="iry-NS-Eyr" secondAttribute="bottom" constant="65" id="hWj-lB-Pmt"/>
                             <constraint firstItem="796-7T-w6u" firstAttribute="leading" secondItem="5eJ-OG-KRj" secondAttribute="leading" constant="16" id="hxV-OS-W3m"/>
+                            <constraint firstItem="9cV-Nz-b0f" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="796-7T-w6u" secondAttribute="trailing" constant="20" id="jxc-CF-Ikl"/>
                             <constraint firstItem="5eJ-OG-KRj" firstAttribute="trailing" secondItem="9Yk-gc-jHG" secondAttribute="trailing" id="kNh-xt-cr4"/>
                             <constraint firstItem="hnN-H1-11D" firstAttribute="top" secondItem="9cV-Nz-b0f" secondAttribute="bottom" constant="16" id="l4a-Kx-irS"/>
                             <constraint firstItem="gZt-uu-CZY" firstAttribute="leading" secondItem="5eJ-OG-KRj" secondAttribute="leading" constant="16" id="mLM-Fe-9Bx"/>
                             <constraint firstItem="zck-K6-joX" firstAttribute="height" secondItem="Eyj-CV-gE1" secondAttribute="height" multiplier="0.194836" id="rdn-3o-KZw"/>
                             <constraint firstItem="5eJ-OG-KRj" firstAttribute="trailing" secondItem="eTz-I7-XYZ" secondAttribute="trailing" constant="20" id="tDi-F3-7Ce"/>
                             <constraint firstItem="zck-K6-joX" firstAttribute="centerX" secondItem="Eyj-CV-gE1" secondAttribute="centerX" id="vBZ-pq-LY0"/>
+                            <constraint firstItem="9cV-Nz-b0f" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="UYl-px-PP8" secondAttribute="trailing" constant="20" id="vhY-xO-NN7"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="devicesConnectedLabel" destination="UYl-px-PP8" id="T0m-bE-AbC"/>
-                        <outlet property="lampImage" destination="zck-K6-joX" id="M3W-5b-px7"/>
+                        <outlet property="lampImage" destination="zck-K6-joX" id="TQd-6O-9Gt"/>
                         <outlet property="roomNameLabel" destination="796-7T-w6u" id="1hi-xI-c9V"/>
                         <outlet property="tableView" destination="hnN-H1-11D" id="SSA-RB-l5Q"/>
                         <outlet property="youDontHaveAnyLightLabel" destination="eTz-I7-XYZ" id="KD7-8i-jvR"/>

@@ -76,6 +76,7 @@
 "OpenCamera" = "打开相机";
 "enterRoomName" = "请输入房间名称";
 "enterLightName" = "请输入灯的名称";
+"devicesConnected" = "已连接设备";
 
 
 //collection

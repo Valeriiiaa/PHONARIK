@@ -26,7 +26,7 @@ class MusicDeviceCell: UITableViewCell {
         super.awakeFromNib()
         imageRoom.layer.cornerRadius = 16
         imageRoom.layer.masksToBounds = true
-        backgroundCellView.layer.cornerRadius = 40
+        backgroundCellView.layer.cornerRadius = 36
         backgroundCellView.layer.masksToBounds = true
       
     }
@@ -46,7 +46,7 @@ class MusicDeviceCell: UITableViewCell {
     @IBAction func menuBtnDidTap(_ sender: Any) {
         menuButtonDidTap?()
     }
-    func configure(deviceName: String, imageDevice: UIImage, stateLabel: Bool, hexLabel: String, instensityLabel: String, isSelected: Bool) {
+    func configure(deviceName: String, roomName: String, imageDevice: UIImage, stateLabel: Bool, hexLabel: String, instensityLabel: String, isSelected: Bool) {
         self.imageRoom.image = imageDevice
         self.stateLabel.text = stateLabel ? "connect".localized : "disconnect".localized
         self.hexLabel.text = hexLabel
@@ -54,6 +54,7 @@ class MusicDeviceCell: UITableViewCell {
         self.stateLabel.textColor = stateLabel ? .activeText : .inactiveText
         deviceNameLabel.text = deviceName
         chooseButton.isSelected = isSelected
+        roomNameLabel.text = roomName
         DispatchQueue.main.async {
             self.switcher.setOn(stateLabel, animated: false)
         }

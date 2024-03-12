@@ -9,19 +9,32 @@ import UIKit
 
 class AddLightViewController: UIViewController {
 
+    @IBOutlet weak var lampImage: UIImageView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var youDontHaveAnyLightLabel: UILabel!
-    @IBOutlet weak var lampImage: UIImageView!
     @IBOutlet weak var roomNameLabel: UILabel!
     @IBOutlet weak var devicesConnectedLabel: UILabel!
+    
+    var roomModel: RoomModel!
+    
+    var lamps = [LampModel]()
+    
+    var image = ["firstImage", "fourthImage", "SecondImage", "thirdImage", "firstImage", "fourthImage", "SecondImage", "thirdImage", "firstImage", "fourthImage", "SecondImage", "thirdImage", "firstImage", "fourthImage", "SecondImage", "thirdImage", "firstImage", "fourthImage", "SecondImage", "thirdImage", "firstImage", "fourthImage", "SecondImage", "thirdImage", "firstImage", "fourthImage", "SecondImage", "thirdImage", "firstImage", "fourthImage", "SecondImage", "thirdImage", "firstImage", "fourthImage", "SecondImage", "thirdImage", "firstImage", "fourthImage", "SecondImage", "thirdImage", "firstImage", "fourthImage", "SecondImage", "thirdImage", "firstImage", "fourthImage", "SecondImage", "thirdImage", "firstImage", "fourthImage", "SecondImage", "thirdImage", "firstImage", "fourthImage", "SecondImage", "thirdImage", "firstImage", "fourthImage", "SecondImage", "thirdImage", "firstImage", "fourthImage", "SecondImage", "thirdImage", "firstImage", "fourthImage", "SecondImage", "thirdImage", "firstImage", "fourthImage", "SecondImage", "thirdImage", "firstImage", "fourthImage", "SecondImage", "thirdImage","firstImage", "fourthImage", "SecondImage", "thirdImage", "firstImage", "fourthImage", "SecondImage", "thirdImage","firstImage", "fourthImage", "SecondImage", "thirdImage", "firstImage", "fourthImage", "SecondImage", "thirdImage","firstImage", "fourthImage", "SecondImage", "thirdImage","firstImage", "fourthImage", "SecondImage", "thirdImage","firstImage", "fourthImage", "SecondImage", "thirdImage", "firstImage", "fourthImage", "SecondImage", "thirdImage"]
   
     override func viewDidLoad() {
         super.viewDidLoad()
         youDontHaveAnyLightLabel.text = "youDontHaveLight".localized
         tableView.register(UINib(nibName: "RoomDeviceCell", bundle: nil), forCellReuseIdentifier: "RoomDeviceCell")
-        
+        roomNameLabel.text = roomModel.name
         tableView.dataSource = self
         tableView.delegate = self
+        lamps = DatabaseManager.shared.loadLamp(by: roomModel.name)
+        ActionManager.shared.reloadData.append { [weak self] in
+            guard let self else { return }
+            self.lamps = DatabaseManager.shared.loadLamp(by: roomModel.name)
+            configureTableView()
+        }
+        configureTableView()
     }
     
     private func configureTableView() {
@@ -29,19 +42,24 @@ class AddLightViewController: UIViewController {
         tableView.showsVerticalScrollIndicator = false
         tableView.contentInset = .init(top: 0, left: 0, bottom: 100, right: 0)
         tableView.isHidden = isEmptyLights
-        tableView.isHidden = !isEmptyLights
+//        tableView.isHidden = !isEmptyLights
         youDontHaveAnyLightLabel.isHidden = !isEmptyLights
+        lampImage.isHidden = !isEmptyLights
+        
+        devicesConnectedLabel.text = lamps.count.description + " " + "devicesConnected".localized
+        tableView.reloadData()
     }
    
     @IBAction func addLightBtnDidTap(_ sender: Any) {
-        
+        HomeManager.shared.showCamera()
     }
    
     @IBAction func menuBtnDidTap(_ sender: Any) {
+        
     }
     
     @IBAction func backBtnDidTap(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
+        self.dismiss(animated: true)
     }
     
     func editName(lightModel: LampModel) {
@@ -52,12 +70,13 @@ class AddLightViewController: UIViewController {
             textField.keyboardType = .default
             textField.autocorrectionType = .no
         }
-        let okAction = UIAlertAction(title: "Save", style: .default) {
+        let okAction = UIAlertAction(title: "Save", style: .default) { [unowned self]
             action in guard let textField = alertController.textFields?.first,
                             let text = textField.text else {
                 return
             }
             lightModel.name = text
+            roomNameLabel.text = text
             DatabaseManager.shared.update(lightModel)
             ActionManager.shared.reload()
             
@@ -76,7 +95,7 @@ class AddLightViewController: UIViewController {
 extension AddLightViewController: UITableViewDelegate, UITableViewDataSource {
    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        DatabaseManager.shared.load().count
+        lamps.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -85,8 +104,13 @@ extension AddLightViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RoomDeviceCell", for: indexPath)
-        let lightModel = DatabaseManager.shared.load()[indexPath.row]
-        (cell as? RoomDeviceCell)?.configure(deviceName: lightModel.name, imageDevice: UIImage(), stateLabel: lightModel.isEnabled, hexLabel: UIColor(hex: lightModel.color).hexValue(), instensityLabel: "")
+        let lightModel = lamps[indexPath.row]
+        let imageName = image[indexPath.row]
+        (cell as? RoomDeviceCell)?.configure(deviceName: lightModel.name,
+                                             imageDevice: UIImage(named: imageName) ?? UIImage(),
+                                             stateLabel: lightModel.isEnabled,
+                                             hexLabel: "#" + UIColor(hex: lightModel.color).hexValue(),
+                                             instensityLabel: Int(UIColor(hex: lightModel.color).hsbColor.brightness * 100).description + "%")
         
         (cell as? MainScreenCell)?.switchValueChanged = { [unowned self] value in
             lightModel.isEnabled = value

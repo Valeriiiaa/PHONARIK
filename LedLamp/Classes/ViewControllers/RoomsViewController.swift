@@ -61,6 +61,8 @@ class RoomsViewController: UIViewController {
         roomCollectionView.register(UINib(nibName: "AddedRoomCell", bundle: nil),
                                     forCellWithReuseIdentifier: "AddedRoomCell")
         
+        rooms = DatabaseManager.shared.loadRooms()
+        
         ActionManager.shared.reloadData.append { [weak self] in
             guard let self else { return }
             self.rooms = DatabaseManager.shared.loadRooms()
@@ -169,6 +171,16 @@ class RoomsViewController: UIViewController {
 extension RoomsViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         rooms.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Rooms", bundle: nil)
+        let room = rooms[indexPath.row]
+        let entrance = storyboard.instantiateViewController(withIdentifier: "AddLightViewController") as! AddLightViewController
+        entrance.modalPresentationStyle = .fullScreen
+        entrance.modalTransitionStyle = .coverVertical
+        entrance.roomModel = room
+        present(entrance, animated: true)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

@@ -45,8 +45,9 @@ class MainViewController: UIViewController {
             self.lightsTableView.reloadData()
         }
         
-        HomeManager.shared.itemDidAdded = { [weak self] hm in
-            guard let self else { return }
+        HomeManager.shared.itemDidAdded = { hm in
+//            guard let self else { return }
+            print(hm.name)
             DatabaseManager.shared.save(LampModel(name: hm.name, deviceId: hm.uniqueIdentifier.uuidString, room: hm.room?.name ?? "bedroom".localized,  color: 0xE7FE55, isEnabled: false, accessory: hm))
             ActionManager.shared.reload()
         }

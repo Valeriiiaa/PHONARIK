@@ -24,7 +24,7 @@ class RoomDeviceCell: UITableViewCell {
         super.awakeFromNib()
         imageDevice.layer.cornerRadius = 16
         imageDevice.layer.masksToBounds = true
-        bckgroundCellView.layer.cornerRadius = 40
+        bckgroundCellView.layer.cornerRadius = 36
         bckgroundCellView.layer.masksToBounds = true
     }
 

@@ -195,7 +195,7 @@ class DatabaseManager: DatabaseManagerProtocol {
             var models: [LampModel] = []
             for item in fetchedItems {
                 let device = devices.first(where: { $0.uniqueIdentifier.uuidString == item.deviceId })
-                models.append(LampModel(name: item.name ?? "", deviceId: item.deviceId ?? "", room: item.room ?? device?.room?.name, color: Int(item.color), isEnabled: item.isEnabled, accessory: device))
+                models.append(LampModel(name: item.name ?? "", deviceId: item.deviceId ?? "", room: device?.room?.name, color: Int(item.color), isEnabled: item.isEnabled, accessory: device))
             }
             return models
         } catch let error {
@@ -204,6 +204,25 @@ class DatabaseManager: DatabaseManagerProtocol {
         }
     }
     
+    
+    func loadLamp(by roomName: String) -> [LampModel] {
+        let request: NSFetchRequest<LightLamp> = LightLamp.fetchRequest()
+        let roomPredicate = NSPredicate(format: "room == %@", roomName)
+        request.predicate = roomPredicate
+        do {
+            let fetchedItems = try persistentContainer.viewContext.fetch(request)
+            let devices = HomeManager.shared.loadConnectedDevices()
+            var models: [LampModel] = []
+            for item in fetchedItems {
+                let device = devices.first(where: { $0.uniqueIdentifier.uuidString == item.deviceId })
+                models.append(LampModel(name: item.name ?? "", deviceId: item.deviceId ?? "", room: item.room ?? device?.room?.name, color: Int(item.color), isEnabled: item.isEnabled, accessory: device))
+            }
+            return models
+        } catch let error {
+            print("Error fetching history \(error)")
+            return []
+        }
+    }
     
     func loadRooms() -> [RoomModel] {
         let request: NSFetchRequest<MyRoom> = MyRoom.fetchRequest()

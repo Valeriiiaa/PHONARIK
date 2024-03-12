@@ -330,8 +330,15 @@ extension HomeManager: HMAccessoryDelegate {
     func accessory(_ accessory: HMAccessory, service: HMService, didUpdateValueFor characteristic: HMCharacteristic) {
     }
     
-    func home(_ home: HMHome, didAdd accessory: HMAccessory) {
+    func home(_ home: HMHome, didUpdate room: HMRoom, for accessory: HMAccessory) {
         itemDidAdded?(accessory)
+    }
+    
+//    func home
+    
+    func home(_ home: HMHome, didAdd accessory: HMAccessory) {
+        print("[test] \(accessory.room?.name)")
+//        itemDidAdded?(accessory)
     }
 }
 

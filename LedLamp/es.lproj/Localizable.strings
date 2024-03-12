@@ -69,6 +69,7 @@
 "OpenCamera" = "Abrir cámara";
 "enterRoomName" = "Por favor, ingresa un nombre de sala";
 "enterLightName" = "Por favor, ingresa un nombre de luz";
+"devicesConnected" = "dispositivos conectados";
 
 "collection" = "Colección";
 "devicesConnected" = "Dispositivos conectados";
