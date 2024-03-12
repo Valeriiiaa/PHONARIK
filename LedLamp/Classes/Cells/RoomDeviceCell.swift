@@ -9,7 +9,6 @@ import UIKit
 
 class RoomDeviceCell: UITableViewCell {
    
-    @IBOutlet weak var chooseDeviceButton: UIButton!
     @IBOutlet weak var hexLabel: UILabel!
     @IBOutlet weak var intensityLabel: UILabel!
     @IBOutlet weak var bckgroundCellView: UIView!
@@ -32,8 +31,7 @@ class RoomDeviceCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-    @IBAction func chooseDeviceBtnDidTap(_ sender: Any) {
-    }
+
     
     @IBAction func menuBtnDIdTap(_ sender: Any) {
         menuButtonDidTap?()
@@ -45,14 +43,13 @@ class RoomDeviceCell: UITableViewCell {
         stateLabel.textColor = switchView.isOn ? .activeText : .inactiveText
     }
     
-    func configure(deviceName: String, imageDevice: UIImage, stateLabel: Bool, hexLabel: String, instensityLabel: String, isSelected: Bool) {
+    func configure(deviceName: String, imageDevice: UIImage, stateLabel: Bool, hexLabel: String, instensityLabel: String) {
         self.imageDevice.image = imageDevice
         self.stateLabel.text = stateLabel ? "connect".localized : "disconnect".localized
         self.hexLabel.text = hexLabel
         intensityLabel.text = instensityLabel
         self.stateLabel.textColor = stateLabel ? .activeText : .inactiveText
         deviceNameLabel.text = deviceName
-        chooseDeviceButton.isSelected = isSelected
         DispatchQueue.main.async {
             self.switchView.setOn(stateLabel, animated: false)
         }

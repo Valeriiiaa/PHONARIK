@@ -27,7 +27,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FOu-1g-PFD">
                         <rect key="frame" x="0.0" y="0.0" width="327" height="255"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="j6q-8e-qPE">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="firstImage" translatesAutoresizingMaskIntoConstraints="NO" id="j6q-8e-qPE">
                                 <rect key="frame" x="0.0" y="0.0" width="327" height="161"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="161" id="fre-PY-ams"/>
@@ -112,16 +112,6 @@
                                     <action selector="switcherDidTap:" destination="cth-6Q-hkb" eventType="valueChanged" id="dVV-QD-4yN"/>
                                 </connections>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TVM-rq-oZB">
-                                <rect key="frame" x="267" y="0.0" width="60" height="62"/>
-                                <inset key="contentEdgeInsets" minX="16" minY="16" maxX="16" maxY="16"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="emptyChooseDevice"/>
-                                <state key="selected" image="ChoosenDevice"/>
-                                <connections>
-                                    <action selector="chooseDeviceBtnDidTap:" destination="cth-6Q-hkb" eventType="touchUpInside" id="DDU-Hj-sPh"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.45490196078431372" green="0.45490196078431372" blue="0.45490196078431372" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <constraints>
@@ -134,9 +124,7 @@
                             <constraint firstAttribute="bottom" secondItem="Kid-nN-6mA" secondAttribute="bottom" constant="16" id="7La-SE-A8M"/>
                             <constraint firstAttribute="height" constant="255" id="9Nb-Dq-qgN"/>
                             <constraint firstItem="0Cs-wI-6Ra" firstAttribute="top" secondItem="j6q-8e-qPE" secondAttribute="bottom" constant="6" id="AJM-ZA-4fz"/>
-                            <constraint firstAttribute="trailing" secondItem="TVM-rq-oZB" secondAttribute="trailing" id="Aj3-dZ-o4e"/>
                             <constraint firstAttribute="trailing" secondItem="Kid-nN-6mA" secondAttribute="trailing" constant="15" id="Drs-Kq-RDA"/>
-                            <constraint firstItem="TVM-rq-oZB" firstAttribute="top" secondItem="FOu-1g-PFD" secondAttribute="top" id="K6A-hq-jKQ"/>
                             <constraint firstItem="j6q-8e-qPE" firstAttribute="leading" secondItem="FOu-1g-PFD" secondAttribute="leading" id="M2H-bh-37Y"/>
                             <constraint firstItem="wwb-2T-RX2" firstAttribute="leading" secondItem="FOu-1g-PFD" secondAttribute="leading" constant="16" id="OdW-Eu-CxQ"/>
                             <constraint firstItem="Kid-nN-6mA" firstAttribute="top" secondItem="Cqq-Ox-hL9" secondAttribute="bottom" id="gWK-nI-GgU"/>
@@ -157,7 +145,6 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="bckgroundCellView" destination="FOu-1g-PFD" id="25W-ZJ-Oc0"/>
-                <outlet property="chooseDeviceButton" destination="TVM-rq-oZB" id="ouN-hI-b5M"/>
                 <outlet property="deviceNameLabel" destination="0Cs-wI-6Ra" id="Fst-O8-MaS"/>
                 <outlet property="hexLabel" destination="Yfl-AG-L6C" id="zeV-of-hlh"/>
                 <outlet property="imageDevice" destination="j6q-8e-qPE" id="xLC-sk-SKB"/>
@@ -169,8 +156,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="ChoosenDevice" width="24" height="24"/>
-        <image name="emptyChooseDevice" width="28" height="30"/>
+        <image name="firstImage" width="359" height="161"/>
         <image name="menuButton" width="24" height="24"/>
         <image name="yellowView" width="5" height="5.3333334922790527"/>
     </resources>
