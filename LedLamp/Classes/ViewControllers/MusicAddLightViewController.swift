@@ -10,6 +10,7 @@ import BottomSheet
 
 class MusicAddLightViewController: UIViewController {
    
+    @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var lampImageView: UIImageView!
     @IBOutlet weak var plusButton: UIButton!
     @IBOutlet weak var buttonTopConstraint: NSLayoutConstraint!
@@ -22,7 +23,9 @@ class MusicAddLightViewController: UIViewController {
     
     var selectedLamps = [LampModel]()
     
-    var image = ["light1", "light2", "light3"]
+    var saveDidTap: (([LampModel]) -> Void)?
+    
+    var image = ["firstImage", "fourthImage", "SecondImage", "thirdImage"]
     
     var lights = [LampModel]()
     
@@ -38,13 +41,16 @@ class MusicAddLightViewController: UIViewController {
         backgroundAddLight.layer.cornerRadius = 30
         backgroundAddLight.layer.masksToBounds = true
         
-        tableView.register(UINib(nibName: "RoomDeviceCell", bundle: nil), forCellReuseIdentifier: "RoomDeviceCell")
+        tableView.register(UINib(nibName: "MusicDeviceCell", bundle: nil), forCellReuseIdentifier: "MusicDeviceCell")
         tableView.dataSource = self
         tableView.delegate = self
         
         lights = DatabaseManager.shared.load()
         configure()
         configureTableView()
+        
+        saveButton.layer.cornerRadius = 30
+        saveButton.layer.masksToBounds = true
         
         ActionManager.shared.reloadData.append { [weak self] in
             guard let self else { return }
@@ -77,9 +83,15 @@ class MusicAddLightViewController: UIViewController {
     private func configure() {
         backgroundAddLight.isHidden = !lights.isEmpty
         plusButton.isHidden = lights.isEmpty
+        saveButton.isHidden = lights.isEmpty
         tableView.isHidden = lights.isEmpty
     }
 
+    @IBAction func saveButtonDidTap(_ sender: Any) {
+        saveDidTap?(selectedLamps)
+        dismiss(animated: true)
+    }
+    
     @IBAction func backButtonDidTap(_ sender: Any) {
         dismiss(animated: true)
     }
@@ -147,20 +159,20 @@ extension MusicAddLightViewController: UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "RoomDeviceCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MusicDeviceCell", for: indexPath)
         let lightModel = lights[indexPath.row]
         let random = Int.random(in: 0...2)
         let image = UIImage(named: image[random]) ?? UIImage()
-        (cell as? RoomDeviceCell)?.configure(deviceName: lightModel.name, imageDevice: image, stateLabel: lightModel.isEnabled, hexLabel: UIColor(hex: lightModel.color).hexValue(), instensityLabel: "", isSelected: selectedLamps.contains(where: { $0.deviceId == lightModel.deviceId }))
+        (cell as? MusicDeviceCell)?.configure(deviceName: lightModel.name, imageDevice: image, stateLabel: lightModel.isEnabled, hexLabel: UIColor(hex: lightModel.color).hexValue(), instensityLabel: "", isSelected: selectedLamps.contains(where: { $0.deviceId == lightModel.deviceId }))
         
-        (cell as? RoomDeviceCell)?.switchValueChanged = { value in
+        (cell as? MusicDeviceCell)?.switchValueChanged = { value in
             lightModel.isEnabled = value
             DatabaseManager.shared.update(lightModel)
             lightModel.accessory?.getCharacteristic(forType: .power)?.writeValue(lightModel.isEnabled, completionHandler: { error in
                 print(error)
             })
         }
-        (cell as? RoomDeviceCell)?.menuButtonDidTap = { [unowned self] in
+        (cell as? MusicDeviceCell)?.menuButtonDidTap = { [unowned self] in
             let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
             alert.addAction(UIAlertAction(title: "editName".localized, style: .default, handler: { [unowned self] _ in
                 self.editName(lightModel: lightModel)

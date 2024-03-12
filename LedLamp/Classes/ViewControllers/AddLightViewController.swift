@@ -86,7 +86,7 @@ extension AddLightViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RoomDeviceCell", for: indexPath)
         let lightModel = DatabaseManager.shared.load()[indexPath.row]
-        (cell as? RoomDeviceCell)?.configure(deviceName: lightModel.name, imageDevice: UIImage(), stateLabel: lightModel.isEnabled, hexLabel: UIColor(hex: lightModel.color).hexValue(), instensityLabel: "", isSelected: false)
+        (cell as? RoomDeviceCell)?.configure(deviceName: lightModel.name, imageDevice: UIImage(), stateLabel: lightModel.isEnabled, hexLabel: UIColor(hex: lightModel.color).hexValue(), instensityLabel: "")
         
         (cell as? MainScreenCell)?.switchValueChanged = { [unowned self] value in
             lightModel.isEnabled = value

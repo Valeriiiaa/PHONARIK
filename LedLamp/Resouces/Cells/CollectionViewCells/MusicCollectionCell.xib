@@ -26,27 +26,28 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="6h5-lt-hwk">
-                        <rect key="frame" x="0.0" y="0.0" width="219" height="52"/>
+                        <rect key="frame" x="0.0" y="0.0" width="191" height="80"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PrB-fD-cyN">
-                                <rect key="frame" x="0.0" y="0.0" width="219" height="19.666666666666668"/>
+                                <rect key="frame" x="0.0" y="0.0" width="191" height="19.666666666666668"/>
                                 <fontDescription key="fontDescription" name="ChakraPetch-SemiBold" family="Chakra Petch" pointSize="15"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s3k-hi-ifr">
-                                <rect key="frame" x="0.0" y="24.666666666666671" width="219" height="27.333333333333329"/>
+                                <rect key="frame" x="0.0" y="24.666666666666668" width="191" height="55.333333333333329"/>
                                 <fontDescription key="fontDescription" name="ChakraPetch-Regular" family="Chakra Petch" pointSize="14"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                     </stackView>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AhN-X3-yun">
-                        <rect key="frame" x="239" y="5" width="42" height="42"/>
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AhN-X3-yun">
+                        <rect key="frame" x="211" y="5" width="70" height="70"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="42" id="9bK-pF-9Yu"/>
-                            <constraint firstAttribute="height" constant="42" id="TeM-fs-mlg"/>
+                            <constraint firstAttribute="height" constant="70" id="TeM-fs-mlg"/>
+                            <constraint firstAttribute="width" secondItem="AhN-X3-yun" secondAttribute="height" multiplier="1:1" id="dZX-mn-gnS"/>
                         </constraints>
                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                         <state key="normal" image="musicOff"/>

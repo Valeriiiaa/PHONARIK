@@ -21,7 +21,6 @@ class MusicDeviceCell: UITableViewCell {
     
     var menuButtonDidTap: (() -> Void)?
     var switchValueChanged: ((Bool) -> Void)?
-    var choosenButtonDidTap: (() -> Void)?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -37,9 +36,7 @@ class MusicDeviceCell: UITableViewCell {
 
        
     }
-    @IBAction func chooseBtnDidTap(_ sender: Any) {
-        choosenButtonDidTap?()
-    }
+    
     @IBAction func switcherDidTap(_ sender: Any) {
         switchValueChanged?(switcher.isOn)
         stateLabel.text = switcher.isOn ? "connect".localized : "disconnect".localized

@@ -19,8 +19,9 @@ class MusicCollectionCell: UICollectionViewCell {
     @IBAction func stateBtnDidTap(_ sender: Any) {
     }
     
-    func configure(roomNameLabel: String, deviceNameLabel: String) {
+    func configure(roomNameLabel: String, deviceNameLabel: String, isEnabled: Bool) {
         self.roomNameLabel.text = roomNameLabel
         self.deviceNameLabel.text = deviceNameLabel
+        stateButton.setImage(UIImage(resource: isEnabled ? .musicOn : .musicOff), for: .normal)
     }
 }

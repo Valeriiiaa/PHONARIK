@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFAudio
 
 class MusicPlayerViewController: UIViewController {
 
@@ -28,6 +29,8 @@ class MusicPlayerViewController: UIViewController {
         syncWithMusicBtn.titleLabel?.textAlignment = .center
         musicOnIphineBtn.titleLabel?.numberOfLines = 3
         musicOnIphineBtn.titleLabel?.textAlignment = .center
+        
+        AVAudioSession.sharedInstance().requestRecordPermission({ _ in })
        }
     
     @IBAction func syncWithMusicBtnDidTap(_ sender: Any) {

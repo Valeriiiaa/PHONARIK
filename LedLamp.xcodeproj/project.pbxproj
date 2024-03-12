@@ -1045,6 +1045,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = Ledtttttt;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Qr code scanner";
 				INFOPLIST_KEY_NSHomeKitUsageDescription = "We need it for add devices, room to your Home";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need it for Playback light reflection";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -1085,6 +1086,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = Ledtttttt;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Qr code scanner";
 				INFOPLIST_KEY_NSHomeKitUsageDescription = "We need it for add devices, room to your Home";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need it for Playback light reflection";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
