@@ -25,7 +25,7 @@ class MusicAddLightViewController: UIViewController {
     
     var saveDidTap: (([LampModel]) -> Void)?
     
-    var image = ["firstImage", "fourthImage", "SecondImage", "thirdImage"]
+    var image = ["firstImage", "fourthImage", "SecondImage", "thirdImage", "firstImage", "fourthImage", "SecondImage", "thirdImage", "firstImage", "fourthImage", "SecondImage", "thirdImage", "firstImage", "fourthImage", "SecondImage", "thirdImage", "firstImage", "fourthImage", "SecondImage", "thirdImage", "firstImage", "fourthImage", "SecondImage", "thirdImage", "firstImage", "fourthImage", "SecondImage", "thirdImage", "firstImage", "fourthImage", "SecondImage", "thirdImage", "firstImage", "fourthImage", "SecondImage", "thirdImage", "firstImage", "fourthImage", "SecondImage", "thirdImage", "firstImage", "fourthImage", "SecondImage", "thirdImage", "firstImage", "fourthImage", "SecondImage", "thirdImage", "firstImage", "fourthImage", "SecondImage", "thirdImage", "firstImage", "fourthImage", "SecondImage", "thirdImage", "firstImage", "fourthImage", "SecondImage", "thirdImage", "firstImage", "fourthImage", "SecondImage", "thirdImage", "firstImage", "fourthImage", "SecondImage", "thirdImage", "firstImage", "fourthImage", "SecondImage", "thirdImage", "firstImage", "fourthImage", "SecondImage", "thirdImage","firstImage", "fourthImage", "SecondImage", "thirdImage", "firstImage", "fourthImage", "SecondImage", "thirdImage","firstImage", "fourthImage", "SecondImage", "thirdImage", "firstImage", "fourthImage", "SecondImage", "thirdImage","firstImage", "fourthImage", "SecondImage", "thirdImage","firstImage", "fourthImage", "SecondImage", "thirdImage","firstImage", "fourthImage", "SecondImage", "thirdImage", "firstImage", "fourthImage", "SecondImage", "thirdImage"]
     
     var lights = [LampModel]()
     
@@ -161,8 +161,8 @@ extension MusicAddLightViewController: UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MusicDeviceCell", for: indexPath)
         let lightModel = lights[indexPath.row]
-        let random = Int.random(in: 0...2)
-        let image = UIImage(named: image[random]) ?? UIImage()
+       
+        let image = UIImage(named: image[indexPath.row]) ?? UIImage()
         (cell as? MusicDeviceCell)?.configure(deviceName: lightModel.name, imageDevice: image, stateLabel: lightModel.isEnabled, hexLabel: UIColor(hex: lightModel.color).hexValue(), instensityLabel: "", isSelected: selectedLamps.contains(where: { $0.deviceId == lightModel.deviceId }))
         
         (cell as? MusicDeviceCell)?.switchValueChanged = { value in

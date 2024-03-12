@@ -110,9 +110,10 @@ class MusicIphoneViewController: UIViewController {
             selectLight()
             return
         }
+        isPlayiing.toggle()
+        guard isPlayiing else { return }
         let url = URL(string: "music://music.apple.com/library")!
         UIApplication.shared.open(url)
-        isPlayiing.toggle()
     }
     
     @IBAction func backButtonDidTap(_ sender: Any) {
