@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -25,7 +26,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KmW-fr-T1s">
-                        <rect key="frame" x="0.0" y="0.0" width="327" height="275"/>
+                        <rect key="frame" x="0.0" y="8" width="327" height="275"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="firstImage" translatesAutoresizingMaskIntoConstraints="NO" id="qRL-Yj-5te">
                                 <rect key="frame" x="0.0" y="0.0" width="327" height="173.66666666666666"/>
@@ -162,7 +163,7 @@
                     <constraint firstItem="KmW-fr-T1s" firstAttribute="leading" secondItem="2RE-wb-atZ" secondAttribute="leading" id="8ka-H9-YX2"/>
                     <constraint firstAttribute="trailing" secondItem="KmW-fr-T1s" secondAttribute="trailing" id="Bok-7z-jHQ"/>
                     <constraint firstAttribute="bottom" secondItem="KmW-fr-T1s" secondAttribute="bottom" id="R2K-vt-qYB"/>
-                    <constraint firstItem="KmW-fr-T1s" firstAttribute="top" secondItem="2RE-wb-atZ" secondAttribute="top" id="cCs-40-uti"/>
+                    <constraint firstItem="KmW-fr-T1s" firstAttribute="top" secondItem="2RE-wb-atZ" secondAttribute="top" constant="8" id="cCs-40-uti"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
