@@ -16,6 +16,7 @@ enum SubType {
 }
 
 class SubscriptionViewController: UIViewController {
+    @IBOutlet weak var activityIndicatorSub: UIActivityIndicatorView!
     @IBOutlet weak var yearButton: UIButton!
     
     @IBOutlet weak var backgorund85OffView: UIView!

@@ -10,6 +10,7 @@ import ApphudSDK
 import SwiftUI
 
 class FourthPageViewController: UIViewController {
+    @IBOutlet weak var activityIndicatorFourthScreen: UIActivityIndicatorView!
     @IBOutlet weak var backgroundNextView: UIView!
     @IBOutlet weak var notNowBtn: UIButton!
     @IBOutlet weak var restoreBtn: UIButton!
