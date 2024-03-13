@@ -1,6 +1,15 @@
 {
   "pins" : [
     {
+      "identity" : "apphudsdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apphud/ApphudSDK",
+      "state" : {
+        "revision" : "fcc4cced82d2cabe65c8566df3f273acacc5b1ab",
+        "version" : "3.2.8"
+      }
+    },
+    {
       "identity" : "axistabview",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/jasudev/AxisTabView.git",

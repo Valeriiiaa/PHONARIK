@@ -6,10 +6,10 @@
 //
 
 import UIKit
+import ApphudSDK
 import SwiftUI
 
 class FourthPageViewController: UIViewController {
-   
     @IBOutlet weak var backgroundNextView: UIView!
     @IBOutlet weak var notNowBtn: UIButton!
     @IBOutlet weak var restoreBtn: UIButton!
@@ -32,7 +32,6 @@ class FourthPageViewController: UIViewController {
         restoreBtn.setTitle("restore".localized, for: .normal)
         privacyBtn.setTitle("privacy".localized, for: .normal)
         termsBtn.setTitle("terms".localized, for: .normal)
-        
         notNowBtn.titleLabel?.numberOfLines = 0
         notNowBtn.titleLabel?.textAlignment = .center
         restoreBtn.titleLabel?.numberOfLines = 0
@@ -41,7 +40,6 @@ class FourthPageViewController: UIViewController {
         privacyBtn.titleLabel?.textAlignment = .center
         termsBtn.titleLabel?.numberOfLines = 0
         termsBtn.titleLabel?.textAlignment = .center
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -52,7 +50,6 @@ class FourthPageViewController: UIViewController {
         super.viewWillDisappear(animated)
         timer?.invalidate()
         timer = nil
-        
     }
     
     private func setTimer() {
@@ -77,18 +74,38 @@ class FourthPageViewController: UIViewController {
     }
    
     @IBAction func restoreBtnDidTap(_ sender: Any) {
+        Task {
+            guard let result = await Apphud.restorePurchases() else {
+                //showSuccess
+                return
+            }
+            //showError
+        }
     }
     
     @IBAction func privacyBtnDidTap(_ sender: Any) {
+        
     }
    
     @IBAction func termsBtnDidTap(_ sender: Any) {
+        
     }
-    
    
     @IBAction func aheadBtnDidTap(_ sender: Any) {
-//        let entrance = UIStoryboard(name: "Onboarding", bundle: nil).instantiateViewController(withIdentifier: "SubscriptionViewController")
-//        navigationController?.pushViewController(entrance, animated: true)
+        Task {
+            let products = try? await Apphud.fetchProducts()
+            guard let product = products?.first(where: { $0.id == "week.trial.phonarik" }) else {
+                return
+            }
+            guard let apphudProduct = Apphud.apphudProductFor(product) else {
+                return
+            }
+            let result = await Apphud.purchase(apphudProduct)
+            if let error = result.error {
+                
+            } else {
+                
+            }
+        }
     }
-    
 }
