@@ -120,7 +120,7 @@
 "unrestrictedLed" = "Unrestricted LED Lamp Controller";
 "choosingOptimal" = "Choosing optimal colors and brightness for each room";
 "popular" = "POPULAR";
-"3dayFree" = "3 DAYS FREE TRIAL";
+"3dayFree" = "3 DAYS";
 "bestDeal" = "BEST DEAL";
 "monthly" = "Monthly";
 "weekly" = "Weekly";
@@ -131,6 +131,6 @@
 "19month" = "$19,99/month";
 "5week" = "$5,99/week";
 "39year" = "$39,99/year";
-"startTrialThen" = "Start Trial then Subscribe";
+"startTrialThen" = "Subscribe";
 
 

@@ -7,6 +7,8 @@
 
 import UIKit
 import FlexColorPicker
+import ApphudSDK
+import AudioToolbox
 
 class ColorPickerViewController: UIViewController {
     
@@ -66,19 +68,26 @@ class ColorPickerViewController: UIViewController {
         })
         
         stackColours.arrangedSubviews[1].layer.borderWidth = 1
-        stackColours.arrangedSubviews[1].layer.borderColor = UIColor(red: 136/255, green: 166/255, blue: 248/255, alpha: 1).cgColor
+//        stackColours.arrangedSubviews[1].layer.borderColor = UIColor(red: 136/255, green: 166/255, blue: 248/255, alpha: 1).cgColor
         stackColours.arrangedSubviews[2].layer.borderWidth = 1
-        stackColours.arrangedSubviews[2].layer.borderColor = UIColor(red: 165/255, green: 251/255, blue: 254/255, alpha: 1).cgColor
+//        stackColours.arrangedSubviews[2].layer.borderColor = UIColor(red: 165/255, green: 251/255, blue: 254/255, alpha: 1).cgColor
         stackColours.arrangedSubviews[3].layer.borderWidth = 1
-        stackColours.arrangedSubviews[3].layer.borderColor = UIColor(red: 177/255, green: 253/255, blue: 153/255, alpha: 1).cgColor
+//        stackColours.arrangedSubviews[3].layer.borderColor = UIColor(red: 177/255, green: 253/255, blue: 153/255, alpha: 1).cgColor
         stackColours.arrangedSubviews[4].layer.borderWidth = 1
-        stackColours.arrangedSubviews[4].layer.borderColor = UIColor(red: 191/255, green: 115/255, blue: 87/255, alpha: 1).cgColor
+//        stackColours.arrangedSubviews[4].layer.borderColor = UIColor(red: 191/255, green: 115/255, blue: 87/255, alpha: 1).cgColor
         stackColours.arrangedSubviews[5].layer.borderWidth = 1
-        stackColours.arrangedSubviews[5].layer.borderColor = UIColor(red: 228/255, green: 101/255, blue: 98/255, alpha: 1).cgColor
+//        stackColours.arrangedSubviews[5].layer.borderColor = UIColor(red: 228/255, green: 101/255, blue: 98/255, alpha: 1).cgColor
         stackColours.arrangedSubviews[6].layer.borderWidth = 1
-        stackColours.arrangedSubviews[6].layer.borderColor = UIColor(red: 195/255, green: 101/255, blue: 128/255, alpha: 1).cgColor
+//        stackColours.arrangedSubviews[6].layer.borderColor = UIColor(red: 195/255, green: 101/255, blue: 128/255, alpha: 1).cgColor
         stackColours.arrangedSubviews[7].layer.borderWidth = 1
-        stackColours.arrangedSubviews[7].layer.borderColor = UIColor(red: 159/255, green: 89/255, blue: 214/255, alpha: 1).cgColor
+//        stackColours.arrangedSubviews[7].layer.borderColor = UIColor(red: 159/255, green: 89/255, blue: 214/255, alpha: 1).cgColor
+        
+        for view in stackColours.arrangedSubviews {
+            view.layer.borderColor = UIColor.white.withAlphaComponent(0.2).cgColor
+            let tap = UITapGestureRecognizer(target: self, action: #selector(didTap(_:)))
+            view.addGestureRecognizer(tap)
+            view.isUserInteractionEnabled = true
+        }
         
         [hexView, plinthView, intensityView].forEach( { item in
             item?.layer.cornerRadius =  10
@@ -91,32 +100,79 @@ class ColorPickerViewController: UIViewController {
     }
     
     @objc
+    private func didTap(_ sender: UITapGestureRecognizer) {
+        let hbsColor = sender.view?.backgroundColor?.hsbColor ?? UIColor.white.hsbColor
+        colorPaletterView.setSelectedHSBColor(hbsColor, isInteractive: true)
+        brightnessSlider.setSelectedHSBColor(hbsColor, isInteractive: true)
+        saturationSlider.setSelectedHSBColor(hbsColor, isInteractive: true)
+        configurePallete()
+        configureBrigtness()
+        configureSaturation()
+        Vibration.success.vibrate()
+        UIView.animate(withDuration: 0.5) {
+            sender.view?.layer.borderColor = UIColor.white.cgColor
+            sender.view?.layer.borderWidth = 2
+        } completion: { _ in
+            UIView.animate(withDuration: 0.5) {
+                sender.view?.layer.borderColor = UIColor.clear.cgColor
+            }
+        }
+    }
+    
+    func configureBrigtness() {
+        let value = brightnessSlider.sliderDelegate.valueAndGradient(for: brightnessSlider.selectedHSBColor).value
+        let stringValue = Int(round((brightnessSlider.reversePercentage ? 1 - value : value) * 100))
+        intensityLabel.text = "intensity".localized + " " + stringValue.description + "%"
+        let baseColor = colorPaletterView.selectedHSBColor
+        colorPaletterView.setSelectedHSBColor(baseColor.withBrightness(brightnessSlider.selectedHSBColor.brightness), isInteractive: true)
+        hexLabel.text = "HEX: #" + colorPaletterView.selectedColor.hexValue()
+        pizdaImageView.tintColor = colorPaletterView.selectedColor
+    }
+    
+    func configureSaturation() {
+        let baseColor = colorPaletterView.selectedHSBColor
+        colorPaletterView.setSelectedHSBColor(baseColor.withSaturation(saturationSlider.selectedHSBColor.saturation), isInteractive: true)
+        hexLabel.text = "HEX: #" + colorPaletterView.selectedColor.hexValue()
+        pizdaImageView.tintColor = colorPaletterView.selectedColor
+    }
+    
+    func configurePallete() {
+        hexLabel.text = "HEX: #" + colorPaletterView.selectedColor.hexValue()
+        pizdaImageView.tintColor = colorPaletterView.selectedColor
+    }
+    
+    @objc
     open func colorPicked(by control: Any?) {
         guard let control = control as? ColorControl else {
             return
         }
-        if control === brightnessSlider,
-           let posis = control as? BrightnessSliderControl {
-            let value = posis.sliderDelegate.valueAndGradient(for: posis.selectedHSBColor).value
-            let stringValue = Int(round((posis.reversePercentage ? 1 - value : value) * 100))
-            intensityLabel.text = "intensity".localized + " " + stringValue.description + "%"
-            let baseColor = colorPaletterView.selectedHSBColor
-            colorPaletterView.setSelectedHSBColor(baseColor.withBrightness(posis.selectedHSBColor.brightness), isInteractive: true)
-            hexLabel.text = "HEX: #" + colorPaletterView.selectedColor.hexValue()
-            pizdaImageView.tintColor = colorPaletterView.selectedColor
-        } else if let posis = control as? SaturationSliderControl   {
-            let baseColor = colorPaletterView.selectedHSBColor
-            colorPaletterView.setSelectedHSBColor(baseColor.withSaturation(posis.selectedHSBColor.saturation), isInteractive: true)
-            hexLabel.text = "HEX: #" + colorPaletterView.selectedColor.hexValue()
-            pizdaImageView.tintColor = colorPaletterView.selectedColor
+        if control === brightnessSlider {
+            guard Apphud.hasPremiumAccess() else {
+                let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
+                let rootVC = storyboard.instantiateViewController(withIdentifier: "SubscriptionViewController")
+                rootVC.modalPresentationStyle = .fullScreen
+                rootVC.modalTransitionStyle = .coverVertical
+                present(rootVC, animated: true)
+                return
+            }
+            configureBrigtness()
+        } else if let posis = control as? SaturationSliderControl {
+            guard Apphud.hasPremiumAccess() else {
+                let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
+                let rootVC = storyboard.instantiateViewController(withIdentifier: "SubscriptionViewController")
+                rootVC.modalPresentationStyle = .fullScreen
+                rootVC.modalTransitionStyle = .coverVertical
+                present(rootVC, animated: true)
+                return
+            }
+            configureSaturation()
         } else if let huesos = control as? ColorPaletteControl {
-            hexLabel.text = "HEX: #" + huesos.selectedColor.hexValue()
-            pizdaImageView.tintColor = colorPaletterView.selectedColor
+            configurePallete()
         }
+        reconfigureDeviceColor()
     }
     
-    @IBAction func saveBtnDidTap(_ sender: Any) {
-        guard let intColor = Int(colorPaletterView.selectedColor.hexValue(), radix: 16) else { return }
+    func reconfigureDeviceColor() {
         lampModel.accessory!.getCharacteristic(forType: .hue)!.writeValue(colorPaletterView.selectedHSBColor.hue * 360, completionHandler: { error in
             print(error)
         })
@@ -126,6 +182,11 @@ class ColorPickerViewController: UIViewController {
         lampModel.accessory!.getCharacteristic(forType: .brightness)!.writeValue(colorPaletterView.selectedHSBColor.brightness * 100, completionHandler: { error in
             print(error)
         })
+    }
+    
+    @IBAction func saveBtnDidTap(_ sender: Any) {
+        guard let intColor = Int(colorPaletterView.selectedColor.hexValue(), radix: 16) else { return }
+        reconfigureDeviceColor()
         lampModel.color = intColor
         DatabaseManager.shared.update(lampModel)
         ActionManager.shared.reload()
@@ -163,7 +224,7 @@ class ColorPickerViewController: UIViewController {
         let alert = UIAlertController(title: nil, message: "wantToDelete".localized, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "yes".localized, style: .default, handler: { [unowned self] _ in
             DispatchQueue.main.async {
-                DatabaseManager.shared.remove(lightModel.name)
+                DatabaseManager.shared.remove(lightModel.deviceId)
                 ActionManager.shared.reload()
                 self.dismiss(animated: true)
             }
@@ -214,3 +275,48 @@ func hexStringFromColor(color: UIColor) -> String {
     print(hexString)
     return hexString
  }
+
+
+enum Vibration {
+        case error
+        case success
+        case warning
+        case light
+        case medium
+        case heavy
+        @available(iOS 13.0, *)
+        case soft
+        @available(iOS 13.0, *)
+        case rigid
+        case selection
+        case oldSchool
+
+        public func vibrate() {
+            switch self {
+            case .error:
+                UINotificationFeedbackGenerator().notificationOccurred(.error)
+            case .success:
+                UINotificationFeedbackGenerator().notificationOccurred(.success)
+            case .warning:
+                UINotificationFeedbackGenerator().notificationOccurred(.warning)
+            case .light:
+                UIImpactFeedbackGenerator(style: .light).impactOccurred()
+            case .medium:
+                UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+            case .heavy:
+                UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
+            case .soft:
+                if #available(iOS 13.0, *) {
+                    UIImpactFeedbackGenerator(style: .soft).impactOccurred()
+                }
+            case .rigid:
+                if #available(iOS 13.0, *) {
+                    UIImpactFeedbackGenerator(style: .rigid).impactOccurred()
+                }
+            case .selection:
+                UISelectionFeedbackGenerator().selectionChanged()
+            case .oldSchool:
+                AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
+            }
+        }
+    }

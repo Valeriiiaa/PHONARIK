@@ -7,6 +7,7 @@
 
 import UIKit
 import AVFAudio
+import ApphudSDK
 
 class MusicPlayerViewController: UIViewController {
 
@@ -34,6 +35,15 @@ class MusicPlayerViewController: UIViewController {
        }
     
     @IBAction func syncWithMusicBtnDidTap(_ sender: Any) {
+        guard Apphud.hasPremiumAccess() else { 
+            let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
+            let rootVC = storyboard.instantiateViewController(withIdentifier: "SubscriptionViewController")
+            rootVC.modalPresentationStyle = .fullScreen
+            rootVC.modalTransitionStyle = .coverVertical
+            present(rootVC, animated: true)
+            return
+        }
+        
         let entrance = UIStoryboard(name: "MusicPlayer", bundle: nil).instantiateViewController(withIdentifier: "SyncWithMusicViewController")
         entrance.modalPresentationStyle = .fullScreen
         entrance.modalTransitionStyle = .coverVertical
@@ -41,6 +51,14 @@ class MusicPlayerViewController: UIViewController {
     }
    
     @IBAction func musicOnIphoneBtnDidTap(_ sender: Any) {
+        guard Apphud.hasPremiumAccess() else {
+            let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
+            let rootVC = storyboard.instantiateViewController(withIdentifier: "SubscriptionViewController")
+            rootVC.modalPresentationStyle = .fullScreen
+            rootVC.modalTransitionStyle = .coverVertical
+            present(rootVC, animated: true)
+            return
+        }
         let entrance = UIStoryboard(name: "MusicPlayer", bundle: nil).instantiateViewController(withIdentifier: "MusicIphoneViewController")
         entrance.modalPresentationStyle = .fullScreen
         entrance.modalTransitionStyle = .coverVertical

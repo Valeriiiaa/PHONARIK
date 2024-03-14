@@ -120,7 +120,7 @@
 "unrestrictedLed" = "Controlador de lâmpada LED sem restrições";
 "choosingOptimal" = "Escolhendo cores e brilho ótimos para cada cômodo";
 "popular" = "POPULAR";
-"3dayFree" = "TESTE GRATUITO DE 3 DIAS";
+"3dayFree" = "3 DIAS";
 "bestDeal" = "MELHOR NEGÓCIO";
 "monthly" = "Mensal";
 "weekly" = "Semanal";
@@ -131,4 +131,4 @@
 "19month" = "$19,99 por mês";
 "5week" = "$5,99 por semana";
 "39year" = "$39,99 por ano";
-"startTrialThen" = "Iniciar teste, depois inscrever-se";
+"startTrialThen" = "Inscrever-se";

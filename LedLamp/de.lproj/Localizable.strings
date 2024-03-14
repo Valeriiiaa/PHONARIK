@@ -119,7 +119,7 @@
 "unrestrictedLed" = "Uneingeschränktes LED-Lampensteuergerät";
 "choosingOptimal" = "Optimale Farben und Helligkeiten für jeden Raum auswählen";
 "popular" = "BELIEBT";
-"3dayFree" = "3 TAGE KOSTENLOSE TESTVERSION";
+"3dayFree" = "3 TAGE";
 "bestDeal" = "BESTES ANGEBOT";
 "monthly" = "Monatlich";
 "weekly" = "Wöchentlich";
@@ -130,5 +130,5 @@
 "19month" = "19,99 $ pro Monat";
 "5week" = "5,99 $ pro Woche";
 "39year" = "39,99 $ pro Jahr";
-"startTrialThen" = "Testversion starten, dann abonnieren";
+"startTrialThen" = "Dann abonnieren";
 

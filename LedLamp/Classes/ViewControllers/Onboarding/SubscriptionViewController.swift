@@ -8,11 +8,25 @@
 import UIKit
 import Combine
 import SwiftUI
+import ApphudSDK
 
 enum SubType {
     case weekly
     case monthly
     case yearly
+    
+    var id: String {
+        switch self {
+        case .weekly:
+            return "week.phonarik"
+            
+        case .monthly:
+            return "month.phonarik"
+            
+        case .yearly:
+            return "year.phonarik"
+        }
+    }
 }
 
 class SubscriptionViewController: UIViewController {
@@ -103,7 +117,7 @@ class SubscriptionViewController: UIViewController {
         bestDealView.layer.masksToBounds = true
         popularView.layer.cornerRadius = 15
         popularView.layer.masksToBounds = true
-        freeTrialView.layer.cornerRadius = 25
+        freeTrialView.layer.cornerRadius = 15
         freeTrialView.layer.masksToBounds = true
         
         yearView.layer.cornerRadius = 24
@@ -146,8 +160,8 @@ class SubscriptionViewController: UIViewController {
         selectedTitle = popularLabel
         selectedSubbackgroundView = popularView
         selectedBackgroundMainView = monthView
-        periodTitle = perWeekFirstLabel
-        perPeriodTitle = monthlyLabel
+        periodTitle = monthlyLabel
+        perPeriodTitle = monthAmountLabel
         
         activateState()
     }
@@ -205,17 +219,39 @@ class SubscriptionViewController: UIViewController {
         self.backgroundNextView.btnAnimation()
     }
     
-    @IBAction func notNowBtnDidTap(_ sender: Any) {
+    func goAway() {
         if let viewController = navigationController?.viewControllers.first(where: { $0 is FirstPageViewController }) {
             let main = CustomTabBarView()
             navigationController?.setViewControllers([UIHostingController(rootView: main)], animated: true)
         } else if navigationController?.viewControllers.first is SubscriptionViewController {
             let main = CustomTabBarView()
             navigationController?.setViewControllers([UIHostingController(rootView: main)], animated: true)
+        } else {
+            dismiss(animated: true)
         }
     }
     
+    @IBAction func notNowBtnDidTap(_ sender: Any) {
+        goAway()
+    }
+    
     @IBAction func restoreBtnDidTap(_ sender: Any) {
+        activityIndicatorSub.startAnimating()
+        Task {
+            guard let result = await Apphud.restorePurchases() else {
+                DispatchQueue.main.async { [unowned self] in
+                    showAlert(alertText: "Success", alertMessage: "", okAction: { [unowned self] in
+                        goAway()
+                    })
+                }
+                return
+            }
+            DispatchQueue.main.async { [unowned self] in
+                showAlert(alertText: "Error", alertMessage: result.localizedDescription, okAction: { [unowned self] in
+                    activityIndicatorSub.stopAnimating()
+                })
+            }
+        }
     }
    
     @IBAction func termsBtnDidTap(_ sender: Any) {
@@ -225,6 +261,35 @@ class SubscriptionViewController: UIViewController {
     }
     
     @IBAction func aheadBtnDidTap(_ sender: Any) {
+        Task { [unowned self] in
+            do {
+                let products = try? await Apphud.fetchProducts()
+                DispatchQueue.main.async {
+                    self.activityIndicatorSub.startAnimating()
+                }
+                guard let product = products?.first(where: { $0.id == selectedSubType.id }) else {
+                    return
+                }
+                guard let apphudProduct = Apphud.apphudProductFor(product) else {
+                    return
+                }
+                let result = await Apphud.purchase(apphudProduct)
+                DispatchQueue.main.async { [unowned self] in
+                    if let error = result.error {
+                        activityIndicatorSub.stopAnimating()
+                        showAlert(alertText: "Error", alertMessage: error.localizedDescription, okAction: {})
+                    } else {
+                        showAlert(alertText: "Success", alertMessage: "", okAction: { [unowned self] in
+                            goAway()
+                        })
+                    }
+                }
+            } catch {
+                DispatchQueue.main.async {
+                    self.showAlert(alertText: "Error", alertMessage: error.localizedDescription, okAction: {})
+                }
+            }
+        }
     }
    
     @IBAction func monthBtnDidTap(_ sender: Any) {
@@ -237,5 +302,17 @@ class SubscriptionViewController: UIViewController {
   
     @IBAction func yearBtnDidTap(_ sender: Any) {
         selectedSubType = .yearly
+    }
+}
+
+extension UIViewController {
+    //Show a basic alert
+    func showAlert(alertText : String, alertMessage : String, okAction: @escaping() -> Void) {
+        let alert = UIAlertController(title: alertText, message: alertMessage, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { _ in
+            okAction()
+        }))
+        //Add more actions as you see fit
+        self.present(alert, animated: true, completion: nil)
     }
 }

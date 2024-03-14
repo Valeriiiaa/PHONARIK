@@ -326,26 +326,43 @@ extension HomeManager: HMHomeDelegate {
 
 
 extension HomeManager: HMAccessoryDelegate {
-    
     func accessory(_ accessory: HMAccessory, service: HMService, didUpdateValueFor characteristic: HMCharacteristic) {
     }
     
     func home(_ home: HMHome, didUpdate room: HMRoom, for accessory: HMAccessory) {
+        print("[test] did update room")
+        ActionManager.shared.reload()
+    }
+    
+    func accessory(_ accessory: HMAccessory, didUpdateNameFor service: HMService) {
+        print("[test] did update name for")
+        ActionManager.shared.reload()
+    }
+    
+    func home(_ home: HMHome, didAdd accessory: HMAccessory) {
+        print("[test] did add accessory")
         itemDidAdded?(accessory)
     }
     
-//    func home
-    
-    func home(_ home: HMHome, didAdd accessory: HMAccessory) {
-        print("[test] \(accessory.room?.name)")
-//        itemDidAdded?(accessory)
+    func accessoryDidUpdateName(_ accessory: HMAccessory) {
+        print("[test] did update accessory")
+        ActionManager.shared.reload()
     }
 }
 
 extension HomeManager: HMHomeManagerDelegate {
     func homeManagerDidUpdateHomes(_ manager: HMHomeManager) {
-        print("updated eptr \(manager.homes.count)")
-      }
+        let number = manager.value(forKey: "_didUpdateHomes")
+        
+        if let num = number, let boolValue = num as? Bool {
+            if boolValue == true {
+                checkHomes()
+                print("We got access.")
+            } else{
+                print("We don't have access")
+            }
+        }
+    }
 }
 
 extension HMAccessory {

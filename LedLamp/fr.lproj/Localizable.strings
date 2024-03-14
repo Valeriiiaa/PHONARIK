@@ -120,7 +120,7 @@
 "unrestrictedLed" = "Contrôleur de lampe LED sans restrictions";
 "choosingOptimal" = "Choisir des couleurs et une luminosité optimales pour chaque pièce";
 "popular" = "POPULAIRE";
-"3dayFree" = "ESSAI GRATUIT DE 3 JOURS";
+"3dayFree" = "DE 3 JOURS";
 "bestDeal" = "MEILLEURE OFFRE";
 "monthly" = "Mensuel";
 "weekly" = "Hebdomadaire";
@@ -131,4 +131,4 @@
 "19month" = "19,99 $ par mois";
 "5week" = "5,99 $ par semaine";
 "39year" = "39,99 $ par an";
-"startTrialThen" = "Commencer l'essai puis s'abonner";
+"startTrialThen" = "Commencer";

@@ -153,7 +153,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
                 let alert = UIAlertController(title: nil, message: "wantToDelete".localized, preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "yes".localized, style: .default, handler: { _ in
                     DispatchQueue.main.async {
-                        DatabaseManager.shared.remove(lightModel.name)
+                        DatabaseManager.shared.remove(lightModel.deviceId)
                         ActionManager.shared.reload()
                         guard let accessory = lightModel.accessory else { return }
                         HomeManager.shared.removeDevice(accessory, { _ in })

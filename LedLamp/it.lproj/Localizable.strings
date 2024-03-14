@@ -118,7 +118,7 @@
 "unrestrictedLed" = "Controller della lampada a LED senza limitazioni";
 "choosingOptimal" = "Scegliere colori e luminosità ottimali per ogni stanza";
 "popular" = "POPOLARE";
-"3dayFree" = "PROVA GRATUITA DI 3 GIORNI";
+"3dayFree" = "3 GIORNI";
 "bestDeal" = "MIGLIOR OFFERTA";
 "monthly" = "Mensile";
 "weekly" = "Settimanale";
@@ -129,4 +129,4 @@
 "19month" = "$19,99 al mese";
 "5week" = "$5,99 a settimana";
 "39year" = "$39,99 all'anno";
-"startTrialThen" = "Inizia la prova, poi abbonati";
+"startTrialThen" = "Abbonati";

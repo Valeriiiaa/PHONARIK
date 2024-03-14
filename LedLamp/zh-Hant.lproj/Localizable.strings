@@ -119,7 +119,7 @@
 "unrestrictedLed" = "无限制的 LED 灯控制器";
 "choosingOptimal" = "为每个房间选择最佳的颜色和亮度";
 "popular" = "热门";
-"3dayFree" = "3 天免费试用";
+"3dayFree" = "3 试用";
 "bestDeal" = "最佳交易";
 "monthly" = "每月";
 "weekly" = "每周";
@@ -130,4 +130,4 @@
 "19month" = "每月 $19.99";
 "5week" = "每周 $5.99";
 "39year" = "每年 $39.99";
-"startTrialThen" = "开始试用，然后订阅";
+"startTrialThen" = "然后订阅";

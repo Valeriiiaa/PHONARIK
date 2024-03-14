@@ -158,11 +158,11 @@ class DatabaseManager: DatabaseManagerProtocol {
     }
     
     
-    func remove(_ name: String) {
+    func remove(_ deviceId: String) {
         let request: NSFetchRequest<LightLamp> = LightLamp.fetchRequest()
         do {
             let fetchedItems = try persistentContainer.viewContext.fetch(request)
-            if let item = fetchedItems.first(where: { $0.name == name }) {
+            if let item = fetchedItems.first(where: { $0.deviceId == deviceId }) {
                 persistentContainer.viewContext.delete(item)
                 saveContext()
             }
@@ -195,7 +195,7 @@ class DatabaseManager: DatabaseManagerProtocol {
             var models: [LampModel] = []
             for item in fetchedItems {
                 let device = devices.first(where: { $0.uniqueIdentifier.uuidString == item.deviceId })
-                models.append(LampModel(name: item.name ?? "", deviceId: item.deviceId ?? "", room: device?.room?.name, color: Int(item.color), isEnabled: item.isEnabled, accessory: device))
+                models.append(LampModel(name: device?.name ?? item.name ?? "", deviceId: item.deviceId ?? "", room: device?.room?.name, color: Int(item.color), isEnabled: item.isEnabled, accessory: device))
             }
             return models
         } catch let error {

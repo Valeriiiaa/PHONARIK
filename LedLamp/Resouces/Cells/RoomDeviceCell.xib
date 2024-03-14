@@ -21,27 +21,27 @@
         <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="RoomDeviceCell" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="257" id="cth-6Q-hkb" customClass="RoomDeviceCell" customModule="LedLamp" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="327" height="257"/>
             <autoresizingMask key="autoresizingMask"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cth-6Q-hkb" id="gG0-S2-LqC">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cth-6Q-hkb" id="gG0-S2-LqC">
                 <rect key="frame" x="0.0" y="0.0" width="327" height="257"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FOu-1g-PFD">
-                        <rect key="frame" x="0.0" y="8" width="327" height="255"/>
+                        <rect key="frame" x="0.0" y="8" width="327" height="268.66666666666669"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="firstImage" translatesAutoresizingMaskIntoConstraints="NO" id="j6q-8e-qPE">
-                                <rect key="frame" x="0.0" y="0.0" width="327" height="161"/>
+                                <rect key="frame" x="0.0" y="0.0" width="327" height="169.66666666666666"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="161" id="fre-PY-ams"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Cs-wI-6Ra">
-                                <rect key="frame" x="15.999999999999996" y="167" width="40.666666666666657" height="21"/>
+                                <rect key="frame" x="15.999999999999996" y="175.66666666666666" width="40.666666666666657" height="29.333333333333343"/>
                                 <fontDescription key="fontDescription" name="ChakraPetch-SemiBold" family="Chakra Petch" pointSize="16"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="wwb-2T-RX2">
-                                <rect key="frame" x="16" y="194" width="143.66666666666666" height="18.333333333333343"/>
+                                <rect key="frame" x="16" y="211" width="143.66666666666666" height="18.333333333333343"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="9ni-hQ-xRm">
                                         <rect key="frame" x="0.0" y="0.0" width="34.333333333333336" height="18.333333333333332"/>
@@ -88,13 +88,13 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7bV-VN-FAm">
-                                <rect key="frame" x="15.999999999999996" y="217.66666666666666" width="35.666666666666657" height="18.333333333333343"/>
+                                <rect key="frame" x="15.999999999999996" y="235.33333333333334" width="35.666666666666657" height="18.333333333333343"/>
                                 <fontDescription key="fontDescription" name="ChakraPetch-SemiBold" family="Chakra Petch" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cqq-Ox-hL9">
-                                <rect key="frame" x="275" y="161" width="52" height="42"/>
+                                <rect key="frame" x="275" y="169.66666666666666" width="52" height="47"/>
                                 <inset key="contentEdgeInsets" minX="13" minY="7" maxX="15" maxY="16"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="menuButton"/>
@@ -103,7 +103,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kid-nN-6mA" customClass="ConfigurableSwitchControl" customModule="LedLamp" customModuleProvider="target">
-                                <rect key="frame" x="251" y="203" width="61" height="36"/>
+                                <rect key="frame" x="251" y="216.66666666666666" width="61" height="36"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="CKW-Zy-pnE"/>
@@ -131,14 +131,14 @@
                             <constraint firstAttribute="trailing" secondItem="Cqq-Ox-hL9" secondAttribute="trailing" id="6fF-lU-Jvg"/>
                             <constraint firstItem="j6q-8e-qPE" firstAttribute="top" secondItem="FOu-1g-PFD" secondAttribute="top" id="7Jg-rg-9Sq"/>
                             <constraint firstAttribute="bottom" secondItem="Kid-nN-6mA" secondAttribute="bottom" constant="16" id="7La-SE-A8M"/>
-                            <constraint firstAttribute="height" constant="255" id="9Nb-Dq-qgN"/>
                             <constraint firstItem="0Cs-wI-6Ra" firstAttribute="top" secondItem="j6q-8e-qPE" secondAttribute="bottom" constant="6" id="AJM-ZA-4fz"/>
+                            <constraint firstItem="7bV-VN-FAm" firstAttribute="top" secondItem="wwb-2T-RX2" secondAttribute="bottom" constant="6" id="Bem-ax-5yi"/>
                             <constraint firstAttribute="trailing" secondItem="Kid-nN-6mA" secondAttribute="trailing" constant="15" id="Drs-Kq-RDA"/>
                             <constraint firstItem="j6q-8e-qPE" firstAttribute="leading" secondItem="FOu-1g-PFD" secondAttribute="leading" id="M2H-bh-37Y"/>
                             <constraint firstItem="wwb-2T-RX2" firstAttribute="leading" secondItem="FOu-1g-PFD" secondAttribute="leading" constant="16" id="OdW-Eu-CxQ"/>
                             <constraint firstItem="Kid-nN-6mA" firstAttribute="top" secondItem="Cqq-Ox-hL9" secondAttribute="bottom" id="gWK-nI-GgU"/>
                             <constraint firstItem="wwb-2T-RX2" firstAttribute="top" secondItem="0Cs-wI-6Ra" secondAttribute="bottom" constant="6" id="hL6-VJ-1Oj"/>
-                            <constraint firstAttribute="bottom" secondItem="7bV-VN-FAm" secondAttribute="bottom" constant="19" id="sQM-N9-rZf"/>
+                            <constraint firstAttribute="bottom" secondItem="7bV-VN-FAm" secondAttribute="bottom" constant="15" id="sQM-N9-rZf"/>
                             <constraint firstItem="j6q-8e-qPE" firstAttribute="height" secondItem="FOu-1g-PFD" secondAttribute="height" multiplier="0.631373" id="vxm-f3-Cqu"/>
                         </constraints>
                     </view>

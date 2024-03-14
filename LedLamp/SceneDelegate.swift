@@ -23,6 +23,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         Apphud.fetchProducts({ p, e in
             print(e)
         })
+        
+        print(Apphud.hasPremiumAccess())
+        print(Apphud.hasActiveSubscription())
         self.window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         self.window?.windowScene = windowScene
         HomeManager.shared.init1()
@@ -41,10 +44,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let isFirstLaunch = UserDefaultsService().get(key: LocalStorageKey.isFirstOpen, defaultValue: true)
         print(isFirstLaunch)
         guard isFirstLaunch else {
-            let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
-            let rootVC = storyboard.instantiateViewController(withIdentifier: "SubscriptionViewController")
             let navigationController = UINavigationController()
             navigationController.navigationBar.isHidden = true
+            guard !Apphud.hasPremiumAccess() else {
+                let main = CustomTabBarView()
+                navigationController.setViewControllers([UIHostingController(rootView: main)], animated: true)
+                return navigationController
+            }
+            let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
+            let rootVC = storyboard.instantiateViewController(withIdentifier: "SubscriptionViewController")
             navigationController.setViewControllers([rootVC], animated: true)
             return navigationController
         }

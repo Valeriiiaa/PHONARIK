@@ -66,21 +66,32 @@ class FourthPageViewController: UIViewController {
         self.backgroundNextView.btnAnimation()
     }
     
-  
-    @IBAction func notNowBtnDidTap(_ sender: Any) {
+    private func toRoot() {
         if let viewController = navigationController?.viewControllers.first(where: { $0 is FirstPageViewController }) {
             let main = CustomTabBarView()
             navigationController?.setViewControllers([UIHostingController(rootView: main)], animated: true)
         }
     }
+  
+    @IBAction func notNowBtnDidTap(_ sender: Any) {
+        toRoot()
+    }
    
     @IBAction func restoreBtnDidTap(_ sender: Any) {
+        activityIndicatorFourthScreen.startAnimating()
         Task {
             guard let result = await Apphud.restorePurchases() else {
-                //showSuccess
+                DispatchQueue.main.async { [unowned self] in
+                    showAlert(alertText: "Success", alertMessage: "", okAction: {
+                        self.toRoot()
+                    })
+                }
                 return
             }
-            //showError
+            DispatchQueue.main.async { [unowned self] in
+                activityIndicatorFourthScreen.stopAnimating()
+                showAlert(alertText: "Error", alertMessage: result.localizedDescription, okAction: { })
+            }
         }
     }
     
@@ -93,6 +104,7 @@ class FourthPageViewController: UIViewController {
     }
    
     @IBAction func aheadBtnDidTap(_ sender: Any) {
+        activityIndicatorFourthScreen.startAnimating()
         Task {
             let products = try? await Apphud.fetchProducts()
             guard let product = products?.first(where: { $0.id == "week.trial.phonarik" }) else {
@@ -102,10 +114,15 @@ class FourthPageViewController: UIViewController {
                 return
             }
             let result = await Apphud.purchase(apphudProduct)
-            if let error = result.error {
-                
-            } else {
-                
+            DispatchQueue.main.async { [unowned self] in
+                if let error = result.error {
+                    activityIndicatorFourthScreen.stopAnimating()
+                    showAlert(alertText: "Error", alertMessage: error.localizedDescription, okAction: {})
+                } else {
+                    showAlert(alertText: "Success", alertMessage: "", okAction: { [unowned self] in
+                        self.toRoot()
+                    })
+                }
             }
         }
     }

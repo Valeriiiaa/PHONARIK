@@ -38,7 +38,7 @@ class AddLightViewController: UIViewController {
     }
     
     private func configureTableView() {
-        let isEmptyLights = DatabaseManager.shared.load().isEmpty
+        let isEmptyLights = lamps.isEmpty
         tableView.showsVerticalScrollIndicator = false
         tableView.contentInset = .init(top: 0, left: 0, bottom: 100, right: 0)
         tableView.isHidden = isEmptyLights
@@ -128,7 +128,7 @@ extension AddLightViewController: UITableViewDelegate, UITableViewDataSource {
                 let alert = UIAlertController(title: nil, message: "wantToDelete".localized, preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "yes".localized, style: .default, handler: { _ in
                     DispatchQueue.main.async {
-                        DatabaseManager.shared.remove(lightModel.name)
+                        DatabaseManager.shared.remove(lightModel.deviceId)
                         ActionManager.shared.reload()
                         guard let accessory = lightModel.accessory else { return }
                         HomeManager.shared.removeDevice(accessory, { _ in })
