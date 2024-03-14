@@ -44,6 +44,7 @@ class MusicIphoneViewController: UIViewController {
         collectionView.contentInset = .init(top: 10, left: 16, bottom: 0, right: 16)
         startRecording()
         stopRecording()
+//        isPlayiing = true
         bind()
     }
     
@@ -65,14 +66,24 @@ class MusicIphoneViewController: UIViewController {
     
     private func startRecording() {
         let audioFilename = getDocumentsDirectory().appendingPathComponent("recording.m4a")
-
+        do {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playAndRecord)
+        } catch let error as NSError {
+            print(error)
+        }
+        try! AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playAndRecord, mode: AVAudioSession.Mode.videoRecording, options: AVAudioSession.CategoryOptions.mixWithOthers)
         let settings = [
             AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
             AVSampleRateKey: 12000,
             AVNumberOfChannelsKey: 1,
             AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
         ]
-
+        do {
+            try AVAudioSession.sharedInstance().setActive(true)
+        } catch let error as NSError {
+            print(error)
+        }
+        AVAudioSession.CategoryOptions.mixWithOthers
         self.audioRecorder = try? AVAudioRecorder(url: audioFilename, settings: settings)
         
         self.audioRecorder?.prepareToRecord()
@@ -111,9 +122,6 @@ class MusicIphoneViewController: UIViewController {
             return
         }
         isPlayiing.toggle()
-        guard isPlayiing else { return }
-        let url = URL(string: "music://music.apple.com/library")!
-        UIApplication.shared.open(url)
     }
     
     @IBAction func backButtonDidTap(_ sender: Any) {

@@ -70,6 +70,10 @@ class AddRoomViewController: UIViewController {
     }
     
     @objc func textFieldDidChange(_ textField: UITextField) {
+        configureText()
+    }
+    
+    private func configureText() {
         if textFieldNameDevice.text != nil, textFieldNameDevice.text?.isEmpty == false {
             [openCameraView, galleryView, collectionView].forEach({ item in
                 item?.isUserInteractionEnabled = true
@@ -130,5 +134,59 @@ extension AddRoomViewController: UITextFieldDelegate {
             textField.resignFirstResponder()
             return true
         }
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        let rooms = HomeManager.shared.home?.rooms ?? []
+        if !rooms.isEmpty {
+            textField.resignFirstResponder()
+            let alert = UIAlertController(title: "Select the room", message: nil, preferredStyle: .actionSheet)
+            
+            for room in rooms {
+                alert.addAction(UIAlertAction(title: room.name, style: .default, handler: { _ in
+                    DispatchQueue.main.async {
+                        textField.text = room.name
+                        self.configureText()
+                    }
+                }))
+            }
+            
+            alert.addAction(UIAlertAction(title: "New room", style: .default, handler: { _ in
+                DispatchQueue.main.async {
+                    self.showRoomNameAlert()
+                }
+            }))
+            
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+            self.present(alert, animated: true)
+            return false
+        }
+        return true
+    }
+    
+    private func showRoomNameAlert() {
+        let alertController = UIAlertController(title: "New Room", message: "Please enter a room name", preferredStyle: .alert)
+        alertController.addTextField { textField in
+            textField.placeholder = "Room name..."
+            textField.keyboardType = .default
+            textField.autocorrectionType = .no
+        }
+        let okAction = UIAlertAction(title: "Save", style: .default) {
+            action in guard let textField = alertController.textFields?.first,
+                            let text = textField.text else {
+                print("No value has been entered in email address")
+                return
+            }
+            
+            print("Entered email address value: \(text)")
+            DispatchQueue.main.async {
+                self.textFieldNameDevice.text = text
+                self.configureText()
+            }
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(okAction)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true)
+    }
 }
 

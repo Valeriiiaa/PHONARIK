@@ -49,13 +49,59 @@ class AddLightViewController: UIViewController {
         devicesConnectedLabel.text = lamps.count.description + " " + "devicesConnected".localized
         tableView.reloadData()
     }
+    
+    func editName(roomModel: RoomModel) {
+        let alertController = UIAlertController(title: "New Room", message: "Please enter a room name", preferredStyle: .alert)
+        alertController.addTextField { textField in
+            textField.text = roomModel.name
+            textField.placeholder = "Room name..."
+            textField.keyboardType = .default
+            textField.autocorrectionType = .no
+        }
+        let okAction = UIAlertAction(title: "Save", style: .default) {
+            action in guard let textField = alertController.textFields?.first,
+                            let text = textField.text else {
+                return
+            }
+            let oldName = roomModel.name
+            roomModel.name = text
+            DatabaseManager.shared.update(roomModel, oldName: oldName)
+            ActionManager.shared.reload()
+            
+            guard let room = roomModel.room else { return }
+            HomeManager.shared.updateRoom(room, name: text, { _ in })
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(okAction)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true, completion: nil)
+    }
    
     @IBAction func addLightBtnDidTap(_ sender: Any) {
         HomeManager.shared.showCamera()
     }
    
     @IBAction func menuBtnDidTap(_ sender: Any) {
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "editName".localized, style: .default, handler: { [unowned self] _ in
+            self.editName(roomModel: roomModel)
+        }))
+        alert.addAction(UIAlertAction(title: "delete".localized, style: .destructive, handler: { [unowned self] _ in
+            let alert = UIAlertController(title: nil, message: "wantToDelete".localized, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "yes".localized, style: .default, handler: { _ in
+                DispatchQueue.main.async {
+                    DatabaseManager.shared.removeRoom(self.roomModel.name)
+                    ActionManager.shared.reload()
+                    dismiss(animated: true)
+                }
+            }))
+            alert.addAction(UIAlertAction(title: "no".localized, style: .cancel))
+            self.present(alert, animated: true)
+        }))
         
+        alert.addAction(UIAlertAction(title: "cancel".localized, style: .cancel))
+        alert.popoverPresentationController?.barButtonItem = self.navigationItem.rightBarButtonItem
+        self.present(alert, animated: true)
     }
     
     @IBAction func backBtnDidTap(_ sender: Any) {

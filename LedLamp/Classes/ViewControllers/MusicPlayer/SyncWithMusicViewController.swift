@@ -116,7 +116,9 @@ class SyncWithMusicViewController: UIViewController {
     }
     
     @IBAction func selectLightBtnDidTap(_ sender: Any) {
+        selectLight()
     }
+    
     
     func selectLight() {
         let storyboard = UIStoryboard(name: "MusicPlayer", bundle: nil)
