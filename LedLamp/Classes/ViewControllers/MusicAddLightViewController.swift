@@ -34,6 +34,8 @@ class MusicAddLightViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        saveButton.layer.borderWidth = 1
+        saveButton.layer.borderColor = UIColor.white.cgColor
         playBackButton.setTitle("playbackLight".localized, for: .normal)
         selectLightLabel.text = "selectLight".localized
         addLightLabel.text = "addLight".localized
