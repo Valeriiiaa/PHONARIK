@@ -48,7 +48,7 @@ class MainViewController: UIViewController {
         HomeManager.shared.itemDidAdded = { hm in
 //            guard let self else { return }
             print(hm.name)
-            DatabaseManager.shared.save(LampModel(name: hm.name, deviceId: hm.uniqueIdentifier.uuidString, room: hm.room?.name ?? "bedroom".localized,  color: 0xE7FE55, isEnabled: false, accessory: hm))
+            DatabaseManager.shared.save(LampModel(name: hm.name, deviceId: hm.uniqueIdentifier.uuidString, room: hm.room!.name ?? "bedroom".localized,  color: 0xE7FE55, isEnabled: false, accessory: hm))
             ActionManager.shared.reload()
         }
         
@@ -71,6 +71,13 @@ class MainViewController: UIViewController {
     }
   
     @IBAction func addLightButtonDidTap(_ sender: Any) {
+        guard HomeManager.shared.hasAccess else {
+            guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else {
+                return
+            }
+            UIApplication.shared.open(settingsUrl)
+            return
+        }
         HomeManager.shared.showCamera()
     }
     

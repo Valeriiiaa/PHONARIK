@@ -9,6 +9,7 @@ import UIKit
 
 class AddLightViewController: UIViewController {
 
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var lampImage: UIImageView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var youDontHaveAnyLightLabel: UILabel!
@@ -28,11 +29,15 @@ class AddLightViewController: UIViewController {
         roomNameLabel.text = roomModel.name
         tableView.dataSource = self
         tableView.delegate = self
-        lamps = DatabaseManager.shared.loadLamp(by: roomModel.name)
+        lamps = DatabaseManager.shared.loadLamp(by: roomModel.room!.name ?? "")
         ActionManager.shared.reloadData.append { [weak self] in
             guard let self else { return }
-            self.lamps = DatabaseManager.shared.loadLamp(by: roomModel.name)
+            print("[test] \(roomModel.room!.name)")
+            self.lamps = DatabaseManager.shared.loadLamp(by: roomModel.room!.name ?? "")
             configureTableView()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 4, execute: {
+                self.activityIndicator.stopAnimating()
+            })
         }
         configureTableView()
     }
@@ -78,7 +83,11 @@ class AddLightViewController: UIViewController {
     }
    
     @IBAction func addLightBtnDidTap(_ sender: Any) {
-        HomeManager.shared.showCamera()
+        HomeManager.shared.showCamera(completions: { [weak self] in
+            DispatchQueue.main.async {
+                self?.activityIndicator.startAnimating()
+            }
+        })
     }
    
     @IBAction func menuBtnDidTap(_ sender: Any) {
@@ -158,7 +167,7 @@ extension AddLightViewController: UITableViewDelegate, UITableViewDataSource {
                                              hexLabel: "#" + UIColor(hex: lightModel.color).hexValue(),
                                              instensityLabel: Int(UIColor(hex: lightModel.color).hsbColor.brightness * 100).description + "%")
         
-        (cell as? MainScreenCell)?.switchValueChanged = { [unowned self] value in
+        (cell as? RoomDeviceCell)?.switchValueChanged = { [unowned self] value in
             lightModel.isEnabled = value
             DatabaseManager.shared.update(lightModel)
             lightModel.accessory?.getCharacteristic(forType: .power)?.writeValue(lightModel.isEnabled, completionHandler: { error in

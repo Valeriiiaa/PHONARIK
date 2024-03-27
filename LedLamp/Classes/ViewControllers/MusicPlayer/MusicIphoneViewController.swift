@@ -44,18 +44,13 @@ class MusicIphoneViewController: UIViewController {
         collectionView.contentInset = .init(top: 10, left: 16, bottom: 0, right: 16)
         startRecording()
         stopRecording()
-//        isPlayiing = true
+        startRecording()
         bind()
     }
     
     func bind() {
         $isPlayiing.sink(receiveValue: { [unowned self] isPlaying in
             playPauseButton.isSelected = isPlaying
-            if isPlaying {
-                startRecording()
-            } else {
-                stopRecording()
-            }
         }).store(in: &cancellable)
     }
     
@@ -83,7 +78,6 @@ class MusicIphoneViewController: UIViewController {
         } catch let error as NSError {
             print(error)
         }
-        AVAudioSession.CategoryOptions.mixWithOthers
         self.audioRecorder = try? AVAudioRecorder(url: audioFilename, settings: settings)
         
         self.audioRecorder?.prepareToRecord()
@@ -157,6 +151,14 @@ extension MusicIphoneViewController: UICollectionViewDataSource, UICollectionVie
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        16
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        16
+    }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let lamp = lamps[indexPath.row]
         lamp.isEnabled.toggle()
@@ -178,7 +180,6 @@ extension MusicIphoneViewController: UICollectionViewDataSource, UICollectionVie
 }
 
 extension MusicIphoneViewController {
-    
     fileprivate func runMeteringTimer() {
         
         self.meteringTimer = Timer.scheduledTimer(withTimeInterval: self.meteringFrequency, repeats: true, block: { [weak self] (_) in
@@ -189,16 +190,37 @@ extension MusicIphoneViewController {
             guard let averagePower = self.audioRecorder?.averagePower(forChannel: 0) else { return }
             
             // 1.1 to increase the feedback for low voice - due to noise cancellation.
-            let amplitude = 1.1 * pow(10.0, averagePower / 20.0)
+            let amplitude = 2.3 * pow(10.0, averagePower / 20.0)
+            print(amplitude)
             let clampedAmplitude = min(max(amplitude, 0), 1)
             lamps.forEach({ light in
-                light.accessory?.getCharacteristic(forType: .hue)?.writeValue(clampedAmplitude * 360, completionHandler: { error in
+                guard self.isPlayiing else { return }
+                let color = self.adjustRedColorShade(for: CGFloat(clampedAmplitude), baseColor: UIColor(hex: light.color)).hsbColor
+                light.accessory!.getCharacteristic(forType: .hue)!.writeValue(color.hue * 360, completionHandler: { error in
+                    print(error)
+                })
+//                light.accessory!.getCharacteristic(forType: .saturation)!.writeValue(color.saturation * 100, completionHandler: { error in
+//                    print(error)
+//                })
+                light.accessory!.getCharacteristic(forType: .brightness)!.writeValue(color.brightness * 100, completionHandler: { error in
                     print(error)
                 })
             })
         })
         
         self.meteringTimer?.fire()
+    }
+    
+    func adjustRedColorShade(for parameter: CGFloat, baseColor: UIColor) -> UIColor {
+        
+        // Извлечение компонентов цвета
+        var hue: CGFloat = 0, saturation: CGFloat = 0, brightness: CGFloat = 0, alpha: CGFloat = 0
+        baseColor.getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha)
+        
+        // Изменяем насыщенность и яркость, оставляя оттенок неизменным
+        let newColor = UIColor(hue: hue, saturation: saturation, brightness: brightness * parameter, alpha: alpha)
+        print("[test] result color \(newColor.hexValue())")
+        return newColor
     }
     
     fileprivate func stopMeteringTimer() {

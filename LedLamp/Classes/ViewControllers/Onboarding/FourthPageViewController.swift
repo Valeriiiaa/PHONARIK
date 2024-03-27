@@ -96,11 +96,11 @@ class FourthPageViewController: UIViewController {
     }
     
     @IBAction func privacyBtnDidTap(_ sender: Any) {
-        
+        UIApplication.shared.open(URL(string: "https://docs.google.com/document/d/1J7QEWnqOrWbCNo41SZPp5FoBCdx0J8er__fLSTX-w88/edit")!)
     }
    
     @IBAction func termsBtnDidTap(_ sender: Any) {
-        
+        UIApplication.shared.open(URL(string: "https://docs.google.com/document/d/1p9pe0SMlWYQReQl1ldBXwcAr2-uBq4ncmcwTwc_T6io/edit")!)
     }
    
     @IBAction func aheadBtnDidTap(_ sender: Any) {

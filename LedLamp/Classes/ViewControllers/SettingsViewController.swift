@@ -39,6 +39,29 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let item = SettingsModel.allCases[indexPath.row]
+        
+        switch item {
+        case .cameraAcess, .homeAccess, .microphoneAcess:
+            guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else {
+                return
+            }
+            UIApplication.shared.open(settingsUrl)
+        
+        case .contactUs:
+            break
+            
+        case .temsOfUse:
+            UIApplication.shared.open(URL(string: "https://docs.google.com/document/d/1p9pe0SMlWYQReQl1ldBXwcAr2-uBq4ncmcwTwc_T6io/edit")!)
+            
+        case .privacyPolicy:
+            UIApplication.shared.open(URL(string: "https://docs.google.com/document/d/1J7QEWnqOrWbCNo41SZPp5FoBCdx0J8er__fLSTX-w88/edit")!)
+            
+        case .share:
+            break
+        }
+        
         if indexPath.row == 0 {
             
         } else if indexPath.row == 1 {

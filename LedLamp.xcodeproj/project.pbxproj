@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		112A0F412B9CBFDB00F5B5D0 /* UIColor+hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112A0F402B9CBFDB00F5B5D0 /* UIColor+hex.swift */; };
 		115E476A2B9A3E7E009E8B85 /* FlexColorPicker in Frameworks */ = {isa = PBXBuildFile; productRef = 115E47692B9A3E7E009E8B85 /* FlexColorPicker */; };
+		1177DD732BAA337000D28A19 /* TROLEDLH.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 1177DD722BAA333F00D28A19 /* TROLEDLH.storekit */; };
 		118EAD0C2B965CC900F6A8BD /* UPCarouselFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118EAD0B2B965CC900F6A8BD /* UPCarouselFlowLayout.swift */; };
 		118EAD0E2B9663A800F6A8BD /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118EAD0D2B9663A800F6A8BD /* DatabaseManager.swift */; };
 		118EAD112B96641700F6A8BD /* LEDapp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 118EAD0F2B96641600F6A8BD /* LEDapp.xcdatamodeld */; };
@@ -123,6 +124,7 @@
 
 /* Begin PBXFileReference section */
 		112A0F402B9CBFDB00F5B5D0 /* UIColor+hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+hex.swift"; sourceTree = "<group>"; };
+		1177DD722BAA333F00D28A19 /* TROLEDLH.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = TROLEDLH.storekit; sourceTree = "<group>"; };
 		118EAD0B2B965CC900F6A8BD /* UPCarouselFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UPCarouselFlowLayout.swift; sourceTree = "<group>"; };
 		118EAD0D2B9663A800F6A8BD /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		118EAD102B96641600F6A8BD /* LEDapp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LEDapp.xcdatamodel; sourceTree = "<group>"; };
@@ -430,6 +432,7 @@
 		F6EB00EB2B8C9FBB005139CC = {
 			isa = PBXGroup;
 			children = (
+				1177DD722BAA333F00D28A19 /* TROLEDLH.storekit */,
 				F6EB00F62B8C9FBB005139CC /* LedLamp */,
 				F6EB010D2B8C9FBC005139CC /* LedLampTests */,
 				F6EB01172B8C9FBC005139CC /* LedLampUITests */,
@@ -760,6 +763,7 @@
 				F6EB00FF2B8C9FBB005139CC /* Main.storyboard in Resources */,
 				F6BED5982B9F7CA400E14F3C /* RoomDeviceCell.xib in Resources */,
 				F6B176E12B91EED400932231 /* ColorPicker.storyboard in Resources */,
+				1177DD732BAA337000D28A19 /* TROLEDLH.storekit in Resources */,
 				F6A0BC162B8CA4DD0084A0E8 /* Settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1043,18 +1047,18 @@
 				CODE_SIGN_ENTITLEMENTS = LedLamp/LedLamp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6NNWR2JHQ8;
+				DEVELOPMENT_TEAM = 3S3LZT39QF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LedLamp/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Ledtttttt;
+				INFOPLIST_KEY_CFBundleDisplayName = "LED Light: Smart Remote App";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Qr code scanner";
 				INFOPLIST_KEY_NSHomeKitUsageDescription = "We need it for add devices, room to your Home";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need it for Playback light reflection";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1062,7 +1066,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.applage.w.Led;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fledbeckpuck.w.Led.flud;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -1084,18 +1088,18 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6NNWR2JHQ8;
+				DEVELOPMENT_TEAM = 3S3LZT39QF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LedLamp/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Ledtttttt;
+				INFOPLIST_KEY_CFBundleDisplayName = "LED Light: Smart Remote App";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Qr code scanner";
 				INFOPLIST_KEY_NSHomeKitUsageDescription = "We need it for add devices, room to your Home";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need it for Playback light reflection";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1103,7 +1107,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.applage.w.Led;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fledbeckpuck.w.Led.flud;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

@@ -15,7 +15,7 @@ protocol HomeManagerProtocol {
     var accessories: (([HMAccessory]) -> Void)? { set get }
     var reloadDatas: [() -> Void] { get set }
     
-    func showCamera()
+    func showCamera(completions: (() -> Void)?)
     func checkHomes()
     func startDeviceDiscovering()
     func stopDeviceDiscovering()
@@ -39,12 +39,14 @@ class HomeManager: NSObject, HomeManagerProtocol {
     
     static let shared = HomeManager()
     
+    var hasAccess: Bool = false
+    
     var home: HMHome? {
         didSet {
             home?.delegate = self
         }
     }
-    private var manager: HMHomeManager!
+    var manager: HMHomeManager!
     private var browser: HMAccessoryBrowser!
     private var room: HMRoom?
     private var discoveredAccessories: [HMAccessory] = [] {
@@ -220,7 +222,7 @@ class HomeManager: NSObject, HomeManagerProtocol {
     }
     
     
-    func showCamera() {
+    func showCamera(completions: (() -> Void)? = nil) {
         self.home?.delegate = self
 //        let accessotyRequest = HMAccessorySetupRequest()
 //        accessotyRequest.payload = HMAccessorySetupPayload(url: URL(string: "X-HM://00195JERG4W7D"))!
@@ -229,6 +231,7 @@ class HomeManager: NSObject, HomeManagerProtocol {
 //            print(error)
 //        })
         home?.addAndSetupAccessories(completionHandler: { error in
+            completions?()
             print("errror \(error)")
         })
 //        HMAccessorySetupManager().performAccessorySetup(using: .init(), completionHandler: { result, error in
@@ -357,8 +360,10 @@ extension HomeManager: HMHomeManagerDelegate {
         if let num = number, let boolValue = num as? Bool {
             if boolValue == true {
                 checkHomes()
+                hasAccess = true
                 print("We got access.")
             } else{
+                hasAccess = false
                 print("We don't have access")
             }
         }
@@ -368,14 +373,6 @@ extension HomeManager: HMHomeManagerDelegate {
 extension HMAccessory {
     
     func getCharacteristic(forType type: CharacteristicType) -> HMCharacteristic? {
-        services.forEach({ item in
-            print("test" + item.serviceType)
-            print("test bool \(HMServiceTypeLightbulb == item.serviceType)")
-        })
-        services.lazy.forEach({ item in
-            print("test" + item.serviceType)
-            print("test bool \(HMServiceTypeLightbulb == item.serviceType)")
-        })
         switch type {
         case .hue:
             return services.lazy

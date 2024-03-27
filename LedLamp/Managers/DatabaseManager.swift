@@ -207,8 +207,7 @@ class DatabaseManager: DatabaseManagerProtocol {
     
     func loadLamp(by roomName: String) -> [LampModel] {
         let request: NSFetchRequest<LightLamp> = LightLamp.fetchRequest()
-        let roomPredicate = NSPredicate(format: "room == %@", roomName)
-        request.predicate = roomPredicate
+        let rooms = loadRooms()
         do {
             let fetchedItems = try persistentContainer.viewContext.fetch(request)
             let devices = HomeManager.shared.loadConnectedDevices()
@@ -217,7 +216,7 @@ class DatabaseManager: DatabaseManagerProtocol {
                 let device = devices.first(where: { $0.uniqueIdentifier.uuidString == item.deviceId })
                 models.append(LampModel(name: item.name ?? "", deviceId: item.deviceId ?? "", room: item.room ?? device?.room?.name, color: Int(item.color), isEnabled: item.isEnabled, accessory: device))
             }
-            return models
+            return models.filter({ $0.accessory?.room?.name == roomName })
         } catch let error {
             print("Error fetching history \(error)")
             return []

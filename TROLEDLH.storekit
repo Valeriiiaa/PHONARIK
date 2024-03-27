@@ -1,0 +1,182 @@
+{
+  "identifier" : "D13C44C7",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+
+  ],
+  "settings" : {
+    "_applicationInternalID" : "6479662295",
+    "_developerTeamID" : "3S3LZT39QF",
+    "_failTransactionsEnabled" : false,
+    "_lastSynchronizedDate" : 732835556.64435005,
+    "_storeKitErrors" : [
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Load Products"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Purchase"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Verification"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "App Store Sync"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Subscription Status"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "App Transaction"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Manage Subscriptions Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Refund Request Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Offer Code Redeem Sheet"
+      }
+    ]
+  },
+  "subscriptionGroups" : [
+    {
+      "id" : "21466101",
+      "localizations" : [
+
+      ],
+      "name" : "prem",
+      "subscriptions" : [
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "19.99",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "6479924451",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "Month",
+              "displayName" : "Month",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "month.phonarik",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "Month",
+          "subscriptionGroupID" : "21466101",
+          "type" : "RecurringSubscription"
+        },
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "5.99",
+          "familyShareable" : false,
+          "groupNumber" : 3,
+          "internalID" : "6479924317",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "Week",
+              "displayName" : "Week",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "week.phonarik",
+          "recurringSubscriptionPeriod" : "P1W",
+          "referenceName" : "Week",
+          "subscriptionGroupID" : "21466101",
+          "type" : "RecurringSubscription"
+        },
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "5.99",
+          "familyShareable" : false,
+          "groupNumber" : 4,
+          "internalID" : "6479924426",
+          "introductoryOffer" : {
+            "internalID" : "6703BC78",
+            "numberOfPeriods" : 1,
+            "paymentMode" : "free",
+            "subscriptionPeriod" : "P3D"
+          },
+          "localizations" : [
+            {
+              "description" : "Week trial",
+              "displayName" : "Week trial",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "week.trial.phonarik",
+          "recurringSubscriptionPeriod" : "P1W",
+          "referenceName" : "Week trial",
+          "subscriptionGroupID" : "21466101",
+          "type" : "RecurringSubscription"
+        },
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "39.99",
+          "familyShareable" : false,
+          "groupNumber" : 2,
+          "internalID" : "6479924418",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "Year",
+              "displayName" : "Year",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "year.phonarik",
+          "recurringSubscriptionPeriod" : "P1Y",
+          "referenceName" : "Year",
+          "subscriptionGroupID" : "21466101",
+          "type" : "RecurringSubscription"
+        }
+      ]
+    }
+  ],
+  "version" : {
+    "major" : 3,
+    "minor" : 0
+  }
+}

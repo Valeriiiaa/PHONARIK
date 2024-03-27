@@ -72,5 +72,4 @@ class MusicPlayerViewController: UIViewController {
         entrance.modalTransitionStyle = .coverVertical
         present(entrance, animated: true)
     }
-    
 }

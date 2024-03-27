@@ -47,9 +47,12 @@ class ColorPickerViewController: UIViewController {
         brightnessSlider.reversePercentage = true
         saturationSlider.addTarget(self, action: #selector(colorPicked(by:)), for: .valueChanged)
         let color = UIColor(hex: lampModel.color)
-        colorPaletterView.selectedColor = color
-        brightnessSlider.selectedColor = color
-        saturationSlider.selectedColor = color
+        colorPaletterView.setSelectedHSBColor(color.hsbColor, isInteractive: true)
+        brightnessSlider.setSelectedHSBColor(color.hsbColor, isInteractive: true)
+        saturationSlider.setSelectedHSBColor(color.hsbColor, isInteractive: true)
+//        colorPaletterView.selectedColor = color
+//        brightnessSlider.selectedColor = color
+//        saturationSlider.selectedColor = color
         pizdaImageView.tintColor = color
         hexLabel.text = "HEX: #" + colorPaletterView.selectedColor.hexValue()
         roomLabel.text = lampModel.room
@@ -101,6 +104,14 @@ class ColorPickerViewController: UIViewController {
     
     @objc
     private func didTap(_ sender: UITapGestureRecognizer) {
+        guard Apphud.hasPremiumAccess() else {
+            let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
+            let rootVC = storyboard.instantiateViewController(withIdentifier: "SubscriptionViewController")
+            rootVC.modalPresentationStyle = .fullScreen
+            rootVC.modalTransitionStyle = .coverVertical
+            present(rootVC, animated: true)
+            return
+        }
         let hbsColor = sender.view?.backgroundColor?.hsbColor ?? UIColor.white.hsbColor
         colorPaletterView.setSelectedHSBColor(hbsColor, isInteractive: true)
         brightnessSlider.setSelectedHSBColor(hbsColor, isInteractive: true)
@@ -117,6 +128,7 @@ class ColorPickerViewController: UIViewController {
                 sender.view?.layer.borderColor = UIColor.clear.cgColor
             }
         }
+        reconfigureDeviceColor()
     }
     
     func configureBrigtness() {
