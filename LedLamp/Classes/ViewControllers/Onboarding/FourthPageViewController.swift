@@ -6,8 +6,8 @@
 //
 
 import UIKit
-import ApphudSDK
 import SwiftUI
+import Adapty
 
 class FourthPageViewController: UIViewController {
     @IBOutlet weak var activityIndicatorFourthScreen: UIActivityIndicatorView!
@@ -80,17 +80,19 @@ class FourthPageViewController: UIViewController {
     @IBAction func restoreBtnDidTap(_ sender: Any) {
         activityIndicatorFourthScreen.startAnimating()
         Task {
-            guard let result = await Apphud.restorePurchases() else {
+            do {
+                let result = try await Adapty.restorePurchases()
+
                 DispatchQueue.main.async { [unowned self] in
                     showAlert(alertText: "Success", alertMessage: "", okAction: {
                         self.toRoot()
                     })
                 }
-                return
-            }
-            DispatchQueue.main.async { [unowned self] in
-                activityIndicatorFourthScreen.stopAnimating()
-                showAlert(alertText: "Error", alertMessage: result.localizedDescription, okAction: { })
+            } catch {
+                DispatchQueue.main.async { [unowned self] in
+                    activityIndicatorFourthScreen.stopAnimating()
+                    showAlert(alertText: "Error", alertMessage: error.localizedDescription, okAction: { })
+                }
             }
         }
     }
@@ -105,23 +107,23 @@ class FourthPageViewController: UIViewController {
    
     @IBAction func aheadBtnDidTap(_ sender: Any) {
         activityIndicatorFourthScreen.startAnimating()
-        Task {
-            let products = try? await Apphud.fetchProducts()
-            guard let product = products?.first(where: { $0.id == "week.trial.phonarik" }) else {
-                return
-            }
-            guard let apphudProduct = Apphud.apphudProductFor(product) else {
-                return
-            }
-            let result = await Apphud.purchase(apphudProduct)
-            DispatchQueue.main.async { [unowned self] in
-                if let error = result.error {
-                    activityIndicatorFourthScreen.stopAnimating()
-                    showAlert(alertText: "Error", alertMessage: error.localizedDescription, okAction: {})
-                } else {
-                    showAlert(alertText: "Success", alertMessage: "", okAction: { [unowned self] in
-                        self.toRoot()
-                    })
+        Task { [weak self] in
+            guard let self else { return }
+            do {
+                let paywall = try await Adapty.getPaywall(placementId: "main")
+                let products = try await Adapty.getPaywallProducts(paywall: paywall)
+                guard let product = products.first(where: { $0.vendorProductId == "week.trial.phonarik" }) else {
+                    return
+                }
+                let infp = try await Adapty.makePurchase(product: product)
+                UserDefaultsService().set(key: LocalStorageKey.isPremium, value: true)
+                showAlert(alertText: "Success", alertMessage: "", okAction: { [unowned self] in
+                    self.toRoot()
+                })
+            } catch {
+                DispatchQueue.main.async {
+                    self.activityIndicatorFourthScreen.stopAnimating()
+                    self.showAlert(alertText: "Error", alertMessage: error.localizedDescription, okAction: {})
                 }
             }
         }

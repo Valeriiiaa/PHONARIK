@@ -7,7 +7,8 @@
 
 import UIKit
 import SwiftUI
-import ApphudSDK
+import Adapty
+
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -19,16 +20,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
-        Apphud.start(apiKey: "app_XYnbYZrZRLS9KNVu9yDGzX8eZfGdBg")
-        Apphud.fetchProducts({ p, e in
-            print(e)
-        })
-        
-        print(Apphud.hasPremiumAccess())
-        print(Apphud.hasActiveSubscription())
+        Adapty.activate("public_live_2ndMfu4V.el4UaCkjrhmpKSpriYJk")
         self.window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         self.window?.windowScene = windowScene
         HomeManager.shared.init1()
+        Adapty.getProfile({ result in
+            switch result {
+            case let .success(profile):
+                UserDefaultsService().set(key: LocalStorageKey.isPremium, value: profile.accessLevels["premium"]?.isActive ?? false)
+                
+            case .failure(let error):
+                print(error)
+            }
+        })
         let onboardingVC = UIStoryboard(name: "Onboarding", bundle: nil).instantiateInitialViewController()
         window?.rootViewController = getRootVC()//onboardingVC//UIHostingController(rootView: CustomTabBarView())
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
@@ -46,7 +50,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard isFirstLaunch else {
             let navigationController = UINavigationController()
             navigationController.navigationBar.isHidden = true
-            guard !Apphud.hasPremiumAccess() else {
+            guard UserDefaultsService().get(key: LocalStorageKey.isPremium, defaultValue: false) else {
                 let main = CustomTabBarView()
                 navigationController.setViewControllers([UIHostingController(rootView: main)], animated: true)
                 return navigationController

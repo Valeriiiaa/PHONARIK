@@ -8,7 +8,7 @@
 import UIKit
 import Combine
 import SwiftUI
-import ApphudSDK
+import Adapty
 
 enum SubType {
     case weekly
@@ -238,18 +238,21 @@ class SubscriptionViewController: UIViewController {
     @IBAction func restoreBtnDidTap(_ sender: Any) {
         activityIndicatorSub.startAnimating()
         Task {
-            guard let result = await Apphud.restorePurchases() else {
+            do {
+                let paywall = try await Adapty.getPaywall(placementId: "main")
+                let products = try await Adapty.getPaywallProducts(paywall: paywall)
+                let profile = try await Adapty.restorePurchases()
                 DispatchQueue.main.async { [unowned self] in
                     showAlert(alertText: "Success", alertMessage: "", okAction: { [unowned self] in
                         goAway()
                     })
                 }
-                return
-            }
-            DispatchQueue.main.async { [unowned self] in
-                showAlert(alertText: "Error", alertMessage: result.localizedDescription, okAction: { [unowned self] in
-                    activityIndicatorSub.stopAnimating()
-                })
+            } catch {
+                DispatchQueue.main.async { [unowned self] in
+                    showAlert(alertText: "Error", alertMessage: error.localizedDescription, okAction: { [unowned self] in
+                        activityIndicatorSub.stopAnimating()
+                    })
+                }
             }
         }
     }
@@ -265,26 +268,20 @@ class SubscriptionViewController: UIViewController {
     @IBAction func aheadBtnDidTap(_ sender: Any) {
         Task { [unowned self] in
             do {
-                let products = try? await Apphud.fetchProducts()
+                let paywall = try await Adapty.getPaywall(placementId: "main")
+                let products = try await Adapty.getPaywallProducts(paywall: paywall)
                 DispatchQueue.main.async {
                     self.activityIndicatorSub.startAnimating()
                 }
-                guard let product = products?.first(where: { $0.id == selectedSubType.id }) else {
+                guard let product = products.first(where: { $0.vendorProductId == selectedSubType.id }) else {
                     return
                 }
-                guard let apphudProduct = Apphud.apphudProductFor(product) else {
-                    return
-                }
-                let result = await Apphud.purchase(apphudProduct)
+                let result = try await Adapty.makePurchase(product: product)
+                UserDefaultsService().set(key: LocalStorageKey.isPremium, value: true)
                 DispatchQueue.main.async { [unowned self] in
-                    if let error = result.error {
-                        activityIndicatorSub.stopAnimating()
-                        showAlert(alertText: "Error", alertMessage: error.localizedDescription, okAction: {})
-                    } else {
-                        showAlert(alertText: "Success", alertMessage: "", okAction: { [unowned self] in
-                            goAway()
-                        })
-                    }
+                    showAlert(alertText: "Success", alertMessage: "", okAction: { [unowned self] in
+                        goAway()
+                    })
                 }
             } catch {
                 DispatchQueue.main.async {

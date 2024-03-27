@@ -7,7 +7,6 @@
 
 import UIKit
 import FlexColorPicker
-import ApphudSDK
 import AudioToolbox
 
 class ColorPickerViewController: UIViewController {
@@ -104,7 +103,7 @@ class ColorPickerViewController: UIViewController {
     
     @objc
     private func didTap(_ sender: UITapGestureRecognizer) {
-        guard Apphud.hasPremiumAccess() else {
+        guard UserDefaultsService().get(key: LocalStorageKey.isPremium, defaultValue: false) else {
             let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
             let rootVC = storyboard.instantiateViewController(withIdentifier: "SubscriptionViewController")
             rootVC.modalPresentationStyle = .fullScreen
@@ -159,7 +158,7 @@ class ColorPickerViewController: UIViewController {
             return
         }
         if control === brightnessSlider {
-            guard Apphud.hasPremiumAccess() else {
+            guard UserDefaultsService().get(key: LocalStorageKey.isPremium, defaultValue: false) else {
                 let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
                 let rootVC = storyboard.instantiateViewController(withIdentifier: "SubscriptionViewController")
                 rootVC.modalPresentationStyle = .fullScreen
@@ -169,7 +168,7 @@ class ColorPickerViewController: UIViewController {
             }
             configureBrigtness()
         } else if let posis = control as? SaturationSliderControl {
-            guard Apphud.hasPremiumAccess() else {
+            guard UserDefaultsService().get(key: LocalStorageKey.isPremium, defaultValue: false) else {
                 let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
                 let rootVC = storyboard.instantiateViewController(withIdentifier: "SubscriptionViewController")
                 rootVC.modalPresentationStyle = .fullScreen

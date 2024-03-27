@@ -1,12 +1,13 @@
 {
+  "originHash" : "bc5482381d3ca7c120ad631a787a4f9a9951d7681ad9ce0e3952eebea1292ae7",
   "pins" : [
     {
-      "identity" : "apphudsdk",
+      "identity" : "adaptysdk-ios",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/apphud/ApphudSDK",
+      "location" : "https://github.com/adaptyteam/AdaptySDK-iOS.git",
       "state" : {
-        "revision" : "fcc4cced82d2cabe65c8566df3f273acacc5b1ab",
-        "version" : "3.2.8"
+        "revision" : "306ddc073d72dad375c2e4296d4d7016786c2889",
+        "version" : "2.10.2"
       }
     },
     {
@@ -46,5 +47,5 @@
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }

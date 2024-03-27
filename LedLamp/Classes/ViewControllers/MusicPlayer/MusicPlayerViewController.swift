@@ -7,7 +7,6 @@
 
 import UIKit
 import AVFAudio
-import ApphudSDK
 
 class MusicPlayerViewController: UIViewController {
 
@@ -35,7 +34,7 @@ class MusicPlayerViewController: UIViewController {
        }
     
     @IBAction func syncWithMusicBtnDidTap(_ sender: Any) {
-        guard Apphud.hasPremiumAccess() else { 
+        guard UserDefaultsService().get(key: LocalStorageKey.isPremium, defaultValue: false) else {
             let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
             let rootVC = storyboard.instantiateViewController(withIdentifier: "SubscriptionViewController")
             rootVC.modalPresentationStyle = .fullScreen
@@ -51,7 +50,7 @@ class MusicPlayerViewController: UIViewController {
     }
    
     @IBAction func musicOnIphoneBtnDidTap(_ sender: Any) {
-        guard Apphud.hasPremiumAccess() else {
+        guard UserDefaultsService().get(key: LocalStorageKey.isPremium, defaultValue: false) else {
             let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
             let rootVC = storyboard.instantiateViewController(withIdentifier: "SubscriptionViewController")
             rootVC.modalPresentationStyle = .fullScreen

@@ -7,6 +7,7 @@
 
 import UIKit
 import IQKeyboardManagerSwift
+import Adapty
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {

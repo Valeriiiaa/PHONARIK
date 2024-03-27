@@ -249,6 +249,7 @@ class DatabaseManager: DatabaseManagerProtocol {
 
 enum LocalStorageKey: String, CaseIterable, CustomStringConvertible {
     case isFirstOpen
+    case isPremium
     
     var description: String {
         self.rawValue

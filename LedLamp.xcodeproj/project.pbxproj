@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		112267272BB493AA003042C6 /* Adapty in Frameworks */ = {isa = PBXBuildFile; productRef = 112267262BB493AA003042C6 /* Adapty */; };
 		112A0F412B9CBFDB00F5B5D0 /* UIColor+hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112A0F402B9CBFDB00F5B5D0 /* UIColor+hex.swift */; };
 		115E476A2B9A3E7E009E8B85 /* FlexColorPicker in Frameworks */ = {isa = PBXBuildFile; productRef = 115E47692B9A3E7E009E8B85 /* FlexColorPicker */; };
 		1177DD732BAA337000D28A19 /* TROLEDLH.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 1177DD722BAA333F00D28A19 /* TROLEDLH.storekit */; };
 		118EAD0C2B965CC900F6A8BD /* UPCarouselFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118EAD0B2B965CC900F6A8BD /* UPCarouselFlowLayout.swift */; };
 		118EAD0E2B9663A800F6A8BD /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118EAD0D2B9663A800F6A8BD /* DatabaseManager.swift */; };
 		118EAD112B96641700F6A8BD /* LEDapp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 118EAD0F2B96641600F6A8BD /* LEDapp.xcdatamodeld */; };
-		119CE46A2BA226DF006AEF05 /* ApphudSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 119CE4692BA226DF006AEF05 /* ApphudSDK */; };
 		11A1D3EB2B94F8E6003184AA /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A1D3EA2B94F8E6003184AA /* ScannerView.swift */; };
 		11A1D3ED2B94F911003184AA /* QRCodePreviewLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A1D3EC2B94F911003184AA /* QRCodePreviewLayer.swift */; };
 		11C621A32B936493006B15F7 /* DefaultTabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C6219D2B936493006B15F7 /* DefaultTabBarViewModel.swift */; };
@@ -234,9 +234,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				112267272BB493AA003042C6 /* Adapty in Frameworks */,
 				11E0BA0D2B98EE7000656C31 /* AxisTabView in Frameworks */,
 				F6EFECAA2B8E491300041B96 /* BottomSheet in Frameworks */,
-				119CE46A2BA226DF006AEF05 /* ApphudSDK in Frameworks */,
 				F6F827672B9086D300F1BB61 /* IQKeyboardManagerSwift in Frameworks */,
 				115E476A2B9A3E7E009E8B85 /* FlexColorPicker in Frameworks */,
 			);
@@ -631,7 +631,7 @@
 				F6F827662B9086D300F1BB61 /* IQKeyboardManagerSwift */,
 				11E0BA0C2B98EE7000656C31 /* AxisTabView */,
 				115E47692B9A3E7E009E8B85 /* FlexColorPicker */,
-				119CE4692BA226DF006AEF05 /* ApphudSDK */,
+				112267262BB493AA003042C6 /* Adapty */,
 			);
 			productName = LedLamp;
 			productReference = F6EB00F42B8C9FBB005139CC /* LedLamp.app */;
@@ -717,7 +717,7 @@
 				F6F827652B9086D300F1BB61 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 				11E0BA0B2B98EE7000656C31 /* XCRemoteSwiftPackageReference "AxisTabView" */,
 				115E47682B9A3E7E009E8B85 /* XCRemoteSwiftPackageReference "FlexColorPicker" */,
-				119CE4682BA226DF006AEF05 /* XCRemoteSwiftPackageReference "ApphudSDK" */,
+				112267252BB493AA003042C6 /* XCRemoteSwiftPackageReference "AdaptySDK-iOS" */,
 			);
 			productRefGroup = F6EB00F52B8C9FBB005139CC /* Products */;
 			projectDirPath = "";
@@ -1238,20 +1238,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		112267252BB493AA003042C6 /* XCRemoteSwiftPackageReference "AdaptySDK-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adaptyteam/AdaptySDK-iOS.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.10.2;
+			};
+		};
 		115E47682B9A3E7E009E8B85 /* XCRemoteSwiftPackageReference "FlexColorPicker" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/RastislavMirek/FlexColorPicker.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 1.4.4;
-			};
-		};
-		119CE4682BA226DF006AEF05 /* XCRemoteSwiftPackageReference "ApphudSDK" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/apphud/ApphudSDK";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.2.8;
 			};
 		};
 		11E0BA0B2B98EE7000656C31 /* XCRemoteSwiftPackageReference "AxisTabView" */ = {
@@ -1281,15 +1281,15 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		112267262BB493AA003042C6 /* Adapty */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 112267252BB493AA003042C6 /* XCRemoteSwiftPackageReference "AdaptySDK-iOS" */;
+			productName = Adapty;
+		};
 		115E47692B9A3E7E009E8B85 /* FlexColorPicker */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 115E47682B9A3E7E009E8B85 /* XCRemoteSwiftPackageReference "FlexColorPicker" */;
 			productName = FlexColorPicker;
-		};
-		119CE4692BA226DF006AEF05 /* ApphudSDK */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 119CE4682BA226DF006AEF05 /* XCRemoteSwiftPackageReference "ApphudSDK" */;
-			productName = ApphudSDK;
 		};
 		11E0BA0C2B98EE7000656C31 /* AxisTabView */ = {
 			isa = XCSwiftPackageProductDependency;
